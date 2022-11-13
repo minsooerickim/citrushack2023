@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Citrus Hack 2023</title>
-        <meta name="Citrus Hack 2023"/>
+        <meta name="Citrus Hack 2023" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>hello</p>
