@@ -1,12 +1,12 @@
-import { UseFormRegister, FieldValues } from 'react-hook-form'
+import { UseFormRegister, FieldValues } from 'react-hook-form';
 
 interface GroupProps {
   /** Name of group. */
-  title: string
+  title: string;
   /** Option description detailing the group. */
-  subtitle?: string
+  subtitle?: string;
   /** Input fields in the same group. */
-  children: React.ReactNode | React.ReactNode[]
+  children: React.ReactNode | React.ReactNode[];
 }
 
 /** Group of input fields. */
@@ -16,20 +16,20 @@ export const Group = ({ title, subtitle, children }: GroupProps) => (
     {subtitle && <p className="m-0 text-base">{subtitle}</p>}
     {children}
   </div>
-)
+);
 
 interface InputProps {
-  type: string
-  defaultValue?: string
-  label: string
-  variable: string
-  register: UseFormRegister<FieldValues>
-  required?: boolean
+  type: string;
+  defaultValue?: string;
+  label: string;
+  variable: string;
+  register: UseFormRegister<FieldValues>;
+  required?: boolean;
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
-  onChange?: () => void
+    [x: string]: any;
+  };
+  onChange?: () => void;
 }
 
 export const Input = ({
@@ -65,18 +65,18 @@ export const Input = ({
       onChange={onChange}
     />
   </div>
-)
+);
 
 interface SelectProps {
-  label: string
-  variable: string
-  register: UseFormRegister<FieldValues>
-  required?: boolean
-  options: string[]
+  label: string;
+  variable: string;
+  register: UseFormRegister<FieldValues>;
+  required?: boolean;
+  options: string[];
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
+    [x: string]: any;
+  };
 }
 
 export const Select = ({
@@ -106,20 +106,20 @@ export const Select = ({
       ))}
     </select>
   </div>
-)
+);
 
 interface RadioProps {
-  label: string
-  variable: string
-  register: UseFormRegister<FieldValues>
-  required?: boolean
-  options: string[]
+  label: string;
+  variable: string;
+  register: UseFormRegister<FieldValues>;
+  required?: boolean;
+  options: string[];
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
-  direction?: 'row' | 'col'
-  subtext?: string | React.ReactNode
+    [x: string]: any;
+  };
+  direction?: 'row' | 'col';
+  subtext?: string | React.ReactNode;
 }
 
 export const Radio = ({
@@ -166,24 +166,24 @@ export const Radio = ({
       ))}
     </div>
   </div>
-)
+);
 
 Radio.defaultProps = {
   direction: 'row',
   subtext: null,
-}
+};
 
 interface CheckboxProps {
-  label: string
-  variable: string
-  register: UseFormRegister<FieldValues>
-  required?: boolean
-  options: string[] | React.ReactNode[]
+  label: string;
+  variable: string;
+  register: UseFormRegister<FieldValues>;
+  required?: boolean;
+  options: string[] | React.ReactNode[];
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
-  subtext?: string | React.ReactNode
+    [x: string]: any;
+  };
+  subtext?: string | React.ReactNode;
 }
 
 export const Checkbox = ({
@@ -221,4 +221,4 @@ export const Checkbox = ({
       ))}
     </div>
   </div>
-)
+);

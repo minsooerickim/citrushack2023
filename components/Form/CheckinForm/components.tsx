@@ -1,23 +1,23 @@
-import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form'
-import { useSession } from 'next-auth/react'
-import { Group, Input, Select, Radio, Checkbox } from '../components'
-import ExternalLink from '@/components/ExternalLink'
-import { inperson, daily_wellness_completion, MLH, states } from './options'
+import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form';
+import { useSession } from 'next-auth/react';
+import { Group, Input, Select, Radio, Checkbox } from '../components';
+import ExternalLink from '@/components/ExternalLink';
+import { inperson, daily_wellness_completion, MLH, states } from './options';
 
 interface Props {
-  register: UseFormRegister<FieldValues>
+  register: UseFormRegister<FieldValues>;
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
-  setFileUploaded?: (arg0: boolean) => void
-  watch: UseFormWatch<FieldValues>
+    [x: string]: any;
+  };
+  setFileUploaded?: (arg0: boolean) => void;
+  watch: UseFormWatch<FieldValues>;
 }
 
 export function Confirmation({ register, errors, watch }: Props) {
-  const { data: session } = useSession()
-  const inperson_confirmation = watch('inperson')
-  const lives_in_US = watch('lives_in_US')
+  const { data: session } = useSession();
+  const inperson_confirmation = watch('inperson');
+  const lives_in_US = watch('lives_in_US');
 
   return (
     <>
@@ -159,5 +159,5 @@ export function Confirmation({ register, errors, watch }: Props) {
         </Group>
       )}
     </>
-  )
+  );
 }

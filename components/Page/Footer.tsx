@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import React from 'react';
+import Link from 'next/link';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-import { MdEmail } from 'react-icons/md'
+import { MdEmail } from 'react-icons/md';
 // import { Wave } from '../Wave'
 
 const SocialLinks = [
@@ -21,7 +21,7 @@ const SocialLinks = [
     title: 'Email',
     image: <MdEmail size="20"></MdEmail>,
   },
-]
+];
 
 export default function Footer() {
   return (
@@ -46,11 +46,11 @@ export default function Footer() {
                     </a>
                   </Link>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

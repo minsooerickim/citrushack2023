@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Link as NavLink } from 'react-scroll'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { useRouter } from 'next/router'
+import React, { useState } from 'react';
+import { Link as NavLink } from 'react-scroll';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import {
   BiHomeAlt,
   BiCalendarEvent,
@@ -16,13 +16,13 @@ import {
   BiX,
   BiAlarm,
   BiReceipt,
-} from 'react-icons/bi'
-import { ThemeButton } from '@/components/UserBar/ThemeButton'
+} from 'react-icons/bi';
+import { ThemeButton } from '@/components/UserBar/ThemeButton';
 
 /** Side navbar. */
 export default function Nav() {
-  const [navOpen, setNavOpen] = useState(false)
-  const router = useRouter()
+  const [navOpen, setNavOpen] = useState(false);
+  const router = useRouter();
   const hometabs = [
     {
       icon: <BiHomeAlt />,
@@ -56,7 +56,7 @@ export default function Nav() {
       icon: <BiHelpCircle />,
       title: 'FAQ',
     },
-  ]
+  ];
   const livetabs = [
     {
       icon: <BiAlarm />,
@@ -82,7 +82,7 @@ export default function Nav() {
       icon: <BiGroup />,
       title: 'Staff',
     },
-  ]
+  ];
 
   return (
     <>
@@ -239,5 +239,5 @@ export default function Nav() {
         onClick={() => setNavOpen(false)}
       />
     </>
-  )
+  );
 }

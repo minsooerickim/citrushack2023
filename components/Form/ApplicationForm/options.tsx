@@ -1,4 +1,4 @@
-import ExternalLink from '@/components/ExternalLink'
+import ExternalLink from '@/components/ExternalLink';
 
 export const genders = [
   'Male',
@@ -6,7 +6,7 @@ export const genders = [
   'Nonbinary',
   'Other',
   'Prefer not to say',
-]
+];
 
 export const ethnicities = [
   'American Indian or Alaska Native',
@@ -17,7 +17,7 @@ export const ethnicities = [
   'White',
   'Other',
   'Prefer not to say',
-]
+];
 
 export const majors = [
   'Bioengineering',
@@ -33,7 +33,7 @@ export const majors = [
   'Other STEM Major Not Listed',
   'Humanities Major',
   'Other Major',
-]
+];
 
 export const grades = [
   'High School',
@@ -44,15 +44,15 @@ export const grades = [
   '5th+ Year Undergraduate',
   'Graduate',
   'International',
-]
+];
 
-export const firstTimeHacker = ['Yes', 'No']
+export const firstTimeHacker = ['Yes', 'No'];
 
-export const participation = ['In-Person', 'Online']
+export const participation = ['In-Person', 'Online'];
 
-export const foodPreference = ['Meat', 'Vegetarian', 'Nut Allergy']
+export const foodPreference = ['Meat', 'Vegetarian', 'Nut Allergy'];
 
-export const shirtSize = ['S', 'M', 'L', 'XL']
+export const shirtSize = ['S', 'M', 'L', 'XL'];
 
 export const MLH = [
   [
@@ -90,4 +90,4 @@ export const MLH = [
   [
     'I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners.',
   ],
-]
+];

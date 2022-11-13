@@ -1,6 +1,6 @@
-import ExternalLink from '@/components/ExternalLink'
+import ExternalLink from '@/components/ExternalLink';
 
-export const inperson = ['Yes', 'No']
+export const inperson = ['Yes', 'No'];
 
 export const daily_wellness_completion = [
   [
@@ -13,7 +13,7 @@ export const daily_wellness_completion = [
       .
     </>,
   ],
-]
+];
 
 export const MLH = [
   [
@@ -26,7 +26,7 @@ export const MLH = [
       .
     </>,
   ],
-]
+];
 
 export const states = [
   'AL',
@@ -86,4 +86,4 @@ export const states = [
   'WV',
   'WI',
   'WY',
-]
+];

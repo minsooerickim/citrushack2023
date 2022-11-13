@@ -1,6 +1,6 @@
-import { Session } from 'next-auth'
-import { UseFormRegister, FieldValues } from 'react-hook-form'
-import { Group, Input, Select, Radio, Checkbox } from '../components'
+import { Session } from 'next-auth';
+import { UseFormRegister, FieldValues } from 'react-hook-form';
+import { Group, Input, Select, Radio, Checkbox } from '../components';
 import {
   genders,
   ethnicities,
@@ -11,16 +11,16 @@ import {
   foodPreference,
   shirtSize,
   MLH,
-} from './options'
+} from './options';
 
 interface Props {
-  session?: Session
-  register: UseFormRegister<FieldValues>
+  session?: Session;
+  register: UseFormRegister<FieldValues>;
   errors: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [x: string]: any
-  }
-  setFileUploaded?: (arg0: boolean) => void
+    [x: string]: any;
+  };
+  setFileUploaded?: (arg0: boolean) => void;
 }
 
 export const PersonalInfo = ({ session, register, errors }: Props) => (
@@ -99,7 +99,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
       required
     />
   </Group>
-)
+);
 
 export const Education = ({ register, errors }: Props) => (
   <Group title="Education">
@@ -138,7 +138,7 @@ export const Education = ({ register, errors }: Props) => (
       />
     </div>
   </Group>
-)
+);
 
 export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
   <Group title="Hacker App">
@@ -214,4 +214,4 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       />
     </span>
   </Group>
-)
+);
