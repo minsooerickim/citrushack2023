@@ -1,13 +1,18 @@
 import type { AppProps } from 'next/app';
 import { SessionProvider } from 'next-auth/react';
+import { ThemeProvider } from 'next-themes';
 
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
+import { UserBar } from '@/components/UserBar';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
-      <Component {...pageProps} />
+      <ThemeProvider enableSystem={false}>
+        <Component {...pageProps} />
+        <UserBar />
+      </ThemeProvider>
     </SessionProvider>
   );
 }

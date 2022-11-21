@@ -8,7 +8,6 @@ export default function Home() {
         <meta name="Citrus Hack 2023" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p>hello</p>
     </div>
   );
 }
