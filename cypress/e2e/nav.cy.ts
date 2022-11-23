@@ -6,3 +6,5 @@ describe('Navigation', () => {
     cy.url().should('eq', Cypress.env('host'))
   })
 })
+
+export {};
