@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request, fork]
+on: [push, pull_request]
 
 jobs:
   prettier:
@@ -11,3 +11,14 @@ jobs:
         run: yarn add prettier
       - name: Run prettier
         run: yarn prettier --config .prettierrc.json  --check "components/**/*.{js,jsx,ts,tsx}" "pages/**/*.{js,jsx,ts,tsx}"
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run with env
+        uses: cypress-io/github-action@v4
+        env:
+          host: ${{ secrets.CYPRESS_HOST }}
+      
