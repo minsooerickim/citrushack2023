@@ -39,7 +39,7 @@ yarn-error.log*
 next-env.d.ts
 
 # firebase
-lib/firebase.js
+# lib/firebase.js
 
 # cypress
 cypress.env.json
