@@ -18,7 +18,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        env:
         with:
           build: yarn install
           start: yarn dev
