@@ -16,12 +16,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install deps
-        run: yarn install
-      - name: run dev server
-        run: yarn dev
       - name: Cypress run with env
         uses: cypress-io/github-action@v4
         env:
           host: ${{ secrets.CYPRESS_HOST }}
+        with:
+          build: yarn install
+          dev: yarn dev
+          wait-on: ${{ secrets.CYPRESS_HOST }}
       
