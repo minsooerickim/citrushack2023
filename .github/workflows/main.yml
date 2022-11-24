@@ -19,8 +19,8 @@ jobs:
       - name: build server
         run: |
           yarn install
-          yarn dev &
       - name: run Cypress
+        run: yarn dev &
         run: yarn cypress:headless
         
       
