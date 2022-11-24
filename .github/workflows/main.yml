@@ -22,5 +22,8 @@ jobs:
         run: |
           yarn dev &
           yarn cypress:headless
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_DB: ${{ secrets.MONGODB_DB }}
         
       
