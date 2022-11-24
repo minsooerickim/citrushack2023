@@ -17,10 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: build server
-        run: |
-          yarn install
+        run: yarn install
       - name: run Cypress
-        run: yarn dev &
-        run: yarn cypress:headless
+        run: |
+          yarn dev
+          yarn cypress:headless
         
       
