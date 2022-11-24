@@ -25,8 +25,7 @@ export default function Landing() {
     <>
       <section className="relative flex flex-col-reverse w-full h-screen min-h-[48rem] md:min-h-[60rem] xl:max-w-[68rem] 2xl:max-w-[80rem] justify-center items-center my-40 lg:my-0 mb-20 md:mb-0 gap-6">
         <div className="lg:absolute flex flex-col left-4 2xl:left-0 items-center">
-          <div className="flex flex-col max-w-xl">
-          </div>
+          <div className="flex flex-col max-w-xl"></div>
           <CountdownWrapper date="2023-04-02T16:00:00Z" />
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
