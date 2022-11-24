@@ -1,31 +1,30 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { motion } from 'framer-motion'
-import { ButtonLink } from '@/components/ButtonLink'
+import { motion } from 'framer-motion';
+import { ButtonLink } from '@/components/ButtonLink';
 
 interface Props {
   /** Heading at the top of the card. */
-  title: string
+  title: string;
   /** Description about the way to support the hackathon. */
-  description: string
+  description: string;
   /** Name of the button to diplsay. */
-  buttonLabel: string
+  buttonLabel: string;
   /** Link to external source. */
-  buttonLink: string
+  buttonLink: string;
 }
 
 /** Card to display information about ways to support the hackathon. */
-export const SupportCard = ({ title, description, buttonLabel, buttonLink }: Props) => (
-  <motion.div 
+export const SupportCard = ({
+  title,
+  description,
+  buttonLabel,
+  buttonLink,
+}: Props) => (
+  <motion.div
     whileHover={{ y: -8 }}
-    className='flex flex-col items-center w-full md:max-w-md p-10 bg-card shadow-lg rounded-md cursor-default'
+    className="flex flex-col items-center w-full md:max-w-md p-10 bg-card shadow-lg rounded-md cursor-default"
   >
-    <p className='grow mb-8 text-center'>
-      {description}
-    </p>
-    <ButtonLink
-      link={buttonLink}
-      label={buttonLabel}
-      external
-    />
+    <p className="grow mb-8 text-center">{description}</p>
+    <ButtonLink link={buttonLink} label={buttonLabel} external />
   </motion.div>
-)
+);

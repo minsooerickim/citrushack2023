@@ -1,38 +1,38 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface ProfileProps {
   /** Link to the lead's LinkedIn profile. */
-  link: string
+  link: string;
   /** Profile picture of the lead. */
-  image: string
+  image: string;
   /** Name of the lead. */
-  name: string
+  name: string;
   /** Role/title of the lead. */
-  role: string
+  role: string;
 }
 
 /** Individual profile for each team lead. */
 export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
-  <div className='flex flex-col w-full max-w-[8rem] md:max-w-[9rem] items-center'>
-    <motion.span whileHover={{ y: -4 }} className='cursor-pointer'>
-      <a target='_blank' rel='noreferrer noopener' href={link}>
+  <div className="flex flex-col w-full max-w-[8rem] md:max-w-[9rem] items-center">
+    <motion.span whileHover={{ y: -4 }} className="cursor-pointer">
+      <a target="_blank" rel="noreferrer noopener" href={link}>
         <Image
           src={image}
           width={150}
           height={150}
-          objectFit='contain'
+          objectFit="contain"
           priority={true}
           quality={100}
           className="rounded-full"
         />
       </a>
     </motion.span>
-    <p className='mb-0 w-max font-semibold'>{name}</p>
-    <p className='mt-0 leading-4 text-base text-center'>{role}</p>
+    <p className="mb-0 w-max font-semibold">{name}</p>
+    <p className="mt-0 leading-4 text-base text-center">{role}</p>
   </div>
-)
+);
 
 const staff = [
   {
@@ -101,12 +101,12 @@ const staff = [
     name: 'Jakin Chan',
     role: 'Volunteer Lead',
   },
-]
+];
 
 /** Grid of team lead profiles. */
 export const TeamGrid = () => (
-  <div className='flex flex-wrap justify-center gap-6 md:gap-12 md:gap-y-12'>
-    { staff.map(({ link, image, name, role }) =>
+  <div className="flex flex-wrap justify-center gap-6 md:gap-12 md:gap-y-12">
+    {staff.map(({ link, image, name, role }) => (
       <TeamProfile
         key={link}
         link={link}
@@ -114,6 +114,6 @@ export const TeamGrid = () => (
         name={name}
         role={role}
       />
-    )}
+    ))}
   </div>
-)
+);

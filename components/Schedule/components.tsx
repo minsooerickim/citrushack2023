@@ -1,53 +1,56 @@
-import ExternalLink from '../ExternalLink'
+import ExternalLink from '../ExternalLink';
 
 interface EventBlockProps {
-  name: string
-  startTime: string
-  endTime?: string
-  hybrid?: boolean
-  room?: string
-  note?: string | React.ReactNode
+  name: string;
+  startTime: string;
+  endTime?: string;
+  hybrid?: boolean;
+  room?: string;
+  note?: string | React.ReactNode;
 }
 
-const EventBlock = ({ name, startTime, endTime, hybrid, room, note }: EventBlockProps) => (
-  <div className='flex items-center bg-card p-3 rounded-md shadow-md text-left'>
-    <div className='flex flex-col w-full max-w-[8.25rem] text-sub-bright font-medium'>
+const EventBlock = ({
+  name,
+  startTime,
+  endTime,
+  hybrid,
+  room,
+  note,
+}: EventBlockProps) => (
+  <div className="flex items-center bg-card p-3 rounded-md shadow-md text-left">
+    <div className="flex flex-col w-full max-w-[8.25rem] text-sub-bright font-medium">
       <span>
         {startTime} {endTime && <>- {endTime}</>}
       </span>
     </div>
     <div>
-      <p className='m-0 text-base font-medium'>{name}</p>
-      { hybrid &&
-        <div className='text-sm text-highlight font-medium italic'>
+      <p className="m-0 text-base font-medium">{name}</p>
+      {hybrid && (
+        <div className="text-sm text-highlight font-medium italic">
           Hybrid
-          <div>
-            (In-Person @ {room})
-          </div>
-        </div> 
-      }
-      { note &&
-        <div className='text-sm text-highlight font-medium italic'>
-          {note}
-        </div> 
-      }
+          <div>(In-Person @ {room})</div>
+        </div>
+      )}
+      {note && (
+        <div className="text-sm text-highlight font-medium italic">{note}</div>
+      )}
     </div>
   </div>
-)
+);
 
 interface EventStackProps {
-  title: string
-  subtitle?: string
-  events: EventBlockProps[]
+  title: string;
+  subtitle?: string;
+  events: EventBlockProps[];
 }
 
 const EventStack = ({ title, subtitle, events }: EventStackProps) => (
-  <div className='flex flex-col gap-3 w-full max-w-lg lg:max-w-md'>
+  <div className="flex flex-col gap-3 w-full max-w-lg lg:max-w-md">
     <div>
-      <h4 className='m-0 font-medium'>{title}</h4>
-      { subtitle && <p>{subtitle}</p> }
+      <h4 className="m-0 font-medium">{title}</h4>
+      {subtitle && <p>{subtitle}</p>}
     </div>
-    { events.map(({ name, startTime, endTime, hybrid, room, note }) =>
+    {events.map(({ name, startTime, endTime, hybrid, room, note }) => (
       <EventBlock
         key={name}
         name={name}
@@ -57,48 +60,36 @@ const EventStack = ({ title, subtitle, events }: EventStackProps) => (
         room={room}
         note={note}
       />
-    )}
+    ))}
   </div>
-)
+);
 
 interface Schedule {
-  event: EventBlockProps[]
-  workshops?: EventBlockProps[]
-  activities: EventBlockProps[]
+  event: EventBlockProps[];
+  workshops?: EventBlockProps[];
+  activities: EventBlockProps[];
 }
 
 interface ScheduleGridProps {
-  title: string
-  schedule: Schedule
+  title: string;
+  schedule: Schedule;
 }
 
-function ScheduleGrid ({ title, schedule }: ScheduleGridProps) {
-  const { event, workshops, activities } = schedule
+function ScheduleGrid({ title, schedule }: ScheduleGridProps) {
+  const { event, workshops, activities } = schedule;
 
   return (
-    <div className='flex flex-col gap-2'>
-      <h3 className='col-span-3 font-bold'>{title}</h3>
-      <div className='flex flex-col justify-center items-center lg:items-baseline lg:flex-row gap-4'>
-        <EventStack
-          title='Event'
-          subtitle={null}
-          events={event}
-        />
-        { workshops &&
-          <EventStack
-            title='Workshops'
-            subtitle={null}
-            events={workshops}
-          />
-        }
-        <EventStack
-          title='Activities'
-          subtitle={null}
-          events={activities}
-        />
+    <div className="flex flex-col gap-2">
+      <h3 className="col-span-3 font-bold">{title}</h3>
+      <div className="flex flex-col justify-center items-center lg:items-baseline lg:flex-row gap-4">
+        <EventStack title="Event" subtitle={null} events={event} />
+        {workshops && (
+          <EventStack title="Workshops" subtitle={null} events={workshops} />
+        )}
+        <EventStack title="Activities" subtitle={null} events={activities} />
       </div>
     </div>
-  )
+  );
 }
 
 const saturdaySchedule = {
@@ -122,7 +113,7 @@ const saturdaySchedule = {
       startTime: '9 AM',
     },
     {
-      name: 'Check-In (Cont\'d)',
+      name: "Check-In (Cont'd)",
       startTime: '9',
       endTime: '10:30 AM',
       hybrid: Boolean(true),
@@ -131,12 +122,12 @@ const saturdaySchedule = {
     {
       name: 'Lunch',
       startTime: '1 PM',
-      note: 'Distributed @ Bytes'
+      note: 'Distributed @ Bytes',
     },
     {
       name: 'Dinner',
       startTime: '6 PM',
-      note: 'Distributed @ Bytes'
+      note: 'Distributed @ Bytes',
     },
   ],
   workshops: [
@@ -186,7 +177,7 @@ const saturdaySchedule = {
       room: 'Bourns A125',
     },
     {
-      name: 'Snapchat\'s Workshop - Augmented Reality',
+      name: "Snapchat's Workshop - Augmented Reality",
       startTime: '2',
       endTime: '3 PM',
     },
@@ -196,7 +187,7 @@ const saturdaySchedule = {
       endTime: '3 PM',
     },
     {
-      name: 'Amazon\'s Workshop - Diversity in Tech: Latinx at Amazon',
+      name: "Amazon's Workshop - Diversity in Tech: Latinx at Amazon",
       startTime: '3',
       endTime: '4 PM',
       hybrid: Boolean(true),
@@ -215,7 +206,7 @@ const saturdaySchedule = {
       endTime: '5 PM',
     },
     {
-      name: 'What They Don\'t Tell You About Tech Interviews',
+      name: "What They Don't Tell You About Tech Interviews",
       startTime: '5',
       endTime: '6 PM',
     },
@@ -237,10 +228,14 @@ const saturdaySchedule = {
       name: 'CTF',
       startTime: '12 PM',
       endTime: '12 AM',
-      note: 
-      <>
-        <ExternalLink name='Via Cyber@UCR Website' link='https://ctf.ucrcyber.org/' />
-      </>
+      note: (
+        <>
+          <ExternalLink
+            name="Via Cyber@UCR Website"
+            link="https://ctf.ucrcyber.org/"
+          />
+        </>
+      ),
     },
     {
       name: 'CSSBattle',
@@ -308,7 +303,7 @@ const saturdaySchedule = {
       note: 'In-Person @ WCH 202',
     },
   ],
-}
+};
 
 const sundaySchedule = {
   event: [
@@ -316,7 +311,7 @@ const sundaySchedule = {
       name: 'Red Bull Giveaway',
       startTime: '8 AM',
       endTime: '1 PM',
-      note: 'In-Person @ WCH 205/206'
+      note: 'In-Person @ WCH 205/206',
     },
     {
       name: 'Hackathon End',
@@ -325,7 +320,7 @@ const sundaySchedule = {
     {
       name: 'Breakfast',
       startTime: '9 AM',
-      note: 'Distributed @ Bytes'
+      note: 'Distributed @ Bytes',
     },
     {
       name: 'Judging',
@@ -347,11 +342,11 @@ const sundaySchedule = {
       endTime: '10 AM',
     },
   ],
-}
+};
 
 export const MasterSchedule = () => (
-  <div className='flex flex-col gap-6 w-full text-center'>
-    <ScheduleGrid title='Saturday, April 2' schedule={saturdaySchedule} />
-    <ScheduleGrid title='Sunday, April 3' schedule={sundaySchedule} />
+  <div className="flex flex-col gap-6 w-full text-center">
+    <ScheduleGrid title="Saturday, April 2" schedule={saturdaySchedule} />
+    <ScheduleGrid title="Sunday, April 3" schedule={sundaySchedule} />
   </div>
-)
+);
