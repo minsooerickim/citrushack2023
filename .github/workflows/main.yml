@@ -20,7 +20,7 @@ jobs:
         run: yarn install
       - name: run Cypress
         run: |
-          yarn dev
+          yarn dev &
           yarn cypress:headless
         
       
