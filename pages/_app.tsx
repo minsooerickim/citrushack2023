@@ -6,8 +6,11 @@ import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import { UserBar } from '@/components/UserBar';
 import { MLHBanner } from '@/components/MLHBanner';
+import { Session } from 'next-auth';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps<{
+  session: Session;
+}>) {
   return (
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
