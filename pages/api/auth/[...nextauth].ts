@@ -20,11 +20,11 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         if (account.provider === 'google') {
           // first and last name attributes are available for GoogleProfile
           // -- https://github.com/nextauthjs/next-auth/blob/main/packages/next-auth/src/providers/google.ts
-          user.name = profile.name
-          // user.name = {
-          //   first: String(profile.given_name),
-          //   last: String(profile.family_name),
-          // };
+
+          user.name = {
+            first: String(profile.name.split(' ')[0]),
+            last: String(profile.name.split(' ')[1]),
+          };
         }
         return true;
       },

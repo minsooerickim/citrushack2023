@@ -8,7 +8,10 @@ declare module 'next-auth' {
       email: string
       uid: string
       gid: string
-      name: string
+      name: {
+        first: string
+        last: string
+      }
       qualified: string
       admin: boolean
       checkedIn: boolean
@@ -19,7 +22,10 @@ declare module 'next-auth' {
   interface User {
     uid: string
     gid: string
-    name: string
+    name: {
+      first: string
+      last: string
+    }
     qualified: string
     admin: boolean
     checkedIn: boolean
