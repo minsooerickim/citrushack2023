@@ -4,7 +4,7 @@ describe('Navigation', () => {
     cy.visit('/404', {failOnStatusCode: false})
     cy.request({url: '/404', failOnStatusCode: false}).its('status').should('equal', 404)
     cy.contains("Go Back to Homepage"). click()
-    cy.url().should('eq','http://localhost:3000/')
+    cy.url().should('eq', Cypress.config().baseUrl)
   })
 })
 
