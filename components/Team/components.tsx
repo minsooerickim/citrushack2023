@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface ProfileProps {
   /** Link to the lead's LinkedIn profile. */
-  link: string
+  link: string;
   /** Profile picture of the lead. */
-  image: string
+  image: string;
   /** Name of the lead. */
-  name: string
+  name: string;
   /** Role/title of the lead. */
-  role: string
+  role: string;
 }
 
 /** Individual profile for each team lead. */
@@ -22,12 +22,10 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
           width={170}
           height={170}
           objectFit="contain"
-          
           // for performance
           priority={false}
           // for performance
           quality={0}
-
           className="rounded-full mt-5"
           alt="profile photo"
         />
@@ -38,7 +36,7 @@ export const TeamProfile = ({ link, image, name, role }: ProfileProps) => (
       {role}
     </p>
   </div>
-)
+);
 
 const directors = [
   {
@@ -53,7 +51,7 @@ const directors = [
     name: 'Mariam Golwalla',
     role: 'Director',
   },
-]
+];
 const staff = [
   {
     link: 'https://www.linkedin.com/in/minsookime/',
@@ -121,7 +119,7 @@ const staff = [
     name: 'Jonathan Chon',
     role: 'UI/UX Lead',
   },
-]
+];
 
 /** Grid of team lead profiles. */
 export const TeamGrid = () => (
@@ -149,4 +147,4 @@ export const TeamGrid = () => (
       ))}
     </div>
   </>
-)
+);

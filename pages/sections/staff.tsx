@@ -1,4 +1,4 @@
-import { TeamGrid } from '@/components/Team/components'
+import { TeamGrid } from '@/components/Team/components';
 
 export default function Staff() {
   return (
@@ -33,5 +33,5 @@ export default function Staff() {
         </div>
       </div>
     </section>
-  )
+  );
 }
