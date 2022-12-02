@@ -4,7 +4,7 @@ import { Page } from '@/components/Page';
 export default function Home() {
   return (
     <Page>
-      <div className='flex flex-col text-center'>
+      <div className="flex flex-col text-center">
         <h1>Citrus Hack 2023 Coming Soon!</h1>
         <p>
           Feel free to email us at{' '}
