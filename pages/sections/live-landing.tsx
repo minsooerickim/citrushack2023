@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
-import {
-  HackerCountdownWrapper,
-} from '@/components/Countdown';
+import { HackerCountdownWrapper } from '@/components/Countdown';
 import { ButtonLink } from '@/components/ButtonLink';
 import Modal from '@/components/Modal';
 import { SigninForm } from '@/components/Form/SigninForm';
@@ -53,14 +51,15 @@ export default function Landing() {
                 </span>
               )}
             {status === 'authenticated' &&
-            session.user.uid &&
-            session.user.qualified === 'yeah' &&
-            <ButtonLink
-              primary
-              link="https://cutie-hack-2022.devpost.com/"
-              label="Devpost"
-              external
-            />}
+              session.user.uid &&
+              session.user.qualified === 'yeah' && (
+                <ButtonLink
+                  primary
+                  link="https://cutie-hack-2022.devpost.com/"
+                  label="Devpost"
+                  external
+                />
+              )}
             {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' && (
