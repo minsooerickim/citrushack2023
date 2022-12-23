@@ -1,5 +1,3 @@
-> modification of https://github.com/citrushack/citrushack2022/blob/dev/README.md
-
 # Citrus Hack 2023
 
 > Author: Minsoo Kim
@@ -13,6 +11,15 @@ This is the codebase for Citrus Hack 2023. Below is a short project description 
 
 Hey I'm Minsoo! I'm a software engineer based in California. I like to weightlift or boulder after a long day of coding :) You can connect with me on [LinkedIn](https://www.linkedin.com/in/minsookime/) or my [Github](https://github.com/minsooerickim).
 
+<br/>
+
+### Paulian Le
+
+<img align="left" src="public/leads/kanin.png" alt="image of Paulian Le" width="100" height="100">
+
+Hi! I'm a duck!
+
+<br/>
 <br/>
 
 ## Tech Stack
