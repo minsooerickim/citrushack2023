@@ -113,4 +113,5 @@ Run the following commands in a terminal
 ## Tech Stack
 
 - **[NextJS](https://nextjs.org/)**: This is the frontend framework for this project
-- **MongoDB**: This is the database used for the backend for this project
+- **[MongoDB](https://www.mongodb.com/)**: This is the primary database used for the backend for this project
+- **[TailwindCSS](https://tailwindcss.com/)**: This is the CSS framework used for the frontend for this project
