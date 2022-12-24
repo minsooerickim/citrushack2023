@@ -15,9 +15,9 @@ Hey I'm Minsoo! I'm a software engineer based in California. I like to weightlif
 
 ### Paulian Le
 
-<img align="left" src="public/leads/kanin.png" alt="image of Paulian Le" width="100" height="100">
+<img align="left" src="public/readme/paulian.png" alt="image of Paulian Le" width="100" height="100">
 
-Hi! I'm a duck!
+Hello hello! I'm Paulian. I'm a software engineer based in Southern California. In my free time, I love to boulder and to watch movies. My favorite film has to be "La La Land" at the moment. :) 🎵 Feel free to connect with me on my [LinkedIn](https://www.linkedin.com/in/paulianle/). Cheers!
 
 <br/>
 <br/>
