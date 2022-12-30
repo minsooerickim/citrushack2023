@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import ExternalLink from '../ExternalLink';
+import Modal from '../Modal';
 
 interface EventBlockProps {
   name: string;
@@ -9,35 +11,73 @@ interface EventBlockProps {
   note?: string | React.ReactNode;
 }
 
-const EventBlock = ({
+function EventBlock({
   name,
   startTime,
   endTime,
   hybrid,
   room,
   note,
-}: EventBlockProps) => (
-  <div className="flex items-center bg-card p-3 rounded-md shadow-md text-left">
-    <div className="flex flex-col w-full max-w-[8.25rem] text-sub-bright font-medium">
-      <span>
-        {startTime} {endTime && <>- {endTime}</>}
-      </span>
-    </div>
-    <div>
-      <p className="m-0 text-base font-medium">{name}</p>
-      {hybrid && (
-        <div className="text-sm text-highlight font-medium italic">
-          Hybrid
-          <div>(In-Person @ {room})</div>
+}: EventBlockProps) {
+  const [signinModalOpen, setSigninModalOpen] = useState(false);
+  const toggleSigninModal = () => {
+    setSigninModalOpen(!signinModalOpen);
+  };
+  
+  return (
+    <>
+      <Modal
+        title={name}
+        description="make this a dynamic event description later"
+        show={signinModalOpen}
+        handler={setSigninModalOpen}
+        card={true}
+      >
+        <EventDetail startTime={startTime} endTime={endTime} hybrid={hybrid} room={room} note={note} />
+      </Modal>
+      <div className="flex items-center bg-card p-3 rounded-md shadow-md text-left hover:cursor-pointer" onClick={() => toggleSigninModal()}>
+        <div className="flex flex-col w-full max-w-[8.25rem] text-sub-bright font-medium">
+          <span>
+            {startTime} {endTime && <>- {endTime}</>}
+          </span>
         </div>
-      )}
-      {note && (
-        <div className="text-sm text-highlight font-medium italic">{note}</div>
-      )}
-    </div>
-  </div>
-);
+        <div>
+          <p className="m-0 text-base font-medium">{name}</p>
+          {hybrid && (
+            <div className="text-sm text-highlight font-medium italic">
+              Hybrid
+              <div>(In-Person @ {room})</div>
+            </div>
+          )}
+          {note && (
+            <div className="text-sm text-highlight font-medium italic">
+              {note}
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
 
+interface EventDetailProps {
+  startTime: string;
+  endTime?: string;
+  hybrid?: boolean;
+  room?: string;
+  note?: string | React.ReactNode;
+}
+
+function EventDetail({ startTime, endTime, hybrid, room, note }: EventDetailProps) {
+  return (
+    <div className="flex flex-col w-full items-center">
+      <p>{startTime} - {endTime}</p>
+      <p>{hybrid}</p>
+      <p>{room}</p>
+      <p>{note}</p>
+    </div>
+  )
+}
 interface EventStackProps {
   title: string;
   subtitle?: string;
