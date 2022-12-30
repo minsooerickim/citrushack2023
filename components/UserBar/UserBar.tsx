@@ -55,6 +55,7 @@ export function UserBar() {
         description="Sign in to Citrus Hack via Google to apply and access more. No password required."
         show={signinModalOpen}
         handler={setSigninModalOpen}
+        card={false}
       >
         <SigninForm />
       </Modal>

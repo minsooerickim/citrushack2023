@@ -11,6 +11,8 @@ interface Props {
   title: string;
   /** Short description below the heading. */
   description: string;
+  /** Toggles the color of the modal. */
+  card: boolean;
   /** Other content in the modal (e.g. input fields, buttons, etc.). */
   children: React.ReactNode | React.ReactNode[];
 }
@@ -20,6 +22,7 @@ export default function Modal({
   handler,
   title,
   description,
+  card,
   children,
 }: Props) {
   const [targetElement, setTargetElement] = useState(null);
@@ -37,8 +40,8 @@ export default function Modal({
       <div
         id="modal"
         className={
-          'fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded bg-secondary transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 ' +
-          (show ? 'z-[1100] visible opacity-100' : 'z-0 invisible opacity-0')
+          'fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 ' +
+          (show ? 'z-[1100] visible opacity-100 ' : 'z-0 invisible opacity-0 ') + (card ? 'bg-card' : 'bg-secondary')
         }
       >
         <div className="relative flex flex-col gap-4 items-center w-full mb-4">
@@ -66,4 +69,8 @@ export default function Modal({
       />
     </>
   );
+}
+
+Modal.defaultProps = {
+  card: false
 }
