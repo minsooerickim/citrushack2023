@@ -1,6 +1,7 @@
 import { Session } from 'next-auth';
 import { UseFormRegister, FieldValues } from 'react-hook-form';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
+import { schools } from "./schools";
 import {
   genders,
   ethnicities,
