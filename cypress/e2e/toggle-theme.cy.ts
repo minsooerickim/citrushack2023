@@ -1,4 +1,3 @@
-
 describe('Toggle theme button', () => {
 	const checkTheme = (theme) => {
 		cy.get('html')
@@ -16,3 +15,5 @@ describe('Toggle theme button', () => {
     checkTheme('dark')
   })
 })
+
+export {};
