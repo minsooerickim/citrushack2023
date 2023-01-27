@@ -8,7 +8,7 @@ describe('Toggle theme button', () => {
     	.and('equal', theme)
 	}
   it('check document data-theme and color-scheme style', () => {
-    cy.visit('127.0.0.1:3000')
+    cy.visit('/')
 
     checkTheme('light')
     cy.get('span.md\\:block > button:has(svg)').click()
