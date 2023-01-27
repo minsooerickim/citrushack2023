@@ -12,6 +12,7 @@ import Sponsors from '@/pages/sections/sponsors';
 import Staff from '@/pages/sections/staff';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
+import Passport from '@/components/Passport';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <Landing />
         </span>
       </Element>
+      <Passport />
       <Element
         name="Schedule"
         className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
