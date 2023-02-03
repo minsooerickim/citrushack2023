@@ -1,22 +1,43 @@
 describe('Verify /apply is working', () => {
-	const checkTheme = (theme) => {
-		cy.get('html').should('have.attr', 'data-theme').and('equal', theme);
-		cy.get('html').should('have.css', 'color-scheme').and('equal', theme);
-	};
-	it('check document data-theme and color-scheme style', () => {
+	it('check fields exist', () => {
 		cy.login();
 		cy.visit('/');
 		cy.wait("@session");
-
 		cy.visit('/apply');
-		
-		// cy.get('div > button').contains('Sign In').click();
-		// cy.get('input[name=email]').type('testaccount@test.test');
-		// cy.get('button[type=submit]').contains('Sign In With Email').click();
-		// cy.get('button > span').contains('Sign in with Google').parent().click();
-		// cy.get('input[type=email]').type(process.env.TESTACCOUNT_EMAIL);
-		// cy.get('div > span').contains('Next').parent().click();
 
+		['first_name', 'last_name', 'phone_number'].forEach(inputCategory =>
+			cy.get(`input[type=text][name=${inputCategory}]`)
+				.should('be.visible')
+		);
+		// radio inputs
+		Object.entries({
+			'Food Preference': ['Meat', 'Vegetarian', 'Nut Allergy'],
+			'T-Shirt Size': ['S', 'M', 'L', 'XL'],
+			'First time hacker?': ['Yes', 'No'],
+			'Are you participating in-person or online?': ['In-Person', 'Online']
+		}).forEach(([category, categoryValues]) =>
+			categoryValues.forEach(categoryValue =>
+				cy.get(`[id="${category}"]`)
+					.contains(categoryValue)
+					.should('be.visible')
+					// .and('contains', 'input[type=radio]')
+			)
+		);
+		['gender', 'ethnicity', 'school', 'major', 'grade'].forEach(selectCategory => 
+			cy.get(`select[name=${selectCategory}]`)
+				.should('be.visible')
+		);
+		cy.get('input[type=date][name=grad_date]').should('be.visible');
+		cy.get('input[type=file][name=resume]').should('be.visible');
+		cy.get('input[type=checkbox][name=MLH_code_of_conduct]').should('be.visible');
+
+		// select is normal select ... im not sure what to check for the dropdown
+		cy.get('select[name=school]')
+			.select('York University')
+			.should('have.value', 'York University');
+		// cypress doesn't like clicking on <select> elements
+		// cy.get('select[name=school]').trigger('mousedown');
+		// cy.get('option[value="York University"]').should('be.visible');
 	});
 });
 
