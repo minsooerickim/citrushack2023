@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineConfig } from "cypress";
-require('dotenv').config({path: './.env.development'});
+// require('dotenv').config({path: './.env.development'});
 
 export default defineConfig({
   projectId: 'krfkwu',
