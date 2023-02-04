@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineConfig } from "cypress";
-// require('dotenv').config({path: './.env.development'});
 
 export default defineConfig({
   projectId: 'krfkwu',
@@ -10,7 +9,7 @@ export default defineConfig({
       // implement node event listeners here
       // https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/server-communication__env-variables/cypress.config.js
       config.env = config.env || {};
-      config.env.SESSION_TOKEN = process.env.CYPRESS_SESSION_TOKEN || "12345678-abcd-efed-cba9-876543242069";
+      config.env.SESSION_TOKEN = "";
       console.log('extended config.env with process.env.{SESSION_TOKEN}');
       return config;
     },

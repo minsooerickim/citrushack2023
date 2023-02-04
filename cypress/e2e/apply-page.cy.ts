@@ -20,7 +20,6 @@ describe('Verify /apply is working', () => {
 				cy.get(`[id="${category}"]`)
 					.contains(categoryValue)
 					.should('be.visible')
-					// .and('contains', 'input[type=radio]')
 			)
 		);
 		['gender', 'ethnicity', 'school', 'major', 'grade'].forEach(selectCategory => 
@@ -35,9 +34,6 @@ describe('Verify /apply is working', () => {
 		cy.get('select[name=school]')
 			.select('York University')
 			.should('have.value', 'York University');
-		// cypress doesn't like clicking on <select> elements
-		// cy.get('select[name=school]').trigger('mousedown');
-		// cy.get('option[value="York University"]').should('be.visible');
 	});
 });
 
