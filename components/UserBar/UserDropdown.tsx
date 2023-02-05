@@ -20,7 +20,12 @@ export function UserDropdown() {
   const router = useRouter();
   const { data: session, status } = useSession();
   const [open, setOpen] = useState(false);
+  const [userDataLink, setUserDataLink] = useState('');
 
+  useEffect(() => {
+    setUserDataLink('users/' + session.user.uid) 
+  }, [session])
+  
   /** Display information regarding app status reviews. */
   const triggerInfo = () => {
     toast(
@@ -217,6 +222,25 @@ export function UserDropdown() {
                       </div>
                       <div className="p-1.5 group-hover:text-highlight">
                         Admin Dashboard
+                      </div>
+                    </motion.button>
+                  </Link>
+                )}
+                {status === 'authenticated' &&
+                session.user.uid &&
+               (
+                  <Link passHref href={userDataLink}>
+                    <motion.button
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.995 }}
+                      className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
+                      onClick={() => setOpen(!open)}
+                    >
+                      <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <BiCategory />
+                      </div>
+                      <div className="p-1.5 group-hover:text-highlight">
+                        QR Code
                       </div>
                     </motion.button>
                   </Link>

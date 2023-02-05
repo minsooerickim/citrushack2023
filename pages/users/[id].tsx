@@ -1,4 +1,5 @@
 import { Page } from '@/components/Page';
+import QR from '@/components/QR';
 import { getAllUserIds } from '@/lib/getAllUserIds';
 import { getUserData } from '@/lib/getUserData';
 
@@ -8,6 +9,7 @@ export default function Info({ userData }) {
     <Page>
       <p>{userData.uid}</p>
       <p>{userData.email}</p>
+      <QR />
     </Page>
   );
 }
