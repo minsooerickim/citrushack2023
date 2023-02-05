@@ -1,17 +1,16 @@
 import clientPromise from '@/lib/mongodb';
-import { ObjectId } from 'mongodb';
 
-export async function getUserData(id) {
-    console.log(id)
+export async function getUserData(uid) {
+    console.log(uid)
     const db = (await clientPromise).db(process.env.MONGODB_DB);
 
     const userData = {}
     const user = await db
         .collection('users')
-        .find({ _id: { $eq: new ObjectId(id) } })
+        .find({ uid: { $eq: uid } })
         .toArray();
 
-    userData['id'] = id;
+    userData['uid'] = uid;
     userData['email'] = user[0]['email']
 
     return userData

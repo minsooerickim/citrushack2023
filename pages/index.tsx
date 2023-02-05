@@ -12,7 +12,7 @@ import Sponsors from '@/pages/sections/sponsors';
 import Staff from '@/pages/sections/staff';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
-import QR from '@/components/QR'
+import QR from '@/components/QR';
 
 export default function Home() {
   return (

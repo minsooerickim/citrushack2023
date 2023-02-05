@@ -5,14 +5,14 @@ export async function getAllUserIds() {
     const userIds = []
     const users = await db
         .collection('users')
-        .find()
+        .find({ "uid": { $exists: true }})
         .toArray();
 
     // formatting for getStaticPaths()
     users.forEach(user => {
         userIds.push({
             params: {
-                id: user['_id'].toString()
+                id: user['uid'].toString()
             }
         })
     });
