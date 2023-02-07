@@ -43,18 +43,18 @@ export default function Landing() {
             <SignupCounter />
           </span>
           {status === 'authenticated' &&
-          !session.user.uid &&
-          router.pathname !== '/apply' && (
-            <Link passHref href="/apply">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.995 }}
-                className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
-              >
-                Apply Now!
-              </motion.button>
-            </Link>
-          )}
+            !session.user.uid &&
+            router.pathname !== '/apply' && (
+              <Link passHref href="/apply">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
+                >
+                  Apply Now!
+                </motion.button>
+              </Link>
+            )}
           {!session && (
             <span className="flex justify-center w-full z-[200]">
               <motion.button
