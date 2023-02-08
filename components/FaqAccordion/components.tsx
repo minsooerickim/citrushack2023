@@ -77,27 +77,8 @@ const faq = [
   },
   {
     question: 'Where is the event?',
-    answer: (
-      <>
-        <p className="mt-0">
-          Since this event will be hybrid, we will have{' '}
-          <span className="font-semibold">two</span> locations for the event.
-        </p>
-        <p>
-          <span className="font-semibold">
-            Note that only UCR students can attend in-person.
-          </span>{' '}
-          For those attending in-person, the event will be located in Winston
-          Chung Hall at UCR.
-        </p>
-        <p>
-          And for those attending online, the event will be hosted on Discord so
-          be sure to make an account before you apply. An invite link to our
-          server will be sent via email to those who will be participating and
-          will be also made available on the website for those qualified.
-        </p>
-      </>
-    ),
+    answer: 
+      'The event will be in-person and will be located in Winston Chung Hall at the University of California, Riverside.',     
   },
   {
     question: "What if I've never been to a hackathon before?",

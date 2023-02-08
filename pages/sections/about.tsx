@@ -48,12 +48,8 @@ export default function About() {
       <p className="text-center lg:mb-20">
         This year,{' '}
         <span className="font-medium">
-          Citrus Hack 2022 will be a hybrid event
+          Citrus Hack 2023 will be an in-person event
         </span>{' '}
-        to accomodate those who prefer to participate from the comfort of their
-        own home. We are working hard to ensure that all participants have an
-        exciting and streamlined experience whether they attend online or
-        in-person.
       </p>
       <div className="flex flex-col lg:flex-row">
         {stats.map(({ stat, label }, idx) => (
