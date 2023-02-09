@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 export default function Info({ userData }) {
   const { data: session, status } = useSession();
   const json_obj = JSON.parse(userData);
-  const { uid, email, shirtSize, ...other } = json_obj[0];
+  const { uid, email, shirtSize, qualified,  ...other } = json_obj[0];
 
   // {
   //   _id: new ObjectId("63e4b1f210e022bb585f31b3"),
@@ -54,6 +54,9 @@ export default function Info({ userData }) {
           <p>{uid}</p>
           <p>{email}</p>
           <p>shirt size: {shirtSize}</p>
+          <p>qualified: {qualified == '' ? 'pending' : qualified}</p>
+          {/* add button to check people in  */}
+          {/* add button to approve/disapprove people */}
         </div>
       )}
     </ProtectedPage>
