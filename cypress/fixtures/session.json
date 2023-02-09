@@ -1,8 +1,8 @@
 {
   "user": {
     "name": {
-    	"first": "NAME",
-    	"last": "SURNAME"
+      "first": "NAME",
+      "last": "SURNAME"
     },
     "email": "test@example.com",
     "image": "https://---.---"
