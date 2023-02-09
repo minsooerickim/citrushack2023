@@ -1,9 +1,10 @@
 describe('Verify /apply is working', () => {
-  it('check fields exist', () => {
-    cy.login();
-    cy.visit('/');
-    cy.wait('@session');
-    cy.visit('/apply');
+	it('check fields exist', () => {
+		cy.mock();
+		cy.login();
+		cy.visit('/');
+		cy.wait("@session");
+		cy.visit('/apply');
 
     ['first_name', 'last_name', 'phone_number'].forEach((inputCategory) =>
       cy.get(`input[type=text][name=${inputCategory}]`).should('be.visible')
