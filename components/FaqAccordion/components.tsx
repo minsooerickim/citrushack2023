@@ -87,29 +87,7 @@ const faq = [
   },
   {
     question: 'What will I need to participate?',
-    answer: (
-      <>
-        <p className="mt-0">
-          If you&apos;re participating in-person,{' '}
-          <span className="font-semibold">
-            you&apos;ll need to wear a mask, bring proof of vaccination, and
-            fill out
-          </span>{' '}
-          <ExternalLink
-            name="this daily wellness check-in form"
-            link="http://visitorwellnesscheck.ucr.edu/"
-          />
-          &nbsp;
-          <span className="font-semibold">per UCR&apos;s guidelines.</span>
-        </p>
-        <p>
-          Otherwise, if you&apos;re staying online, all you need is a working
-          device (i.e your laptop or PC) and a stable internet connection. If
-          you haven&apos;t already, create a Discord and/or Zoom to help you
-          participate.
-        </p>
-      </>
-    ),
+    answer: "You should bring a working device, charger, and create a Discord to get notifications.",
   },
   {
     question: 'Where will we submit?',
