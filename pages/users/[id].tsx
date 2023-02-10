@@ -2,12 +2,61 @@ import { ProtectedPage } from '@/components/Page';
 import QR from '@/components/QR';
 import { getAllUserIds } from '@/lib/getAllUserIds';
 import { getUserData } from '@/lib/getUserData';
+import axios from 'axios';
+import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
+import router from 'next/router';
+import toast from 'react-hot-toast';
 
 export default function Info({ userData }) {
+  const approveRejectUser = (email, firstName, approved, uid) => {
+    axios
+      .post('/api/applications/approve-user', {
+        email,
+        firstName,
+        approved,
+        uid,
+      })
+      .then(() => {
+        toast.success('Approved selected successfully!', {
+          id: 'approvedSelectedSuccess',
+        });
+        router.reload();
+      })
+      .catch(() => {
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'approvedSelectedError',
+        });
+      });
+  };
+
+  const checkInInperson = () => {
+    axios
+      .post('/api/users/in-person-check-in', { uid })
+      .then(() => {
+        toast.success('In-person check in successful!', {
+          id: 'approvedSelectedSuccess',
+        });
+        router.reload();
+      })
+      .catch(() => {
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'checkInInpersonError',
+        });
+      });
+  };
+
   const { data: session, status } = useSession();
   const json_obj = JSON.parse(userData);
-  const { uid, email, shirtSize, qualified,  ...other } = json_obj[0];
+  const {
+    uid,
+    email,
+    shirtSize,
+    qualified,
+    name,
+    MLHAcknowledgement,
+    ...other
+  } = json_obj[0];
 
   // {
   //   _id: new ObjectId("63e4b1f210e022bb585f31b3"),
@@ -48,15 +97,62 @@ export default function Info({ userData }) {
       {/* user can only see the QR code */}
       <QR />
 
+      {/* goodies picked up */}
       {/* only admins can see actions and additional info */}
       {status === 'authenticated' && session.user.admin && (
-        <div>
-          <p>{uid}</p>
+        <div className="flex flex-col justify-center items-center py-4">
+          {session.user.InPersonCheckIn ? (
+            <p className="text-green-400">Checked In!</p>
+          ) : (
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.995 }}
+              className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-blue-400 text-white cursor-pointer"
+              onClick={() => {
+                checkInInperson();
+              }}
+            >
+              Check-In {name.first}
+            </motion.button>
+          )}
+
           <p>{email}</p>
           <p>shirt size: {shirtSize}</p>
+          {MLHAcknowledgement ? (
+            <p>
+              MLHAcknowledgement: <span className="text-green-400">True</span>
+            </p>
+          ) : (
+            <p>
+              MLHAcknowledgement: <span className="text-red-400">False</span>
+            </p>
+          )}
           <p>qualified: {qualified == '' ? 'pending' : qualified}</p>
           {/* add button to check people in  */}
-          {/* add button to approve/disapprove people */}
+
+          {/* approve or reject user */}
+          <div className="flex flex-row space-x-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.995 }}
+              className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-green-400 text-white cursor-pointer"
+              onClick={() => {
+                approveRejectUser(email, name.first, true, uid);
+              }}
+            >
+              Approve Selected
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.995 }}
+              className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-red-400 text-white cursor-pointer"
+              onClick={() => {
+                approveRejectUser(email, name.first, false, uid);
+              }}
+            >
+              Reject Selected
+            </motion.button>
+          </div>
         </div>
       )}
     </ProtectedPage>
