@@ -1,5 +1,6 @@
 describe('Verify /apply is working', () => {
   it('check fields exist', () => {
+    cy.mockAPI();
     cy.login();
     cy.visit('/');
     cy.wait('@session');
@@ -8,6 +9,8 @@ describe('Verify /apply is working', () => {
     ['first_name', 'last_name', 'phone_number'].forEach((inputCategory) =>
       cy.get(`input[type=text][name=${inputCategory}]`).should('be.visible')
     );
+    cy.get('input[type=text][name=phone_number]').type('1231231234');
+    cy.get('input[type=date]').type('2000-02-22');
     // radio inputs
     Object.entries({
       'Food Preference': ['Meat', 'Vegetarian', 'Nut Allergy'],
@@ -15,16 +18,16 @@ describe('Verify /apply is working', () => {
       'First time hacker?': ['Yes', 'No'],
       'Are you participating in-person or online?': ['In-Person', 'Online'],
     }).forEach(([category, categoryValues]) =>
-      categoryValues.forEach((categoryValue) =>
-        cy
-          .get(`[id="${category}"]`)
+      categoryValues.forEach((categoryValue) => {
+        cy.get(`[id="${category}"]`)
           .contains(categoryValue)
-          .should('be.visible')
-      )
+          .should('be.visible');
+        cy.get(`[id="${category}"] > input[type=radio]`).first().click();
+      })
     );
     ['gender', 'ethnicity', 'school', 'major', 'grade'].forEach(
       (selectCategory) =>
-        cy.get(`select[name=${selectCategory}]`).should('be.visible')
+        cy.get(`select[name=${selectCategory}]`).first().select(1)
     );
     cy.get('input[type=date][name=grad_date]').should('be.visible');
     cy.get('input[type=file][name=resume]').should('be.visible');
@@ -36,6 +39,13 @@ describe('Verify /apply is working', () => {
     cy.get('select[name=school]')
       .select('York University')
       .should('have.value', 'York University');
+
+    cy.get('input[type=checkbox]').click({ multiple: true });
+    cy.intercept('POST', '/api/applications/create', {
+      statusCode: 201,
+    }).as('submit');
+    cy.get('button[type=submit]:contains("Submit")').click();
+    cy.wait('@submit');
   });
 });
 
