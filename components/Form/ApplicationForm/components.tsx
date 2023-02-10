@@ -1,6 +1,7 @@
 import { Session } from 'next-auth';
 import { UseFormRegister, FieldValues } from 'react-hook-form';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
+import { schools } from './schools';
 import {
   genders,
   ethnicities,
@@ -103,12 +104,12 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
 
 export const Education = ({ register, errors }: Props) => (
   <Group title="Education">
-    <Input
-      type="text"
+    <Select
       label="School"
       variable="school"
       register={register}
       errors={errors}
+      options={schools}
       required
     />
     <Select
