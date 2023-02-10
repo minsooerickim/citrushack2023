@@ -77,8 +77,8 @@ const faq = [
   },
   {
     question: 'Where is the event?',
-    answer: 
-      'The event will be in-person and will be located in Winston Chung Hall at the University of California, Riverside.',     
+    answer:
+      'The event will be in-person and will be located in Winston Chung Hall at the University of California, Riverside.',
   },
   {
     question: "What if I've never been to a hackathon before?",
@@ -87,7 +87,8 @@ const faq = [
   },
   {
     question: 'What will I need to participate?',
-    answer: "You should bring a working device, charger, and create a Discord to get notifications.",
+    answer:
+      'You should bring a working device, charger, and create a Discord to get notifications.',
   },
   {
     question: 'Where will we submit?',
