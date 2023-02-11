@@ -8,7 +8,6 @@ import {
   majors,
   grades,
   firstTimeHacker,
-  participation,
   foodPreference,
   shirtSize,
   MLH,
