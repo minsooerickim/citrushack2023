@@ -16,7 +16,6 @@ describe('Verify /apply is working', () => {
       'Food Preference': ['Meat', 'Vegetarian', 'Nut Allergy'],
       'T-Shirt Size': ['S', 'M', 'L', 'XL'],
       'First time hacker?': ['Yes', 'No'],
-      'Are you participating in-person or online?': ['In-Person', 'Online'],
     }).forEach(([category, categoryValues]) =>
       categoryValues.forEach((categoryValue) => {
         cy.get(`[id="${category}"]`)
