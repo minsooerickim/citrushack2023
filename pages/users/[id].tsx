@@ -134,13 +134,15 @@ export default function Info({ userData }) {
             </motion.button>
           )}
 
-          <p>{name.first}, {name.last}</p>
+          <p>
+            {name.first}, {name.last}
+          </p>
           <p>{email}</p>
           <div className="flex flex-col py-4 items-center">
             {pickedUpShirt ? (
               <p className="text-green-400">picked up</p>
-              ) : (
-                <div>
+            ) : (
+              <div>
                 <p className="text-red-400">not picked up</p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -149,7 +151,7 @@ export default function Info({ userData }) {
                   onClick={() => {
                     markTshirt();
                   }}
-                  >
+                >
                   Mark as Picked Up
                 </motion.button>
               </div>
@@ -157,18 +159,25 @@ export default function Info({ userData }) {
             <p>shirt size: {shirtSize}</p>
           </div>
 
-          <div className='pb-4'>
-          {MLHAcknowledgement ? (
-            <p>
-              MLHAcknowledgement: <span className="text-green-400">True</span>
-            </p>
-          ) : (
-            <p>
-              MLHAcknowledgement: <span className="text-red-400">False</span>
-            </p>
-          )}
+          <div className="pb-4">
+            {MLHAcknowledgement ? (
+              <p>
+                MLHAcknowledgement: <span className="text-green-400">True</span>
+              </p>
+            ) : (
+              <p>
+                MLHAcknowledgement: <span className="text-red-400">False</span>
+              </p>
+            )}
           </div>
-          <p className='pb-4'>qualified: {qualified == '' ? <span className="text-red-400">pending</span> : <span className="text-green-400">qualified</span>}</p>
+          <p className="pb-4">
+            qualified:{' '}
+            {qualified == '' ? (
+              <span className="text-red-400">pending</span>
+            ) : (
+              <span className="text-green-400">qualified</span>
+            )}
+          </p>
           {/* add button to check people in  */}
 
           {/* approve or reject user */}
