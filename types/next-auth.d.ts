@@ -18,6 +18,7 @@ declare module 'next-auth' {
       participation: string
       applied_after_limit: boolean
       InPersonCheckIn: boolean
+      pickedUpShirt: boolean
     }
   }
   interface User {
@@ -33,5 +34,6 @@ declare module 'next-auth' {
     participation: string
     applied_after_limit: boolean
     InPersonCheckIn: boolean
+    pickedUpShirt: boolean
   }
 }
