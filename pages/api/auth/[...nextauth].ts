@@ -37,6 +37,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         session.user.checkedIn = user.checkedIn;
         session.user.participation = user.participation;
         session.user.InPersonCheckIn = user.InPersonCheckIn;
+        session.user.pickedUpShirt = user.pickedUpShirt;
         return session;
       },
     },
