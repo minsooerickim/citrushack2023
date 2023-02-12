@@ -9,6 +9,20 @@ import router from 'next/router';
 import toast from 'react-hot-toast';
 
 export default function Info({ userData }) {
+  const { data: session, status } = useSession();
+  const json_obj = JSON.parse(userData);
+  const {
+    uid,
+    email,
+    shirtSize,
+    qualified,
+    name,
+    MLHAcknowledgement,
+    pickedUpShirt,
+    InPersonCheckIn,
+    // ...other
+  } = json_obj[0];
+
   const approveRejectUser = (email, firstName, approved, uid) => {
     axios
       .post('/api/applications/approve-user', {
@@ -46,17 +60,22 @@ export default function Info({ userData }) {
       });
   };
 
-  const { data: session, status } = useSession();
-  const json_obj = JSON.parse(userData);
-  const {
-    uid,
-    email,
-    shirtSize,
-    qualified,
-    name,
-    MLHAcknowledgement,
-    ...other
-  } = json_obj[0];
+  const markTshirt = () => {
+    axios
+      .post('/api/users/mark-tshirt-picked-up', { uid })
+      .then(() => {
+        console.log('hello inside');
+        toast.success('In-person check in successful!', {
+          id: 'markTshirtSuccess',
+        });
+        router.reload();
+      })
+      .catch(() => {
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'markTshirtError',
+        });
+      });
+  };
 
   // {
   //   _id: new ObjectId("63e4b1f210e022bb585f31b3"),
@@ -85,7 +104,6 @@ export default function Info({ userData }) {
   //   uid: '5ckOzWDbhHIKCMusBlqXS'
   // }
 
-  console.log(other);
   // console.log('hello' + JSON.parse(userData));
   return (
     // only admins and the user themselves can see this page
@@ -101,7 +119,7 @@ export default function Info({ userData }) {
       {/* only admins can see actions and additional info */}
       {status === 'authenticated' && session.user.admin && (
         <div className="flex flex-col justify-center items-center py-4">
-          {session.user.InPersonCheckIn ? (
+          {InPersonCheckIn ? (
             <p className="text-green-400">Checked In!</p>
           ) : (
             <motion.button
@@ -116,8 +134,30 @@ export default function Info({ userData }) {
             </motion.button>
           )}
 
+          <p>{name.first}, {name.last}</p>
           <p>{email}</p>
-          <p>shirt size: {shirtSize}</p>
+          <div className="flex flex-col py-4 items-center">
+            {pickedUpShirt ? (
+              <p className="text-green-400">picked up</p>
+              ) : (
+                <div>
+                <p className="text-red-400">not picked up</p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-slate-400 text-white cursor-pointer"
+                  onClick={() => {
+                    markTshirt();
+                  }}
+                  >
+                  Mark as Picked Up
+                </motion.button>
+              </div>
+            )}
+            <p>shirt size: {shirtSize}</p>
+          </div>
+
+          <div className='pb-4'>
           {MLHAcknowledgement ? (
             <p>
               MLHAcknowledgement: <span className="text-green-400">True</span>
@@ -127,7 +167,8 @@ export default function Info({ userData }) {
               MLHAcknowledgement: <span className="text-red-400">False</span>
             </p>
           )}
-          <p>qualified: {qualified == '' ? 'pending' : qualified}</p>
+          </div>
+          <p className='pb-4'>qualified: {qualified == '' ? <span className="text-red-400">pending</span> : <span className="text-green-400">qualified</span>}</p>
           {/* add button to check people in  */}
 
           {/* approve or reject user */}
@@ -162,7 +203,6 @@ export default function Info({ userData }) {
 export async function getStaticPaths() {
   // Return a list of possible value for id
   const paths = await getAllUserIds();
-  console.log(paths);
   return {
     paths,
     fallback: false,
