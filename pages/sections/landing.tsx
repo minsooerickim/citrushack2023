@@ -23,7 +23,9 @@ export default function Landing() {
 
   useEffect(() => {
     setMounted(true);
-    setUserDataLink('users/' + session.user.uid);
+    if (session) {
+      setUserDataLink('users/' + session.user.uid);
+    }
   }, [session]);
 
   if (!mounted) return null;
