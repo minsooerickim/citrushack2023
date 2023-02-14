@@ -15,12 +15,18 @@ export default function Landing() {
   const [mounted, setMounted] = useState(false);
   const { data: session, status } = useSession();
   const [signinModalOpen, setSigninModalOpen] = useState(false);
+  const [userDataLink, setUserDataLink] = useState('');
 
   const toggleSigninModal = () => {
     setSigninModalOpen(!signinModalOpen);
   };
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    if (session) {
+      setUserDataLink('users/' + session.user.uid);
+    }
+  }, [session]);
 
   if (!mounted) return null;
 
@@ -95,6 +101,9 @@ export default function Landing() {
                       label="Group Dashboard"
                       link="/group/dashboard"
                     />
+                  </span>
+                  <span className="flex justify-center w-full z-[200]">
+                    <ButtonLink secondary label="QR Code" link={userDataLink} />
                   </span>
                 </>
               )}
