@@ -3,7 +3,6 @@
 // import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
-import Image from 'next/image';
 // import Modal from '@/components/Modal'
 // import Landing from '@/pages/sections/live-landing';
 import Landing from '@/pages/sections/landing';
@@ -18,10 +17,7 @@ import Schedule from '@/pages/sections/schedule';
 export default function Home() {
   return (
     <Page>
-      <Element
-        name="Home"
-        className="flex justify-center w-full"
-      >
+      <Element name="Home" className="flex justify-center w-full">
         <span className="flex justify-center w-full">
           <Landing />
         </span>

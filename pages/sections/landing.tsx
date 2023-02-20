@@ -1,9 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Ellipse from '../../public/assets/Ellipse 9.png';
-import Skyline from '../../public/assets/Group 494.png';
-import Plane from '../../public/assets/Group 194.png';
 import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { CountdownWrapper } from '@/components/Countdown';
