@@ -18,78 +18,81 @@
   font-family: "BalooPaaji2Bold";
   src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Bold.ttf");
 } */
+
+/*
 @layer base {
   :root {
-    /* default light theme */
-    --overlay: #00000059;
-    --buttons: #F09372;
-    --primary: #FFD5C3;
-    --secondary: #DFDFDF;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
-    --text: #FFFFFF;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --wave-from: #65385D;
-    --wave-via: #FF8E6A;
-    --wave-to: #B56B83;
-    --via: #65385D;
-    --via2: #FF8E6A;
-    --to: #B56B83;
+    /* default light theme 
+    --overlay: #a3deff;
+    --buttons: #a3deff;
+    --primary: #a3deff;
+    --secondary: #dfdfdf;
+    --third: #b56b83;
+    --sub-secondary: #7a5770;
+    --highlight: #a3deff;
+    --card: #ab6f82;
+    --text: #ffffff;
+    --opposite: #ffffff;
+    --sub: #f6dd5a;
+    --from: #190e56;
+    --wave-from: #65385d;
+    --wave-via: #ff8e6a;
+    --wave-to: #b56b83;
+    --via: #65385d;
+    --via2: #ff8e6a;
+    --to: #b56b83;
     --transparent: #0000;
     --judge: #000000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
   [data-theme='light'] {
-    --buttons: #F09372;
+    --buttons: #a3deff;
     --overlay: #00000059;
-    --primary: #FFD5C3;
-    --secondary: #DFDFDF;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
+    --primary: #a3deff;
+    --secondary: #b1e3ff;
+    --third: #b56b83;
+    --sub-secondary: #7a5770;
+    --highlight: #a3deff;
+    --card: #ab6f82;
     --text: #000000;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --via: #B56B83;
-    --to: #FF8E6A;
+    --opposite: #ffffff;
+    --sub: #f6dd5a;
+    --from: #190e56;
+    --via: #b56b83;
+    --to: #ff8e6a;
     --transparent: #0000;
     --judge: #000000;
     --pattern: url('/assets/aboutUsStars.svg');
   }
 
   [data-theme='dark'] {
-    --buttons: #F09372;
+    --buttons: #f09372;
     --overlay: #00000080;
-    --primary: #110A36;
+    --primary: #110a36;
     --secondary: #353535;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
-    --text: #FFFFFF;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --via: #B56B83;
-    --to: #FF8E6A;
+    --third: #b56b83;
+    --sub-secondary: #7a5770;
+    --highlight: #f09372;
+    --card: #ab6f82;
+    --text: #ffffff;
+    --opposite: #ffffff;
+    --sub: #f6dd5a;
+    --from: #a3deff;
+    --via: #b56b83;
+    --to: #ff8e6a;
     --transparent: #0000;
-    --judge: #F6DD5A;
+    --judge: #f6dd5a;
     --pattern: url('/assets/aboutUsStars.svg');
   }
-}
+} */
 
 /* * {
   border: 2px solid greenyellow;
 } */
 
-html, body {
+html,
+body {
   width: 100% !important;
   background-color: var(--primary);
 }

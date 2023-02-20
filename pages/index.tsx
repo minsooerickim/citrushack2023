@@ -18,7 +18,7 @@ export default function Home() {
     <Page>
       <Element
         name="Home"
-        className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
+        className="flex justify-center w-full bg-citrus-sky "
       >
         <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
           <Landing />
@@ -26,7 +26,7 @@ export default function Home() {
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+        className="relative flex justify-center px-4 w-full bg-citrus-darksky from-accent-secondary to-accent"
       >
         <Schedule />
       </Element>
