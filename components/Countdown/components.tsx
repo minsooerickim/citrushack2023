@@ -35,7 +35,7 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
               </motion.div>
             ))}
           </div>
-          <p className="absolute top-9 xs:top-10 md:top-[3.25rem] text-base xs:text-lg sm:text-xl leading-3 font-semibold">
+          <p className="absolute top-9 xs:top-10 md:top-[3.5rem] text-base xs:text-lg sm:text-xl leading-3 font-semibold">
             {label}
           </p>
         </div>
@@ -68,6 +68,15 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 
     return (
       <div className="mb-10 flex flex-col justify-center items-center">
+        <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
+          CITRUS HACK 2023
+        </div>
+        <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal">
+          Reach your next destination
+        </div>
+        <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black ">
+          April 8-9, 2023
+        </div>
         <div
           className={
             'grid flex max-w-xl ' +
