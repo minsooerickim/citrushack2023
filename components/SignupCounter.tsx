@@ -1,6 +1,5 @@
 import useSWR, { useSWRConfig } from 'swr';
 import CountUp from 'react-countup';
-import { BiEdit } from 'react-icons/bi';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -25,9 +24,6 @@ export default function SignupCounter() {
   if (error || !data) {
     return (
       <div className="flex items-center gap-2">
-        {/* <div>
-          <BiEdit className="text-2xl xs:text-3xl" />
-        </div> */}
         <h4 className="text-sm sm:text-lg md:text-xl font-black">
           <span className="text-sm sm:text-lg md:text-xl font-black">
             {cachedCount ? (
@@ -47,9 +43,6 @@ export default function SignupCounter() {
   } else {
     return (
       <div className="flex items-center gap-2">
-        {/* <div>
-          <BiEdit className="text-2xl xs:text-3xl" />
-        </div> */}
         <h4 className="text-sm sm:text-lg md:text-xl font-black">
           <span className="text-sm sm:text-lg md:text-xl font-black">
             <CountUp

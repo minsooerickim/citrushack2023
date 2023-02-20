@@ -9,7 +9,8 @@ import { SigninForm } from '@/components/Form';
 import SignupCounter from '@/components/SignupCounter';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import LandingAsset from './landing_asset';
+import Image from 'next/image';
+import LandingAsset from '../../public/assets/landing.svg';
 
 export default function Landing() {
   const router = useRouter();
@@ -18,9 +19,9 @@ export default function Landing() {
   const [signinModalOpen, setSigninModalOpen] = useState(false);
   const [userDataLink, setUserDataLink] = useState('');
 
-  const toggleSigninModal = () => {
-    setSigninModalOpen(!signinModalOpen);
-  };
+  // const toggleSigninModal = () => {
+  //   setSigninModalOpen(!signinModalOpen);
+  // };
 
   useEffect(() => {
     setMounted(true);
@@ -34,8 +35,8 @@ export default function Landing() {
   return (
     <>
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[65rem] my-0 md:mb-20 gap-6">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[30%] md:top-[25%] lg:top-[15%] flex flex-col justify-center items-center z-14 px-4">
-          {/* <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[30%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4">
+          <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
             CITRUS HACK 2023
           </div>
           <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal">
@@ -43,8 +44,8 @@ export default function Landing() {
           </div>
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black ">
             April 8-9, 2023
-          </div> */}
-          <CountdownWrapper date="2023-04-02T16:00:00Z" />
+          </div>
+          <CountdownWrapper date="2023-04-02T16:00:00" />
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
           </p> */}
@@ -118,8 +119,8 @@ export default function Landing() {
               )}
           </div>
         </div>
-        <div className="">
-          <LandingAsset />
+        <div className="absolute z-0">
+          <Image src={LandingAsset} />
         </div>
       </section>
       <Modal

@@ -67,16 +67,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     const numSeconds = seconds < 10 ? String(`0${seconds}`) : String(seconds);
 
     return (
-      <div className="mb-10 flex flex-col justify-center items-center">
-        <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
-          CITRUS HACK 2023
-        </div>
-        <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal">
-          Reach your next destination
-        </div>
-        <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black ">
-          April 8-9, 2023
-        </div>
+      <div className="mb-8 md:mb-10 flex flex-col justify-center items-center">
         <div
           className={
             'grid flex max-w-xl ' +
