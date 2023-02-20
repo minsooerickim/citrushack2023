@@ -52,41 +52,53 @@ export default function Landing() {
           <span className="flex justify-center w-full mb-6">
             <SignupCounter />
           </span>
-          {/* {status === 'authenticated' &&
-              !session.user.uid &&
-              router.pathname !== '/apply' && (
-                <Link passHref href="/apply">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.995 }}
-                    className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
-                  >
-                    Apply Now!
-                  </motion.button>
-                </Link>
-              )}
-            {!session && (
-              <span className="flex justify-center w-full z-[200]">
+          {status === 'authenticated' &&
+            !session.user.uid &&
+            router.pathname !== '/apply' && (
+              <Link passHref href="/apply">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
                   className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
-                  onClick={() => toggleSigninModal()}
                 >
-                  Sign In
+                  Apply Now!
                 </motion.button>
-              </span>
-            )} */}
-          {/* <div className="flex flex-col w-full gap-3">
-              uncomment the day before
-              {status === 'authenticated' &&
-                session.user.uid &&
-                session.user.qualified === 'yeah' &&
-                !session.user.checkedIn && (
+              </Link>
+            )}
+          {!session && (
+            <span className="flex justify-center w-full z-[200]">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer"
+                onClick={() => toggleSigninModal()}
+              >
+                Sign In
+              </motion.button>
+            </span>
+          )}
+          <div className="flex flex-col w-full gap-3">
+            {/* uncomment the day before */}
+            {status === 'authenticated' &&
+              session.user.uid &&
+              session.user.qualified === 'yeah' &&
+              !session.user.checkedIn && (
+                <span className="flex justify-center w-full z-[200]">
+                  <ButtonLink primary label="Check-In Now!" link="/checkin" />
+                </span>
+              )}
+            {status === 'authenticated' &&
+              session.user.uid &&
+              session.user.qualified === 'yeah' && (
+                <>
                   <span className="flex justify-center w-full z-[200]">
-                    <ButtonLink primary label="Check-In Now!" link="/checkin" />
+                    <ButtonLink
+                      secondary
+                      label="Join Our Discord"
+                      link={process.env.discord}
+                      external
+                    />
                   </span>
-<<<<<<< Updated upstream
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
                       secondary
@@ -100,35 +112,10 @@ export default function Landing() {
                 </>
               )}
           </div>
-=======
-                )}
-              {status === 'authenticated' &&
-                session.user.uid &&
-                session.user.qualified === 'yeah' && (
-                  <>
-                    <span className="flex justify-center w-full z-[200]">
-                      <ButtonLink
-                        secondary
-                        label="Join Our Discord"
-                        link={process.env.discord}
-                        external
-                      />
-                    </span>
-                    <span className="flex justify-center w-full z-[200]">
-                      <ButtonLink
-                        secondary
-                        label="Group Dashboard"
-                        link="/group/dashboard"
-                      />
-                    </span>
-                  </>
-                )}
-            </div> */}
           {/* </div> */}
         </div>
         <div className="">
           <LandingAsset />
->>>>>>> Stashed changes
         </div>
       </section>
       <Modal
