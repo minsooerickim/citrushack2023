@@ -4,7 +4,6 @@
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
 // import Modal from '@/components/Modal'
-// import Landing from '@/pages/sections/live-landing';
 import Landing from '@/pages/sections/landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
@@ -17,14 +16,14 @@ import Schedule from '@/pages/sections/schedule';
 export default function Home() {
   return (
     <Page>
-      <Element name="Home" className="flex justify-center w-full">
+      <Element name="Home" className="flex justify-center w-full bg-citrus-sky">
         <span className="flex justify-center w-full">
           <Landing />
         </span>
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+        className="relative flex justify-center px-4 w-full bg-citrus-sky from-accent-secondary to-accent"
       >
         <Schedule />
       </Element>

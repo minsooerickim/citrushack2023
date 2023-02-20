@@ -42,7 +42,7 @@ export default function Landing() {
           <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal">
             Reach your next destination
           </div>
-          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black ">
+          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1">
             April 8-9, 2023
           </div>
           <CountdownWrapper date="2023-04-02T16:00:00" />
@@ -119,9 +119,9 @@ export default function Landing() {
               )}
           </div>
         </div>
-        <div className="absolute z-0">
-          <Image src={LandingAsset} />
-        </div>
+        {/* <div className="absolute z-0"> */}
+        <Image src={LandingAsset} />
+        {/* </div> */}
       </section>
       <Modal
         title="Sign In"
