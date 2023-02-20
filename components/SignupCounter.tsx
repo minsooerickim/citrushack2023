@@ -25,11 +25,11 @@ export default function SignupCounter() {
   if (error || !data) {
     return (
       <div className="flex items-center gap-2">
-        <div>
+        {/* <div>
           <BiEdit className="text-2xl xs:text-3xl" />
-        </div>
-        <h4 className="text-base xs:text-xl font-medium">
-          <span className="font-bold">
+        </div> */}
+        <h4 className="text-sm sm:text-lg md:text-xl font-black">
+          <span className="text-sm sm:text-lg md:text-xl font-black">
             {cachedCount ? (
               <CountUp
                 start={cachedCount.numUsers - 100}
@@ -40,25 +40,25 @@ export default function SignupCounter() {
               '...'
             )}
           </span>
-          &nbsp;hackers signed up so far!
+          &nbsp;hackers signed up!
         </h4>
       </div>
     );
   } else {
     return (
       <div className="flex items-center gap-2">
-        <div>
+        {/* <div>
           <BiEdit className="text-2xl xs:text-3xl" />
-        </div>
-        <h4 className="text-base xs:text-xl font-medium">
-          <span className="font-bold">
+        </div> */}
+        <h4 className="text-sm sm:text-lg md:text-xl font-black">
+          <span className="text-sm sm:text-lg md:text-xl font-black">
             <CountUp
               start={data.numUsers - 100}
               end={data.numUsers}
               duration={1.5}
             />
           </span>
-          &nbsp;hackers signed up so far!
+          &nbsp;hackers signed up!
         </h4>
       </div>
     );

@@ -3,7 +3,9 @@
 // import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
+import Image from 'next/image';
 // import Modal from '@/components/Modal'
+// import Landing from '@/pages/sections/live-landing';
 import Landing from '@/pages/sections/landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
@@ -18,9 +20,9 @@ export default function Home() {
     <Page>
       <Element
         name="Home"
-        className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
+        className="flex justify-center w-full"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+        <span className="flex justify-center w-full">
           <Landing />
         </span>
       </Element>
