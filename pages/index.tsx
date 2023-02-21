@@ -23,7 +23,7 @@ export default function Home() {
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-citrus-sky from-accent-secondary to-accent"
+        className="relative flex justify-center px-4 w-full bg-citrus-sky"
       >
         <Schedule />
       </Element>
