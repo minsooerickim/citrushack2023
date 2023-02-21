@@ -119,9 +119,7 @@ export default function Landing() {
               )}
           </div>
         </div>
-        {/* <div className="absolute z-0"> */}
-        <Image src={LandingAsset} />
-        {/* </div> */}
+        <Image src={LandingAsset} className="object-cover " />
       </section>
       <Modal
         title="Sign In"
