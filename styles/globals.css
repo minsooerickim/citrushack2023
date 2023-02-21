@@ -2,73 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
 @layer base {
   :root {
-    /* default light theme 
-    --overlay: #a3deff;
-    --buttons: #a3deff;
-    --primary: #a3deff;
-    --secondary: #dfdfdf;
-    --third: #b56b83;
-    --sub-secondary: #7a5770;
-    --highlight: #a3deff;
-    --card: #ab6f82;
-    --text: #ffffff;
-    --opposite: #ffffff;
-    --sub: #f6dd5a;
-    --from: #190e56;
-    --wave-from: #65385d;
-    --wave-via: #ff8e6a;
-    --wave-to: #b56b83;
-    --via: #65385d;
-    --via2: #ff8e6a;
-    --to: #b56b83;
-    --transparent: #0000;
-    --judge: #000000;
-    --pattern: url('/assets/aboutUsStars.svg');
+    /* default light theme */
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
   }
 
   [data-theme='light'] {
-    --buttons: #a3deff;
-    --overlay: #00000059;
-    --primary: #a3deff;
-    --secondary: #b1e3ff;
-    --third: #b56b83;
-    --sub-secondary: #7a5770;
-    --highlight: #a3deff;
-    --card: #ab6f82;
-    --text: #000000;
-    --opposite: #ffffff;
-    --sub: #f6dd5a;
-    --from: #190e56;
-    --via: #b56b83;
-    --to: #ff8e6a;
-    --transparent: #0000;
-    --judge: #000000;
-    --pattern: url('/assets/aboutUsStars.svg');
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
   }
 
   [data-theme='dark'] {
-    --buttons: #f09372;
-    --overlay: #00000080;
-    --primary: #110a36;
-    --secondary: #353535;
-    --third: #b56b83;
-    --sub-secondary: #7a5770;
-    --highlight: #f09372;
-    --card: #ab6f82;
-    --text: #ffffff;
-    --opposite: #ffffff;
-    --sub: #f6dd5a;
-    --from: #a3deff;
-    --via: #b56b83;
-    --to: #ff8e6a;
-    --transparent: #0000;
-    --judge: #f6dd5a;
-    --pattern: url('/assets/aboutUsStars.svg');
+    /* TODO: NEED TO CHANGE COLORS FOR DARK MODE (it is currently same as light mode) */
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
   }
-} */
+}
 
 /* * {
   border: 2px solid greenyellow;
