@@ -16,14 +16,14 @@ import Schedule from '@/pages/sections/schedule';
 export default function Home() {
   return (
     <Page>
-      <Element name="Home" className="flex justify-center w-full">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+      <Element name="Home" className="flex justify-center w-full bg-citrus-sky">
+        <span className="flex justify-center w-full">
           <Landing />
         </span>
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full from-accent-secondary to-accent"
+        className="relative flex justify-center px-4 w-full bg-citrus-sky"
       >
         <Schedule />
       </Element>

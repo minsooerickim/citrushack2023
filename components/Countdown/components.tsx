@@ -23,19 +23,19 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
     condition && (
       <>
         <div className="relative flex flex-col col-span-2 items-center text-sub-bright">
-          <div className="flex gap-0.5 xs:gap-1 sm:gap-2">
+          <div className="flex gap-0.5 xs:gap-1 sm:gap-2 ">
             {Array.from(num).map((n, idx) => (
               <motion.div
                 key={label + String(idx)}
                 variants={buttonVariants}
                 whileHover="hover"
-                className="flex justify-center items-center w-8 xs:w-11 sm:w-14 h-8 xs:h-11 sm:h-14 rounded bg-secondary shadow-md cursor-default"
+                className="flex justify-center items-center w-8 xs:w-10 md:w-14 h-8 xs:h-10 md:h-14 rounded bg-secondary shadow-md cursor-default"
               >
                 {n}
               </motion.div>
             ))}
           </div>
-          <p className="absolute top-8 xs:top-10 sm:top-[3.25rem] text-lg xs:text-xl leading-3 font-semibold">
+          <p className="absolute top-9 xs:top-10 md:top-[3.5rem] text-base xs:text-lg sm:text-xl leading-3 font-semibold">
             {label}
           </p>
         </div>
@@ -52,7 +52,6 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
 /** Content displayed after countdown finishes. */
 const Completionist = () => (
   <div className="mb-4">
-    <h3 className="mb-6 text-center font-bold">Grow your potential.</h3>
     <ButtonLink primary label="Live Page" link="/live" />
   </div>
 );
@@ -68,10 +67,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     const numSeconds = seconds < 10 ? String(`0${seconds}`) : String(seconds);
 
     return (
-      <div className="mb-10">
-        <h3 className="text-center sm:text-left font-bold">
-          Grow your potential in...
-        </h3>
+      <div className="mb-8 md:mb-10 flex flex-col justify-center items-center">
         <div
           className={
             'grid flex max-w-xl ' +
@@ -131,7 +127,7 @@ export function CountdownWrapper({ date }) {
   });
 
   return (
-    <h2 className="text-2xl xs:text-4xl sm:text-5xl">
+    <h2 className="text-2xl xs:text-4xl md:text-5xl">
       <Countdown date={date} renderer={renderer} />
     </h2>
   );
@@ -155,8 +151,8 @@ const hackingRenderer = ({ days, hours, minutes, seconds, completed }) => {
     const numSeconds = seconds < 10 ? String(`0${seconds}`) : String(seconds);
 
     return (
-      <div className="mb-10">
-        <h3 className="text-center sm:text-left font-bold">
+      <div className="mb-10 flex flex-col justify-center items-center ">
+        <h3 className="text-center sm:text-center font-bold">
           Hacking ends in...
         </h3>
         <div
