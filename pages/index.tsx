@@ -16,7 +16,7 @@ import Schedule from '@/pages/sections/schedule';
 export default function Home() {
   return (
     <Page>
-      <Element name="Home" className="flex justify-center w-full bg-citrus-sky">
+      <Element name="Home" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center w-full">
           <Landing />
         </span>
