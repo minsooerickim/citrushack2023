@@ -6,7 +6,6 @@ import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import { MLHBanner } from '@/components/MLHBanner';
 import { Session } from 'next-auth';
-import Nav from '@/components/Page/Nav';
 
 export default function App({
   Component,
@@ -18,7 +17,6 @@ export default function App({
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
         <MLHBanner />
-        <Nav />
         <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>
