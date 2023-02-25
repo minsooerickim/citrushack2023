@@ -16,14 +16,14 @@ import Schedule from '@/pages/sections/schedule';
 export default function Home() {
   return (
     <Page>
-      <Element name="Home" className="flex justify-center w-full bg-sky">
+      <Element name="Home" className="flex justify-center w-full bg-citrus-sky bg-clouds2 bg-repeat-x bg-contain">
         <span className="flex justify-center w-full">
           <Landing />
         </span>
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-citrus-sky"
+        className="relative flex justify-center px-4 w-full bg-citrus-sky bg-schedule bg-contain bg-repeat"
       >
         <Schedule />
       </Element>
@@ -31,12 +31,12 @@ export default function Home() {
         name="About"
         className="relative flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <About />
         </span>
       </Element>
       <Element name="Tracks" className="flex justify-center w-full bg-primary">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
         </span>
       </Element>
@@ -44,7 +44,7 @@ export default function Home() {
         name="Support"
         className="flex justify-center w-full bg-gradient-to-b from-accent to-card"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Support />
         </span>
       </Element>
@@ -55,7 +55,7 @@ export default function Home() {
         <Sponsors />
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-primary">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+        <span className="flex justify-center px-4 w-full">
           <Staff />
         </span>
       </Element>
