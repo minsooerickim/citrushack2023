@@ -21,6 +21,11 @@ module.exports = {
         textcolor: 'var(--textcolor)',
         button: 'var(--button)',
       },
+      backgroundImage: {
+        clouds: 'var(--clouds)',
+        clouds2: 'var(--clouds2)',
+        schedule: 'var(--schedule)',
+      },
     },
   },
   plugins: [],
