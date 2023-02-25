@@ -5,27 +5,55 @@
 @layer base {
   :root {
     /* default light theme */
-    --sky: #a3deff;
-    --bubble: #b1e3ff;
-    --trackoutline: #33719f;
-    --textcolor: #47455c;
-    --button: #313556;
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 
   [data-theme='light'] {
-    --sky: #a3deff;
-    --bubble: #b1e3ff;
-    --trackoutline: #33719f;
-    --textcolor: #47455c;
-    --button: #313556;
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 
   [data-theme='dark'] {
-    --sky: #2c314f;
-    --bubble: #373a5e;
-    --trackoutline: #a0d7ff;
-    --textcolor: #ffffff;
-    --button: #202439;
+    /* TODO: NEED TO CHANGE COLORS FOR DARK MODE (it is currently same as light mode) */
+    --sky: #A3DEFF;
+    --bubble: #B1E3FF;
+    --darkgreen: #2F5525;
+    --lightgreen: #69C063;
+    --brown: #71461F;
+    --gold: #EF9B1F;
+    --bluegray: #514F66;
+    --gray: #5F5F5F;
+    --white: #FFFFFF;
+    --darksky: #2C314F;
+    --darkbubble: #373A5E;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 }
 
