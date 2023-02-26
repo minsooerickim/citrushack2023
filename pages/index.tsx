@@ -25,26 +25,23 @@ export default function Home() {
         </span>
       </Element>
       <Element
-        name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-citrus-sky bg-schedule bg-contain bg-repeat"
-      >
-        <Schedule />
-      </Element>
-      <Element
-        name="About"
-        className="relative flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
-      >
-        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
-          <About />
-        </span>
-      </Element>
-      <Element
         name="Tracks"
         className="flex justify-center w-full bg-primary bg-clouds md:bg-contain"
       >
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
         </span>
+      </Element>
+      <Element name="About" className="flex justify-center w-full">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
+          <About />
+        </span>
+      </Element>
+      <Element
+        name="Schedule"
+        className="relative flex justify-center px-4 w-full bg-citrus-sky bg-schedule bg-contain bg-repeat"
+      >
+        <Schedule />
       </Element>
       <Element
         name="Support"
