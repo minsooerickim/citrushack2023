@@ -11,10 +11,10 @@ export default function Home() {
         <span className="pr-6">
           <Image src={logo} width={100} height={100} alt="" />
         </span>
-        
-        <div className='py-4'>
-        <h1 className='pb-2'>Citrus Hack 2023 Registration Countdown</h1>
-        <CountdownWrapper date="2023-04-02T16:00:00" />
+
+        <div className="py-4">
+          <h1 className="pb-2">Citrus Hack 2023 Registration Countdown</h1>
+          <CountdownWrapper date="2023-04-02T16:00:00" />
         </div>
 
         <p className=" text-black/[.5]">
