@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="py-4">
           <h1 className="pb-2">Citrus Hack 2023 Registration Countdown</h1>
-          <CountdownWrapper date="2023-04-02T16:00:00" />
+          <CountdownWrapper date="2023-04-03T01:00:00" />
         </div>
 
         <p className=" text-black/[.5]">
