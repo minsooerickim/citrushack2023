@@ -29,12 +29,12 @@ export default function Nav() {
       title: 'Home',
     },
     {
-      icon: <BiDirections />,
-      title: 'Tracks',
-    },
-    {
       icon: <BiInfoCircle />,
       title: 'About',
+    },
+    {
+      icon: <BiDirections />,
+      title: 'Tracks',
     },
     {
       icon: <BiCalendarEvent />,
