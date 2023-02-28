@@ -1,62 +1,80 @@
-import React, { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import React, { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
-  type: string
+  type: string;
   /** Path to sponsor logo (e.g. /assets/sponsors/google-cloud.svg). */
-  image: string
+  image: string;
   /** Width of sponsor logo. */
-  width: number
+  width: number;
   /** Height of sponsor logo. */
-  height: number
+  height: number;
   /** Link to sponsor website. */
-  link: string
+  link: string;
   /** Decides whether to shrink the sponsor logo if it appears larger than others in the same tier. */
-  shrink?: boolean
+  shrink?: boolean;
   /** Decides whether to shrink the sponsor logo even more if it still appears larger than others in the same tier. */
-  tall?: boolean
+  tall?: boolean;
 }
 
 /** Individual sponsor logo linked to sponsor website. */
-export const Sponsor = ({ type, image, width, height, link, shrink, tall }: SponsorProps) => (
+export const Sponsor = ({
+  type,
+  image,
+  width,
+  height,
+  link,
+  shrink,
+  tall,
+}: SponsorProps) => (
   <div
     className={
-      'flex items-center min-h-[10rem] '
-      + ( type === 'kumquat' ? 'w-32 md:w-36 ' + (shrink ? 'w-16 md:w-24' : '') + (tall ? 'w-12 md:w-20' : '')
-        : (
-        type === 'cutie' ? 'w-32 md:w-36 ' + (shrink ? 'w-16 md:w-24' : '') + (tall ? 'w-12 md:w-20' : '')
-        : (
-        type === 'tangerine' ? 'w-32 md:w-36 ' + (shrink ? 'w-24 md:w-28' : '') + (tall ? 'w-18 md:w-24' : '')
-        : (
-        type === 'orange' ? 'w-32 md:w-36 ' + (shrink ? 'w-[6.5rem] md:w-32' : '') + (tall ? 'w-18 md:w-20' : '')
-        : (
-        type === 'pomelo' ? 'w-40 md:w-48 ' + (shrink ? 'w-24 md:w-32' : '') + (tall ? 'w-20 md:w-28' : '')
-        : ''
-      )))))
+      'flex items-center min-h-[10rem] ' +
+      (type === 'kumquat'
+        ? 'w-32 md:w-36 ' +
+          (shrink ? 'w-16 md:w-24' : '') +
+          (tall ? 'w-12 md:w-20' : '')
+        : type === 'cutie'
+        ? 'w-32 md:w-36 ' +
+          (shrink ? 'w-16 md:w-24' : '') +
+          (tall ? 'w-12 md:w-20' : '')
+        : type === 'tangerine'
+        ? 'w-32 md:w-36 ' +
+          (shrink ? 'w-24 md:w-28' : '') +
+          (tall ? 'w-18 md:w-24' : '')
+        : type === 'orange'
+        ? 'w-32 md:w-36 ' +
+          (shrink ? 'w-[6.5rem] md:w-32' : '') +
+          (tall ? 'w-18 md:w-20' : '')
+        : type === 'pomelo'
+        ? 'w-40 md:w-48 ' +
+          (shrink ? 'w-24 md:w-32' : '') +
+          (tall ? 'w-20 md:w-28' : '')
+        : '')
     }
   >
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.995 }}
-      className='w-full transform-gpu'
+      className="w-full transform-gpu"
     >
-      <a target='_blank' rel='noreferrer noopener' href={link}>
+      <a target="_blank" rel="noreferrer noopener" href={link}>
         <Image
           src={image}
           width={width}
           height={height}
           quality={50}
           priority={Boolean(true)}
-          layout='responsive'
-          objectFit='contain'
+          layout="responsive"
+          objectFit="contain"
         />
       </a>
     </motion.div>
   </div>
-)
+);
 
 const tiers = [
   {
@@ -71,8 +89,8 @@ const tiers = [
         link: 'https://www.twilio.com/',
         shrink: null,
         tall: null,
-      }
-    ]
+      },
+    ],
   },
   {
     type: 'orange',
@@ -87,7 +105,7 @@ const tiers = [
         shrink: Boolean(true),
         tall: null,
       },
-    ]
+    ],
   },
   {
     type: 'tangerine',
@@ -111,7 +129,7 @@ const tiers = [
         shrink: Boolean(true),
         tall: null,
       },
-    ]
+    ],
   },
   {
     type: 'cutie',
@@ -207,53 +225,56 @@ const tiers = [
         shrink: Boolean(true),
         tall: null,
       },
-    ]
+    ],
   },
   {
     type: 'kumquat',
     wide: null,
-    sponsors: []
+    sponsors: [],
   },
-]
+];
 
 /** Grid of sponsors of all specified tiers. */
 export function SponsorsGrid() {
-  const [mounted, setMounted] = useState(false)
-  const { theme } = useTheme()
-  
-  useEffect(() => setMounted(true), [])
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
 
-  if (!mounted) return null
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
-    <div className='grid grid-cols-2 flex flex-col gap-6 mt-16'>
-      { tiers
+    <div className="grid grid-cols-2 flex flex-col gap-6 mt-16">
+      {tiers
         .filter(({ sponsors }) => sponsors.length > 0) // only map tiers with sponsors
-        .map(({ type, sponsors, wide }) =>
-        <div
-          key={type}
-          className={
-            'relative flex flex-wrap justify-center w-full gap-14 gap-y-6 p-10 rounded-md overflow-hidden '
-            + (wide ? 'col-span-2' : 'col-span-2 sm:col-span-1')
-          }
-        >
-          <h3 className='absolute top-0 left-4 flex w-[100rem] items-center transform font-black uppercase rotate-90 origin-left'>
-            {type}&nbsp;<span className='w-[100rem] border-text border-t-4'></span>
-          </h3>
-          { sponsors.map(({ image, imageDark, width, height, link, shrink, tall }) =>
-            <Sponsor
-              key={link}
-              type={type}
-              image={theme === 'light' ? image : imageDark}
-              width={width}
-              height={height}
-              link={link}
-              shrink={shrink}
-              tall={tall}
-            />
-          )}
-        </div>
-      )}
+        .map(({ type, sponsors, wide }) => (
+          <div
+            key={type}
+            className={
+              'relative flex flex-wrap justify-center w-full gap-14 gap-y-6 p-10 rounded-md overflow-hidden ' +
+              (wide ? 'col-span-2' : 'col-span-2 sm:col-span-1')
+            }
+          >
+            <h3 className="absolute top-0 left-4 flex w-[100rem] items-center transform font-black uppercase rotate-90 origin-left">
+              {type}&nbsp;
+              <span className="w-[100rem] border-text border-t-4"></span>
+            </h3>
+            {sponsors.map(
+              ({ image, imageDark, width, height, link, shrink, tall }) => (
+                <Sponsor
+                  key={link}
+                  type={type}
+                  image={theme === 'light' ? image : imageDark}
+                  width={width}
+                  height={height}
+                  link={link}
+                  shrink={shrink}
+                  tall={tall}
+                />
+              )
+            )}
+          </div>
+        ))}
     </div>
-  )
+  );
 }
