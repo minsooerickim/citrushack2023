@@ -49,6 +49,7 @@ def run_backup(mongo_uri: str, db_name: str, dropbox_file_path: str) -> None:
             file.write(']')
     tar_file = ('%s.tar.gz' % (directory)) 
     make_tarfile(tar_file,files_to_compress)
+
     local_file_pth = os.getcwd()+'/'+tar_file
     dropbox_upload_file(local_file_pth, dropbox_file_path)
 
@@ -83,6 +84,7 @@ def dropbox_connect() -> None:
 
     try:
         # dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
+        dbx = dropbox.Dropbox('sl.BaHUGtLGZ3T8XsDK2TNQcGBhx1pr3UVAwr_eNsUjmmfiMJ0N1nQRAW5otfQQK85aSrV1W58ltHty5xBOWQeCgOU2F0yJIeL77fEoG1_Rg0K4x5FMGpNaVGWPfBUav4R2m_doHGP8G5CS')
     except AuthError as e:
         print('Error connecting to Dropbox with access token: ' + str(e))
     return dbx
@@ -114,6 +116,10 @@ if __name__ == '__main__':
     Driver function.
     """
     mode = int(input('\nbackup for\n1.dev\n2.prod\n'))
+    
+    mongo_uri = 'mongodb+srv://minsooerickim:0aOvW6KR6Zy7HkIR@development.jek65.mongodb.net/?retryWrites=true&w=majority' if mode == 1 else 'mongodb+srv://minsooerickim:0aOvW6KR6Zy7HkIR@production.xirvdja.mongodb.net/?retryWrites=true&w=majority'
+    db_name = 'Development' if mode == 1 else 'Production'
+    dropbox_path = '/dev' if mode == 1 else '/prod'
 
     try:
         print('\n[-] starting backup')
