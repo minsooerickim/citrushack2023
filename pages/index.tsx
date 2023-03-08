@@ -16,7 +16,7 @@ export default function Home() {
             <CountdownWrapper date="2023-04-03T01:00:00" />
           </div>
 
-          <p className=" text-white/[.5] text-white text-sm md:text-lg">
+          <p className=" text-white/[.5] text-white text-sm md:text-lg font-Nunito">
             Feel free to email us at{' '}
             <ExternalLink
               name="citrushack@gmail.com"
