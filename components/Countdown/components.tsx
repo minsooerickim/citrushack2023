@@ -29,13 +29,13 @@ function TimeBlock({ condition, num, label, separator }: TimeBlockProps) {
                 key={label + String(idx)}
                 variants={buttonVariants}
                 whileHover="hover"
-                className="flex justify-center items-center w-8 xs:w-10 md:w-14 h-8 xs:h-10 md:h-14 rounded bg-bubble shadow-md cursor-default"
+                className="flex justify-center items-center w-8 xs:w-10 md:w-14 h-8 xs:h-10 md:h-14 rounded bg-darkbubble shadow-md cursor-default text-white"
               >
                 {n}
               </motion.div>
             ))}
           </div>
-          <p className="absolute top-9 xs:top-10 md:top-[3.5rem] text-base xs:text-lg sm:text-xl leading-3 font-semibold">
+          <p className="absolute top-9 xs:top-10 md:top-[3.5rem] text-base xs:text-lg sm:text-xl leading-3 font-semibold text-white">
             {label}
           </p>
         </div>
