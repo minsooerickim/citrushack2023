@@ -27,6 +27,9 @@ module.exports = {
         darksky: 'var(--darksky)',
         darkbubble: 'var(--darkbubble)',
       },
+      fontFamily: {
+        Nunito: ["Nunito", "Inter"],
+      },
     },
   },
   plugins: [],

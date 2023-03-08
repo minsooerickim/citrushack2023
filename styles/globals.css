@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +8,7 @@
 @layer base {
   :root {
     /* default light theme */
-    --sky: #A3DEFF;
+    --sky: #303230;
     --bubble: #B1E3FF;
     --darkgreen: #2F5525;
     --lightgreen: #69C063;
@@ -15,11 +18,11 @@
     --gray: #5F5F5F;
     --white: #FFFFFF;
     --darksky: #2C314F;
-    --darkbubble: #373A5E;
+    --darkbubble: #202439;
   }
 
   [data-theme='light'] {
-    --sky: #A3DEFF;
+    --sky: #303230;
     --bubble: #B1E3FF;
     --darkgreen: #2F5525;
     --lightgreen: #69C063;
@@ -29,12 +32,12 @@
     --gray: #5F5F5F;
     --white: #FFFFFF;
     --darksky: #2C314F;
-    --darkbubble: #373A5E;
+    --darkbubble: #202439;
   }
 
   [data-theme='dark'] {
     /* TODO: NEED TO CHANGE COLORS FOR DARK MODE (it is currently same as light mode) */
-    --sky: #A3DEFF;
+    --sky: #303230;
     --bubble: #B1E3FF;
     --darkgreen: #2F5525;
     --lightgreen: #69C063;
@@ -44,7 +47,7 @@
     --gray: #5F5F5F;
     --white: #FFFFFF;
     --darksky: #2C314F;
-    --darkbubble: #373A5E;
+    --darkbubble: #202439;
   }
 }
 
