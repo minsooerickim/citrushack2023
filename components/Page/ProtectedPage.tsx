@@ -12,10 +12,12 @@ interface Props {
   restrictions: string[];
   /** Title of the page displayed in the head tag. */
   title?: string;
+  /** uid of accessing user to ensure only self or admin can access the page */
+  uid?: string;
 }
 
 /** Page protected by specified criteria. */
-export function ProtectedPage({ title, restrictions, children }: Props) {
+export function ProtectedPage({ title, restrictions, uid, children }: Props) {
   const router = useRouter();
   const { data: session, status } = useSession();
 
@@ -49,6 +51,17 @@ export function ProtectedPage({ title, restrictions, children }: Props) {
       }
       if (restrictions.includes('checkedIn') && session.user.checkedIn) {
         // toast.error('Access denied. You already checked in!', {id: 'checkedInAlreadyRestriction'})
+        router.push('/');
+      }
+      // only the user themselves can access the user info page & admins
+      if (
+        restrictions.includes('self') &&
+        uid != session.user.uid &&
+        !session.user.admin
+      ) {
+        toast.error('Access denied. Unauthorized user.', {
+          id: 'selfRestriction',
+        });
         router.push('/');
       }
     }

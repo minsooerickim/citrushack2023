@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "yarn prettier --config .prettierrc.json  --write \"components/**/*.{js,jsx,ts,tsx}\" \"pages/**/*.{js,jsx,ts,tsx}\"",
+    "format": "yarn prettier --config .prettierrc.json  --write \"components/**/*.{js,jsx,ts,tsx}\" \"pages/**/*.{js,jsx,ts,tsx}\" \"cypress/e2e/**/*.{js,jsx,ts,tsx}\"",
     "cypress": "cypress open",
     "cypress:headless": "cypress run --record --key 58b2b54d-f417-471c-85bc-5563436c257f"
   },
@@ -27,6 +27,8 @@
     "file-saver": "^2.0.5",
     "firebase": "^9.9.1",
     "framer-motion": "^4.1.17",
+    "framer-motion-carousel": "^2.0.1",
+    "jszip": "^3.10.1",
     "lint-staged": "^13.0.3",
     "mongodb": "^4.8.0",
     "next": "^12.0.3",
@@ -36,16 +38,17 @@
     "postcss": "^8.4.19",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
+    "react-countdown": "^2.3.2",
+    "react-countup": "^6.1.1",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.19.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.6.0",
+    "react-qr-code": "^2.0.11",
     "react-scroll": "^1.8.8",
     "swr": "^1.0.1",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.4.4",
-    "react-countdown": "^2.3.2",
-    "react-countup": "^6.1.1"
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
     "@types/react": "18.0.1",

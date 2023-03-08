@@ -16,7 +16,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
       }),
     ],
     callbacks: {
-      async signIn({ user, account, profile}) {
+      async signIn({ user, account, profile }) {
         if (account.provider === 'google') {
           // first and last name attributes are available for GoogleProfile
           // -- https://github.com/nextauthjs/next-auth/blob/main/packages/next-auth/src/providers/google.ts
@@ -36,6 +36,8 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         session.user.admin = user.admin;
         session.user.checkedIn = user.checkedIn;
         session.user.participation = user.participation;
+        session.user.InPersonCheckIn = user.InPersonCheckIn;
+        session.user.pickedUpShirt = user.pickedUpShirt;
         return session;
       },
     },

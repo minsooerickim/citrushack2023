@@ -29,16 +29,16 @@ export default function Nav() {
       title: 'Home',
     },
     {
-      icon: <BiCalendarEvent />,
-      title: 'Schedule',
-    },
-    {
       icon: <BiInfoCircle />,
       title: 'About',
     },
     {
       icon: <BiDirections />,
       title: 'Tracks',
+    },
+    {
+      icon: <BiCalendarEvent />,
+      title: 'Schedule',
     },
     {
       icon: <BiDonateHeart />,
@@ -89,7 +89,7 @@ export default function Nav() {
       {/* desktop navbar */}
       <motion.div
         whileHover={{ width: 200 }}
-        className="z-[1000] fixed top-1/2 left-3 transform -translate-y-1/2 hidden xl:flex flex-col gap-2.5 w-14 p-2 rounded-md text-sub-bright bg-secondary shadow"
+        className="z-[1000] fixed top-1/2 left-3 transform -translate-y-1/2 hidden xl:flex flex-col gap-2.5 w-14 p-2 rounded-md text-sub-bright bg-red shadow"
       >
         <div className="self-center p-2 text-2xl">
           <BiMenu />
@@ -107,7 +107,7 @@ export default function Nav() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-text cursor-pointer"
+                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-darkRed hover:text-text cursor-pointer"
               >
                 <span className="text-2xl">{icon}</span>
                 <span>{title}</span>

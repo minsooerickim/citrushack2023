@@ -24,7 +24,7 @@ export function MLHBanner() {
       target="_blank"
     >
       <img
-        src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-black.svg"
+        src="https://citrushack2023.s3.us-west-1.amazonaws.com/mlh-trust-badge-2023-white.svg"
         alt="Major League Hacking 2022 Hackathon Season"
         className="w-full"
       />

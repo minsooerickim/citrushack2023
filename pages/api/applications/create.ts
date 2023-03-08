@@ -116,6 +116,7 @@ export default async function createApplication(
           admin: false,
           appliedAt: new Date(),
           applied_after_limit: applied_after_limit,
+          pickedUpShirt: false, // initally false; set to true after picking up a shirt in person
         },
       }
     );
