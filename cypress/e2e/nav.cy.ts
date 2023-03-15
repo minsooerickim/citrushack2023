@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 describe('Navigation', () => {
   it('should navigate back to the home page', () => {
     // cy.visit(Cypress.env('host') + '404', {failOnStatusCode: false})
@@ -6,7 +7,9 @@ describe('Navigation', () => {
       .its('status')
       .should('equal', 404);
     cy.contains('Go Back to Homepage').click();
-    cy.url().should('eq', Cypress.config().baseUrl);
+
+    var baseUrl = Cypress.config('baseUrl')
+    cy.url().should('eq', baseUrl);
   });
 });
 
