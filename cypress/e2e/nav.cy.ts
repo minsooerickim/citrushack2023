@@ -8,8 +8,8 @@ describe('Navigation', () => {
       .should('equal', 404);
     cy.contains('Go Back to Homepage').click();
 
-    var baseUrl = Cypress.config('baseUrl');
-    cy.url().should('eq', baseUrl);
+    var indexUrl = Cypress.config('baseUrl');
+    cy.url().should('eq', indexUrl);
   });
 });
 
