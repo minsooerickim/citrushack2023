@@ -4,7 +4,7 @@ describe('Performance', () => {
     cy.visit('/', {
       onBeforeLoad: (win) => {
         win.performance.mark('start-loading');
-      },
+      }
     })
       .its('performance')
       .then((performance) => {

@@ -18,7 +18,7 @@ export const SupportCard = ({
   title,
   description,
   buttonLabel,
-  buttonLink,
+  buttonLink
 }: Props) => (
   <motion.div
     whileHover={{ y: -8 }}

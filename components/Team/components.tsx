@@ -43,82 +43,82 @@ const directors = [
     link: 'https://www.linkedin.com/in/henry-zheng00/',
     image: '/leads/Henry.png',
     name: 'Henry Zheng',
-    role: 'Director',
+    role: 'Director'
   },
   {
     link: 'https://www.linkedin.com/in/mariam-golwalla-74930949/',
     image: '/leads/Mariam.png',
     name: 'Mariam Golwalla',
-    role: 'Director',
-  },
+    role: 'Director'
+  }
 ];
 const staff = [
   {
     link: 'https://www.linkedin.com/in/minsookime/',
     image: '/leads/minsookim.png',
     name: 'Minsoo Kim',
-    role: 'Lead Software Engineer',
+    role: 'Lead Software Engineer'
   },
   {
     link: 'https://www.linkedin.com/in/nathan-melwani/',
     image: '/leads/Nate.png',
     name: 'Nate Melwani',
-    role: 'Web Dev Lead',
+    role: 'Web Dev Lead'
   },
   {
     link: 'https://www.linkedin.com/in/ashley-h-pham',
     image: '/leads/Ash.png',
     name: 'Ashley Pham',
-    role: 'Operations Lead',
+    role: 'Operations Lead'
   },
   {
     link: 'https://www.linkedin.com/in/kanin-liang/',
     image: '/leads/Kanin.png',
     name: 'Kanin Liang',
-    role: 'Operations Lead',
+    role: 'Operations Lead'
   },
   {
     link: 'https://www.linkedin.com/in/prathmeshjain/',
     image: '/leads/Prathmesh.png',
     name: 'Prathmesh Jain',
-    role: 'Operations Lead',
+    role: 'Operations Lead'
   },
   {
     link: 'https://www.linkedin.com/in/jakin200/',
     image: '/leads/Jakin.png',
     name: 'Jakin Chan',
-    role: 'Operations Lead',
+    role: 'Operations Lead'
   },
   {
     link: 'https://www.linkedin.com/in/viviane-fernando-60282018b/',
     image: '/leads/Viviane_.png',
     name: 'Viviane Fernando',
-    role: 'Marketing Lead',
+    role: 'Marketing Lead'
   },
   {
     link: 'https://www.linkedin.com/in/sarahkim9/',
     image: '/leads/Sarah.png',
     name: 'Sarah Kim',
-    role: 'Marketing Lead',
+    role: 'Marketing Lead'
   },
   {
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
     image: '/leads/Gabs.png',
     name: 'Gabriela Alvarez',
-    role: 'Sponsorships Lead',
+    role: 'Sponsorships Lead'
   },
   {
     link: 'https://www.linkedin.com/in/alex-c-hsieh/',
     image: '/leads/Alex_.png',
     name: 'Alex Hsieh',
-    role: 'Sponsorships Lead',
+    role: 'Sponsorships Lead'
   },
   {
     link: 'https://www.linkedin.com/in/jonathanchon/',
     image: '/leads/Jon.png',
     name: 'Jonathan Chon',
-    role: 'UI/UX Lead',
-  },
+    role: 'UI/UX Lead'
+  }
 ];
 
 /** Grid of team lead profiles. */

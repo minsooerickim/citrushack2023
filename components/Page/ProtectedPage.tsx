@@ -35,14 +35,14 @@ export function ProtectedPage({ title, restrictions, uid, children }: Props) {
     if (status === 'unauthenticated') {
       if (restrictions.includes('signin')) {
         toast.error('Access denied. Please sign in first!', {
-          id: 'signinRestriction',
+          id: 'signinRestriction'
         });
         router.push('/');
       }
     } else if (status === 'authenticated') {
       if (restrictions.includes('admin') && !session.user.admin) {
         toast.error('Access denied. Unauthorized user.', {
-          id: 'adminRestriction',
+          id: 'adminRestriction'
         });
         router.push('/');
       }
@@ -55,7 +55,7 @@ export function ProtectedPage({ title, restrictions, uid, children }: Props) {
         session.user.qualified !== 'yeah'
       ) {
         toast.error('Access denied. Unauthorized user.', {
-          id: 'qualifiedRestriction',
+          id: 'qualifiedRestriction'
         });
         router.push('/');
       }
@@ -70,7 +70,7 @@ export function ProtectedPage({ title, restrictions, uid, children }: Props) {
         !session.user.admin
       ) {
         toast.error('Access denied. Unauthorized user.', {
-          id: 'selfRestriction',
+          id: 'selfRestriction'
         });
         router.push('/');
       }
@@ -81,7 +81,7 @@ export function ProtectedPage({ title, restrictions, uid, children }: Props) {
         !session.user.admin
       ) {
         toast.error('Access denied. Unauthorized user.', {
-          id: 'livePageRestriction',
+          id: 'livePageRestriction'
         });
         router.push('/');
       }

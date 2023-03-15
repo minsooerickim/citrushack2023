@@ -9,18 +9,18 @@ const SocialLinks = [
   {
     path: 'https://www.instagram.com/cutiehack_ucr/',
     title: 'Instagram',
-    image: <FaInstagram size="20"></FaInstagram>,
+    image: <FaInstagram size="20"></FaInstagram>
   },
   {
     path: 'https://www.linkedin.com/company/17907222/admin/',
     title: 'LinkedIn',
-    image: <FaLinkedin size="20"></FaLinkedin>,
+    image: <FaLinkedin size="20"></FaLinkedin>
   },
   {
     path: 'mailto:citrushack@gmail.com',
     title: 'Email',
-    image: <MdEmail size="20"></MdEmail>,
-  },
+    image: <MdEmail size="20"></MdEmail>
+  }
 ];
 
 export default function Footer() {

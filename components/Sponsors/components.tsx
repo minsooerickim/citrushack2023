@@ -28,7 +28,7 @@ export const Sponsor = ({
   height,
   link,
   shrink,
-  tall,
+  tall
 }: SponsorProps) => (
   <div
     className={
@@ -88,9 +88,9 @@ const tiers = [
         height: 60,
         link: 'https://www.twilio.com/',
         shrink: null,
-        tall: null,
-      },
-    ],
+        tall: null
+      }
+    ]
   },
   {
     type: 'orange',
@@ -103,9 +103,9 @@ const tiers = [
         height: 3757,
         link: 'https://www.spaceforce.mil/',
         shrink: Boolean(true),
-        tall: null,
-      },
-    ],
+        tall: null
+      }
+    ]
   },
   {
     type: 'tangerine',
@@ -118,7 +118,7 @@ const tiers = [
         height: 728,
         link: 'https://www.gcapucr.com/aboutgcap',
         shrink: null,
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/amazon-light.svg',
@@ -127,9 +127,9 @@ const tiers = [
         height: 2452,
         link: 'https://www.amazon.com/',
         shrink: Boolean(true),
-        tall: null,
-      },
-    ],
+        tall: null
+      }
+    ]
   },
   {
     type: 'cutie',
@@ -142,7 +142,7 @@ const tiers = [
         height: 154.34,
         link: 'https://www.wolframalpha.com/',
         shrink: null,
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/sketch-light.svg',
@@ -151,7 +151,7 @@ const tiers = [
         height: 1288,
         link: 'https://sketch.com/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/triad-light.svg',
@@ -160,7 +160,7 @@ const tiers = [
         height: 2701,
         link: 'https://www.triadmagnetics.com/',
         shrink: Boolean(true),
-        tall: Boolean(true),
+        tall: Boolean(true)
       },
       {
         image: '/assets/sponsors/vercel-light.svg',
@@ -169,7 +169,7 @@ const tiers = [
         height: 1000,
         link: 'https://vercel.com/?utm_source=citrushack&utm_campaign=oss',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/snapchat.svg',
@@ -178,7 +178,7 @@ const tiers = [
         height: 385.49,
         link: 'https://www.snapchat.com/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/interview-cake-light.svg',
@@ -187,7 +187,7 @@ const tiers = [
         height: 1850,
         link: 'https://www.interviewcake.com/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/google-cloud.svg',
@@ -196,7 +196,7 @@ const tiers = [
         height: 1833,
         link: 'https://cloud.google.com/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/digital-ocean-light.svg',
@@ -205,7 +205,7 @@ const tiers = [
         height: 176.5,
         link: 'https://www.digitalocean.com/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/acm-light.svg',
@@ -214,7 +214,7 @@ const tiers = [
         height: 910,
         link: 'https://acmucr.org/',
         shrink: Boolean(true),
-        tall: null,
+        tall: null
       },
       {
         image: '/assets/sponsors/ieee-light.svg',
@@ -223,15 +223,15 @@ const tiers = [
         height: 959,
         link: 'https://ieee.ucr.edu/',
         shrink: Boolean(true),
-        tall: null,
-      },
-    ],
+        tall: null
+      }
+    ]
   },
   {
     type: 'kumquat',
     wide: null,
-    sponsors: [],
-  },
+    sponsors: []
+  }
 ];
 
 /** Grid of sponsors of all specified tiers. */

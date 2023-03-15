@@ -15,7 +15,7 @@ import {
   BiMenu,
   BiX,
   BiAlarm,
-  BiReceipt,
+  BiReceipt
 } from 'react-icons/bi';
 import { ThemeButton } from '@/components/UserBar/ThemeButton';
 
@@ -26,62 +26,62 @@ export default function Nav() {
   const hometabs = [
     {
       icon: <BiHomeAlt />,
-      title: 'Home',
+      title: 'Home'
     },
     {
       icon: <BiInfoCircle />,
-      title: 'About',
+      title: 'About'
     },
     {
       icon: <BiDirections />,
-      title: 'Tracks',
+      title: 'Tracks'
     },
     {
       icon: <BiCalendarEvent />,
-      title: 'Schedule',
+      title: 'Schedule'
     },
     {
       icon: <BiDonateHeart />,
-      title: 'Support',
+      title: 'Support'
     },
     {
       icon: <BiDollarCircle />,
-      title: 'Sponsors',
+      title: 'Sponsors'
     },
     {
       icon: <BiGroup />,
-      title: 'Staff',
+      title: 'Staff'
     },
     {
       icon: <BiHelpCircle />,
-      title: 'FAQ',
-    },
+      title: 'FAQ'
+    }
   ];
   const livetabs = [
     {
       icon: <BiAlarm />,
-      title: 'Countdown',
+      title: 'Countdown'
     },
     {
       icon: <BiCalendarEvent />,
-      title: 'Schedule',
+      title: 'Schedule'
     },
     {
       icon: <BiReceipt />,
-      title: 'Judges',
+      title: 'Judges'
     },
     {
       icon: <BiDirections />,
-      title: 'Tracks',
+      title: 'Tracks'
     },
     {
       icon: <BiDollarCircle />,
-      title: 'Sponsors',
+      title: 'Sponsors'
     },
     {
       icon: <BiGroup />,
-      title: 'Staff',
-    },
+      title: 'Staff'
+    }
   ];
 
   return (
