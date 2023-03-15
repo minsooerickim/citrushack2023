@@ -8,9 +8,9 @@ describe('Navigation', () => {
       .should('equal', 404);
     cy.contains('Go Back to Homepage').click();
 
-    // TODO: cypress is actually so dumb; check out https://github.com/citrushack/citrushack2023/issues/76
-    // var baseUrl = Cypress.config('baseUrl');
-    // cy.url().should('eq', baseUrl);
+    // index/homepage is formatted with a trailing slash for some reason
+    var indexUrl = Cypress.config('baseUrl') + '/';
+    cy.url().should('eq', indexUrl);
   });
 });
 

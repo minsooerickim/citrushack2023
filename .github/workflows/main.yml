@@ -5,7 +5,7 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: install prettier
         run: yarn add prettier
       - name: Run prettier
