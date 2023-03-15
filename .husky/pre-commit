@@ -1,4 +1,17 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint-staged
+# branch naming pattern
+nyarn enforce-branch-name '(hotfix|bugfix|feature)/.+' --ignore '(dev|prod|coming-soon)'
+
+# eslint
+nyarn lint-staged
+
+# e2e testing
+nyarn precommit_cypress
+
+# prettier
+nyarn prettier_check
+
+# build (can add this in for THOROUGH check but vercel is better at this so I think we gud :))
+# nyarn build
