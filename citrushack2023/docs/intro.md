@@ -2,46 +2,63 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# CitrusHack 2023 Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## What is it?
 
-## Getting Started
+This web application is used to facilitate Citrus Hack 2023. 
 
-Get started by **creating a new site**.
+The application handles everything from registering users, gathering their information (email, school, resumes, etc.), schedules, judges, etc. (It pretty much handles every aspect of the hackathon 😲)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Pages
 
-### What you'll need
+For CitrusHack 2023, there are 3 pages put up for production
+- coming soon
+- pre-live event page
+- live page
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+The way I handled the above pages in GitHub are described furthur [here](./github)
 
-## Generate a new site
+## Timeline
 
-Generate a new Docusaurus site using the **classic template**.
+- Coming Soon
+  - Put it in production AS SOON AS POSSIBLE (I had mine up since the beginning of winter quarter)
 
-The classic template will automatically be added to your project after you run the command:
+- Pre-Event Page
+  - Usually in production a month before the day of the actual event
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- Live Page
+  - Can be in production before the day of the event BUT it should have restricted acess UNTIL the day of the event
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Version Control
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+In order to collaborate with other developers and have neat features like [CI/CD](./devops), we use GitHub and many of the features they provide like [Github Actions](https://github.com/features/actions)
 
-## Start your site
+## IDE
 
-Run the development server:
+I would personally prefer that all developers on this project use [VSCode](https://code.visualstudio.com/) so that I can actually help troubleshoot any bugs.
 
-```bash
-cd my-website
-npm run start
-```
+However, you can use any IDE you would like, if any.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Host
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+[Vercel](https://vercel.com/) is the tool I use deploy CitrusHack 2023. It integrates seemlessly with Next.js applications and is really easy to setup!
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Technologies
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
