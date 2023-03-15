@@ -4,14 +4,15 @@
 # branch naming pattern
 nyarn enforce-branch-name '(hotfix|bugfix|feature)/.+' --ignore '(dev|prod|coming-soon)'
 
+# prettier
+nyarn prettier_check
+
 # eslint
 nyarn lint-staged
 
-# e2e testing
+# e2e testing (run last since it takes the longest)
 nyarn precommit_cypress
 
-# prettier
-nyarn prettier_check
 
 # build (can add this in for THOROUGH check but vercel is better at this so I think we gud :))
 # nyarn build
