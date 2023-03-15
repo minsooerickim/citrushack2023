@@ -2,16 +2,16 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # branch naming pattern
-nyarn enforce-branch-name '(hotfix|bugfix|feature)/.+' --ignore '(dev|prod|coming-soon)'
+yarn enforce-branch-name '(hotfix|bugfix|feature)/.+' --ignore '(dev|prod|coming-soon)'
 
 # prettier
-nyarn prettier_check
+yarn prettier_check
 
 # eslint
-nyarn lint-staged
+yarn lint-staged
 
 # e2e testing (run last since it takes the longest)
-nyarn precommit_cypress
+yarn precommit_cypress
 
 
 # build (can add this in for THOROUGH check but vercel is better at this so I think we gud :))
