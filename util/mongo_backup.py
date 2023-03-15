@@ -1,3 +1,10 @@
+"""
+script to backup your mongoDB database.
+
+Note:
+    I have a cronjob setup on my own server to run this but you can also run it on GitHub if you'd like
+"""
+
 #!/usr/bin/python
 import os, datetime, tarfile, os.path
 from pymongo import MongoClient
