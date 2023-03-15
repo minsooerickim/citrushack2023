@@ -8,6 +8,7 @@ import { UserBar } from '@/components/UserBar';
 import { MLHBanner } from '@/components/MLHBanner';
 import { Session } from 'next-auth';
 import Nav from '@/components/Page/Nav';
+import { Toaster } from 'react-hot-toast';
 
 export default function App({
   Component,
@@ -22,6 +23,7 @@ export default function App({
         <Nav />
         <Component {...pageProps} />
         <UserBar />
+        <Toaster />
       </ThemeProvider>
     </SessionProvider>
   );
