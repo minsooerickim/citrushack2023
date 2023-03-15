@@ -1,5 +1,5 @@
 import { ProtectedPage } from '@/components/Page';
-import QR from '@/components/QR';
+import QR from '@/components/QRCode';
 import { getAllUserIds } from '@/lib/getAllUserIds';
 import { getUserData } from '@/lib/getUserData';
 import axios from 'axios';

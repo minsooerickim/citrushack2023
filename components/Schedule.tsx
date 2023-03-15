@@ -1,4 +1,4 @@
-import ExternalLink from '../ExternalLink';
+import ExternalLink from './ExternalLink';
 
 interface EventBlockProps {
   name: string;

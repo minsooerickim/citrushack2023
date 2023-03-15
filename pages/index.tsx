@@ -1,9 +1,5 @@
-// import { useState, useEffect } from 'react'
-// import Link from 'next/link'
-// import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
-// import Modal from '@/components/Modal'
 import Landing from '@/pages/sections/landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';

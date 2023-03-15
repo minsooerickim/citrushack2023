@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Countdown from 'react-countdown';
 import { motion } from 'framer-motion';
-import { ButtonLink } from '../ButtonLink';
+import { ButtonLink } from './ButtonLink';
 
 var buttonVariants = {};
 
