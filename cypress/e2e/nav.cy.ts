@@ -8,7 +8,8 @@ describe('Navigation', () => {
       .should('equal', 404);
     cy.contains('Go Back to Homepage').click();
 
-    var indexUrl = Cypress.config('baseUrl');
+    // index/homepage is formatted with a trailing slash for some reason
+    var indexUrl = Cypress.config('baseUrl') + '/';
     cy.url().should('eq', indexUrl);
   });
 });
