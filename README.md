@@ -4,14 +4,16 @@
 
 > Author: Minsoo Kim
 
-This is the codebase for Citrus Hack 2023. Below is a short project description and a guide for setting up a local environment to run the project locally for development purposes
+This is the codebase for Citrus Hack 2023. Below is a short project description and a guide for setting up a local environment to run the project locally for development purposes.
+
+👀 Documentation coming soon...
 
 ## Leads
 ### Minsoo Kim
 
 <img align="left" src="public/readme/minsoo.png" alt="image of Minsoo Kim" width="100" height="100">
 
-Hey I'm Minsoo! I'm a software engineer based in California. I like to weightlift or boulder after a long day of coding :) You can connect with me on [LinkedIn](https://www.linkedin.com/in/minsookime/) or my [Github](https://github.com/minsooerickim).
+Hey I'm Minsoo! I'm a software engineer based in California. I like to weightlift or climb after a long day of coding :) You can connect with me on [LinkedIn](https://www.linkedin.com/in/minsookime/) • [Website](https://minsoo.vercel.app/) • [E-mail](mailto:minsooerickim@gmail.com).
 
 <br/>
 
