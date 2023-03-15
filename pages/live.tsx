@@ -2,7 +2,7 @@
 // import Link from 'next/link'
 // import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
-import { Page } from '@/components/Page';
+import { ProtectedPage } from '@/components/Page';
 // import Modal from '@/components/Modal'
 import Landing from '@/pages/sections/live-landing';
 import About from '@/pages/sections/about';
@@ -15,7 +15,8 @@ import Schedule from '@/pages/sections/schedule';
 
 export default function Home() {
   return (
-    <Page title="Live Page">
+    // only availble on the day of event for signed-in users!
+    <ProtectedPage title="Live Page" restrictions={['live', 'signin']}>
       <Element
         name="Countdown"
         className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
@@ -68,6 +69,6 @@ export default function Home() {
       >
         <Faq />
       </Element>
-    </Page>
+    </ProtectedPage>
   );
 }

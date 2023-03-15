@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { toast } from 'react-hot-toast';
@@ -20,6 +20,16 @@ interface Props {
 export function ProtectedPage({ title, restrictions, uid, children }: Props) {
   const router = useRouter();
   const { data: session, status } = useSession();
+
+  const [targetDate, setTargetDate] = useState(new Date());
+  const [currDate, setCurrDate] = useState(new Date());
+  useEffect(() => {
+    // Get the current date
+    setCurrDate(new Date());
+
+    // Set the target date
+    setTargetDate(new Date('2023-04-29'));
+  }, []);
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -61,6 +71,17 @@ export function ProtectedPage({ title, restrictions, uid, children }: Props) {
       ) {
         toast.error('Access denied. Unauthorized user.', {
           id: 'selfRestriction',
+        });
+        router.push('/');
+      }
+      // only availble on the day of event for signed-in users only (except admins)
+      if (
+        restrictions.includes('live') &&
+        (uid != session.user.uid || currDate < targetDate) &&
+        !session.user.admin
+      ) {
+        toast.error('Access denied. Unauthorized user.', {
+          id: 'livePageRestriction',
         });
         router.push('/');
       }
