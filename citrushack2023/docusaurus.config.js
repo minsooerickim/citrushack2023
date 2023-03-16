@@ -12,7 +12,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://citrushack2023-three.vercel.app/',
+  url: 'https://citrushack.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -21,6 +21,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'citrushack', // Usually your GitHub org/user name.
   projectName: 'citrushack2023', // Usually your repo name.
+
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
