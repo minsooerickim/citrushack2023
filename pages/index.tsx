@@ -8,6 +8,7 @@ import Sponsors from '@/pages/sections/sponsors';
 import Staff from '@/pages/sections/staff';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       </Element>
       <Element
         name="Tracks"
-        className="flex justify-center w-full bg-primary bg-clouds md:bg-contain"
+        className="flex justify-center w-full bg-primary md:bg-contain"
       >
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
