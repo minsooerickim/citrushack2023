@@ -35,7 +35,7 @@ export default function Home() {
       </Element>
       <Element
         name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-citrus-sky bg-schedule bg-contain bg-repeat"
+        className="relative flex justify-center w-full bg-citrus-sky bg-contain"
       >
         <Schedule />
       </Element>
