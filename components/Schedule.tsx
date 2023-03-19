@@ -1,352 +1,607 @@
-import ExternalLink from './ExternalLink';
+import React from 'react';
+import Image from 'next/image';
+import dayOneFlag from '../public/assets/dayOneFlag.svg';
+import dayTwoFlag from '../public/assets/dayTwoFlag.svg';
+import reverseDayOneFlag from '../public/assets/reverseDayOneFlag.svg';
+import reverseDayTwoFlag from '../public/assets/reverseDayTwoFlag.svg';
+import balloonYellow from '../public/assets/balloonYellow.svg';
+import balloonRed from '../public/assets/balloonRed.svg';
+import balloonBlue from '../public/assets/balloonBlue.svg';
+import balloonOrange from '../public/assets/balloonOrange.svg';
+import balloonBlueTilt from '../public/assets/balloonBlueTilt.svg';
+import cloud from '../public/assets/cloud.svg';
+import { motion } from 'framer-motion';
 
-interface EventBlockProps {
-  name: string;
-  startTime: string;
-  endTime?: string;
-  hybrid?: boolean;
-  room?: string;
-  note?: string | React.ReactNode;
-}
+const eventDesktopDay1 = [
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Check-In',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Teambuilding Activity',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Unity',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to Discord Bot',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Git/Github',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to GUI Programming',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: ' ',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Resume Building',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Git/Github',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to GUI Programming',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: ' ',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Git/Github',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to GUI Programming',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Hacking Check-In',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Teambuilding Activity',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Unity',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to Discord Bot',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Intro to Git/Github',
+    rightPlace: 'WCH 205/205'
+  },
+  {
+    leftTime: '1pm - 2pm',
+    leftDescription: 'Intro to GUI Programming',
+    leftPlace: 'WCH 205/205',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    rightTime: '1pm - 2pm',
+    rightDescription: 'Resume Building',
+    rightPlace: 'WCH 205/205'
+  }
+];
 
-const EventBlock = ({
-  name,
-  startTime,
-  endTime,
-  hybrid,
-  room,
-  note
-}: EventBlockProps) => (
-  <div className="flex items-center bg-card p-3 rounded-md shadow-md text-left">
-    <div className="flex flex-col w-full max-w-[8.25rem] text-sub-bright font-medium">
-      <span>
-        {startTime} {endTime && <>- {endTime}</>}
-      </span>
-    </div>
-    <div>
-      <p className="m-0 text-base font-medium">{name}</p>
-      {hybrid && (
-        <div className="text-sm text-highlight font-medium italic">
-          Hybrid
-          <div>(In-Person @ {room})</div>
-        </div>
-      )}
-      {note && (
-        <div className="text-sm text-highlight font-medium italic">{note}</div>
-      )}
-    </div>
-  </div>
-);
+const eventsMobileDay1 = [
+  {
+    time: '1pm - 2pm',
+    description: 'Check-In',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Teambuilding Activity',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Intro to Unity',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Intro to Discord Bot',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to Git/Github',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to GUI Programming',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to UI/UX Design',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Resume Building',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm - 9pm',
+    description: 'Intro to UI/UX Design',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm-9pm',
+    description: 'Lunch Distribution',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm - 9pm',
+    description: 'Dinner Distribution',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Teambuilding Activity',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Intro to Unity',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '1pm - 2pm',
+    description: 'Intro to Discord Bot',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to Git/Github',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to GUI Programming',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Intro to UI/UX Design',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '3pm - 4pm',
+    description: 'Resume Building',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm - 9pm',
+    description: 'Intro to UI/UX Design',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm-9pm',
+    description: 'Lunch Distribution',
+    place: 'WCH 205/205'
+  },
+  {
+    time: '8pm - 9pm',
+    description: 'Dinner Distribution',
+    place: 'WCH 205/205'
+  }
+];
 
-interface EventStackProps {
-  title: string;
-  subtitle?: string;
-  events: EventBlockProps[];
-}
-
-const EventStack = ({ title, subtitle, events }: EventStackProps) => (
-  <div className="flex flex-col gap-3 w-full max-w-lg lg:max-w-md">
-    <div>
-      <h4 className="m-0 font-medium">{title}</h4>
-      {subtitle && <p>{subtitle}</p>}
-    </div>
-    {events.map(({ name, startTime, endTime, hybrid, room, note }) => (
-      <EventBlock
-        key={name}
-        name={name}
-        startTime={startTime}
-        endTime={endTime}
-        hybrid={hybrid}
-        room={room}
-        note={note}
-      />
-    ))}
-  </div>
-);
-
-interface Schedule {
-  event: EventBlockProps[];
-  workshops?: EventBlockProps[];
-  activities: EventBlockProps[];
-}
-
-interface ScheduleGridProps {
-  title: string;
-  schedule: Schedule;
-}
-
-function ScheduleGrid({ title, schedule }: ScheduleGridProps) {
-  const { event, workshops, activities } = schedule;
-
+export const EventMobile = ({ time, description, color, place }) => {
   return (
-    <div className="flex flex-col gap-2">
-      <h3 className="col-span-3 font-bold">{title}</h3>
-      <div className="flex flex-col justify-center items-center lg:items-baseline lg:flex-row gap-4">
-        <EventStack title="Event" subtitle={null} events={event} />
-        {workshops && (
-          <EventStack title="Workshops" subtitle={null} events={workshops} />
-        )}
-        <EventStack title="Activities" subtitle={null} events={activities} />
+    <>
+      <span
+        className={`rounded-full border-4 ${color} w-5 h-5 relative right-2`}
+      ></span>
+      <div className="flex">
+        <div className={`border-r-4 ${color}`}></div>
+        <div className="hidden xs:inline w-full relative bottom-[55%] pl-10 py-6 h-[90px] items-center justify-evenly">
+          <div className="flex">
+            <p className="text-xl text-left font-semibold w-full">
+              {description}
+            </p>
+            <div className="flex flex-col w-full">
+              <p className="text-base text-center font-semibold w-full text-brown">
+                {time}
+              </p>
+              <p className="text-base text-center font-medium w-full text-brown">
+                {place}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="xs:hidden relative bottom-[55%] pl-10 py-6 h-[90px] flex flex-col items-start">
+          <p className="text-xl text-left font-semibold">{description}</p>
+          <p className="text-md text-left text-brown">
+            {time} @ {place}
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const Mobile = () => {
+  return (
+    <div className="flex flex-col items-center justify-end w-full">
+      <div className="flex flex-col">
+        <div className="flex">
+          <div className="border-r-4 border-[#D56774]"></div>
+          <div className="w-56 relative pb-5 bottom-4">
+            <Image src={reverseDayOneFlag} alt="flag" />
+          </div>
+        </div>
+        {/* Mobile Day 1 */}
+        {eventsMobileDay1.map(({ time, description, place }) => (
+          <EventMobile
+            key={time}
+            time={time}
+            description={description}
+            place={place}
+            color="border-[#D56774]"
+          />
+        ))}
+        <span className="mr-1 self-start bg-gradient-to-b from-[#D56774] pb-14 to-[#E7AA36] pr-1 flex"></span>
+        <div className="flex">
+          <div className="border-r-4 border-[#E7AA36]"></div>
+          <div className="w-56 relative pb-5 bottom-4">
+            <Image src={reverseDayTwoFlag} alt="flag" />
+          </div>
+        </div>
+        {/* Mobile Day 2 */}
+        {eventsMobileDay1.map(({ time, description, place }) => (
+          <EventMobile
+            key={time}
+            time={time}
+            place={place}
+            description={description}
+            color="border-[#E7AA36]"
+          />
+        ))}
+        <span className="mr-1 self-start  bg-gradient-to-b from-[#E7AA36] pb-10 to-transparent pr-1 flex"></span>
       </div>
     </div>
   );
-}
-
-const saturdaySchedule = {
-  event: [
-    {
-      name: 'Check-In',
-      startTime: '7',
-      endTime: '8 AM',
-      hybrid: Boolean(true),
-      room: 'MSE 116'
-    },
-    {
-      name: 'Opening Ceremony',
-      startTime: '8',
-      endTime: '9 AM',
-      hybrid: Boolean(true),
-      room: 'MSE 116'
-    },
-    {
-      name: 'Hackathon Start',
-      startTime: '9 AM'
-    },
-    {
-      name: "Check-In (Cont'd)",
-      startTime: '9',
-      endTime: '10:30 AM',
-      hybrid: Boolean(true),
-      room: 'MSE 116'
-    },
-    {
-      name: 'Lunch',
-      startTime: '1 PM',
-      note: 'Distributed @ Bytes'
-    },
-    {
-      name: 'Dinner',
-      startTime: '6 PM',
-      note: 'Distributed @ Bytes'
-    }
-  ],
-  workshops: [
-    {
-      name: 'Teambuilding Activity',
-      startTime: '9:30',
-      endTime: '10 AM',
-      hybrid: Boolean(true),
-      room: 'WCH 202'
-    },
-    {
-      name: 'Intro to Git/GitHub',
-      startTime: '10',
-      endTime: '11 AM',
-      hybrid: Boolean(true),
-      room: 'Bourns A265'
-    },
-    {
-      name: 'Intro to Unity',
-      startTime: '11 AM',
-      endTime: '12 PM'
-    },
-    {
-      name: 'Intro to Discord Bots',
-      startTime: '11 AM',
-      endTime: '12 PM'
-    },
-    {
-      name: 'Intro to UI/UX',
-      startTime: '11 AM',
-      endTime: '12 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A125'
-    },
-    {
-      name: 'Intro to iOS Development',
-      startTime: '12',
-      endTime: '1 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A265'
-    },
-    {
-      name: 'Intro to CTF',
-      startTime: '12',
-      endTime: '1 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A125'
-    },
-    {
-      name: "Snapchat's Workshop - Augmented Reality",
-      startTime: '2',
-      endTime: '3 PM'
-    },
-    {
-      name: 'Intro to Next.JS',
-      startTime: '2',
-      endTime: '3 PM'
-    },
-    {
-      name: "Amazon's Workshop - Diversity in Tech: Latinx at Amazon",
-      startTime: '3',
-      endTime: '4 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A625'
-    },
-    {
-      name: 'Hacking Your Resume',
-      startTime: '4',
-      endTime: '5 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A265'
-    },
-    {
-      name: 'Intro to VR',
-      startTime: '4',
-      endTime: '5 PM'
-    },
-    {
-      name: "What They Don't Tell You About Tech Interviews",
-      startTime: '5',
-      endTime: '6 PM'
-    },
-    {
-      name: 'Python: Data Science Emojis',
-      startTime: '5',
-      endTime: '6 PM',
-      hybrid: Boolean(true),
-      room: 'Bourns A265'
-    },
-    {
-      name: 'Unity Particle Systems',
-      startTime: '7',
-      endTime: '8 PM'
-    }
-  ],
-  activities: [
-    {
-      name: 'CTF',
-      startTime: '12 PM',
-      endTime: '12 AM',
-      note: (
-        <>
-          <ExternalLink
-            name="Via Cyber@UCR Website"
-            link="https://ctf.ucrcyber.org/"
-          />
-        </>
-      )
-    },
-    {
-      name: 'CSSBattle',
-      startTime: '12:30',
-      endTime: '1 PM'
-    },
-    {
-      name: 'Raffle',
-      startTime: '1',
-      endTime: '9 PM'
-    },
-    {
-      name: 'Typeracer Tournament',
-      startTime: '2',
-      endTime: '3 PM',
-      hybrid: Boolean(true),
-      room: 'WCH 202'
-    },
-    {
-      name: 'Therapy Fluffies',
-      startTime: '3',
-      endTime: '4 PM',
-      note: 'In-Person @ Grass Field in Front of MSE/WCH'
-    },
-    {
-      name: 'Trivia Kahoot',
-      startTime: '4',
-      endTime: '4:30 PM',
-      hybrid: Boolean(true),
-      room: 'WCH 202'
-    },
-    {
-      name: 'Painting With Bob Ross w/ MLH',
-      startTime: '5',
-      endTime: '5:30 PM'
-    },
-    {
-      name: 'Improv Slides',
-      startTime: '6:30',
-      endTime: '7 PM',
-      note: 'In-Person @ WCH 202'
-    },
-    {
-      name: 'Norm the Navel Photo Op',
-      startTime: '8',
-      endTime: '9 PM',
-      note: 'In-Person @ Bytes'
-    },
-    {
-      name: 'Gartic Phone',
-      startTime: '11 PM',
-      endTime: '12 AM',
-      note: 'In-Person @ WCH 202'
-    },
-    {
-      name: 'Community Hacking',
-      startTime: '12',
-      endTime: '1 AM',
-      note: 'In-Person @ WCH 202'
-    },
-    {
-      name: 'Jackbox',
-      startTime: '1',
-      endTime: '2 AM',
-      note: 'In-Person @ WCH 202'
-    }
-  ]
 };
 
-const sundaySchedule = {
-  event: [
-    {
-      name: 'Red Bull Giveaway',
-      startTime: '8 AM',
-      endTime: '1 PM',
-      note: 'In-Person @ WCH 205/206'
-    },
-    {
-      name: 'Hackathon End',
-      startTime: '9 AM'
-    },
-    {
-      name: 'Breakfast',
-      startTime: '9 AM',
-      note: 'Distributed @ Bytes'
-    },
-    {
-      name: 'Judging',
-      startTime: '11 AM',
-      endTime: '1:30 PM'
-    },
-    {
-      name: 'Closing Ceremony',
-      startTime: '3',
-      endTime: '4 PM',
-      hybrid: Boolean(true),
-      room: 'MSE 116'
-    }
-  ],
-  activities: [
-    {
-      name: 'Creative Building on Minecraft',
-      startTime: '9',
-      endTime: '10 AM'
-    }
-  ]
+export const EventDesktop = ({
+  leftTime,
+  leftDescription,
+  leftPlace,
+  rightTime,
+  rightDescription,
+  rightPlace,
+  borderColor
+}) => {
+  return (
+    <>
+      <span
+        className={`mr-1 rounded-full border-4 ${borderColor} w-5 h-8 flex justify-center items-center`}
+      ></span>
+
+      {/* flag left side */}
+      <div className="flex">
+        <div
+          className={`w-56 h-24 border-r-4 ${borderColor} pr-8 flex flex-col items-end`}
+        >
+          {leftTime === '' ? (
+            ''
+          ) : (
+            <div className="relative bottom-7">
+              <p className="text-xl text-right font-semibold w-full">
+                {leftDescription}
+              </p>
+              <p className="text-base text-right text-brown w-full">
+                {leftTime} @ {leftPlace}
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* flag right side */}
+        <div className="w-56 h-24 pl-8 flex flex-col items-start">
+          {rightTime === '' ? (
+            ''
+          ) : (
+            <div className="relative bottom-7">
+              <p className="text-xl text-left font-semibold w-full">
+                {rightDescription}
+              </p>
+              <p className="text-base text-left text-brown w-full">
+                {rightTime} @ {rightPlace}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
 };
 
-export const MasterSchedule = () => (
-  <div className="flex flex-col gap-6 w-full text-center">
-    <ScheduleGrid title="Saturday, April 2" schedule={saturdaySchedule} />
-    <ScheduleGrid title="Sunday, April 3" schedule={sundaySchedule} />
-  </div>
-);
+export const DesktopShedule = ({ image, borderColor, fromColor, day }) => {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="w-full flex justify-start">
+        <div
+          className={`relative w-1/2 mb-0 flex flex-col items-start justify-end border-r-4 ${borderColor}`}
+        >
+          <div className="relative pb-5 bottom-4">
+            <Image src={image} alt="flag" />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center w-5/6 ">
+        {day.map(
+          ({
+            leftTime,
+            leftDescription,
+            leftPlace,
+            rightTime,
+            rightDescription,
+            rightPlace
+          }) => (
+            <EventDesktop
+              key={leftTime}
+              leftTime={leftTime}
+              leftDescription={leftDescription}
+              leftPlace={leftPlace}
+              rightTime={rightTime}
+              rightDescription={rightDescription}
+              rightPlace={rightPlace}
+              borderColor={borderColor}
+            />
+          )
+        )}
+        <span
+          className={`mr-1 rounded-full border-4 ${borderColor} w-5 h-8 flex justify-center items-center`}
+        ></span>
+        <span
+          className={`mr-1 h-[20%] bg-gradient-to-b ${fromColor} pb-10 pr-1 flex`}
+        ></span>
+      </div>
+    </div>
+  );
+};
+
+export const Desktop = () => {
+  return (
+    <>
+      <div className="flex w-full justify-between">
+        <DesktopShedule
+          image={dayOneFlag}
+          day={eventDesktopDay1}
+          borderColor="border-red"
+          fromColor="from-red"
+        />
+        <DesktopShedule
+          image={dayTwoFlag}
+          day={eventDesktopDay1}
+          borderColor="border-gold"
+          fromColor="from-gold"
+        />
+      </div>
+    </>
+  );
+};
+
+export const Assets = () => {
+  return (
+    <>
+      {/* yellow balloon top left */}{' '}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute  -z-1 w-1/12 left-0 sm:left-10 md:-left-0 xl:-left-48 top-96 sm:top-28"
+      >
+        <Image src={balloonYellow} alt="balloon" />
+      </motion.div>
+      {/* red balloon bottom left */}
+      <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute -z-1 w-1/12 right-14 sm:left-10 md:-left-0 xl:-left-28 bottom-[25.5%] sm:bottom-24"
+      >
+        <Image src={balloonRed} alt="balloon" />
+      </motion.div>
+      {/* blue balloon middle */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute -z-1 w-1/12 left-28 sm:left-10 lg:left-[45%] top-[49%]"
+      >
+        <Image src={balloonBlueTilt} alt="balloon" />
+      </motion.div>
+      {/* orange balloon top right */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute -z-1 w-1/12 right-0 sm:right-10 lg:right-0 top-0"
+      >
+        <Image src={balloonOrange} alt="balloon" />
+      </motion.div>
+      {/* blue balloon bottom right */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute -z-1 w-12 right-0 sm:right-10 lg:right-0 bottom-0"
+      >
+        <Image src={balloonBlue} alt="balloon" />
+      </motion.div>
+      {/* Yellow balloon middle right */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute -z-1 w-[5%] right-0 sm:right-0 md:right-10 xl:-right-16 top-[35%] lg:top-[40%]"
+      >
+        <Image src={balloonYellow} alt="balloon" />
+      </motion.div>
+      {/* cloud top right */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute -z-12 w-20 xs:w-36 right-10 sm:right-0 md:right-10 xl:-right-16 top-[49%] lg:top-[17%]"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud middle*/}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute -z-12 w-12 xs:w-16 md:w-32 right-20 sm:right-0 md:right-10 xl:-right-16 top-[23.5%] md:top-[20%] lg:top-[68.5%]"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud bottom right */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute -z-12 w-8 xs:w-20 right-0 sm:right-0 md:right-10 xl:-right-16 bottom-[21%] xs:bottom-[16.5%] lg:bottom-36"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top left */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute -z-12 w-12 xs:w-1/12 right-8 xs:left-0 xl:-left-28 top-40 sm:top-[24%]"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud bottom left */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-10 xl:-left-36 top-[65%] sm:top-[61%]"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+    </>
+  );
+};
+
+export const MasterSchedule = () => {
+  return (
+    <div className="relative flex w-full my-10 px-10">
+      <div className="w-full flex lg:hidden justify-center">
+        <Mobile />
+      </div>
+      <div className="hidden lg:inline w-full">
+        <Desktop />
+      </div>
+      <Assets />
+    </div>
+  );
+};
