@@ -10,8 +10,7 @@ describe('Performance', () => {
       .then((performance) => {
         // add separate assertions for every big asset we add in
         cy.get('[alt="skyline"]').should('be.visible');
-        cy.get('[alt="Postcard"]').should('be.visible');
-        cy.get('[alt="Suitcases"]').should('be.visible');
+        cy.get('[alt="AboutUs"]').should('be.visible');
         cy.url()
           .should('include', '/')
           .then(() => performance.mark('end-loading'))
