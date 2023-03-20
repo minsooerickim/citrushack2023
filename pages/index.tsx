@@ -15,7 +15,7 @@ export default function Home() {
     <Page>
       <Element
         name="Home"
-        className="flex justify-center w-full bg-citrus-sky bg-clouds2 bg-repeat-x bg-contain"
+        className="flex justify-center w-full bg-citrus-sky bg-contain"
       >
         <span className="flex justify-center w-full">
           <Landing />

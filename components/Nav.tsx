@@ -157,7 +157,7 @@ export default function Nav() {
       <div className="z-[1000] fixed top-3 -left-1 xl:hidden px-4">
         <div
           className={
-            'flex flex-col gap-1.5 rounded-md bg-secondary shadow overflow-hidden transform-gpu transition-size duration-200 ' +
+            'flex flex-col gap-1.5 rounded-md bg-secondary shadow overflow-hidden transform-gpu transition-size duration-200' +
             (navOpen ? 'p-2 ' : 'w-11 h-11 ') +
             (navOpen &&
               (router.pathname === '/'
@@ -169,7 +169,7 @@ export default function Nav() {
         >
           <div className="flex w-full justify-between">
             <span
-              className="flex items-center p-2.5 text-lg rounded-md hover:bg-buttons cursor-pointer"
+              className="flex items-center p-2.5 text-lg rounded-md hover:bg-buttons cursor-pointer bg-red"
               onClick={() => setNavOpen(!navOpen)}
             >
               {navOpen ? (

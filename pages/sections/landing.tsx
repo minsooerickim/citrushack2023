@@ -10,7 +10,173 @@ import SignupCounter from '@/components/SignupCounter';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Skyline from '../../public/assets/landing.svg';
+import Skyline from '../../public/assets/skyline.svg';
+import cloud from '../../public/assets/cloud.svg';
+import airplane from '../../public/assets/airplane.svg';
+
+export const Assets = () => {
+  return (
+    <>
+      {/* cloud  left low opacity*/}
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute md:bottom-[50%] w-14 xs:w-20 lg:w-52 opacity-60"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud  left */}
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute md:bottom-[51%] w-14 xs:w-20 lg:w-52 opacity-60"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud right low opacity*/}
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-2 md:bottom-[50%] w-14 xs:w-52 lg:w-32"
+      >
+        <Image src={cloud} alt="balloon" />
+      </motion.div>
+      {/* cloud right */}
+      <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-0 md:bottom-[50%] w-14 xs:w-52 lg:w-40 opacity-60"
+      >
+        <Image src={cloud} alt="balloon" />
+      </motion.div>
+      {/* cloud top middle */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-1/2 md:top-5 w-14 xs:w-52 lg:w-40"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top middle low opacity */}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute left-1/2 md:top-5 w-14 xs:w-56 lg:w-56 opacity-60"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top left low opacity*/}
+      <motion.div
+        animate={{ y: [0, -15, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 3
+        }}
+        className="absolute left-1/4 md:top-5 w-14 xs:w-52 lg:w-40 opacity-60"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top left low opacity*/}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-1/4 md:top-4 w-14 xs:w-52 lg:w-64"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top top left */}
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-[10%] md:top-[20%] w-14 xs:w-52 lg:w-96"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top top left opacity low*/}
+      <motion.div
+        animate={{ y: [0, -15, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-[7%] md:top-[20%] w-14 xs:w-52 lg:w-56 opacity-70"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top top right */}
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-0 md:top-0 w-14 xs:w-52 lg:w-96"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top top right opacity low*/}
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-0 md:top-0 w-14 xs:w-52 lg:w-56 opacity-75"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* cloud top left left opacity low*/}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-10 md:top-0 w-14 xs:w-52 lg:w-40 opacity-60"
+      >
+        <Image src={cloud} alt="cloud" />
+      </motion.div>
+      {/* plane*/}
+      <motion.div
+        animate={{ x: [50, -1000, 50], y: [50, -300, 50] }}
+        //     x: 140,
+        // y: 150,
+        // animate={{ x: [0, -50, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute right-[10%] top-1/4 w-14 xs:w-52 lg:w-[300px]"
+      >
+        <Image src={airplane} alt="airplane" />
+      </motion.div>
+    </>
+  );
+};
 
 export default function Landing() {
   const router = useRouter();
@@ -119,7 +285,12 @@ export default function Landing() {
               )}
           </div>
         </div>
-        <Image src={Skyline} alt="skyline" className="object-cover " />
+        <Assets />
+        <Image
+          src={Skyline}
+          alt="skyline"
+          className="absolute object-cover z-1"
+        />
       </section>
       <Modal
         title="Sign In"
