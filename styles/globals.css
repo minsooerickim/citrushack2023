@@ -50,7 +50,7 @@ body {
 
   [data-theme='dark'] {
     /* TODO: NEED TO CHANGE COLORS FOR DARK MODE (it is currently same as light mode) */
-    --sky: #a3deff;
+    --sky: #2C314F;
     --bubble: #b1e3ff;
     --darkgreen: #2f5525;
     --lightgreen: #69c063;
