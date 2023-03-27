@@ -13,6 +13,7 @@ import Image from 'next/image';
 import Skyline from '../../public/assets/skyline.svg';
 import cloud from '../../public/assets/cloud.svg';
 import airplane from '../../public/assets/airplane.svg';
+import bird from '../../public/assets/bird.svg';
 
 export const Assets = () => {
   return (
@@ -24,7 +25,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute md:bottom-[50%] w-14 xs:w-20 lg:w-52 opacity-60"
+        className="absolute left-2 bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36 opacity-60"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
@@ -35,7 +36,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute md:bottom-[51%] w-14 xs:w-20 lg:w-52 opacity-60"
+        className="absolute bottom-[19%] xs:bottom-[25%] lg:bottom-[37%]  xl:bottom-[50%] w-20 xs:w-28 sm:w-36 opacity-60"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
@@ -46,7 +47,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-2 md:bottom-[50%] w-14 xs:w-52 lg:w-32"
+        className="absolute right-5  bottom-[21%] xs:bottom-[31%]  lg:bottom-[37%] xl:bottom-[50%] w-24 xs:w-28 sm:w-36 opacity-40"
       >
         <Image src={cloud} alt="balloon" />
       </motion.div>
@@ -57,7 +58,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-0 md:bottom-[50%] w-14 xs:w-52 lg:w-40 opacity-60"
+        className="absolute right-0  bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36 opacity-60"
       >
         <Image src={cloud} alt="balloon" />
       </motion.div>
@@ -68,7 +69,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-1/2 md:top-5 w-14 xs:w-52 lg:w-40"
+        className="absolute left-[50%] top-10 lg:top-5 w-24 lg:w-40 opacity-50"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
@@ -79,7 +80,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute left-1/2 md:top-5 w-14 xs:w-56 lg:w-56 opacity-60"
+        className="absolute left-[45%] sm:left-[50%] top-10 lg:top-5 w-24 lg:w-56 opacity-60"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
@@ -90,7 +91,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute left-1/4 md:top-5 w-14 xs:w-52 lg:w-40 opacity-60"
+        className="absolute left-[5%] sm:left-[15%] lg:left-[25%] top-24 sm:top-5 w-24 sm:w-40 opacity-60"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
@@ -101,67 +102,111 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-1/4 md:top-4 w-14 xs:w-52 lg:w-64"
+        className="absolute left-[0%] sm:left-[15%] lg:left-[25%] top-24 sm:top-4 w-24 sm:w-40"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* cloud top top left */}
+      {/* cloud left middle */}
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-[10%] md:top-[20%] w-14 xs:w-52 lg:w-96"
+        className="absolute left-8 lg:left-3 xl:left-[8%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* cloud top top left opacity low*/}
+      {/* cloud left middle opacity low*/}
       <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-[7%] md:top-[20%] w-14 xs:w-52 lg:w-56 opacity-70"
+        className="absolute left-3 lg:left-0 xl:left-[6%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-56 opacity-70"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* cloud top top right */}
+      {/* cloud top right */}
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-0 md:top-0 w-14 xs:w-52 lg:w-96"
+        className="absolute right-10 xl:right-44 top-40 lg:top-0 w-20 xs:w-28 lg:w-52 opacity-90"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* cloud top top right opacity low*/}
+      {/* cloud top right opacity low*/}
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-0 md:top-0 w-14 xs:w-52 lg:w-56 opacity-75"
+        className="absolute right-0 xl:right-56 top-40 lg:top-0  w-20 xs:w-28 lg:w-52 opacity-75"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* cloud top left left opacity low*/}
+      {/* cloud top left opacity low*/}
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-10 md:top-0 w-14 xs:w-52 lg:w-40 opacity-60"
+        className="absolute max-xs:hidden left-12 lg:left-10 top-48 lg:top-6 w-20 xs:w-28 opacity-60"
       >
         <Image src={cloud} alt="cloud" />
       </motion.div>
-      {/* plane*/}
+      {/* bird left */}
       <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-12 top-40 lg:top-28 xl:top-56"
+      >
+        <Image src={bird} alt="bird" />
+      </motion.div>
+      {/* bird right */}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-32 xs:right-20 top-32 lg:top-96"
+      >
+        <Image src={bird} alt="bird" />
+      </motion.div>
+      {/* bird bottom */}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute right-40 xs:right-44 bottom-40 xs:bottom-96 opacity-70"
+      >
+        <Image src={bird} alt="bird" />
+      </motion.div>
+      {/* bird middle */}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4
+        }}
+        className="absolute left-[44%] top-10 max-md:hidden opacity-30"
+      >
+        <Image src={bird} alt="bird" />
+      </motion.div>
+      {/* plane*/}
+      {/* <motion.div
         animate={{ x: [50, -1000, 50], y: [50, -300, 50] }}
         //     x: 140,
         // y: 150,
@@ -173,7 +218,7 @@ export const Assets = () => {
         className="absolute right-[10%] top-1/4 w-14 xs:w-52 lg:w-[300px]"
       >
         <Image src={airplane} alt="airplane" />
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };

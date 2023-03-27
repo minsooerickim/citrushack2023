@@ -2,7 +2,7 @@ module.exports = {
   mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     screens: {
@@ -10,7 +10,7 @@ module.exports = {
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '1280px',
+      xl: '1280px'
     },
     extend: {
       colors: {
@@ -26,14 +26,14 @@ module.exports = {
         darksky: 'var(--darksky)',
         darkbubble: 'var(--darkbubble)',
         red: 'var(--red)',
-        darkRed: 'var(--darkRed)',
+        darkRed: 'var(--darkRed)'
       },
       backgroundImage: {
         clouds: 'var(--clouds)',
         clouds2: 'var(--clouds2)',
-        schedule: 'var(--schedule)',
-      },
-    },
+        schedule: 'var(--schedule)'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
