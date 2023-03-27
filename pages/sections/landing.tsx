@@ -212,7 +212,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 2
         }}
-        className="absolute right-[10%] top-[73%] xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
+        className="absolute right-[24%] lg:right-[10%] top-[70%] xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
       >
         <Image src={airplane} alt="airplane" />
       </motion.div>
@@ -243,7 +243,7 @@ export default function Landing() {
   return (
     <>
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[30%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[25%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
           <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
             CITRUS HACK 2023
           </div>
@@ -251,7 +251,7 @@ export default function Landing() {
             Reach your next destination
           </div>
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1">
-            April 8-9, 2023
+            April 28-29, 2023
           </div>
           <CountdownWrapper date="2023-04-02T16:00:00" />
           {/* <p className='max-w-lg italic text-center font-medium'>
