@@ -184,7 +184,7 @@ export const Assets = () => {
         <Image src={bird} alt="bird" />
       </motion.div>
       {/* bird bottom */}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
@@ -193,7 +193,7 @@ export const Assets = () => {
         className="absolute right-40 xs:right-44 bottom-40 xs:bottom-96 opacity-70"
       >
         <Image src={bird} alt="bird" />
-      </motion.div>
+      </motion.div> */}
       {/* bird middle */}
       <motion.div
         animate={{ y: [0, -10, 0] }}
@@ -201,7 +201,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-[44%] top-10 max-md:hidden opacity-30"
+        className="absolute left-[44%] top-10 max-md:hidden opacity-60"
       >
         <Image src={bird} alt="bird" />
       </motion.div>
@@ -212,7 +212,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 2
         }}
-        className="absolute right-[10%] top-[25%] w-14 xs:w-52 lg:w-[300px]"
+        className="absolute right-[10%] top-[73%] xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
       >
         <Image src={airplane} alt="airplane" />
       </motion.div>
