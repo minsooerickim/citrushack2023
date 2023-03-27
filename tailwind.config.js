@@ -25,8 +25,8 @@ module.exports = {
         white: 'var(--white)',
         darksky: 'var(--darksky)',
         darkbubble: 'var(--darkbubble)',
-        red: 'var(--red)',
-        darkRed: 'var(--darkRed)',
+        purple: 'var(--purple)',
+        lightPurple: 'var(--lightPurple)',
       },
       backgroundImage: {
         clouds: 'var(--clouds)',

@@ -89,7 +89,7 @@ export default function Nav() {
       {/* desktop navbar */}
       <motion.div
         whileHover={{ width: 200 }}
-        className="z-[1000] fixed top-1/2 left-3 transform -translate-y-1/2 hidden xl:flex flex-col gap-2.5 w-14 p-2 rounded-md text-sub-bright bg-red shadow"
+        className="z-[1000] fixed top-1/2 left-3 transform -translate-y-1/2 hidden xl:flex flex-col gap-2.5 w-14 p-2 rounded-md text-sub-bright bg-purple shadow"
       >
         <div className="self-center p-2 text-2xl text-white">
           <BiMenu />
@@ -157,7 +157,7 @@ export default function Nav() {
       <div className="z-[1000] fixed top-3 -left-1 xl:hidden px-4">
         <div
           className={
-            'flex flex-col gap-1.5 rounded-md bg-red shadow overflow-hidden transform-gpu transition-size duration-200 ' +
+            'flex flex-col gap-1.5 rounded-md bg-purple shadow overflow-hidden transform-gpu transition-size duration-200 ' +
             (navOpen ? 'p-2 ' : 'w-11 h-11 ') +
             (navOpen &&
               (router.pathname === '/'
