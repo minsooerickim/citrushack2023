@@ -206,19 +206,16 @@ export const Assets = () => {
         <Image src={bird} alt="bird" />
       </motion.div>
       {/* plane*/}
-      {/* <motion.div
-        animate={{ x: [50, -1000, 50], y: [50, -300, 50] }}
-        //     x: 140,
-        // y: 150,
-        // animate={{ x: [0, -50, 0] }}
+      <motion.div
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 5
+          duration: 2
         }}
-        className="absolute right-[10%] top-1/4 w-14 xs:w-52 lg:w-[300px]"
+        className="absolute right-[10%] top-[25%] w-14 xs:w-52 lg:w-[300px]"
       >
         <Image src={airplane} alt="airplane" />
-      </motion.div> */}
+      </motion.div>
     </>
   );
 };
