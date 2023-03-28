@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-const Passport = ({name, position, link, image}) => {
+const Passport = ({ name, position, link, image }) => {
   return (
     <>
       <div className=" w-40 h-40 bg-transparent group perspective">
@@ -9,7 +9,7 @@ const Passport = ({name, position, link, image}) => {
           <div className="absolute backface-hidden rounded-full w-full h-full bg-[#BFE4FF]">
             <div className="absolute backface-hidden w-full h-full rounded-full border-11 border-[#33719F]">
               <div className="text-center flex flex-col items-center justify-center h-full text-white">
-              <Image
+                <Image
                   src={image}
                   width={170}
                   height={170}
@@ -24,7 +24,7 @@ const Passport = ({name, position, link, image}) => {
           </div>
           <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#BFE4FF] border-[#33719F] rounded-full border-11 ">
             <div className="text-center flex flex-col items-center justify-center h-full text-black">
-              <a target="_blank" rel="noreferrer noopener" href={link}/>
+              <a target="_blank" rel="noreferrer noopener" href={link} />
               <div>{name}</div>
               <div>{position}</div>
             </div>
@@ -32,15 +32,12 @@ const Passport = ({name, position, link, image}) => {
         </div>
 
         <div className="leading-4 text-center text-black">
-          <div className="mt-2 font-baloo_bold" >{name}</div>
+          <div className="mt-2 font-baloo_bold">{name}</div>
           <div className="mt-1 font-baloo_regular">{position}</div>
         </div>
-        
       </div>
-    
-      
     </>
-  )
-}
+  );
+};
 
-export default Passport
+export default Passport;

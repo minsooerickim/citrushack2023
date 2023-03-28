@@ -1,12 +1,12 @@
-import React from 'react'
-import Passports from '@/components/Passports'
+import React from 'react';
+import Passports from '@/components/Passports';
 
 const test = () => {
   return (
     <div>
-        <Passports/>
+      <Passports />
     </div>
-  )
-}
+  );
+};
 
-export default test
+export default test;

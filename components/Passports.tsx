@@ -1,5 +1,5 @@
-import React from 'react'
-import Passport from '@/components/Passport'
+import React from 'react';
+import Passport from '@/components/Passport';
 
 const directors = [
   {
@@ -14,7 +14,7 @@ const directors = [
     name: 'Mariam Golwalla',
     position: 'Director',
   },
-]
+];
 const staff = [
   {
     link: 'https://www.linkedin.com/in/minsookime/',
@@ -82,37 +82,35 @@ const staff = [
     name: 'Jonathan Chon',
     position: 'UI/UX Lead',
   },
-]
-
-
+];
 
 const Passports = () => {
   return (
     <>
-    <div className="flex flex-wrap justify-center md:gap-5 md:gap-y-12 mb-14">
-      {directors.map(({ link, image, name, position }) => (
-        <Passport
-          key={link}
-          link={link}
-          image={image}
-          name={name}
-          position={position}
-        />
-      ))}
-    </div>
-    <div className="flex flex-wrap justify-center md:gap-5 md:gap-y-14">
-      {staff.map(({ link, image, name, position }) => (
-        <Passport
-          key={link}
-          link={link}
-          image={image}
-          name={name}
-          position={position}
-        />
-      ))}
-    </div>
-  </>
-  )
-}
+      <div className="flex flex-wrap justify-center md:gap-5 md:gap-y-12 mb-14">
+        {directors.map(({ link, image, name, position }) => (
+          <Passport
+            key={link}
+            link={link}
+            image={image}
+            name={name}
+            position={position}
+          />
+        ))}
+      </div>
+      <div className="flex flex-wrap justify-center md:gap-5 md:gap-y-14">
+        {staff.map(({ link, image, name, position }) => (
+          <Passport
+            key={link}
+            link={link}
+            image={image}
+            name={name}
+            position={position}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
-export default Passports
+export default Passports;
