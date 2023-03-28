@@ -28,7 +28,7 @@ export default function Home() {
       </Element>
       <Element
         name="Tracks"
-        className="flex justify-center w-full bg-primary md:bg-contain"
+        className="flex justify-center w-full bg-sky md:bg-contain"
       >
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
@@ -40,10 +40,7 @@ export default function Home() {
       >
         <Schedule />
       </Element>
-      <Element
-        name="Support"
-        className="flex justify-center w-full bg-gradient-to-b from-accent to-card"
-      >
+      <Element name="Support" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Support />
         </span>
@@ -54,7 +51,7 @@ export default function Home() {
       >
         <Sponsors />
       </Element>
-      <Element name="Staff" className="flex justify-center w-full bg-primary">
+      <Element name="Staff" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center px-4 w-full">
           <Staff />
         </span>
