@@ -8,7 +8,7 @@ import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
 import React from 'react';
-import Passports from '@/components/Passports.tsx'
+import Passports from '@/components/Passports.tsx';
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center flex-col px-4 w-full">
-        <Passports />
+          <Passports />
         </span>
       </Element>
       <Element
