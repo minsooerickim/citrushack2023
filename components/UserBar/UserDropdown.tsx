@@ -154,7 +154,7 @@ export function UserDropdown() {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.995 }}
-                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight-dark font-semibold"
+                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight font-semibold"
                         onClick={() => setOpen(!open)}
                       >
                         Check-In Now!

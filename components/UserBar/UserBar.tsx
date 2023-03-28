@@ -28,7 +28,7 @@ export function UserBar() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.995 }}
-                className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-purple shadow cursor-pointer text-white"
+                className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-purple shadow cursor-pointer text-white hover:bg-hoverPrimary"
               >
                 Apply
               </motion.button>
