@@ -24,8 +24,8 @@ export default function SignupCounter() {
   if (error || !data) {
     return (
       <div className="flex items-center gap-2">
-        <h4 className="text-sm sm:text-lg md:text-xl font-black">
-          <span className="text-sm sm:text-lg md:text-xl font-black">
+        <h4 className="text-sm sm:text-lg md:text-xl font-black text-text">
+          <span className="text-sm sm:text-lg md:text-xl font-black text-text">
             {cachedCount ? (
               <CountUp
                 start={cachedCount.numUsers - 100}
@@ -43,8 +43,8 @@ export default function SignupCounter() {
   } else {
     return (
       <div className="flex items-center gap-2">
-        <h4 className="text-sm sm:text-lg md:text-xl font-black">
-          <span className="text-sm sm:text-lg md:text-xl font-black">
+        <h4 className="text-sm sm:text-lg md:text-xl font-black text-text">
+          <span className="text-sm sm:text-lg md:text-xl font-black text-text">
             <CountUp
               start={data.numUsers - 100}
               end={data.numUsers}

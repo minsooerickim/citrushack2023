@@ -284,10 +284,10 @@ export const EventMobile = ({ time, description, color, place }) => {
               {description}
             </p>
             <div className="flex flex-col w-full">
-              <p className="text-base text-center font-semibold w-full text-textcolor">
+              <p className="text-base text-center font-semibold w-full text-text">
                 {time}
               </p>
-              <p className="text-base text-center font-medium w-full text-textcolor">
+              <p className="text-base text-center font-medium w-full text-text">
                 {place}
               </p>
             </div>
@@ -295,7 +295,7 @@ export const EventMobile = ({ time, description, color, place }) => {
         </div>
         <div className="xs:hidden relative bottom-[55%] pl-10 py-6 h-[90px] flex flex-col items-start">
           <p className="text-xl text-left font-semibold">{description}</p>
-          <p className="text-md text-left text-textcolor">
+          <p className="text-md text-left text-text">
             {time} @ {place}
           </p>
         </div>
@@ -371,10 +371,10 @@ export const EventDesktop = ({
             ''
           ) : (
             <div className="relative bottom-7">
-              <p className="text-xl text-right font-semibold w-full">
+              <p className="text-xl text-right text-text font-semibold w-full">
                 {leftDescription}
               </p>
-              <p className="text-base text-right text-textcolor w-full">
+              <p className="text-base text-right text-text w-full">
                 {leftTime} @ {leftPlace}
               </p>
             </div>
@@ -387,10 +387,10 @@ export const EventDesktop = ({
             ''
           ) : (
             <div className="relative bottom-7">
-              <p className="text-xl text-left font-semibold w-full">
+              <p className="text-xl text-left text-text font-semibold w-full">
                 {rightDescription}
               </p>
-              <p className="text-base text-left text-textcolor w-full">
+              <p className="text-base text-left text-text w-full">
                 {rightTime} @ {rightPlace}
               </p>
             </div>

@@ -93,7 +93,9 @@ export default function Tracks() {
   return (
     <section className="relative flex flex-col w-full h-full my-0 lg:my-12 max-w-[72rem] justify-center items-center px-4">
       {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
-      <h1 className="text-5xl md:text-7xl font-black mb-8 md:mb-14">Tracks</h1>
+      <h1 className="text-5xl md:text-7xl font-black mb-8 md:mb-14 text-text">
+        Tracks
+      </h1>
       <div className="flex flex-col gap-y-7 md:grid md:grid-cols-3 gap-36 lg:gap-56 items-start mb-0 lg:mb-20">
         {/* <div className="flex justify-start items-start bg-blue-500"> */}
         <div className="flex flex-col items-center justify-end gap-y-2 lg:gap-y-4">
@@ -104,7 +106,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center">
+          <p className="text-lg md:text-2xl font-black text-center text-text">
             New Frontiers
           </p>
         </div>
@@ -116,7 +118,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center w-fit">
+          <p className="text-lg md:text-2xl font-black text-center w-fit text-text">
             Global Community
           </p>
         </div>
@@ -128,7 +130,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center w-fit">
+          <p className="text-lg md:text-2xl font-black text-center w-fit text-text">
             Sustainabiility
           </p>
         </div>

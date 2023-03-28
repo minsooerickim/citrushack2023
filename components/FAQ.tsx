@@ -19,7 +19,7 @@ export function FaqAccordion({ question, answer }: Props) {
         className="flex py-3 items-center hover:text-highlight cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h4 className="grow font-semibold">{question}</h4>
+        <h4 className="grow font-semibold text-text">{question}</h4>
         <div>
           <BiX
             className={
@@ -36,9 +36,9 @@ export function FaqAccordion({ question, answer }: Props) {
         }
       >
         {typeof answer === 'string' ? (
-          <p className="m-0 mb-8">{answer}</p>
+          <p className="m-0 mb-8 text-text">{answer}</p>
         ) : (
-          <div className="m-0 mb-8">{answer}</div>
+          <div className="m-0 mb-8 text-text">{answer}</div>
         )}
       </div>
     </div>
@@ -117,7 +117,7 @@ const faq = [
   {
     question: "My question isn't listed?",
     answer: (
-      <p>
+      <p className="text-text">
         Feel free to email us at{' '}
         <ExternalLink
           name="citrushack@gmail.com"
