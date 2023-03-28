@@ -281,10 +281,10 @@ export const EventMobile = ({ time, description, color, place }) => {
               {description}
             </p>
             <div className="flex flex-col w-full">
-              <p className="text-base text-center font-semibold w-full text-brown">
+              <p className="text-base text-center font-semibold w-full text-lightgreen">
                 {time}
               </p>
-              <p className="text-base text-center font-medium w-full text-brown">
+              <p className="text-base text-center font-medium w-full text-lightgreen">
                 {place}
               </p>
             </div>
@@ -292,7 +292,7 @@ export const EventMobile = ({ time, description, color, place }) => {
         </div>
         <div className="xs:hidden relative bottom-[55%] pl-10 py-6 h-[90px] flex flex-col items-start">
           <p className="text-xl text-left font-semibold">{description}</p>
-          <p className="text-md text-left text-brown">
+          <p className="text-md text-left text-lightgreen">
             {time} @ {place}
           </p>
         </div>
@@ -306,7 +306,7 @@ export const Mobile = () => {
     <div className="flex flex-col items-center justify-end w-full">
       <div className="flex flex-col">
         <div className="flex">
-          <div className="border-r-4 border-[#D56774]"></div>
+          <div className="border-r-4 border-gold"></div>
           <div className="w-56 relative pb-5 bottom-4">
             <Image src={reverseDayOneFlag} alt="flag" />
           </div>
@@ -318,12 +318,12 @@ export const Mobile = () => {
             time={time}
             description={description}
             place={place}
-            color="border-[#D56774]"
+            color="border-gold"
           />
         ))}
-        <span className="mr-1 self-start bg-gradient-to-b from-[#D56774] pb-14 to-[#E7AA36] pr-1 flex"></span>
+        <span className="mr-1 self-start bg-gradient-to-b from-gold pb-14 to-gold pr-1 flex"></span>
         <div className="flex">
-          <div className="border-r-4 border-[#E7AA36]"></div>
+          <div className="border-r-4 border-gold"></div>
           <div className="w-56 relative pb-5 bottom-4">
             <Image src={reverseDayTwoFlag} alt="flag" />
           </div>
@@ -335,10 +335,10 @@ export const Mobile = () => {
             time={time}
             place={place}
             description={description}
-            color="border-[#E7AA36]"
+            color="border-gold"
           />
         ))}
-        <span className="mr-1 self-start  bg-gradient-to-b from-[#E7AA36] pb-10 to-transparent pr-1 flex"></span>
+        <span className="mr-1 self-start  bg-gradient-to-b from-gold pb-10 to-transparent pr-1 flex"></span>
       </div>
     </div>
   );
@@ -371,7 +371,7 @@ export const EventDesktop = ({
               <p className="text-xl text-right font-semibold w-full">
                 {leftDescription}
               </p>
-              <p className="text-base text-right text-brown w-full">
+              <p className="text-base text-right text-textcolor w-full">
                 {leftTime} @ {leftPlace}
               </p>
             </div>
@@ -387,7 +387,7 @@ export const EventDesktop = ({
               <p className="text-xl text-left font-semibold w-full">
                 {rightDescription}
               </p>
-              <p className="text-base text-left text-brown w-full">
+              <p className="text-base text-left text-textcolor w-full">
                 {rightTime} @ {rightPlace}
               </p>
             </div>
@@ -450,8 +450,8 @@ export const Desktop = () => {
         <DesktopShedule
           image={dayOneFlag}
           day={eventDesktopDay1}
-          borderColor="border-red"
-          fromColor="from-red"
+          borderColor="border-gold"
+          fromColor="from-gold"
         />
         <DesktopShedule
           image={dayTwoFlag}
