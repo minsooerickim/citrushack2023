@@ -262,7 +262,7 @@ export const Assets = () => {
           duration: 4
         }}
         className="absolute right-40 xs:right-44 bottom-40 xs:bottom-96 opacity-70"
-      >
+    >
         <Image src={bird} alt="bird" />
       </motion.div> */}
       {/* bird middle left */}

@@ -10,6 +10,9 @@ import balloonBlue from '../public/assets/balloonBlue.svg';
 import balloonOrange from '../public/assets/balloonOrange.svg';
 import balloonBlueTilt from '../public/assets/balloonBlueTilt.svg';
 import cloud from '../public/assets/cloud.svg';
+import cloudDark from '../public/assets/cloudDark.svg';
+import { useTheme } from 'next-themes';
+
 import { motion } from 'framer-motion';
 
 const eventDesktopDay1 = [
@@ -281,10 +284,10 @@ export const EventMobile = ({ time, description, color, place }) => {
               {description}
             </p>
             <div className="flex flex-col w-full">
-              <p className="text-base text-center font-semibold w-full text-lightgreen">
+              <p className="text-base text-center font-semibold w-full text-textcolor">
                 {time}
               </p>
-              <p className="text-base text-center font-medium w-full text-lightgreen">
+              <p className="text-base text-center font-medium w-full text-textcolor">
                 {place}
               </p>
             </div>
@@ -292,7 +295,7 @@ export const EventMobile = ({ time, description, color, place }) => {
         </div>
         <div className="xs:hidden relative bottom-[55%] pl-10 py-6 h-[90px] flex flex-col items-start">
           <p className="text-xl text-left font-semibold">{description}</p>
-          <p className="text-md text-left text-lightgreen">
+          <p className="text-md text-left text-textcolor">
             {time} @ {place}
           </p>
         </div>
@@ -465,6 +468,8 @@ export const Desktop = () => {
 };
 
 export const Assets = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       {/* yellow balloon top left */}{' '}
@@ -542,7 +547,11 @@ export const Assets = () => {
         }}
         className="absolute -z-12 w-20 xs:w-36 right-10 sm:right-0 md:right-10 xl:-right-16 top-[49%] lg:top-[17%]"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud middle*/}
       <motion.div
@@ -553,7 +562,11 @@ export const Assets = () => {
         }}
         className="absolute -z-12 w-12 xs:w-16 md:w-32 right-20 sm:right-0 md:right-10 xl:-right-16 top-[23.5%] md:top-[20%] lg:top-[68.5%]"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
@@ -564,7 +577,11 @@ export const Assets = () => {
         }}
         className="absolute -z-12 w-8 xs:w-20 right-0 sm:right-0 md:right-10 xl:-right-16 bottom-[21%] xs:bottom-[16.5%] lg:bottom-36"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud top left */}
       <motion.div
@@ -575,7 +592,11 @@ export const Assets = () => {
         }}
         className="absolute -z-12 w-12 xs:w-1/12 right-8 xs:left-0 xl:-left-28 top-40 sm:top-[24%]"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud bottom left */}
       <motion.div
@@ -586,7 +607,11 @@ export const Assets = () => {
         }}
         className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-10 xl:-left-36 top-[65%] sm:top-[61%]"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
     </>
   );

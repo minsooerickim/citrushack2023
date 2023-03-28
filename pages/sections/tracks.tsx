@@ -5,9 +5,13 @@ import NewFrontiers from '../../public/assets/newFrontiers.svg';
 import studentCommunity from '../../public/assets/studentCommunity.svg';
 import sustainability from '../../public/assets/sustainability.svg';
 import cloud from '../../public/assets/cloud.svg';
+import cloudDark from '../../public/assets/cloudDark.svg';
 import balloonRed from '../../public/assets/balloonRed.svg';
+import { useTheme } from 'next-themes';
 
 export const Assets = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       {/* cloud top middle */}
@@ -19,7 +23,11 @@ export const Assets = () => {
         }}
         className="absolute -top-10 left-28 md:left-96 w-16 xs:w-16 lg:w-20"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* balloon top right */}
       <motion.div
@@ -30,7 +38,11 @@ export const Assets = () => {
         }}
         className="absolute right-0 top-[45%] md:top-0 w-14 xs:w-20 lg:w-28"
       >
-        <Image src={cloud} alt="balloon" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud top left */}
       <motion.div
@@ -52,7 +64,11 @@ export const Assets = () => {
         }}
         className="absolute left-0 lg:-left-48 bottom-10 md:-bottom-32 lg:bottom-10 w-16 xs:w-20 lg:w-28"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
@@ -63,7 +79,11 @@ export const Assets = () => {
         }}
         className="absolute right-0 xl:-right-16 bottom-20 xs:-bottom-14  w-16 xs:w-20 lg:w-28"
       >
-        <Image src={cloud} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={cloud} alt="cloud" />
+        ) : (
+          <Image src={cloudDark} alt="cloud" />
+        )}
       </motion.div>
     </>
   );
