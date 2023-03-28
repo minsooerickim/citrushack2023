@@ -54,12 +54,12 @@ const faq = [
   {
     question: 'How do I apply?',
     answer:
-      'You need to sign in first with either your Google account. The application form is then accessible on the website after signing in.'
+      'You need to sign in first with your Google account. The application form is then accessible on the website after signing in.'
   },
   {
     question: 'When are applications due?',
     answer:
-      'Applications are due by midnight on Friday, April 1, 2022. Be sure to submit your application before then in order to participate.'
+      'Applications are due by midnight on Friday, April 28, 2023. Be sure to submit your application before then in order to participate.'
   },
   {
     question: 'Is Citrus Hack free?',
@@ -111,10 +111,8 @@ const faq = [
       "Not at all! You can attend a workshop just to learn, network with fellow hackers, and participate in games and raffles. You'll be able to find the schedule on our website as we get closer to the event."
   },
   {
-    question:
-      "If I'm residing outside of the U.S., can I still attend and/or win a prize?",
-    answer:
-      'Those outside of the U.S. can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S.'
+    question: 'Is there an online option to attend?',
+    answer: 'Unfortunately no, Citrus Hack is in-person only.'
   },
   {
     question: "My question isn't listed?",
