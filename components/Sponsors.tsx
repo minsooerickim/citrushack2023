@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { AnimatePresence, motion, useAnimation, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Carousel from 'framer-motion-carousel';
-import SponsorButton from './SponsorButton';
 import React, { useState } from 'react';
 
 interface SponsorProps {
@@ -115,7 +113,7 @@ export function CarouselSponsor() {
           }}
         >
           <img
-            src="/assets/sponsors/sponsor_postcard3.svg"
+            src="/assets/sponsors/sponsor_postcard1.svg"
             className="rounded-box"
           />
         </motion.div>
@@ -127,7 +125,7 @@ export function CarouselSponsor() {
           }}
         >
           <img
-            src="/assets/sponsors/sponsor_postcard3_back.svg"
+            src="/assets/sponsors/sponsor_postcard1_back.svg"
             className="rounded-box"
           />
         </motion.div>
