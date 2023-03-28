@@ -77,7 +77,7 @@ export function UserDropdown() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-darkRed hover:bg-highlight-dark"
+          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-gold hover:bg-highlight-dark"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -88,7 +88,7 @@ export function UserDropdown() {
         </motion.button>
         <div
           className={
-            'absolute top-14 right-0 w-64 p-4 rounded bg-red shadow-md transform-gpu transition-all duration-150 ' +
+            'absolute top-14 right-0 w-64 p-4 rounded bg-purple shadow-md transform-gpu transition-all duration-150 ' +
             (open ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
           }
         >

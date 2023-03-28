@@ -28,7 +28,7 @@ export function UserBar() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.995 }}
-                className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white"
+                className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-purple shadow cursor-pointer text-white"
               >
                 Apply
               </motion.button>
@@ -40,7 +40,7 @@ export function UserBar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.995 }}
-            className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer text-white bg-red"
+            className="flex justify-center items-center self-center w-24 h-11 px-4 font-semibold text-lg rounded-md bg-highlight shadow cursor-pointer text-white bg-purple"
             onClick={() => toggleSigninModal()}
           >
             Sign In

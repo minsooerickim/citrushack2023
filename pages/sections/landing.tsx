@@ -13,7 +13,9 @@ import Image from 'next/image';
 import Skyline from '../../public/assets/skyline.svg';
 import SkylineDark from '../../public/assets/skylineDark.svg';
 import cloud from '../../public/assets/cloud.svg';
+import cloud2 from '../../public/assets/cloud2.svg';
 import cloudDark from '../../public/assets/cloudDark.svg';
+import cloudDark2 from '../../public/assets/cloudDark2.svg';
 import airplane from '../../public/assets/airplane.svg';
 import bird1 from '../../public/assets/bird1.svg';
 import bird2 from '../../public/assets/bird2.svg';
@@ -22,7 +24,7 @@ import star from '../../public/assets/star.svg';
 import { useTheme } from 'next-themes';
 
 export const Assets = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -33,17 +35,17 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute left-2 bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36 opacity-60"
+        className="absolute left-2 bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
         // className="absolute left-2 bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36 opacity-60"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" />
         )}
       </motion.div>
       {/* cloud  left */}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{
           repeat: Infinity,
@@ -56,9 +58,9 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud right low opacity*/}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{
           repeat: Infinity,
@@ -71,7 +73,7 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud right */}
       <motion.div
         animate={{ y: [0, -5, 0] }}
@@ -82,9 +84,9 @@ export const Assets = () => {
         className="absolute right-0  bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" />
         )}
       </motion.div>
       {/* cloud top middle */}
@@ -94,15 +96,15 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute left-[50%] top-10 lg:top-5 w-20 lg:w-40 opacity-50"
+        className="absolute left-[50%] top-10 lg:top-5 w-28 lg:w-40"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
       </motion.div>
-      {/* cloud top middle low opacity */}
+      {/* cloud top middle low opacity
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{
@@ -116,9 +118,9 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud top left low opacity*/}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
           repeat: Infinity,
@@ -131,7 +133,7 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud top left low opacity*/}
       <motion.div
         animate={{ y: [0, -20, 0] }}
@@ -142,9 +144,9 @@ export const Assets = () => {
         className="absolute left-[0%] sm:left-[15%] lg:left-[25%] top-24 sm:top-4 w-24 sm:w-40"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" />
         )}
       </motion.div>
       {/* cloud left middle */}
@@ -157,13 +159,13 @@ export const Assets = () => {
         className="absolute left-8 lg:left-3 xl:left-[8%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
       </motion.div>
       {/* cloud left middle opacity low*/}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -15, 0] }}
         transition={{
           repeat: Infinity,
@@ -176,7 +178,7 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud top right */}
       <motion.div
         animate={{ y: [0, -12, 0] }}
@@ -187,13 +189,13 @@ export const Assets = () => {
         className="absolute right-10 xl:right-44 top-36 lg:top-0 w-20 xs:w-28 lg:w-52 opacity-90"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud2} alt="cloud" />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" />
         )}
       </motion.div>
       {/* cloud top right opacity low*/}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{
           repeat: Infinity,
@@ -206,7 +208,7 @@ export const Assets = () => {
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
-      </motion.div>
+      </motion.div> */}
       {/* cloud top left opacity low*/}
       <motion.div
         animate={{ y: [0, -10, 0] }}
@@ -309,7 +311,7 @@ export const Assets = () => {
 };
 
 export default function Landing() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -363,7 +365,7 @@ export default function Landing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
-                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white"
+                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-purple shadow cursor-pointer text-white"
                 >
                   Apply Now!
                 </motion.button>
