@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
-  "workspaces": ["citrushack2023docs"],
+  "workspaces": [
+    "citrushack2023docs"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,6 +28,7 @@
     "b64-to-blob": "^1.2.19",
     "body-scroll-lock": "^4.0.0-beta.0",
     "csstype": "^3.0.1",
+    "daisyui": "^2.51.5",
     "env-cmd": "^10.1.0",
     "file-saver": "^2.0.5",
     "firebase": "^9.9.1",

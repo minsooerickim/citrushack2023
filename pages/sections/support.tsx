@@ -11,7 +11,7 @@ export default function Support() {
         love to have you on board. Fill out the forms below if you&apos;d like
         to help hackers throughout the day.
       </p>
-      <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center gap-6 mb-12">
+      <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-center gap-6 mb-12 w-full">
         <CarouselSponsor />
       </div>
     </section>

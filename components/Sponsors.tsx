@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { motion, Variants } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Carousel from 'framer-motion-carousel';
 import SponsorButton from './SponsorButton';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
@@ -80,91 +80,120 @@ export const Sponsor = ({
 );
 
 export function CarouselSponsor() {
-  const bounceVariants = {
-    initial: {
-      y: 0
-    },
-    animate: {
-      y: -10,
-      transition: {
-        duration: 0.5,
-        repeat: 1,
-        repeatType: 'reverse'
-      }
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = () => {
+    if (window.innerWidth <= 768) {
+      setIsFlipped(!isFlipped);
     }
   };
-  const [bounce, setBounce] = React.useState(false);
 
-  React.useEffect(() => {
-    const intervalId = setInterval(() => {
-      setBounce(!bounce);
-    }, 2000);
+  const handleHoverStart = () => {
+    if (window.innerWidth > 768) {
+      setIsFlipped(true);
+    }
+  };
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [bounce]);
-
+  const handleHoverEnd = () => {
+    if (window.innerWidth > 768) {
+      setIsFlipped(false);
+    }
+  };
   return (
-    // remove scrollbar when hovering over sponsor us button
-    <>
-      <div style={{ width: 1186, height: 600 }} className="hidden md:block">
-        <Carousel autoPlay={true} interval={3000} loop={true}>
-          {[
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf'],
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf'],
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf']
-          ].map((item, i) => (
-            <div key={i}>
-              <Image
-                draggable="false"
-                src={`/assets/sponsors/${item[0]}.svg`}
-                key={i}
-                layout="fill"
-                alt=""
-              />
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.995 }}
-                className="absolute right-0 bottom-0 pr-4"
-                variants={bounceVariants as Variants}
-                animate={bounce ? 'animate' : 'initial'}
-              >
-                <SponsorButton link={item[1]} width={400} height={180} />
-              </motion.span>
-            </div>
-          ))}
-        </Carousel>
-      </div>
-
-      <div className="md:hidden flex justify-center items-center w-screen h-60">
-        <Carousel autoPlay={true} interval={3000} loop={true}>
-          {[
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf'],
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf'],
-            ['amazon', '/citrushack-2022-sponsorship-packet.pdf']
-          ].map((item, i) => (
-            <div key={i}>
-              <Image
-                draggable="false"
-                src={`/assets/sponsors/${item[0]}.svg`}
-                key={i}
-                layout="fill"
-                alt=""
-              />
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.995 }}
-                className="absolute right-0 bottom-0 w-40"
-                variants={bounceVariants as Variants}
-                animate={bounce ? 'animate' : 'initial'}
-              >
-                <SponsorButton link={item[1]} width={150} height={60} />
-              </motion.span>
-            </div>
-          ))}
-        </Carousel>
-      </div>
-    </>
+    <div className="carousel carousel-center w-full h-72 md:p-4 space-x-4 bg-lightPurple rounded-box">
+      <motion.div
+        className=" w-11/12 h-auto max-w-md relative carousel-item"
+        onClick={handleClick}
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+      >
+        <motion.div
+          className="w-full h-full bg-blue absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard3.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full h-full absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard3_back.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className=" w-11/12 h-auto max-w-md relative carousel-item"
+        onClick={handleClick}
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+      >
+        <motion.div
+          className="w-full h-full bg-blue absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard2.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full h-full absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard2_back.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className=" w-11/12 h-auto max-w-md relative carousel-item"
+        onClick={handleClick}
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+      >
+        <motion.div
+          className="w-full h-full bg-blue absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard3.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full h-full absolute top-0 left-0 flex items-center justify-center backface-hidden"
+          style={{
+            transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
+            transition: 'transform .5s ease-in-out'
+          }}
+        >
+          <img
+            src="/assets/sponsors/sponsor_postcard3_back.svg"
+            className="rounded-box"
+          />
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }
