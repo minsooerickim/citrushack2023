@@ -371,7 +371,7 @@ export const EventDesktop = ({
             ''
           ) : (
             <div className="relative bottom-7">
-              <p className="text-xl text-right text-text font-semibold w-full">
+              <p className="text-xl text-right font-semibold w-full text-text">
                 {leftDescription}
               </p>
               <p className="text-base text-right text-text w-full">
@@ -387,7 +387,7 @@ export const EventDesktop = ({
             ''
           ) : (
             <div className="relative bottom-7">
-              <p className="text-xl text-left text-text font-semibold w-full">
+              <p className="text-xl text-left font-semibold w-full text-text">
                 {rightDescription}
               </p>
               <p className="text-base text-left text-text w-full">

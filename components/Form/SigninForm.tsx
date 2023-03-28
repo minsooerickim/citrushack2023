@@ -1,40 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { signIn, getCsrfToken } from 'next-auth/react';
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import { toast } from 'react-hot-toast';
+// import { useForm } from 'react-hook-form';
+// import axios from 'axios';
+// import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
 /** Form displaying user sign-in options. */
-export function SigninForm({ csrfToken = '' }) {
-  const { register, handleSubmit } = useForm();
-  const [error, setError] = useState(false);
+export function SigninForm() {
+  // export function SigninForm({ csrfToken = '' }) {
+  // const { register, handleSubmit } = useForm();
+  // const [error, setError] = useState(false);
 
-  const handleEmailChange = () => {
-    setError(false);
-  };
+  // const handleEmailChange = () => {
+  //   setError(false);
+  // };
 
   /** Action done on submit to sign-in with email. */
-  const onSubmit = ({ email, csrfToken }) => {
-    const matchRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        email
-      );
+  // const onSubmit = ({ email, csrfToken }) => {
+  //   const matchRegex =
+  //     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+  //       email
+  //     );
 
-    if (email === '' || !matchRegex) {
-      toast.error('Please enter a valid email.');
-      setError(true);
-    } else {
-      axios
-        .post('/api/auth/signin/email', {
-          csrfToken: csrfToken,
-          email: email
-        })
-        .then(() => {
-          signIn('email', { csrfToken: csrfToken, email: email });
-        });
-    }
-  };
+  //   if (email === '' || !matchRegex) {
+  //     toast.error('Please enter a valid email.');
+  //     setError(true);
+  //   } else {
+  //     axios
+  //       .post('/api/auth/signin/email', {
+  //         csrfToken: csrfToken,
+  //         email: email
+  //       })
+  //       .then(() => {
+  //         signIn('email', { csrfToken: csrfToken, email: email });
+  //       });
+  //   }
+  // };
 
   return (
     <div className="flex flex-col w-full items-center">
