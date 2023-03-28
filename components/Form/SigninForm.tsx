@@ -38,7 +38,8 @@ export function SigninForm({ csrfToken = '' }) {
 
   return (
     <div className="flex flex-col w-full items-center">
-      <form
+      {/* email */}
+      {/* <form
         className="flex flex-col w-full gap-3"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -66,19 +67,20 @@ export function SigninForm({ csrfToken = '' }) {
         >
           Sign In With Email
         </motion.button>
-      </form>
+      </form> */}
       <div className="flex flex-col gap-6 pt-6 justify-center w-full">
-        <div className="text-center border-b-2 border-primary leading-[0.1rem]"></div>
+        <div className="text-center border-b-2 border-lightPurple leading-[0.1rem]"></div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="w-full py-1.5 rounded bg-highlight hover:bg-highlight-dark font-baloo_regular"
+          className="w-full py-1.5 rounded bg-lightPurple hover:bg-highlight-dark font-baloo_regular text-white"
           onClick={() => signIn('google')}
         >
           Sign In With Google
         </motion.button>
       </div>
-      <div className="flex flex-col gap-6 pt-6 justify-center w-full">
+      {/* github */}
+      {/* <div className="flex flex-col gap-6 pt-6 justify-center w-full">
         <div className="text-center border-b-2 border-primary leading-[0.1rem]"></div>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -88,7 +90,7 @@ export function SigninForm({ csrfToken = '' }) {
         >
           Sign In With GitHub
         </motion.button>
-      </div>
+      </div> */}
     </div>
   );
 }

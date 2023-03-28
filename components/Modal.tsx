@@ -37,21 +37,21 @@ export default function Modal({
       <div
         id="modal"
         className={
-          'fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded bg-secondary transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 ' +
+          'fixed top-1/2 left-1/2 w-11/12 sm:w-[32rem] p-4 rounded bg-purple transform -translate-x-1/2 -translate-y-1/2 transform-gpu transition-opacity duration-150 ' +
           (show ? 'z-[1100] visible opacity-100' : 'z-0 invisible opacity-0')
         }
       >
         <div className="relative flex flex-col gap-4 items-center w-full mb-4">
-          <div className=" absolute self-end">
+          <div className=" absolute self-end text-white">
             <BiX
               className="text-3xl hover:text-red-500 cursor-pointer"
               onClick={() => handler(false)}
             />
           </div>
-          <h3 className="mt-6 text-center w-full max-w-sm md:max-w-md font-semibold">
+          <h3 className="mt-6 text-center w-full max-w-sm md:max-w-md text-white font-bold">
             {title}
           </h3>
-          <p className="text-center w-full max-w-sm md:max-w-md">
+          <p className="text-center w-full max-w-sm md:max-w-md text-white">
             {description}
           </p>
           <div className="w-full max-w-sm md:max-w-md">{children}</div>

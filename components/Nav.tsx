@@ -107,7 +107,7 @@ export default function Nav() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-darkRed hover:text-white cursor-pointer text-white"
+                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-hoverPrimary hover:text-white cursor-pointer text-white"
               >
                 <span className="text-2xl">{icon}</span>
                 <span>{title}</span>
@@ -127,7 +127,7 @@ export default function Nav() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-white cursor-pointer text-white"
+                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-hoverPrimary hover:text-white cursor-pointer text-white"
               >
                 <span className="text-2xl">{icon}</span>
                 <span>{title}</span>

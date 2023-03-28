@@ -88,7 +88,7 @@ export function UserDropdown() {
         </motion.button>
         <div
           className={
-            'absolute top-14 right-0 w-64 p-4 rounded bg-purple shadow-md transform-gpu transition-all duration-150 ' +
+            'absolute top-14 right-0 w-64 p-4 rounded bg-gold shadow-md transform-gpu transition-all duration-150 ' +
             (open ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
           }
         >
@@ -154,7 +154,7 @@ export function UserDropdown() {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.995 }}
-                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight-dark font-semibold"
+                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight font-semibold"
                         onClick={() => setOpen(!open)}
                       >
                         Check-In Now!
