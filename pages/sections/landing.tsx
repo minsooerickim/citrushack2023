@@ -36,13 +36,13 @@ export default function Landing() {
     <>
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
         <div className="absolute left-1/2 -translate-x-1/2 w-full top-[30%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
-          <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black">
+          <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
             CITRUS HACK 2023
           </div>
-          <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal">
+          <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal text-text">
             Reach your next destination
           </div>
-          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1">
+          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 8-9, 2023
           </div>
           <CountdownWrapper date="2023-04-02T16:00:00" />
@@ -65,7 +65,7 @@ export default function Landing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
-                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white"
+                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white bg-purple hover:bg-hoverPrimary"
                 >
                   Apply Now!
                 </motion.button>

@@ -19,7 +19,7 @@ export function FaqAccordion({ question, answer }: Props) {
         className="flex py-3 items-center hover:text-highlight cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h4 className="grow font-semibold">{question}</h4>
+        <h4 className="grow font-bold text-text">{question}</h4>
         <div>
           <BiX
             className={
@@ -36,9 +36,9 @@ export function FaqAccordion({ question, answer }: Props) {
         }
       >
         {typeof answer === 'string' ? (
-          <p className="m-0 mb-8">{answer}</p>
+          <p className="m-0 mb-8 text-lightPurple">{answer}</p>
         ) : (
-          <div className="m-0 mb-8">{answer}</div>
+          <div className="m-0 mb-8 text-lightPurple">{answer}</div>
         )}
       </div>
     </div>
@@ -54,12 +54,12 @@ const faq = [
   {
     question: 'How do I apply?',
     answer:
-      'You need to sign in first with either your Google account. The application form is then accessible on the website after signing in.'
+      'You need to sign in first with your Google account. The application form is then accessible on the website after signing in.'
   },
   {
     question: 'When are applications due?',
     answer:
-      'Applications are due by midnight on Friday, April 1, 2022. Be sure to submit your application before then in order to participate.'
+      'Applications are due by midnight on Friday, April 28, 2023. Be sure to submit your application before then in order to participate.'
   },
   {
     question: 'Is Citrus Hack free?',
@@ -111,15 +111,13 @@ const faq = [
       "Not at all! You can attend a workshop just to learn, network with fellow hackers, and participate in games and raffles. You'll be able to find the schedule on our website as we get closer to the event."
   },
   {
-    question:
-      "If I'm residing outside of the U.S., can I still attend and/or win a prize?",
-    answer:
-      'Those outside of the U.S. can still attend, compete, and win. However, due to shipping restrictions and COVID, we won’t be able to send any physical items to those residing outside of the U.S.'
+    question: 'Is there an online option to attend?',
+    answer: 'Unfortunately no, Citrus Hack is in-person only.'
   },
   {
     question: "My question isn't listed?",
     answer: (
-      <p>
+      <p className="text-text">
         Feel free to email us at{' '}
         <ExternalLink
           name="citrushack@gmail.com"
