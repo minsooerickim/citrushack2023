@@ -20,6 +20,9 @@ module.exports = {
   mode: 'jit',
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    borderWidth: {
+      '11': '11px',
+    },
     screens: {
       'xs': '420px',
       'sm': '640px',

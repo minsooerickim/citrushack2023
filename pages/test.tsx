@@ -1,10 +1,10 @@
 import React from 'react'
-import Passport from '@/components/Passport'
+import Passports from '@/components/Passports'
 
 const test = () => {
   return (
     <div>
-        <Passport/>
+        <Passports/>
     </div>
   )
 }
