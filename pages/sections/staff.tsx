@@ -1,8 +1,8 @@
-import { TeamGrid } from '@/components/Team/components';
+import { TeamGrid } from '@/components/Team';
 
 export default function Staff() {
   return (
-    <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[70rem] justify-center items-center bg-pattern bg-repeat pb-4">
+    <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[70rem] justify-center items-center pb-4">
       <div className="flex justify-between pb-4 items-center">
         {/* <Image
           src={staffLineLeft}

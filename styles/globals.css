@@ -1,97 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "BalooPaaji2Bold";
-  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-SemiBold.ttf")
+body {
+  font-family: 'Nunito', sans-serif;
 }
-@font-face {
-  font-family: "BalooPaaji2Reg";
-  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Regular.ttf");
-}
-@font-face {
-  font-family: "BalooPaaji2Medium";
-  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Medium.ttf");
-}
-@font-face {
-  font-family: "BalooPaaji2Bold";
-  src: url("../public/fonts/Baloo_Paaji_2/static/BalooPaaji2-Bold.ttf");
-} */
+
 @layer base {
   :root {
     /* default light theme */
-    --overlay: #00000059;
-    --buttons: #F09372;
-    --primary: #FFD5C3;
-    --secondary: #DFDFDF;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
-    --text: #FFFFFF;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --wave-from: #65385D;
-    --wave-via: #FF8E6A;
-    --wave-to: #B56B83;
-    --via: #65385D;
-    --via2: #FF8E6A;
-    --to: #B56B83;
-    --transparent: #0000;
-    --judge: #000000;
-    --pattern: url('/assets/aboutUsStars.svg');
+    --sky: #a3deff;
+    --bubble: #b1e3ff;
+    --darkgreen: #2f5525;
+    --lightgreen: #69c063;
+    --brown: #71461f;
+    --gold: #FFAC01;
+    --bluegray: #514f66;
+    --gray: #5f5f5f;
+    --white: #ffffff;
+    --darksky: #2c314f;
+    --darkbubble: #373a5e;
+    --purple: #373A5E;
+    --lightPurple: #5C6084;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 
   [data-theme='light'] {
-    --buttons: #F09372;
-    --overlay: #00000059;
-    --primary: #FFD5C3;
-    --secondary: #DFDFDF;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
-    --text: #000000;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --via: #B56B83;
-    --to: #FF8E6A;
-    --transparent: #0000;
-    --judge: #000000;
-    --pattern: url('/assets/aboutUsStars.svg');
+    --sky: #a3deff;
+    --bubble: #b1e3ff;
+    --darkgreen: #2f5525;
+    --lightgreen: #69c063;
+    --brown: #71461f;
+    --gold: #FFAC01;
+    --bluegray: #514f66;
+    --gray: #5f5f5f;
+    --white: #ffffff;
+    --darksky: #2c314f;
+    --darkbubble: #373a5e;
+    --purple: #373A5E;
+    --lightPurple: #5C6084;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 
   [data-theme='dark'] {
-    --buttons: #F09372;
-    --overlay: #00000080;
-    --primary: #110A36;
-    --secondary: #353535;
-    --third: #B56B83;
-    --sub-secondary: #7A5770;
-    --highlight: #F09372;
-    --card: #AB6F82;
-    --text: #FFFFFF;
-    --opposite: #FFFFFF;
-    --sub: #F6DD5A;
-    --from: #190E56;
-    --via: #B56B83;
-    --to: #FF8E6A;
-    --transparent: #0000;
-    --judge: #F6DD5A;
-    --pattern: url('/assets/aboutUsStars.svg');
+    /* TODO: NEED TO CHANGE COLORS FOR DARK MODE (it is currently same as light mode) */
+    --sky: #2C314F;
+    --bubble: #b1e3ff;
+    --darkgreen: #2f5525;
+    --lightgreen: #69c063;
+    --brown: #71461f;
+    --gold: #FFAC01;
+    --bluegray: #514f66;
+    --gray: #5f5f5f;
+    --white: #ffffff;
+    --darksky: #2c314f;
+    --darkbubble: #373a5e;
+    --purple: #597DAA;
+    --lightPurple: #5C6084;
+    --clouds: url('/assets/clouds.svg');
+    --clouds2: url('/assets/clouds_birds.svg');
+    --schedule: url('/assets/schedule.svg');
   }
 }
 
+/* very useful for debugging */
 /* * {
   border: 2px solid greenyellow;
 } */
 
-html, body {
+html,
+body {
   width: 100% !important;
-  background-color: var(--primary);
+  background-color: var(--sky);
 }
 
 .min-safe-h-screen {
@@ -106,4 +92,13 @@ html, body {
     /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
     min-height: -webkit-fill-available !important;
   }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

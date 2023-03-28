@@ -1,6 +1,5 @@
 import useSWR, { useSWRConfig } from 'swr';
 import CountUp from 'react-countup';
-import { BiEdit } from 'react-icons/bi';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -17,7 +16,7 @@ export default function SignupCounter() {
 
       // Retry after 1.5 seconds.
       setTimeout(() => revalidate({ retryCount }), 1500);
-    },
+    }
   });
 
   const cachedCount = cache.get('/api/users/count');
@@ -25,11 +24,8 @@ export default function SignupCounter() {
   if (error || !data) {
     return (
       <div className="flex items-center gap-2">
-        <div>
-          <BiEdit className="text-2xl xs:text-3xl" />
-        </div>
-        <h4 className="text-base xs:text-xl font-medium">
-          <span className="font-bold">
+        <h4 className="text-sm sm:text-lg md:text-xl font-black">
+          <span className="text-sm sm:text-lg md:text-xl font-black">
             {cachedCount ? (
               <CountUp
                 start={cachedCount.numUsers - 100}
@@ -40,25 +36,22 @@ export default function SignupCounter() {
               '...'
             )}
           </span>
-          &nbsp;hackers signed up so far!
+          &nbsp;hackers signed up!
         </h4>
       </div>
     );
   } else {
     return (
       <div className="flex items-center gap-2">
-        <div>
-          <BiEdit className="text-2xl xs:text-3xl" />
-        </div>
-        <h4 className="text-base xs:text-xl font-medium">
-          <span className="font-bold">
+        <h4 className="text-sm sm:text-lg md:text-xl font-black">
+          <span className="text-sm sm:text-lg md:text-xl font-black">
             <CountUp
               start={data.numUsers - 100}
               end={data.numUsers}
               duration={1.5}
             />
           </span>
-          &nbsp;hackers signed up so far!
+          &nbsp;hackers signed up!
         </h4>
       </div>
     );

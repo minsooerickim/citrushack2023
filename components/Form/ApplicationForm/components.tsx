@@ -1,16 +1,16 @@
 import { Session } from 'next-auth';
 import { UseFormRegister, FieldValues } from 'react-hook-form';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
+import { schools } from './schools';
 import {
   genders,
   ethnicities,
   majors,
   grades,
   firstTimeHacker,
-  participation,
   foodPreference,
   shirtSize,
-  MLH,
+  MLH
 } from './options';
 
 interface Props {
@@ -103,12 +103,12 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
 
 export const Education = ({ register, errors }: Props) => (
   <Group title="Education">
-    <Input
-      type="text"
+    <Select
       label="School"
       variable="school"
       register={register}
       errors={errors}
+      options={schools}
       required
     />
     <Select
@@ -158,6 +158,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       errors={errors}
       required
     />
+    {/* Commented out for now because unsure if only UCR limited and if vaccine cards will be checked
     <Radio
       label="Are you participating in-person or online?"
       subtext={
@@ -176,9 +177,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
             </span>{' '}
             We will check for them.
           </div>
-          {/* <div>
-            Sorry, we are no longer accepting in-person applicants. We have reached maximum capacity.
-          </div> */}
         </>
       }
       variable="participation"
@@ -186,7 +184,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       register={register}
       errors={errors}
       required
-    />
+    />*/}
     <span className="flex flex-col mt-4 gap-2">
       <Checkbox
         label=""
