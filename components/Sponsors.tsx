@@ -161,7 +161,7 @@ export function CarouselSponsor() {
                 variants={bounceVariants as Variants}
                 animate={bounce ? 'animate' : 'initial'}
               >
-                <a href={'/citrushack-2022-sponsorship-packet.pdf'}>
+                <a href={'/sponsorship_packet.pdf'}>
                   <Image src={sponsorUsButton} width={140} height={120} />
                 </a>
               </motion.span>
