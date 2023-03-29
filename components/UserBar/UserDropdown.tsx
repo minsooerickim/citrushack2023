@@ -11,7 +11,7 @@ import {
   BiGroup,
   BiLogOutCircle,
   BiHelpCircle,
-  BiCategory,
+  BiCategory
 } from 'react-icons/bi';
 import { FaDiscord } from 'react-icons/fa';
 
@@ -20,6 +20,11 @@ export function UserDropdown() {
   const router = useRouter();
   const { data: session, status } = useSession();
   const [open, setOpen] = useState(false);
+  const [userDataLink, setUserDataLink] = useState('');
+
+  useEffect(() => {
+    setUserDataLink('users/' + session.user.uid);
+  }, [session]);
 
   /** Display information regarding app status reviews. */
   const triggerInfo = () => {
@@ -35,7 +40,7 @@ export function UserDropdown() {
       </div>,
       {
         id: 'appStatusInfo',
-        duration: 6000,
+        duration: 6000
       }
     );
   };
@@ -50,7 +55,7 @@ export function UserDropdown() {
       </div>,
       {
         id: 'checkinInfo',
-        duration: 4500,
+        duration: 4500
       }
     );
   };
@@ -72,7 +77,7 @@ export function UserDropdown() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-highlight hover:bg-highlight-dark"
+          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-gold hover:bg-highlight-dark"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -83,7 +88,7 @@ export function UserDropdown() {
         </motion.button>
         <div
           className={
-            'absolute top-14 right-0 w-64 p-4 rounded bg-secondary shadow-md transform-gpu transition-all duration-150 ' +
+            'absolute top-14 right-0 w-64 p-4 rounded bg-gold shadow-md transform-gpu transition-all duration-150 ' +
             (open ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
           }
         >
@@ -149,7 +154,7 @@ export function UserDropdown() {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.995 }}
-                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight-dark font-semibold"
+                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight font-semibold"
                         onClick={() => setOpen(!open)}
                       >
                         Check-In Now!
@@ -217,6 +222,25 @@ export function UserDropdown() {
                       </div>
                       <div className="p-1.5 group-hover:text-highlight">
                         Admin Dashboard
+                      </div>
+                    </motion.button>
+                  </Link>
+                )}
+              {status === 'authenticated' &&
+                session.user.uid &&
+                session.user.checkedIn && (
+                  <Link passHref href={userDataLink}>
+                    <motion.button
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.995 }}
+                      className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
+                      onClick={() => setOpen(!open)}
+                    >
+                      <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <BiCategory />
+                      </div>
+                      <div className="p-1.5 group-hover:text-highlight">
+                        QR Code
                       </div>
                     </motion.button>
                   </Link>

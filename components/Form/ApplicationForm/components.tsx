@@ -8,10 +8,9 @@ import {
   majors,
   grades,
   firstTimeHacker,
-  participation,
   foodPreference,
   shirtSize,
-  MLH,
+  MLH
 } from './options';
 
 interface Props {

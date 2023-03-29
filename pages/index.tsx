@@ -1,9 +1,5 @@
-// import { useState, useEffect } from 'react'
-// import Link from 'next/link'
-// import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
-// import Modal from '@/components/Modal'
 import Landing from '@/pages/sections/landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
@@ -12,42 +8,40 @@ import Sponsors from '@/pages/sections/sponsors';
 import Staff from '@/pages/sections/staff';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
+import React from 'react';
 
 export default function Home() {
   return (
     <Page>
       <Element
         name="Home"
-        className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
+        className="flex justify-center w-full bg-citrus-sky bg-clouds2 bg-repeat-x bg-contain"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+        <span className="flex justify-center w-full">
           <Landing />
         </span>
       </Element>
-      <Element
-        name="Schedule"
-        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
-      >
-        <Schedule />
-      </Element>
-      <Element
-        name="About"
-        className="relative flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
-      >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+      <Element name="About" className="flex justify-center w-full">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <About />
         </span>
       </Element>
-      <Element name="Tracks" className="flex justify-center w-full bg-primary">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+      <Element
+        name="Tracks"
+        className="flex justify-center w-full bg-sky md:bg-contain"
+      >
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
         </span>
       </Element>
       <Element
-        name="Support"
-        className="flex justify-center w-full bg-gradient-to-b from-accent to-card"
+        name="Schedule"
+        className="relative flex justify-center w-full bg-citrus-sky bg-contain"
       >
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain 2xl:bg-cover">
+        <Schedule />
+      </Element>
+      <Element name="Support" className="flex justify-center w-full bg-sky">
+        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Support />
         </span>
       </Element>
@@ -57,8 +51,8 @@ export default function Home() {
       >
         <Sponsors />
       </Element>
-      <Element name="Staff" className="flex justify-center w-full bg-primary">
-        <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
+      <Element name="Staff" className="flex justify-center w-full bg-sky">
+        <span className="flex justify-center px-4 w-full">
           <Staff />
         </span>
       </Element>

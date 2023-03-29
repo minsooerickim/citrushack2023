@@ -1,53 +1,41 @@
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     screens: {
-      'xs': '420px',
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      xs: '420px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
     },
     extend: {
-      backgroundImage: {
-        pattern: 'var(--pattern)',
-      },
-      fontFamily: {
-        baloo_semi_bold: ["BalooPaaji2Bold"],
-        baloo_regular: ["BalooPaaji2Reg"],
-        baloo_medium: ["BalooPaaji2Medium"],
-        baloo_bold: ["BalooPaaji2Bold"]
-      },
       colors: {
-        judge: 'var(--judge)',
-        opposite: 'var(--opposite)',
-        transparent: 'var(--transparent)',
+        sky: 'var(--sky)',
+        bubble: 'var(--bubble)',
+        darkgreen: 'var(--darkgreen)',
+        lightgreen: 'var(--lightgreen)',
+        brown: 'var(--brown)',
+        gold: 'var(--gold)',
+        bluegray: 'var(--bluegray)',
+        gray: 'var(--gray)',
+        white: 'var(--white)',
+        darksky: 'var(--darksky)',
+        darkbubble: 'var(--darkbubble)',
+        purple: 'var(--purple)',
+        lightPurple: 'var(--lightPurple)',
         text: 'var(--text)',
-        buttons: 'var(--buttons)',
-        card: 'var(--card)',
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        third: 'var(--third)',
-        card: 'var(--card)',
-        overlay: 'var(--overlay)',
-        highlight: {
-          DEFAULT: 'var(--highlight)',
-        },
-        sub: {
-          DEFAULT: 'var(--sub)',
-          secondary: 'var(--sub-secondary)'
-        },
-        from: 'var(--from)',
-        via: 'var(--via)',
-        via2: 'var(--via2)',
-        to: 'var(--to)',
-        waveFrom: 'var(--wave-from)',
-        waveVia: 'var(--wave-via)',
-        waveTo: 'var(--wave-to)',
+        hoverPrimary: 'var(--hoverPrimary)'
+      },
+      backgroundImage: {
+        clouds: 'var(--clouds)',
+        clouds2: 'var(--clouds2)',
+        schedule: 'var(--schedule)',
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("daisyui")],
+};
