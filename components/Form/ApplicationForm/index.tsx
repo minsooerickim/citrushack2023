@@ -184,7 +184,7 @@ export function ApplicationForm() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
-          className="w-full py-1.5 rounded bg-buttons font-semibold text-white"
+          className="w-full py-1.5 rounded bg-buttons font-semibold text-white bg-purple hover:bg-hoverPrimary"
           onClick={() => triggerErrorNotification()}
         >
           {clickedSubmitOnce ? 'Submitting...' : 'Submit'}
