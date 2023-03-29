@@ -46,8 +46,12 @@ export function ApplicationForm() {
     // auto accept if
     // if undergrad && UCR
     if (
-      school == 'University of California, Riverside' && 
-      (grade === '1st Year Undergraduate' || grade === '2nd Year Undergraduate' || grade === '3rd Year Undergraduate' || grade === '4th Year Undergraduate' || grade === '5th+ Year Undergraduate')
+      school == 'University of California, Riverside' &&
+      (grade === '1st Year Undergraduate' ||
+        grade === '2nd Year Undergraduate' ||
+        grade === '3rd Year Undergraduate' ||
+        grade === '4th Year Undergraduate' ||
+        grade === '5th+ Year Undergraduate')
     ) {
       criteria_met = true;
     } else {
@@ -97,7 +101,7 @@ export function ApplicationForm() {
     participation,
     MLH_code_of_conduct,
     MLH_privacy_policy,
-    MLH_communication,
+    MLH_communication
   }) => {
     if (clickedSubmitOnce) {
       return;
