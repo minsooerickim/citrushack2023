@@ -141,7 +141,7 @@ export default function Nav() {
           >
             <Link passHref href="/">
               <span
-                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-white cursor-pointer"
+                className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-white cursor-pointer text-white"
                 onClick={() => setNavOpen(false)}
               >
                 <span className="text-2xl">
