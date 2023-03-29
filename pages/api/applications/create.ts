@@ -33,7 +33,7 @@ export default async function createApplication(
     } = req.body;
 
     // input validation
-    if (first_name.length > 35 || last_name.length > 35) {
+    if (first_name.length > 50 || last_name.length > 50) {
       return res.status(400).json({ errror: 'An Error has occrured.' });
     }
     // eslint-disable-next-line no-var
@@ -43,10 +43,6 @@ export default async function createApplication(
     }
     const food_preference_options = ['Meat', 'Vegetarian', 'Nut Allergy'];
     if (!food_preference_options.includes(food_preference)) {
-      return res.status(400).json({ errror: 'An error has occured.' });
-    }
-    const participation_options = ['In-Person', 'Online'];
-    if (!participation_options.includes(participation)) {
       return res.status(400).json({ errror: 'An error has occured.' });
     }
     const first_time_hacker_options = ['Yes', 'No'];
