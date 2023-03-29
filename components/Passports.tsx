@@ -3,7 +3,7 @@ import Passport from '@/components/Passport';
 import Minsoo from '../public/team/minsoo.svg';
 import Ashley from '../public/team/ashley.svg';
 // import Paulian from '../public/team/paulian.png';
-import Gabs from '../public/team/gabs.png';
+import gabs from '../public/team/gabs.png';
 import Mariam from '../public/team/mariam.svg';
 import Henry from '../public/team/henry.svg';
 import Paulian from '../public/team/paulian.svg';
@@ -79,7 +79,7 @@ const staff = [
   },
   {
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
-    image: Gabs,
+    image: gabs,
     name: 'Gabriela Alvarez',
     position: 'Sponsorships'
   },
