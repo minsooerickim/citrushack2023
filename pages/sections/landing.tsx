@@ -31,10 +31,10 @@ export const Assets = () => {
     <>
       {/* cloud left */}
       <motion.div
-        animate={{ y: [0, -12, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 3
+          duration: 5
         }}
         className="absolute left-2 max-sm:hidden bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
       >
@@ -46,10 +46,10 @@ export const Assets = () => {
       </motion.div>
       {/* cloud right */}
       <motion.div
-        animate={{ y: [0, -5, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute right-0 max-sm:hidden bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
       >
@@ -61,10 +61,10 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top middle */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute left-[50%] top-10 lg:top-5 w-28 lg:w-40"
       >
@@ -75,12 +75,12 @@ export const Assets = () => {
         )}
       </motion.div>
 
-      {/* cloud top left low opacity*/}
+      {/* cloud top left*/}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute left-[0%] sm:left-[15%] lg:left-[25%] top-24 sm:top-4 w-24 sm:w-40"
       >
@@ -92,10 +92,10 @@ export const Assets = () => {
       </motion.div>
       {/* cloud left middle */}
       <motion.div
-        animate={{ y: [0, -12, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute left-8 lg:left-3 xl:left-[8%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
       >
@@ -108,10 +108,10 @@ export const Assets = () => {
 
       {/* cloud top right */}
       <motion.div
-        animate={{ y: [0, -12, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute right-0 xl:right-44 top-36 lg:top-0 w-20 xs:w-28 lg:w-52 opacity-90"
       >
@@ -123,10 +123,10 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top left opacity low*/}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute max-xs:hidden left-12 lg:left-10 top-48 lg:top-6 w-20 xs:w-28 opacity-60"
       >
@@ -156,7 +156,7 @@ export const Assets = () => {
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute right-8 xs:right-20 max-[375px]:hidden top-44 xs:top-64 lg:top-96"
       >
@@ -171,7 +171,7 @@ export const Assets = () => {
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute left-[35%] top-10"
       >
@@ -186,7 +186,7 @@ export const Assets = () => {
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
         className="absolute max-xs:hidden right-[35%] top-20"
       >
@@ -201,7 +201,7 @@ export const Assets = () => {
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 2
+          duration: 3
         }}
         className="absolute sm:right-[15%] md:right-[5%] lg:right-[10%] top-[70%] max-sm:hidden xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
       >

@@ -190,12 +190,6 @@ const Passports = () => {
                 <p>Kobe Braga</p>
               </div>
             </div>
-            <div className="md:hidden">
-              <p className="text-opposite font-baloo_semi_bold">
-                Quality Assurance
-              </p>
-              <p>Paulian Le</p>
-            </div>
             <div className="col-span-2 md:hidden">
               <p className="text-opposite font-baloo_semi_bold">Photographer</p>
               <p>Kobe Braga</p>
