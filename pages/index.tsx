@@ -53,7 +53,6 @@ export default function Home() {
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center px-4 w-full">
-          {/* <Staff /> */}
           <Passports />
         </span>
       </Element>

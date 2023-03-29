@@ -28,7 +28,7 @@ const Passport = ({ name, position, link, image }) => {
                     height={170}
                     objectFit="contain"
                     priority={true}
-                    quality={100}
+                    quality={1}
                     className="rounded-full"
                     alt="profile photo"
                   />
