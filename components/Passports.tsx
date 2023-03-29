@@ -3,6 +3,7 @@ import Passport from '@/components/Passport';
 import Minsoo from '../public/team/minsoo.png';
 import Ashley from '../public/team/ashley.png';
 // import Gab from '../public/team/gabs.png';
+import Jakin from '../public/team/jakin.jpg';
 import Mariam from '../public/team/mariam.png';
 import Henry from '../public/team/henry.png';
 import Paulian from '../public/team/paulian.png';
@@ -60,7 +61,7 @@ const staff = [
   },
   {
     link: 'https://www.linkedin.com/in/jakin200/',
-    image: '/leads/Jakin.png',
+    image: Jakin,
     name: 'Jakin Chan',
     position: 'Operations'
   },
