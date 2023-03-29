@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+
+import sponsorUsButton from '../public/assets/sponsors/sponsorus_button.svg';
+import becomeMentorButton from '../public/assets/sponsors/become_mentor_button.svg';
+import becomeVolunteerButton from '../public/assets/sponsors/become_volunteer_button.svg';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
@@ -78,16 +82,40 @@ export const Sponsor = ({
 );
 
 export function CarouselSponsor() {
+  const bounceVariants = {
+    initial: {
+      y: 0
+    },
+    animate: {
+      y: -10,
+      transition: {
+        duration: 0.5,
+        repeat: 1,
+        repeatType: 'reverse'
+      }
+    }
+  };
+  const [bounce, setBounce] = React.useState(false);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setBounce(!bounce);
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [bounce]);
   return (
     <div className="flex flex-col md:flex-row w-full h-screen md:h-72 md:space-x-4 rounded-md justify-center">
-      {/* postcard 1 */}
+      {/* sponsor us postcard */}
       <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
           <div className="absolute backface-hidden w-full h-full ">
             <div className="absolute backface-hidden w-full h-full ">
               <div className="text-center flex flex-col items-center justify-center h-full text-white">
                 <Image
-                  src={'/assets/sponsors/sponsor_postcard1.svg'}
+                  src={'/assets/sponsors/sponsor_us_front.svg'}
                   width={528}
                   height={305}
                   objectFit="contain"
@@ -96,13 +124,28 @@ export function CarouselSponsor() {
                   className="rounded-md"
                   alt=""
                 />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                    }
+                  >
+                    <Image src={sponsorUsButton} width={140} height={120} />
+                  </a>
+                </motion.span>
               </div>
             </div>
           </div>
           <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
             <div className="text-center flex flex-col items-center justify-center h-full">
               <Image
-                src={'/assets/sponsors/sponsor_postcard1_back.svg'}
+                src={'/assets/sponsors/sponsor_us_back.svg'}
                 width={528}
                 height={305}
                 objectFit="contain"
@@ -111,19 +154,30 @@ export function CarouselSponsor() {
                 className="rounded-md"
                 alt=""
               />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a href={'/citrushack-2022-sponsorship-packet.pdf'}>
+                  <Image src={sponsorUsButton} width={140} height={120} />
+                </a>
+              </motion.span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* postcard 2 */}
+      {/* become a mentor postcard */}
       <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
           <div className="absolute backface-hidden w-full h-full ">
             <div className="absolute backface-hidden w-full h-full ">
               <div className="text-center flex flex-col items-center justify-center h-full text-white">
                 <Image
-                  src={'/assets/sponsors/sponsor_postcard2.svg'}
+                  src={'/assets/sponsors/become_mentor_front.svg'}
                   width={528}
                   height={305}
                   objectFit="contain"
@@ -132,13 +186,28 @@ export function CarouselSponsor() {
                   className="rounded-md"
                   alt=""
                 />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLScxmD410p1xbI4z-WLYU_OkX87cNpA0NkVVkbrZOUjfwUL_wQ/viewform?usp=send_form'
+                    }
+                  >
+                    <Image src={becomeMentorButton} width={140} height={120} />
+                  </a>
+                </motion.span>
               </div>
             </div>
           </div>
           <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
             <div className="text-center flex flex-col items-center justify-center h-full">
               <Image
-                src={'/assets/sponsors/sponsor_postcard2_back.svg'}
+                src={'/assets/sponsors/become_mentor_back.svg'}
                 width={528}
                 height={305}
                 objectFit="contain"
@@ -147,19 +216,34 @@ export function CarouselSponsor() {
                 className="rounded-md"
                 alt=""
               />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a
+                  href={
+                    'https://docs.google.com/forms/d/e/1FAIpQLScxmD410p1xbI4z-WLYU_OkX87cNpA0NkVVkbrZOUjfwUL_wQ/viewform?usp=send_form'
+                  }
+                >
+                  <Image src={becomeMentorButton} width={140} height={120} />
+                </a>
+              </motion.span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* postcard 3 */}
+      {/* become a volunteer postcard */}
       <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
           <div className="absolute backface-hidden w-full h-full ">
             <div className="absolute backface-hidden w-full h-full ">
               <div className="text-center flex flex-col items-center justify-center h-full text-white">
                 <Image
-                  src={'/assets/sponsors/sponsor_postcard3.svg'}
+                  src={'/assets/sponsors/become_volunteer_front.svg'}
                   width={528}
                   height={305}
                   objectFit="contain"
@@ -168,13 +252,32 @@ export function CarouselSponsor() {
                   className="rounded-md"
                   alt=""
                 />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                    }
+                  >
+                    <Image
+                      src={becomeVolunteerButton}
+                      width={140}
+                      height={120}
+                    />
+                  </a>
+                </motion.span>
               </div>
             </div>
           </div>
           <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
             <div className="text-center flex flex-col items-center justify-center h-full">
               <Image
-                src={'/assets/sponsors/sponsor_postcard3_back.svg'}
+                src={'/assets/sponsors/become_volunteer_back.svg'}
                 width={528}
                 height={305}
                 objectFit="contain"
@@ -183,6 +286,21 @@ export function CarouselSponsor() {
                 className="rounded-md"
                 alt=""
               />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a
+                  href={
+                    'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                  }
+                >
+                  <Image src={becomeVolunteerButton} width={140} height={120} />
+                </a>
+              </motion.span>
             </div>
           </div>
         </div>
