@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Skyline from '../../public/assets/landing.svg';
+import Globe from '../../public/assets/globe.svg';
 
 export default function Landing() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function Landing() {
   return (
     <>
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[30%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[10%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
           <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
             CITRUS HACK 2023
           </div>
@@ -119,8 +120,19 @@ export default function Landing() {
               )}
           </div>
         </div>
-        {/* TODO: add in darkmode skyline */}
-        <Image src={Skyline} alt="skyline" className="object-cover " />
+        <span className="hidden md:block">
+          <Image src={Skyline} alt="skyline" className="object-cover" />
+        </span>
+        <motion.span
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 5
+          }}
+          className="block md:hidden"
+        >
+          <Image src={Globe} alt="Globe" className="object-cover" />
+        </motion.span>
       </section>
       <Modal
         title="Sign In"
