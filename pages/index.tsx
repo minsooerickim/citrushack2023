@@ -5,7 +5,6 @@ import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
-import Staff from '@/pages/sections/staff';
 import Passports from '@/components/Passports';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
