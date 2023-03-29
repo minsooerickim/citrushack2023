@@ -1,17 +1,17 @@
 import React from 'react';
 import Passport from '@/components/Passport';
-import Minsoo from '../public/team/minsoo.svg';
-import Ashley from '../public/team/ashley.svg';
-// import gabs from '../public/team/gabs.png';
-import Mariam from '../public/team/mariam.svg';
-import Henry from '../public/team/henry.svg';
-import Paulian from '../public/team/paulian.svg';
-import Kanin from '../public/team/kanin.svg';
-import Prathmesh from '../public/team/prathmesh.svg';
-import Vivian from '../public/team/vivian.svg';
-import Sarah from '../public/team/sarah.svg';
-import Alex from '../public/team/alex.svg';
-import Jon from '../public/team/jon.svg';
+import Minsoo from '../public/team/minsoo.png';
+import Ashley from '../public/team/ashley.png';
+import Gab from '../public/team/gabs.png';
+import Mariam from '../public/team/mariam.png';
+import Henry from '../public/team/henry.png';
+import Paulian from '../public/team/paulian.png';
+import Kanin from '../public/team/kanin.png';
+import Prathmesh from '../public/team/prathmesh.png';
+import Vivian from '../public/team/vivian.png';
+import Sarah from '../public/team/sarah.png';
+import Alex from '../public/team/alex.png';
+import Jon from '../public/team/jon.png';
 
 const directors = [
   {
@@ -78,7 +78,7 @@ const staff = [
   },
   {
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
-    image: '',
+    image: Gab,
     name: 'Gabriela Alvarez',
     position: 'Sponsorship'
   },
@@ -99,7 +99,7 @@ const staff = [
 const Passports = () => {
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] justify-center items-center pb-10">
-      <div className="flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-12 mb-12">
+      <div className="flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
         <p className="text-center text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
           Meet The Team
         </p>
