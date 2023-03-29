@@ -2,7 +2,7 @@ import React from 'react';
 import Passport from '@/components/Passport';
 import Minsoo from '../public/team/minsoo.png';
 import Ashley from '../public/team/ashley.png';
-import Gab from '../public/team/gabs.png';
+// import Gab from '../public/team/gabs.png';
 import Mariam from '../public/team/mariam.png';
 import Henry from '../public/team/henry.png';
 import Paulian from '../public/team/paulian.png';
@@ -78,7 +78,7 @@ const staff = [
   },
   {
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
-    image: Gab,
+    image: '',
     name: 'Gabriela Alvarez',
     position: 'Sponsorship'
   },
