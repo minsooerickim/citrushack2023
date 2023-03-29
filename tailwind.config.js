@@ -1,3 +1,22 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const plugin = require('tailwindcss/plugin');
+const MyClass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.my-rotate-y-180': {
+      transform: 'rotateY(180deg)'
+    },
+    '.preserve-3d': {
+      transformStyle: 'preserve-3d'
+    },
+    '.perspective': {
+      perspective: '1000px'
+    },
+    '.backface-hidden': {
+      backfaceVisibility: 'hidden'
+    }
+  });
+});
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -33,9 +52,13 @@ module.exports = {
       backgroundImage: {
         clouds: 'var(--clouds)',
         clouds2: 'var(--clouds2)',
-        schedule: 'var(--schedule)'
+        schedule: 'var(--schedule)',
+        minsoo: 'var(--minsoo)'
+      },
+      borderWidth: {
+        10: '10px'
       }
     }
   },
-  plugins: [require('daisyui')]
+  plugins: [require('daisyui'), MyClass]
 };
