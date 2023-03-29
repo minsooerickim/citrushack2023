@@ -80,13 +80,13 @@ const staff = [
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
     image: '',
     name: 'Gabriela Alvarez',
-    position: 'Sponsorships'
+    position: 'Sponsorship'
   },
   {
     link: 'https://www.linkedin.com/in/alex-c-hsieh/',
     image: Alex,
     name: 'Alex Hsieh',
-    position: 'Sponsorships'
+    position: 'Sponsorship'
   },
   {
     link: 'https://www.linkedin.com/in/jonathanchon/',

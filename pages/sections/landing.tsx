@@ -28,7 +28,7 @@ export const Assets = () => {
 
   return (
     <>
-      {/* cloud  left low opacity*/}
+      {/* cloud left */}
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{
@@ -68,7 +68,7 @@ export const Assets = () => {
         className="absolute left-[50%] top-10 lg:top-5 w-28 lg:w-40"
       >
         {theme === 'light' ? (
-          <Image src={cloud2} alt="cloud" />
+          <Image src={cloud} alt="cloud" />
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
@@ -99,7 +99,7 @@ export const Assets = () => {
         className="absolute left-8 lg:left-3 xl:left-[8%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
       >
         {theme === 'light' ? (
-          <Image src={cloud2} alt="cloud" />
+          <Image src={cloud} alt="cloud" />
         ) : (
           <Image src={cloudDark} alt="cloud" />
         )}
