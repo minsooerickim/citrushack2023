@@ -27,8 +27,14 @@ export default function Modal({
   useEffect(() => {
     setTargetElement(document.querySelector('#modal'));
     if (targetElement) {
-      if (show) disableBodyScroll(targetElement);
-      else enableBodyScroll(targetElement);
+      if (show) {
+        document.body.style.paddingRight =
+          window.innerWidth - document.body.clientWidth + 'px'; // pad the width of scrollbar
+        disableBodyScroll(targetElement);
+      } else {
+        document.body.style.paddingRight = '';
+        enableBodyScroll(targetElement);
+      }
     }
   }, [targetElement, show]);
 
@@ -59,8 +65,10 @@ export default function Modal({
       </div>
       <div
         className={
-          'fixed top-0 left-0 w-full h-full bg-overlay transform-gpu transition-opacity duration-150 ' +
-          (show ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
+          'fixed top-0 left-0 w-full h-full bg-black transform-gpu transition-opacity transition-z duration-150 z-[1000]' +
+          (show
+            ? 'pointer-events-auto opacity-30'
+            : 'pointer-events-none opacity-0')
         }
         onClick={() => handler(false)}
       />
