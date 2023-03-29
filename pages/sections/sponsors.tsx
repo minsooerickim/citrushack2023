@@ -2,7 +2,6 @@ import Image from 'next/image';
 import RedBull from '../../public/assets/sponsors/redbull.svg';
 import BlackStone from '../../public/assets/sponsors/blackstone.svg';
 import UCR from '../../public/assets/sponsors/ucr.svg';
-import RoadBG from '../../public/assets/sponsors/roadBG.svg';
 
 // TRYING TO MAKE COLUMNS
 // export const DesktopSponsors = () => {
@@ -171,9 +170,6 @@ export default function Sponsors() {
         Thank you to all of those who made this hackathon possible!
       </p>
       <DesktopSponsors />
-      {/* <div className="absolute z-0 object-cover">
-        <Image src={RoadBG} alt="road" />
-      </div> */}
     </section>
   );
 }
