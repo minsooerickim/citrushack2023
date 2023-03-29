@@ -165,9 +165,9 @@ export function ApplicationForm() {
 
   return (
     <main className="flex flex-col items-center my-24 px-4 w-full">
-      <h2 className="mb-6">Application Form</h2>
+      <h2 className="mb-6 text-3xl font-bold">Application Form</h2>
       <p className="pb-4 w-full sm:max-w-2xl">
-        Fill out this form to apply for Cutie Hack 2022!
+        Fill out this form to apply for Citrus Hack 2023!
       </p>
       <p className="pb-4 w-full sm:max-w-2xl">
         Within 24 hours of submitting, you will be notified via email about your

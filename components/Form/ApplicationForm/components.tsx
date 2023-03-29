@@ -80,6 +80,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="phone_number"
         register={register}
         errors={errors}
+        required
       />
     </div>
     <Radio
