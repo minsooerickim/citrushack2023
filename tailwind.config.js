@@ -24,6 +24,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    borderWidth: {
+      11: '11px'
+    },
     screens: {
       xs: '430px',
       sm: '640px',
@@ -56,6 +59,10 @@ module.exports = {
         minsoo: 'var(--minsoo)'
       },
       borderWidth: {
+        2: '2px',
+        4: '4px',
+        6: '4px',
+        8: '8px',
         10: '10px'
       }
     }

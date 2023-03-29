@@ -21,6 +21,7 @@ import bird1 from '../../public/assets/bird1.svg';
 import bird2 from '../../public/assets/bird2.svg';
 import bird3 from '../../public/assets/bird3.svg';
 import star from '../../public/assets/star.svg';
+import globeLight from '../../public/assets/globeLight.svg';
 import { useTheme } from 'next-themes';
 
 export const Assets = () => {
@@ -35,7 +36,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute left-2 bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
+        className="absolute left-2 max-sm:hidden bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -50,7 +51,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-0  bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
+        className="absolute right-0 max-sm:hidden bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -112,7 +113,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-10 xl:right-44 top-36 lg:top-0 w-20 xs:w-28 lg:w-52 opacity-90"
+        className="absolute right-0 xl:right-44 top-36 lg:top-0 w-20 xs:w-28 lg:w-52 opacity-90"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -157,7 +158,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 4
         }}
-        className="absolute right-16 xs:right-20 max-[375px]:hidden top-48 xs:top-64 lg:top-96"
+        className="absolute right-8 xs:right-20 max-[375px]:hidden top-44 xs:top-64 lg:top-96"
       >
         {theme === 'light' ? (
           <Image src={bird3} alt="bird" />
@@ -202,7 +203,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 2
         }}
-        className="absolute right-[24%] lg:right-[10%] top-[70%] xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
+        className="absolute sm:right-[15%] md:right-[5%] lg:right-[10%] top-[70%] max-sm:hidden xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
       >
         <Image src={airplane} alt="airplane" />
       </motion.div>
@@ -235,15 +236,25 @@ export default function Landing() {
   return (
     <>
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[57rem]">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[27%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[17%] xs:top-[22%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
           <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
             CITRUS HACK 2023
           </div>
-          <div className="text-center text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal text-text">
+          <div className="text-center text-2xl max-[375px]:text-2xl md:text-3xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-bold text-text">
             Reach your next destination
+            {/* <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[20%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+          <div className="text-center text-5xl md:text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
+            CITRUS HACK <span className="hidden md:block">2023</span>
           </div>
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 28-29, 2023
+          </div>
+          <div className="text-center text-2xl md:text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal text-text">
+            Reach your next destination */}
+          </div>
+          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-semibold z-1 text-text">
+            April 29-30, 2023
           </div>
           <CountdownWrapper date="2023-04-02T16:00:00" />
           {/* <p className='max-w-lg italic text-center font-medium'>
@@ -320,12 +331,36 @@ export default function Landing() {
           </div>
         </div>
         <Assets />
-        {/* TODO: add in darkmode skyline */}
-        {theme === 'light' ? (
+        {/* {theme === 'light' ? (
           <Image src={Skyline} alt="skyline" className="object-cover " />
         ) : (
           <Image src={SkylineDark} alt="skyline" className="object-cover " />
-        )}
+        )} */}
+        <span className="hidden sm:block">
+          {/* <Image src={Skyline} alt="skyline" className="object-cover" /> */}
+          {theme === 'light' ? (
+            <Image src={Skyline} alt="skyline" className="object-cover " />
+          ) : (
+            <Image src={SkylineDark} alt="skyline" className="object-cover " />
+          )}
+        </span>
+        {/* <span className="flex justify-center items-center"> */}
+        <motion.span
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 5
+          }}
+          className="block sm:hidden"
+        >
+          <span className="flex justify-center items-center">
+            <div className="flex max-w-[375px] max-[375px]:w-2/3 xs:w-5/6 mb-3 xs:mb-10">
+              {/* <div className="flex w-11/12 xs:w-[425px] mb-5"> */}
+              <Image src={globeLight} alt="Globe" className="object-cover" />
+            </div>
+          </span>
+        </motion.span>
+        {/* </span> */}
       </section>
       <Modal
         title="Sign In"

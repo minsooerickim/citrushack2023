@@ -1,3 +1,4 @@
+import React from 'react';
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
 import Landing from '@/pages/sections/landing';
@@ -5,10 +6,9 @@ import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
-import Passports from '@/components/Passports';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
-import React from 'react';
+import Passports from '@/components/Passports';
 
 export default function Home() {
   return (

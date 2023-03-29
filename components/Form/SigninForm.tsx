@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { signIn, getCsrfToken } from 'next-auth/react';
 // import { useForm } from 'react-hook-form';
@@ -6,8 +7,7 @@ import { signIn, getCsrfToken } from 'next-auth/react';
 import { motion } from 'framer-motion';
 
 /** Form displaying user sign-in options. */
-export function SigninForm() {
-  // export function SigninForm({ csrfToken = '' }) {
+export function SigninForm({ csrfToken = '' }) {
   // const { register, handleSubmit } = useForm();
   // const [error, setError] = useState(false);
 
