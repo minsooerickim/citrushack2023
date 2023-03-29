@@ -1,3 +1,4 @@
+import React from 'react';
 import { Element } from 'react-scroll';
 import { Page } from '@/components/Page';
 import Landing from '@/pages/sections/landing';
@@ -7,7 +8,6 @@ import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
-import React from 'react';
 import Passports from '@/components/Passports';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <Page>
       <Element
         name="Home"
-        className="flex justify-center w-full bg-citrus-sky bg-clouds2 bg-repeat-x bg-contain"
+        className="flex justify-center w-full bg-citrus-sky bg-contain"
       >
         <span className="flex justify-center w-full">
           <Landing />
@@ -52,7 +52,7 @@ export default function Home() {
         <Sponsors />
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-sky">
-        <span className="flex justify-center flex-col px-4 w-full">
+        <span className="flex justify-center px-4 w-full">
           <Passports />
         </span>
       </Element>

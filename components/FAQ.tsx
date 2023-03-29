@@ -11,7 +11,7 @@ interface Props {
 
 /** Accordion for a single FAQ. */
 export function FaqAccordion({ question, answer }: Props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="flex flex-col w-full border-b-2 border-sub">
