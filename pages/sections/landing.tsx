@@ -38,7 +38,7 @@ export default function Landing() {
       <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
         <div className="absolute left-1/2 -translate-x-1/2 w-full top-[20%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
           <div className="text-center text-5xl md:text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
-            CITRUS HACK <span className='hidden md:block'>2023</span>
+            CITRUS HACK <span className="hidden md:block">2023</span>
           </div>
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 8-9, 2023
