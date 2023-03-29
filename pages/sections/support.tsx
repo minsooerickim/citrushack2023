@@ -2,7 +2,7 @@ import { CarouselSponsor } from '@/components/Sponsors';
 
 export default function Support() {
   return (
-    <section className="flex flex-col w-full h-full max-w-[60rem] my-12 lg:mt-0 justify-center items-center">
+    <section className="flex flex-col w-full h-full my-12 lg:mt-0 justify-center items-center">
       <h1 className="text-center font-black text-5xl md:text-7xl text-text">
         Get Involved
       </h1>

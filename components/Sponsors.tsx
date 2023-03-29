@@ -78,59 +78,116 @@ export const Sponsor = ({
 );
 
 export function CarouselSponsor() {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => {
-    if (window.innerWidth <= 768) {
-      setIsFlipped(!isFlipped);
-    }
-  };
-
-  const handleHoverStart = () => {
-    if (window.innerWidth > 768) {
-      setIsFlipped(true);
-    }
-  };
-
-  const handleHoverEnd = () => {
-    if (window.innerWidth > 768) {
-      setIsFlipped(false);
-    }
-  };
   return (
-    <div className="carousel carousel-center w-full h-72 md:p-4 space-x-4 bg-lightPurple rounded-box">
-      <motion.div
-        className=" w-11/12 h-auto max-w-md relative carousel-item"
-        onClick={handleClick}
-        onMouseEnter={handleHoverStart}
-        onMouseLeave={handleHoverEnd}
-      >
-        <motion.div
-          className="w-full h-full bg-blue absolute top-0 left-0 flex items-center justify-center backface-hidden"
-          style={{
-            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            transition: 'transform .5s ease-in-out'
-          }}
-        >
-          <img
-            src="/assets/sponsors/sponsor_postcard1.svg"
-            className="rounded-box"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full h-full absolute top-0 left-0 flex items-center justify-center backface-hidden"
-          style={{
-            transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
-            transition: 'transform .5s ease-in-out'
-          }}
-        >
-          <img
-            src="/assets/sponsors/sponsor_postcard1_back.svg"
-            className="rounded-box"
-          />
-        </motion.div>
-      </motion.div>
-      <motion.div
+    <div className="flex flex-col md:flex-row w-full h-screen md:h-72 md:space-x-4 rounded-md justify-center">
+      {/* postcard 1 */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/sponsor_postcard1.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/sponsor_postcard1_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* postcard 2 */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/sponsor_postcard2.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/sponsor_postcard2_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* postcard 3 */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/sponsor_postcard3.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/sponsor_postcard3_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <motion.div
         className=" w-11/12 h-auto max-w-md relative carousel-item"
         onClick={handleClick}
         onMouseEnter={handleHoverStart}
@@ -191,7 +248,7 @@ export function CarouselSponsor() {
             className="rounded-box"
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
