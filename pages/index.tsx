@@ -5,10 +5,10 @@ import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
-import Staff from '@/pages/sections/staff';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
 import React from 'react';
+import Passports from '@/components/Passports';
 
 export default function Home() {
   return (
@@ -52,8 +52,8 @@ export default function Home() {
         <Sponsors />
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-sky">
-        <span className="flex justify-center px-4 w-full">
-          <Staff />
+        <span className="flex justify-center flex-col px-4 w-full">
+          <Passports />
         </span>
       </Element>
       <Element
