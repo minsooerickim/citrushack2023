@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
