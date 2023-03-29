@@ -8,7 +8,7 @@ import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
 import React from 'react';
-import Passports from '@/components/Passports.tsx';
+import Passports from '@/components/Passports';
 
 export default function Home() {
   return (
