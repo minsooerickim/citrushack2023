@@ -8,7 +8,7 @@ import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
-import Passports from '@/components/Passports';
+import Team from '@/pages/sections/team';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -54,7 +54,7 @@ export default function Home() {
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center px-4 w-full">
-          <Passports />
+          <Team />
         </span>
       </Element>
       <Element

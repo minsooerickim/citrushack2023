@@ -1,18 +1,18 @@
 import React from 'react';
-import Passport from '@/components/Passport';
-import Minsoo from '../public/team/minsoo.png';
-import Ashley from '../public/team/ashley.png';
-// import Gab from '../public/team/gabs.png';
-import Jakin from '../public/team/jakin.jpg';
-import Mariam from '../public/team/mariam.png';
-import Henry from '../public/team/henry.png';
-import Paulian from '../public/team/paulian.png';
-import Kanin from '../public/team/kanin.png';
-import Prathmesh from '../public/team/prathmesh.png';
-import Vivian from '../public/team/vivian.png';
-import Sarah from '../public/team/sarah.png';
-import Alex from '../public/team/alex.png';
-import Jon from '../public/team/jon.png';
+import ProfileWrapper from '@/components/ProfileWrapper';
+import Minsoo from '@/public/team/minsoo.png';
+import Ashley from '@/public/team/ashley.png';
+// import Gab from '@/public/team/gabs.png';
+import Jakin from '@/public/team/jakin.jpg';
+import Mariam from '@/public/team/mariam.png';
+import Henry from '@/public/team/henry.png';
+import Paulian from '@/public/team/paulian.png';
+import Kanin from '@/public/team/kanin.png';
+import Prathmesh from '@/public/team/prathmesh.png';
+import Vivian from '@/public/team/vivian.png';
+import Sarah from '@/public/team/sarah.png';
+import Alex from '@/public/team/alex.png';
+import Jon from '@/public/team/jon.png';
 
 const directors = [
   {
@@ -97,7 +97,7 @@ const staff = [
   }
 ];
 
-const Passports = () => {
+const team = () => {
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] justify-center items-center pb-10">
       <div className="flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
@@ -109,7 +109,7 @@ const Passports = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12 ">
           {directors.map(({ link, image, name, position }) => (
-            <Passport
+            <ProfileWrapper
               key={link}
               link={link}
               image={image}
@@ -121,7 +121,7 @@ const Passports = () => {
       </div>
       <div className="flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12">
         {staff.map(({ link, image, name, position }) => (
-          <Passport
+          <ProfileWrapper
             key={link}
             link={link}
             image={image}
@@ -209,4 +209,4 @@ const Passports = () => {
   );
 };
 
-export default Passports;
+export default team;

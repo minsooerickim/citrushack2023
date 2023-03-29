@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-// import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
-const Passport = ({ name, position, link, image }) => {
+const ProfileWrapper = ({ name, position, link, image }) => {
   const { theme } = useTheme();
 
   return (
@@ -70,4 +69,4 @@ const Passport = ({ name, position, link, image }) => {
   );
 };
 
-export default Passport;
+export default ProfileWrapper;
