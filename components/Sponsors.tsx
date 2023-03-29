@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
+
+import sponsorUsButton from '../public/assets/sponsors/sponsorus_button.svg';
+import becomeMentorButton from '../public/assets/sponsors/become_mentor_button.svg';
+import becomeVolunteerButton from '../public/assets/sponsors/become_volunteer_button.svg';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
@@ -78,59 +82,230 @@ export const Sponsor = ({
 );
 
 export function CarouselSponsor() {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => {
-    if (window.innerWidth <= 768) {
-      setIsFlipped(!isFlipped);
+  const bounceVariants = {
+    initial: {
+      y: 0
+    },
+    animate: {
+      y: -10,
+      transition: {
+        duration: 0.5,
+        repeat: 1,
+        repeatType: 'reverse'
+      }
     }
   };
+  const [bounce, setBounce] = React.useState(false);
 
-  const handleHoverStart = () => {
-    if (window.innerWidth > 768) {
-      setIsFlipped(true);
-    }
-  };
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setBounce(!bounce);
+    }, 2000);
 
-  const handleHoverEnd = () => {
-    if (window.innerWidth > 768) {
-      setIsFlipped(false);
-    }
-  };
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [bounce]);
   return (
-    <div className="carousel carousel-center w-full h-72 md:p-4 space-x-4 bg-lightPurple rounded-box">
-      <motion.div
-        className=" w-11/12 h-auto max-w-md relative carousel-item"
-        onClick={handleClick}
-        onMouseEnter={handleHoverStart}
-        onMouseLeave={handleHoverEnd}
-      >
-        <motion.div
-          className="w-full h-full bg-blue absolute top-0 left-0 flex items-center justify-center backface-hidden"
-          style={{
-            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            transition: 'transform .5s ease-in-out'
-          }}
-        >
-          <img
-            src="/assets/sponsors/sponsor_postcard1.svg"
-            className="rounded-box"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full h-full absolute top-0 left-0 flex items-center justify-center backface-hidden"
-          style={{
-            transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)',
-            transition: 'transform .5s ease-in-out'
-          }}
-        >
-          <img
-            src="/assets/sponsors/sponsor_postcard1_back.svg"
-            className="rounded-box"
-          />
-        </motion.div>
-      </motion.div>
-      <motion.div
+    <div className="flex flex-col md:flex-row w-full h-screen md:h-72 md:space-x-4 rounded-md justify-center">
+      {/* sponsor us postcard */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/sponsor_us_front.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                    }
+                  >
+                    <Image src={sponsorUsButton} width={140} height={120} />
+                  </a>
+                </motion.span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/sponsor_us_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a href={'/sponsorship_packet.pdf'}>
+                  <Image src={sponsorUsButton} width={140} height={120} />
+                </a>
+              </motion.span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* become a mentor postcard */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/become_mentor_front.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLScxmD410p1xbI4z-WLYU_OkX87cNpA0NkVVkbrZOUjfwUL_wQ/viewform?usp=send_form'
+                    }
+                  >
+                    <Image src={becomeMentorButton} width={140} height={120} />
+                  </a>
+                </motion.span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/become_mentor_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a
+                  href={
+                    'https://docs.google.com/forms/d/e/1FAIpQLScxmD410p1xbI4z-WLYU_OkX87cNpA0NkVVkbrZOUjfwUL_wQ/viewform?usp=send_form'
+                  }
+                >
+                  <Image src={becomeMentorButton} width={140} height={120} />
+                </a>
+              </motion.span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* become a volunteer postcard */}
+      <div className="relative w-full md:w-96 h-full bg-transparent group perspective cursor-pointer carousel-item">
+        <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
+          <div className="absolute backface-hidden w-full h-full ">
+            <div className="absolute backface-hidden w-full h-full ">
+              <div className="text-center flex flex-col items-center justify-center h-full text-white">
+                <Image
+                  src={'/assets/sponsors/become_volunteer_front.svg'}
+                  width={528}
+                  height={305}
+                  objectFit="contain"
+                  priority={true}
+                  quality={1}
+                  className="rounded-md"
+                  alt=""
+                />
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="absolute right-0 bottom-0 pr-4"
+                  variants={bounceVariants as Variants}
+                  animate={bounce ? 'animate' : 'initial'}
+                >
+                  <a
+                    href={
+                      'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                    }
+                  >
+                    <Image
+                      src={becomeVolunteerButton}
+                      width={140}
+                      height={120}
+                    />
+                  </a>
+                </motion.span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute my-rotate-y-180 backface-hidden w-full h-full">
+            <div className="text-center flex flex-col items-center justify-center h-full">
+              <Image
+                src={'/assets/sponsors/become_volunteer_back.svg'}
+                width={528}
+                height={305}
+                objectFit="contain"
+                priority={true}
+                quality={1}
+                className="rounded-md"
+                alt=""
+              />
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.995 }}
+                className="absolute right-0 bottom-0 pr-4"
+                variants={bounceVariants as Variants}
+                animate={bounce ? 'animate' : 'initial'}
+              >
+                <a
+                  href={
+                    'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
+                  }
+                >
+                  <Image src={becomeVolunteerButton} width={140} height={120} />
+                </a>
+              </motion.span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <motion.div
         className=" w-11/12 h-auto max-w-md relative carousel-item"
         onClick={handleClick}
         onMouseEnter={handleHoverStart}
@@ -191,7 +366,7 @@ export function CarouselSponsor() {
             className="rounded-box"
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

@@ -45,18 +45,18 @@ export function ApplicationForm() {
     // determine if criteria to participate is met
     // auto accept if
     // if undergrad && UCR
-    // if undergrad && non-ucr && online
     if (
-      school != 'University of California, Riverside' &&
-      school != 'UCR' &&
-      school != 'ucr' &&
-      school != 'UC Riverside' &&
-      school != 'uc riverside'
+      school == 'University of California, Riverside' &&
+      (grade === '1st Year Undergraduate' ||
+        grade === '2nd Year Undergraduate' ||
+        grade === '3rd Year Undergraduate' ||
+        grade === '4th Year Undergraduate' ||
+        grade === '5th+ Year Undergraduate')
     ) {
+      criteria_met = true;
+    } else {
       criteria_met = false;
     }
-    if (participation == 'Online') criteria_met = true;
-    if (grade === 'Graduate') criteria_met = false;
 
     return criteria_met;
   };
@@ -98,10 +98,10 @@ export function ApplicationForm() {
     grad_date,
     resume,
     first_time,
-    participation
-    // MLH_code_of_conduct,
-    // MLH_privacy_policy,
-    // MLH_communication,
+    participation,
+    MLH_code_of_conduct,
+    MLH_privacy_policy,
+    MLH_communication
   }) => {
     if (clickedSubmitOnce) {
       return;
@@ -135,9 +135,9 @@ export function ApplicationForm() {
         first_time,
         participation,
         criteria_met,
-        // MLH_code_of_conduct,
-        // MLH_privacy_policy,
-        // MLH_communication,
+        MLH_code_of_conduct,
+        MLH_privacy_policy,
+        MLH_communication,
         applied_after_limit
       })
       .then(() => {
@@ -165,9 +165,9 @@ export function ApplicationForm() {
 
   return (
     <main className="flex flex-col items-center my-24 px-4 w-full">
-      <h2 className="mb-6">Application Form</h2>
+      <h2 className="mb-6 text-3xl font-bold">Application Form</h2>
       <p className="pb-4 w-full sm:max-w-2xl">
-        Fill out this form to apply for Cutie Hack 2022!
+        Fill out this form to apply for Citrus Hack 2023!
       </p>
       <p className="pb-4 w-full sm:max-w-2xl">
         Within 24 hours of submitting, you will be notified via email about your
@@ -188,7 +188,7 @@ export function ApplicationForm() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
-          className="w-full py-1.5 rounded bg-buttons font-semibold text-white"
+          className="w-full py-1.5 rounded bg-buttons font-semibold text-white bg-purple hover:bg-hoverPrimary"
           onClick={() => triggerErrorNotification()}
         >
           {clickedSubmitOnce ? 'Submitting...' : 'Submit'}
