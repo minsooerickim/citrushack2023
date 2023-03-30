@@ -164,23 +164,35 @@ const team = () => {
           </p>
           <div className="flex flex-row justify-center space-x-12">
             <div>
-              <div className='flex justify-center pb-2 text-text'>⚙️ SWE ⚙️</div>
+              <div className="flex justify-center pb-2 text-text">
+                ⚙️ SWE ⚙️
+              </div>
               <div>
-              {swe_committee.map((member, index) => (
-                <p key={index} className='text-lightPurple'>{member}</p>
-              ))}
+                {swe_committee.map((member, index) => (
+                  <p key={index} className="text-lightPurple">
+                    {member}
+                  </p>
+                ))}
               </div>
             </div>
             <div>
-              <div className='flex justify-center pb-2 text-text'>💰 Sponsorship 💰</div>
+              <div className="flex justify-center pb-2 text-text">
+                💰 Sponsorship 💰
+              </div>
               {sponsorship_committee.map((member, index) => (
-                <p key={index} className='text-lightPurple'>{member}</p>
+                <p key={index} className="text-lightPurple">
+                  {member}
+                </p>
               ))}
             </div>
             <div>
-              <div className='flex justify-center pb-2 text-text'>✏️ Operations ✏️</div>
+              <div className="flex justify-center pb-2 text-text">
+                ✏️ Operations ✏️
+              </div>
               {operations_committee.map((member, index) => (
-                <p key={index} className='text-lightPurple'>{member}</p>
+                <p key={index} className="text-lightPurple">
+                  {member}
+                </p>
               ))}
             </div>
           </div>
