@@ -16,7 +16,7 @@ import Jon from '@/public/team/jon.png';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import teamWaveDark from '@/public/assets/waves/teamWaveDark.svg';
-import teamWaveLight from '@/public/assets/waves/committeeWave.svg';
+import teamWaveLight from '@/public/assets/waves/teamWave.svg';
 
 const directors = [
   {
