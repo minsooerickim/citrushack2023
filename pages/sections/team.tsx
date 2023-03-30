@@ -97,9 +97,34 @@ const staff = [
   }
 ];
 
+const swe_committee = [
+  'Mika Shanela',
+  'Thomas Li',
+  'Bobby Lerias',
+  'Andre Amante',
+  'Raidah Fairooz',
+  'Kirtana Venkat'
+];
+
+const sponsorship_committee = [
+  'Jasmita Yechuri',
+  'Javier Herrera Jr.',
+  'Freddy Song',
+  'Joseph Hoang',
+  'Javier Vargas',
+  'Brian Uong',
+  'Adreyan Distor',
+  'Minnoli Nori',
+  'Isabelle Celo',
+  'Felix Maass',
+  'Suhani Chaudhary'
+];
+
+const operations_committee = ['Ronit Bhushan', 'Sneha Panda', 'Ethan Quach'];
 const team = () => {
   return (
-    <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] justify-center items-center pb-10">
+    <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] pb-10">
+      {/* leads */}
       <div className="flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
         <p className="text-center text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
           Meet The Team
@@ -130,79 +155,35 @@ const team = () => {
           />
         ))}
       </div>
-      <div className="pt-10 md:pt-20 flex flex-col justify-center">
-        <div className="flex flex-col justify-center pb-4 items-center">
-          <p className="text-opposite text-lg md:text-2xl font-baloo_semi_bold text-center text-text font-semibold">
+
+      {/* commitee members */}
+      <div className="pt-10 md:pt-20 flex flex-col">
+        <div className="flex flex-col pb-4">
+          <p className="text-lg md:text-2xl font-baloo_semi_bold text-center text-text font-semibold pb-4 text-text">
             Committee Members
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-5 text-center text-sub font-baloo_regular justify-center gap-y-4 items-center">
+          <div className="flex flex-row justify-center space-x-12">
             <div>
-              <p className="text-opposite font-baloo_semi_bold">
-                Software Engineers
-              </p>
-              <p>Valerie Wong</p>
-              <p>Theo Fernandez</p>
-              <p>Andrei Dimaano</p>
-              <p>Raidah Fairooz</p>
-              <p>Nicholas Chao</p>
-            </div>
-            <div>
-              <p className="text-opposite font-baloo_semi_bold">Operations</p>
-              <p>Westin Montano</p>
-              <p>Adhithi Narayana Murthy</p>
-              <p>Eliot Lee</p>
-              <p>Ronit Bhushan</p>
-            </div>
-            {/* <div>
-              <p className="text-opposite font-baloo_semi_bold">UI/UX</p>
-              <p>Chloe Xu</p>
-              <p>Elaine Lin</p>
-              <p>Kia Nooshi</p>
-              <p>Rania Saber</p>
-              <p>Siraaj Kudtarkar</p>
-            </div> */}
-            <div>
-              <p className="text-opposite font-baloo_semi_bold">Sponsorship</p>
-              <p>Ryan Wong</p>
-              <p>Nolan Chu</p>
-              <p>Jasmita Yechuri</p>
-              <p>Freddy Song</p>
-              <p>Iliyan Alibhai</p>
-              <p>Ethan Tran</p>
-              <p>Eliot Lee</p>
-              <p>Skyler Saltos</p>
-            </div>
-            <div>
-              {/* <div> */}
-              {/* <p className="text-opposite font-baloo_semi_bold">Marketing</p>
-                <p>Natalie Jung</p>
-                <p>Elaine Lin</p>
-              </div>
-              <div className="pt-4 hidden md:block">
-                <p className="text-opposite font-baloo_semi_bold">
-                  Quality Assurance
-                </p>
-                <p>Paulian Le</p>
-              </div> */}
-              <div className="pt-4 hidden md:block">
-                <p className="text-opposite font-baloo_semi_bold">
-                  Photographer
-                </p>
-                <p>Kobe Braga</p>
+              <div className='flex justify-center pb-2 text-text'>⚙️ SWE ⚙️</div>
+              <div>
+              {swe_committee.map((member, index) => (
+                <p key={index} className='text-lightPurple'>{member}</p>
+              ))}
               </div>
             </div>
-            <div className="md:hidden">
-              <p className="text-opposite font-baloo_semi_bold">
-                Quality Assurance
-              </p>
-              <p>Paulian Le</p>
+            <div>
+              <div className='flex justify-center pb-2 text-text'>💰 Sponsorship 💰</div>
+              {sponsorship_committee.map((member, index) => (
+                <p key={index} className='text-lightPurple'>{member}</p>
+              ))}
             </div>
-            <div className="col-span-2 md:hidden">
-              <p className="text-opposite font-baloo_semi_bold">Photographer</p>
-              <p>Kobe Braga</p>
+            <div>
+              <div className='flex justify-center pb-2 text-text'>✏️ Operations ✏️</div>
+              {operations_committee.map((member, index) => (
+                <p key={index} className='text-lightPurple'>{member}</p>
+              ))}
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </section>
