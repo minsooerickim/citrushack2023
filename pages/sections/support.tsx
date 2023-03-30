@@ -8,7 +8,7 @@ export default function Support() {
   const { theme } = useTheme();
   return (
     <section className="flex flex-col w-full md:my-12 lg:mt-0 pb-12 md:pb-0">
-      <div className="relative z-20 flex flex-col justify-center items-center pb-12">
+      <div className="z-20 flex flex-col justify-center items-center md:pb-12">
         <h1 className="text-center font-black text-5xl md:text-7xl text-text">
           Get Involved
         </h1>
@@ -17,8 +17,6 @@ export default function Support() {
           would love to have you on board. Fill out the forms below if
           you&apos;d like to help hackers throughout the day!
         </p>
-      </div>
-      <div className="relative z-10 flex flex-col justify-center w-full">
         <SupportCards />
       </div>
       <div className="absolute w-screen h-screen -z-0 right-0">
