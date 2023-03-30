@@ -272,7 +272,7 @@ export default function Landing() {
           </span> */}
           {/* plane*/}
           <motion.div
-            animate={{ y: [0, -10, 0] }}
+            animate={{ y: [0, -15, 0] }}
             transition={{
               repeat: Infinity,
               duration: 3

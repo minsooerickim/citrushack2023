@@ -6,6 +6,7 @@ import studentCommunity from '../../public/assets/studentCommunity.svg';
 import sustainability from '../../public/assets/sustainability.svg';
 import cloud from '../../public/assets/cloud.svg';
 import cloudDark from '../../public/assets/cloudDark.svg';
+import balloon5k from '../../public/assets/balloon5k.svg';
 import balloonRed from '../../public/assets/balloonRed.svg';
 import { useTheme } from 'next-themes';
 
@@ -16,10 +17,10 @@ export const Assets = () => {
     <>
       {/* cloud top middle */}
       <motion.div
-        animate={{ y: [0, -8, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 3
+          duration: 5
         }}
         className="absolute -top-10 left-28 md:left-96 w-16 xs:w-16 lg:w-20"
       >
@@ -29,9 +30,9 @@ export const Assets = () => {
           <Image src={cloudDark} alt="cloud" />
         )}
       </motion.div>
-      {/* balloon top right */}
+      {/*  top right */}
       <motion.div
-        animate={{ y: [0, -25, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -44,23 +45,34 @@ export const Assets = () => {
           <Image src={cloudDark} alt="cloud" />
         )}
       </motion.div>
-      {/* cloud top left */}
+      {/* balloon 5k*/}
       <motion.div
-        animate={{ y: [0, -15, 0] }}
+        animate={{ y: [0, -25, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
         }}
-        className="absolute left-0 top-48 md:top-0 w-14 xs:w-20 lg:w-28"
+        className="absolute max-sm:block hidden left-0 sm:top-0 md:top-0 w-14 xs:w-20 lg:w-24"
       >
         <Image src={balloonRed} alt="cloud" />
       </motion.div>
-      {/* cloud bottom left */}
+      {/* balloon red */}
       <motion.div
-        animate={{ y: [0, -15, 0] }}
+        animate={{ y: [0, -25, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 4
+          duration: 5
+        }}
+        className="absolute hidden sm:block left-0 -top-10 md:top-0 w-14 xs:w-20 lg:w-24"
+      >
+        <Image src={balloon5k} alt="cloud" />
+      </motion.div>
+      {/* cloud bottom left */}
+      <motion.div
+        animate={{ y: [0, -7, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
         }}
         className="absolute left-0 lg:-left-48 bottom-10 md:-bottom-32 lg:bottom-10 w-16 xs:w-20 lg:w-28"
       >
@@ -72,7 +84,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
-        animate={{ y: [0, -15, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -93,7 +105,7 @@ export default function Tracks() {
   return (
     <section className="relative flex flex-col w-full h-full my-0 lg:my-12 max-w-[72rem] justify-center items-center px-4">
       {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
-      <h1 className="text-5xl md:text-7xl font-black mb-8 md:mb-14 text-text">
+      <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks
       </h1>
       <div className="flex flex-col gap-y-7 md:grid md:grid-cols-3 gap-36 lg:gap-56 items-start mb-0 lg:mb-20">

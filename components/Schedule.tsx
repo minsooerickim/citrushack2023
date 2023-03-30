@@ -540,7 +540,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top right */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -570,7 +570,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -585,7 +585,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top left */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -600,7 +600,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud bottom left */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
