@@ -7,7 +7,7 @@ export default function Sponsors() {
       <h1 className="text-center text-5xl md:text-7xl font-black text-text">
         Our Sponsors
       </h1>
-      <p className="mb-12 text-center text-lg md:text-2xl font-semibold text-text">
+      <p className="mb-12 text-center text-md sm:text-lg md:text-2xl font-semibold text-text xs:w-3/4">
         Thank you to all of those who made this hackathon possible!
       </p>
       <ButtonLink

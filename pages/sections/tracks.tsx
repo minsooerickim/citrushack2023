@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import NewFrontiers from '../../public/assets/newFrontiers.svg';
-import studentCommunity from '../../public/assets/studentCommunity.svg';
+import globalCommunity from '../../public/assets/globalCommunity.svg';
 import sustainability from '../../public/assets/sustainability.svg';
 import cloud from '../../public/assets/cloud.svg';
 import cloud2 from '../../public/assets/cloud2.svg';
@@ -105,7 +105,7 @@ export const Assets = () => {
 
 export default function Tracks() {
   return (
-    <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4 pb-8 lg:pb-5">
+    <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4 pb-12 lg:pb-5">
       {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
       <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks
@@ -114,7 +114,7 @@ export default function Tracks() {
         {/* <div className="flex justify-start items-start bg-blue-500"> */}
         <div className="flex flex-col items-center justify-end gap-y-2 lg:gap-y-4">
           <Image
-            className=""
+            className="scale-90"
             src={NewFrontiers}
             alt=""
             width={170}
@@ -126,8 +126,8 @@ export default function Tracks() {
         </div>
         <div className="flex flex-col items-center justify-center gap-y-2 lg:gap-y-4">
           <Image
-            className=""
-            src={studentCommunity}
+            className="scale-90"
+            src={globalCommunity}
             alt=""
             width={170}
             height={170}
@@ -136,13 +136,14 @@ export default function Tracks() {
             Global Community
           </p>
         </div>
-        <div className="flex flex-col items-center gap-y-2 lg:gap-y-4">
+        <div className="flex flex-col items-center justify-center">
           <Image
-            className="self-end"
+            className="self-end scale-100"
             src={sustainability}
             alt=""
-            width={170}
-            height={170}
+            width={180}
+            height={180}
+            // objectFit="cover"
           />
           <p className="text-lg lg:text-2xl font-black text-center w-fit text-text">
             Sustainabiility

@@ -62,7 +62,12 @@ export default function SupportCards() {
                         'https://docs.google.com/forms/d/e/1FAIpQLSe2xJD2Qh14IMKMe7RrGhjzaVEjLDXLy_X-FoD01yKAJkgwHw/viewform'
                       }
                     >
-                      <Image src={sponsorUsButton} width={140} height={120} />
+                      <Image
+                        src={sponsorUsButton}
+                        alt="Sponsor Button"
+                        width={140}
+                        height={120}
+                      />
                     </a>
                   </motion.span>
                 </div>
@@ -88,7 +93,12 @@ export default function SupportCards() {
                   animate={bounce ? 'animate' : 'initial'}
                 >
                   <a href={'/sponsorship_packet.pdf'}>
-                    <Image src={sponsorUsButton} width={140} height={120} />
+                    <Image
+                      src={sponsorUsButton}
+                      alt="Sponsor Button"
+                      width={140}
+                      height={120}
+                    />
                   </a>
                 </motion.span>
               </div>
@@ -126,6 +136,7 @@ export default function SupportCards() {
                     >
                       <Image
                         src={becomeMentorButton}
+                        alt="Mentor Button"
                         width={140}
                         height={120}
                       />
@@ -158,7 +169,12 @@ export default function SupportCards() {
                       'https://docs.google.com/forms/d/e/1FAIpQLScxmD410p1xbI4z-WLYU_OkX87cNpA0NkVVkbrZOUjfwUL_wQ/viewform?usp=send_form'
                     }
                   >
-                    <Image src={becomeMentorButton} width={140} height={120} />
+                    <Image
+                      src={becomeMentorButton}
+                      alt="Mentor Button"
+                      width={140}
+                      height={120}
+                    />
                   </a>
                 </motion.span>
               </div>
@@ -196,6 +212,7 @@ export default function SupportCards() {
                     >
                       <Image
                         src={becomeVolunteerButton}
+                        alt="Volunteer Button"
                         width={140}
                         height={120}
                       />
@@ -230,6 +247,7 @@ export default function SupportCards() {
                   >
                     <Image
                       src={becomeVolunteerButton}
+                      alt="Volunteer Button"
                       width={140}
                       height={120}
                     />
