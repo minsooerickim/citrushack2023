@@ -600,7 +600,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-12 xs:w-1/12 right-8 xs:left-0 xl:-left-28 top-40 sm:top-[24%]"
+        className="absolute -z-12 w-12 max-sm:hidden xs:w-1/12 right-8 xs:left-0 xl:-left-28 top-40 sm:top-[24%]"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" />
