@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 export default function Support() {
   const { theme } = useTheme();
   return (
-    <section className="relative z-0 flex flex-col w-full my-10 lg:mt-6 pb-4 md:pb-0">
+    <section className="relative z-0 flex flex-col w-full my-10 lg:mt-6 pb-4 md:pb-0 px-4">
       <div className="relative z-20 flex flex-col justify-center items-center mb-10 md:mb-0">
         <h1 className="text-center font-black text-5xl md:text-7xl text-text">
           Get Involved

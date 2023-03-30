@@ -49,7 +49,7 @@ export default function Home() {
         <Schedule />
       </Element>
       <Element name="Support" className="flex justify-center w-full bg-sky">
-        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
+        <span className="flex justify-center w-full 2xl:bg-cover">
           <Support />
         </span>
       </Element>
