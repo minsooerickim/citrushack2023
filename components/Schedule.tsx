@@ -615,7 +615,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-5 xl:-left-36 top-[64.5%] sm:top-[61%]"
+        className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-10 xl:-left-36 top-[64.5%] sm:top-[61%] max-xs:hidden bg-black"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />

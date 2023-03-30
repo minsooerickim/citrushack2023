@@ -42,7 +42,7 @@ export default function About() {
   const { theme } = useTheme();
 
   return (
-    <section className="relative flex flex-col w-full h-full my-8 lg:my-14 max-h-[60rem] justify-center items-center">
+    <section className="relative flex flex-col w-full h-full my-8 lg:my-10 max-h-[60rem] justify-center items-center pb-0 lg:pb-14">
       <div className="w-5/6 relative left-10 xl:w-2/3 hidden mb-12 px-4 lg:mb-0 sm:inline z-10">
         <Image src={AboutUs} alt="AboutUs" />
       </div>

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Schedule() {
   return (
-    <section className="flex flex-col w-full h-full my-14 lg:my-20 max-w-[72rem] justify-center items-center">
+    <section className="flex flex-col w-full h-full my-8 lg:my-6 max-w-[72rem] justify-center items-center">
       <p className="relative z-10 text-center font-black text-5xl md:text-7xl text-text">
         Schedule
       </p>

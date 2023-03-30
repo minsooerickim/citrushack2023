@@ -65,7 +65,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute hidden sm:block left-10 -top-12 md:-top-3 w-8 xs:w-12 lg:w-24"
+        className="absolute z-20 hidden sm:block left-10 -top-12 md:-top-3 w-8 xs:w-12 lg:w-24"
       >
         <Image src={balloon5k} alt="cloud" />
       </motion.div>
@@ -105,7 +105,7 @@ export const Assets = () => {
 
 export default function Tracks() {
   return (
-    <section className="relative flex flex-col w-full h-full my-0 lg:my-12 max-w-[72rem] justify-center items-center px-4">
+    <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4">
       {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
       <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks
