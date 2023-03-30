@@ -16,7 +16,7 @@ const ProfileWrapper = ({ name, position, link, image }) => {
               }`}
             >
               <div
-                className={`absolute backface-hidden w-full h-full rounded-full border-8 ${
+                className={`absolute backface-hidden w-full h-full rounded-full ${
                   theme === 'dark' ? `border-[#BFE4FF]` : `border-[#33719F]`
                 }`}
               >
@@ -42,7 +42,7 @@ const ProfileWrapper = ({ name, position, link, image }) => {
                 : `bg-[#BFE4FF] border-[#33719F]`
             } 
           
-             rounded-full border-8 p-4`}
+             rounded-full border-2 p-4`}
             >
               <div className="flex flex-col items-center justify-center h-full text-black">
                 <div
