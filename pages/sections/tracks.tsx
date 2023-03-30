@@ -8,10 +8,10 @@ import cloud from '../../public/assets/cloud.svg';
 import cloudDark from '../../public/assets/cloudDark.svg';
 import balloon5k from '../../public/assets/balloon5k.svg';
 import balloonRed from '../../public/assets/balloonRed.svg';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 
 export const Assets = () => {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   return (
     <>
