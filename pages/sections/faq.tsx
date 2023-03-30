@@ -75,7 +75,7 @@ export default function Faq() {
       <h1 className="text-center text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
         FAQ
       </h1>
-      <p className="text-center text-text text-md sm:text-lg md:text-2xl font-semibold mb-4 md:mb-8 xs:w-3/4">
+      <p className="text-center text-text text-lg md:text-2xl font-semibold mb-4 md:mb-8 xs:w-3/4">
         If you still can&apos;t find an answer to your question, feel free to
         email us at{' '}
         <ExternalLink

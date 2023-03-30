@@ -12,7 +12,7 @@ export default function Support() {
         <h1 className="text-center font-black text-5xl md:text-7xl text-text">
           Get Involved
         </h1>
-        <p className="text-center text-text text-md sm:text-lg md:text-2xl font-semibold mb-10 xs:mb-12 sm:w-3/4">
+        <p className="text-center text-text text-lg md:text-2xl font-semibold mb-10 xs:mb-12 sm:w-3/4">
           Not interested in hacking but still want to participate? Great! We
           would love to have you on board. Fill out the forms below if
           you&apos;d like to help hackers throughout the day!

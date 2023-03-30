@@ -360,7 +360,38 @@ const team = () => {
           <p className="text-lg md:text-2xl font-baloo_semi_bold text-center font-semibold pb-4 text-text">
             Committee Members
           </p>
-          <div className="flex flex-row justify-center space-x-12">
+          {/* <div className="flex flex-row"> */}
+          <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">
+            <div>
+              <p className="text-lg font-medium text-text">Operations</p>
+              {operations_committee.map((member, index) => (
+                <p key={index} className="text-lightPurple">
+                  {member}
+                </p>
+              ))}
+            </div>
+            <div>
+              <p className="text-lg font-medium text-text">Sponsorship</p>
+              {sponsorship_committee.map((member, index) => (
+                <p key={index} className="text-lightPurple">
+                  {member}
+                </p>
+              ))}
+            </div>
+            <div>
+              <p className="text-lg font-medium text-text">
+                Software Engineers
+              </p>
+              {swe_committee.map((member, index) => (
+                <p key={index} className="text-lightPurple">
+                  {member}
+                </p>
+              ))}
+            </div>
+            {/* </div> */}
+          </div>
+
+          {/* <div className="flex flex-row justify-center space-x-12">
             <div>
               <div className="flex justify-center pb-2 text-text">
                 ⚙️ SWE ⚙️
@@ -393,7 +424,7 @@ const team = () => {
                 </p>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
