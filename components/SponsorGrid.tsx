@@ -60,6 +60,7 @@ export const Sponsor = ({
       <a target="_blank" rel="noreferrer noopener" href={link}>
         <Image
           src={image}
+          alt="sponsor"
           width={width}
           height={height}
           quality={50}

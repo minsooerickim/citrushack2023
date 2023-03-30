@@ -7,8 +7,10 @@ import { useTheme } from 'next-themes';
 export default function Support() {
   const { theme } = useTheme();
   return (
-    <section className="relative z-0 flex flex-col w-full my-10 lg:mt-6 pb-4 md:pb-0 px-4">
+    <section className="relative z-0 flex flex-col w-full my-10 lg:mt-6 md:pb-0 px-4">
       <div className="relative z-20 flex flex-col justify-center items-center mb-10 md:mb-0">
+        {/* <section className="flex flex-col w-full md:my-12 lg:mt-0 pb-12 md:pb-0">
+      <div className="z-20 flex flex-col justify-center items-center md:pb-12"> */}
         <h1 className="text-center font-black text-5xl md:text-7xl text-text">
           Get Involved
         </h1>
@@ -17,8 +19,6 @@ export default function Support() {
           would love to have you on board. Fill out the forms below if
           you&apos;d like to help hackers throughout the day!
         </p>
-      </div>
-      <div className="relative z-10 flex flex-col justify-center w-full">
         <SupportCards />
       </div>
       <div className="absolute w-screen h-screen -z-0 right-0">

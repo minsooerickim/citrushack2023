@@ -111,7 +111,6 @@ const staff = [
 ];
 
 const swe_committee = [
-  'Mika Shanela',
   'Thomas Li',
   'Bobby Lerias',
   'Andre Amante',
@@ -305,13 +304,13 @@ const team = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] pb-10">
+    <section className="flex flex-col w-full h-full lg:mb-10 max-w-[75rem] pb-10">
       <div className="relative z-10 flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
         <p className="text-center text-5xl md:text-7xl font-black not-italic items-center text-text">
           Meet The Team
         </p>
         <p className="text-opposite text-lg md:text-2xl font-baloo_semi_bold text-center px-4 text-text font-semibold">
-          Leads
+          The Leads
         </p>
         <div className="relative z-10 flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12 ">
           {directors.map(({ link, image, name, position }) => (
@@ -356,9 +355,9 @@ const team = () => {
       </div>
       {/* commitee members */}
       <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
-        <div className="flex flex-col pb-4">
-          <p className="text-lg md:text-2xl font-baloo_semi_bold text-center font-semibold pb-4 text-text">
-            Committee Members
+        <div className="flex flex-col">
+          <p className="text-lg md:text-2xl text-center font-semibold pb-4 text-text">
+            The Committee Members
           </p>
           {/* <div className="flex flex-row"> */}
           <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">

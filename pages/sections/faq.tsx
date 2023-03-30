@@ -6,6 +6,7 @@ import Image from 'next/image';
 import balloonYellow from '@/public/assets/balloonYellow.svg';
 import balloonBlue from '@/public/assets/balloonBlue.svg';
 import bird1 from '@/public/assets/bird1.svg';
+import bird3 from '@/public/assets/bird3.svg';
 import star from '@/public/assets/star.svg';
 
 export const Assets = () => {
@@ -22,7 +23,7 @@ export const Assets = () => {
         }}
         className="absolute z-20 max-[1182px]:hidden -right-28 xl:-right-40 top-[35%] w-16 xl:w-20"
       >
-        <Image src={balloonBlue} alt="cloud" />
+        <Image src={balloonBlue} alt="balloon" />
       </motion.div>
       {/* balloon left */}
       <motion.div
@@ -33,11 +34,11 @@ export const Assets = () => {
         }}
         className="absolute z-20 max-lg:hidden  -left-24 xl:-left-40 bottom-0 w-16 xl:w-20"
       >
-        <Image src={balloonYellow} alt="cloud" />
+        <Image src={balloonYellow} alt="balloon" />
       </motion.div>
-      {/* balloon */}
+      {/* bird */}
       <motion.div
-        animate={{ y: [0, -25, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 3
@@ -47,12 +48,12 @@ export const Assets = () => {
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" />
         )}
       </motion.div>
-      {/* balloon */}
+      {/* bird */}
       <motion.div
-        animate={{ y: [0, -25, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 3
@@ -60,9 +61,9 @@ export const Assets = () => {
         className="absolute z-20 max-[1182px]:hidden -right-24 xl:-right-40 bottom-96 w-16 xl:w-20"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird3} alt="bird" />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" />
         )}
       </motion.div>
     </>
