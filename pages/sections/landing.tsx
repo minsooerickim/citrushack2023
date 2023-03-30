@@ -343,19 +343,27 @@ export default function Landing() {
           </div>
         </div>
         <Assets />
-        {/* {theme === 'light' ? (
-          <Image src={Skyline} alt="skyline" className="object-cover " />
-        ) : (
-          <Image src={SkylineDark} alt="skyline" className="object-cover " />
-        )} */}
         <span className="hidden sm:block">
-          {/* <Image src={Skyline} alt="skyline" className="object-cover" /> */}
           {theme === 'light' ? (
-            <div className="">
-              <Image src={Skyline} alt="skyline" className="object-cover " />
+            <div className=" p-0 w-full">
+              <Image
+                src={Skyline}
+                alt="skyline"
+                layout="responsive"
+                objectFit="contain"
+                className="object-cover !w-screen scale-100 m-0 p-0"
+              />
             </div>
           ) : (
-            <Image src={SkylineDark} alt="skyline" className="object-cover " />
+            <div className="p-0 w-full">
+              <Image
+                src={SkylineDark}
+                alt="Skyline Dark"
+                layout="responsive"
+                objectFit="contain"
+                className="object-cover !w-screen scale-100 m-0 p-0"
+              />
+            </div>
           )}
         </span>
         {/* <span className="flex justify-center items-center"> */}
