@@ -13,7 +13,7 @@ import Team from '@/pages/sections/team';
 import Footer from '@/components/Footer';
 import FooterWaveLight from '@/public/assets/waves/footer_wave.svg';
 import FooterWaveDark from '@/public/assets/waves/footer_wave_dark.svg';
-import FaqBalloons from '@/public/assets/faq_balloons.svg';
+// import FaqBalloons from '@/public/assets/faq_balloons.svg';
 import { useTheme } from 'next-themes';
 
 export default function Home() {
