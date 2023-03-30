@@ -288,7 +288,7 @@ export const MobileSponsors = () => {
 
 export default function Sponsors() {
   return (
-    <section className="flex flex-col w-full h-full max-w-[90rem] my-12 lg:my-0 justify-end items-center">
+    <section className="relative z-0 flex flex-col w-full h-full max-w-[90rem] my-12 lg:my-0 justify-end items-center">
       <p className="text-center text-5xl md:text-7xl  font-black w-391 h-109 not-italic items-center mt-6 text-text">
         Sponsors
       </p>
