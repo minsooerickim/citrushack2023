@@ -36,9 +36,9 @@ export const Sponsor = ({
 }: SponsorProps) => (
   <div
     className={
-      'flex items-center min-h-[10rem] ' +
+      'flex items-center min-h-[10rem]' +
       (type === 'cutie'
-        ? 'w-20 md:w-24 ' +
+        ? 'w-20 md:w-24' +
           (shrink ? 'w-16 md:w-24' : '') +
           (tall ? 'w-12 md:w-20' : '')
         : type === 'tangerine'
@@ -273,7 +273,7 @@ export function SponsorsGrid() {
       <span className="absolute top-10 left-[1.6rem] flex w-1/2 transform h-full z-100 border-l-4 border-gold z-50 px-0"></span>
       {tiers
         .filter(({ sponsors }) => sponsors.length > 0) // only map tiers with sponsors
-        .map(({ type, flag, sponsors, wide }) => (
+        .map(({ type, sponsors, wide }) => (
           <div
             key={type}
             className={
