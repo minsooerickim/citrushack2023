@@ -1,4 +1,4 @@
-import { CarouselSponsor } from '@/components/Sponsors';
+import SupportCards from '@/components/SupportCards';
 import SupportWaveLight from '@/public/assets/waves/supportWave.svg';
 import SupportWaveDark from '@/public/assets/waves/supportWaveDark.svg';
 import Image from 'next/image';
@@ -19,7 +19,7 @@ export default function Support() {
         </p>
       </div>
       <div className="relative z-10 flex flex-col justify-center w-full">
-        <CarouselSponsor />
+        <SupportCards />
       </div>
       <div className="absolute w-screen h-screen -z-0 right-0">
         {theme === 'light' ? (

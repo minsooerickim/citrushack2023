@@ -51,11 +51,11 @@ export default function Home() {
       </Element>
       <Element
         name="Sponsors"
-        className="flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+        className="flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent pb-20"
       >
         <Sponsors />
       </Element>
-      <Element name="Staff" className="flex justify-center w-full bg-sky">
+      <Element name="Staff" className="flex justify-center w-full bg-sky pt-20">
         <span className="flex justify-center px-4 w-full">
           <Team />
         </span>
