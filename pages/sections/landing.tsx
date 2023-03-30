@@ -21,8 +21,8 @@ import bird1 from '@/public/assets/bird1.svg';
 import bird2 from '@/public/assets/bird2.svg';
 import bird3 from '@/public/assets/bird3.svg';
 import star from '@/public/assets/star.svg';
-import globeLight from '@/public/assets/globelight.svg';
-import globeDark from '@/public/assets/globedark.svg';
+import globeLight from '@/public/assets/globeLight.svg';
+import globeDark from '@/public/assets/globeDark.svg';
 import { useTheme } from 'next-themes';
 
 export const Assets = () => {
