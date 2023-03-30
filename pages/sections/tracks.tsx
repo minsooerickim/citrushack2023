@@ -120,7 +120,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center text-text">
+          <p className="text-lg lg:text-2xl font-black text-center text-text">
             New Frontiers
           </p>
         </div>
@@ -132,7 +132,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center w-fit text-text">
+          <p className="text-lg lg:text-2xl font-black text-center w-fit text-text">
             Global Community
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function Tracks() {
             width={170}
             height={170}
           />
-          <p className="text-lg md:text-2xl font-black text-center w-fit text-text">
+          <p className="text-lg lg:text-2xl font-black text-center w-fit text-text">
             Sustainabiility
           </p>
         </div>

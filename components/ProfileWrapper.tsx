@@ -12,12 +12,12 @@ const ProfileWrapper = ({ name, position, link, image }) => {
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
             <div
               className={`absolute backface-hidden rounded-full w-full h-full ${
-                theme === 'dark' ? `bg-[#33719F]` : `bg-[#BFE4FF]`
+                theme === 'dark' ? `bg-[#BFE4FF]` : `bg-[#BFE4FF]`
               }`}
             >
               <div
                 className={`absolute backface-hidden w-full h-full rounded-full ${
-                  theme === 'dark' ? `border-[#BFE4FF]` : `border-[#33719F]`
+                  theme === 'dark' ? `border-[#33719F]` : `border-[#33719F]`
                 }`}
               >
                 <div className="text-center flex flex-col items-center justify-center h-full text-white">
@@ -35,28 +35,13 @@ const ProfileWrapper = ({ name, position, link, image }) => {
               </div>
             </div>
             <div
-              className={`absolute my-rotate-y-180 backface-hidden w-full h-full
-            ${
-              theme === 'dark'
-                ? `bg-[#33719F] border-[#BFE4FF]`
-                : `bg-[#BFE4FF] border-[#33719F]`
-            } 
+              className={`absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#BFE4FF] border-[#33719F]
           
-             rounded-full border-2 p-4`}
+             rounded-full border-4 p-4`}
             >
               <div className="flex flex-col items-center justify-center h-full text-black">
-                <div
-                  className={`${
-                    theme === 'dark' ? `text-white` : `text-black`
-                  } text-center font-black`}
-                >
-                  {name}
-                </div>
-                <div
-                  className={`${
-                    theme === 'dark' ? `text-white` : `text-black`
-                  } text-center text-sm`}
-                >
+                <div className={`text-center font-black`}>{name}</div>
+                <div className={`text-black text-center text-sm`}>
                   {position}
                 </div>
                 {/* <div className="text-center text-sm">{position}</div> */}
