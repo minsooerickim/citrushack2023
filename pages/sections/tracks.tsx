@@ -105,7 +105,7 @@ export const Assets = () => {
 
 export default function Tracks() {
   return (
-    <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4">
+    <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4 pb-8 lg:pb-5">
       {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
       <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks

@@ -3,9 +3,10 @@ import ExternalLink from '@/components/ExternalLink';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import balloonBlue from '../../public/assets/balloonBlue.svg';
-import bird1 from '../../public/assets/bird1.svg';
-import star from '../../public/assets/star.svg';
+import balloonYellow from '@/public/assets/balloonYellow.svg';
+import balloonBlue from '@/public/assets/balloonBlue.svg';
+import bird1 from '@/public/assets/bird1.svg';
+import star from '@/public/assets/star.svg';
 
 export const Assets = () => {
   const { theme } = useTheme();
@@ -32,7 +33,7 @@ export const Assets = () => {
         }}
         className="absolute z-20 max-lg:hidden  -left-24 xl:-left-40 bottom-0 w-16 xl:w-20"
       >
-        <Image src={balloonBlue} alt="cloud" />
+        <Image src={balloonYellow} alt="cloud" />
       </motion.div>
       {/* balloon */}
       <motion.div

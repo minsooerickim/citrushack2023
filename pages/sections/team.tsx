@@ -25,7 +25,7 @@ import cloudDark2 from '../../public/assets/cloudDark2.svg';
 import plane from '../../public/assets/tiltedPlane.svg';
 import bird1 from '../../public/assets/bird1.svg';
 import star from '../../public/assets/star.svg';
-import balloonBlue from '../../public/assets/balloonBlue.svg';
+import balloonOrange from '../../public/assets/balloonOrange.svg';
 
 const directors = [
   {
@@ -203,13 +203,9 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-30 max-md:hidden left-0 lg:left-32 bottom-10 md:bottom-56 w-12 xl:w-24"
+        className="absolute z-30 max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-96 lg:-bottom-96 xl:-bottom-96 w-12 xl:w-24"
       >
-        {theme === 'light' ? (
-          <Image src={balloonBlue} alt="cloud" />
-        ) : (
-          <Image src={cloudDark} alt="cloud" />
-        )}
+        <Image src={balloonOrange} alt="cloud" />
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
@@ -311,7 +307,7 @@ const team = () => {
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] pb-10">
       <div className="relative z-10 flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
-        <p className="text-center text-7xl font-black not-italic items-center text-text">
+        <p className="text-center text-5xl md:text-7xl  font-black not-italic items-center text-text">
           Meet The Team
         </p>
         <p className="text-opposite text-lg md:text-2xl font-baloo_semi_bold text-center px-4 text-text font-semibold">
