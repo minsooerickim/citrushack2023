@@ -1,5 +1,4 @@
 import { SponsorsGrid } from '@/components/SponsorGrid';
-import { ButtonLink } from '@/components/ButtonLink';
 
 export default function Sponsors() {
   return (
@@ -10,12 +9,6 @@ export default function Sponsors() {
       <p className="text-center text-md sm:text-lg md:text-2xl font-semibold text-text xs:w-3/4">
         Thank you to all of those who made this hackathon possible!
       </p>
-      {/* <ButtonLink
-        primary
-        link="/citrushack-2022-sponsorship-packet.pdf"
-        label="Sponsor Us"
-        external
-      /> */}
       <SponsorsGrid />
     </section>
   );
