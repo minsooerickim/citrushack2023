@@ -198,57 +198,6 @@ export const MobileSponsors = () => {
     <div className="relative flex justify-start items-start w-full h-full flex-col">
       <span className="rounded-full border-4 border-[#D94352] p-2 relative right-2.5"></span>
       <div className="border-l-4 border-[#D94352] p-4 md:p-6 flex flex-col">
-        {/* <div className="border-l-4 border-[#D94352] p-4 md:p-10 lg:py-20"> */}
-        <p className="text-text font-black text-2xl xs:text-4xl md:text-5xl relative bottom-10 xs:bottom-12 md:bottom-14">
-          {/* <p className="font-black text-4xl md:text-7xl relative bottom-11 :bottom-32"> */}
-          Citrus
-        </p>
-        {/* <p className="font-black text-3xl md:text-7xl relative bottom-16">
-          Citrus
-        </p> */}
-        <div className="flex gap-1 md:gap-10 justify-evenly">
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-        </div>
-        <div className="flex gap-1 md:gap-10 justify-evenly">
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-          <div className="w-1/6">
-            <Image src={RedBull} alt="redbull" />
-          </div>
-        </div>
-      </div>
-      <span className="rounded-full border-4 border-[#D94352] p-2 relative right-2.5"></span>
-      <div className="border-l-4 border-[#D94352] p-4 md:p-6 flex flex-col">
         <p className="text-text font-black text-2xl xs:text-4xl md:text-5xl relative bottom-10 xs:bottom-12 md:bottom-14">
           Orange
         </p>
@@ -281,6 +230,57 @@ export const MobileSponsors = () => {
           </div>
         </div>
       </div>
+      <span className="rounded-full border-4 border-[#D94352] p-2 relative right-2.5"></span>
+      <div className="border-l-4 border-[#D94352] p-4 md:p-6 flex flex-col">
+        {/* <div className="border-l-4 border-[#D94352] p-4 md:p-10 lg:py-20"> */}
+        <p className="text-text font-black text-2xl xs:text-4xl md:text-5xl relative bottom-10 xs:bottom-12 md:bottom-14">
+          {/* <p className="font-black text-4xl md:text-7xl relative bottom-11 :bottom-32"> */}
+          Citrus
+        </p>
+        {/* <p className="font-black text-3xl md:text-7xl relative bottom-16">
+          Citrus
+        </p> */}
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-5 md:w-1/2 mb-2">
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* </div> */}
+          {/* <div className="flex gap-2 md:gap-10 justify-evenly md:w-1/2"> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+          {/* <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div>
+          <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div>
+          <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div>
+          <div className="w-1/6"> */}
+          <Image src={RedBull} alt="redbull" />
+          {/* </div> */}
+        </div>
+      </div>
       <span className="mr-1 self-start  bg-gradient-to-b from-[#D94352] pb-10 to-transparent pr-1 flex"></span>
     </div>
   );
@@ -295,12 +295,12 @@ export default function Sponsors() {
       <p className="w-1050 h-58 font-weight-400 text-lg md:text-2xl leading-7 text-center pb-5 text-text font-semibold mb-4 md:mb-10">
         Thank you to all of those who made this hackathon possible!
       </p>
-      <div className="hidden md:inline-block">
+      {/* <div className="hidden md:inline-block">
         <DesktopSponsors />
       </div>
-      <div className="md:hidden">
-        <MobileSponsors />
-      </div>
+      <div className="md:hidden"> */}
+      <MobileSponsors />
+      {/* </div> */}
     </section>
   );
 }

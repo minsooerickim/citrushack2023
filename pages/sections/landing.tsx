@@ -345,25 +345,23 @@ export default function Landing() {
         <Assets />
         <span className="hidden sm:block">
           {theme === 'light' ? (
-            <div className=" p-0 w-full">
-              <Image
-                src={Skyline}
-                alt="skyline"
-                layout="responsive"
-                objectFit="contain"
-                className="object-cover !w-screen scale-100 m-0 p-0"
-              />
-            </div>
+            // <div className="">
+            <Image
+              src={Skyline}
+              alt="skyline"
+              layout="responsive"
+              objectFit="contain"
+            />
           ) : (
-            <div className="p-0 w-full">
-              <Image
-                src={SkylineDark}
-                alt="Skyline Dark"
-                layout="responsive"
-                objectFit="contain"
-                className="object-cover !w-screen scale-100 m-0 p-0"
-              />
-            </div>
+            // </div>
+            // <div className="">
+            <Image
+              src={SkylineDark}
+              alt="Skyline Dark"
+              layout="responsive"
+              objectFit="contain"
+            />
+            // </div>
           )}
         </span>
         {/* <span className="flex justify-center items-center"> */}
