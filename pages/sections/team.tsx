@@ -307,7 +307,7 @@ const team = () => {
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] pb-10">
       <div className="relative z-10 flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
-        <p className="text-center text-5xl md:text-7xl  font-black not-italic items-center text-text">
+        <p className="text-center text-5xl md:text-7xl font-black not-italic items-center text-text">
           Meet The Team
         </p>
         <p className="text-opposite text-lg md:text-2xl font-baloo_semi_bold text-center px-4 text-text font-semibold">
