@@ -237,7 +237,7 @@ export default function Landing() {
   return (
     <>
       <section className="relative flex flex-col-reverse w-screen h-screen md:min-h-[57rem]">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[27%] xs:top-[30%] md:top-[25%] lg:top-[25%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[25%] xs:top-[30%] md:top-[25%] lg:top-[25%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
           <div className="text-center text-5xl max-[375px]:text-4xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
             CITRUS HACK
           </div>
@@ -288,7 +288,7 @@ export default function Landing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
-                  className="flex justify-center items-center self-center w-full md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white bg-purple hover:bg-hoverPrimary"
+                  className="flex justify-center items-center self-center w-1/2 md:max-w-[16rem] h-11 px-4 font-semibold text-lg rounded-md bg-red shadow cursor-pointer text-white bg-purple hover:bg-hoverPrimary"
                 >
                   Apply Now!
                 </motion.button>
@@ -377,7 +377,7 @@ export default function Landing() {
           className="block sm:hidden"
         >
           <span className="flex justify-center items-center">
-            <div className="flex max-w-[375px] max-[375px]:w-3/4 xs:w-5/6 max-[375px]:mb-20 mb-28 xs:mb-24">
+            <div className="flex max-w-[375px] max-[375px]:w-3/4 xs:w-5/6 max-[375px]:mb-8 mb-16 xs:mb-24">
               {/* <div className="flex w-11/12 xs:w-[425px] mb-5"> */}
               {theme === 'light' ? (
                 <Image src={globeLight} alt="Globe" className="object-cover" />
