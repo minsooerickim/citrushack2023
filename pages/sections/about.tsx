@@ -10,8 +10,6 @@ import balloon24 from '@/public/assets/balloon24.svg';
 import balloon500 from '@/public/assets/balloon500.svg';
 
 export const Assets = () => {
-  const { theme } = useTheme();
-
   return (
     <>
       {/* 24 hour balloon */}{' '}
@@ -21,7 +19,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute max-sm:hidden z-30 left-5 xl:left-32 top-0 w-12 sm:w-16 lg:w-20 xl:w-28"
+        className="absolute max-sm:hidden z-30 left-5 xl:left-32 top-0 w-8 sm:w-12 lg:w-20 xl:w-28"
       >
         <Image src={balloon24} alt="balloon" />
       </motion.div>
@@ -32,7 +30,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute max-sm:hidden z-30 right-10 xl:right-32 top-8 w-12 sm:w-16 lg:w-20 xl:w-32"
+        className="absolute max-sm:hidden z-30 right-10 xl:right-32 top-8 w-8 sm:w-12 lg:w-20 xl:w-32"
       >
         <Image src={balloon500} alt="balloon" />
       </motion.div>

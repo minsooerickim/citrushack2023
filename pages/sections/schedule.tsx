@@ -7,7 +7,7 @@ export default function Schedule() {
       <p className="relative z-10 text-center font-black text-5xl md:text-7xl text-text">
         Schedule
       </p>
-      <p className="relative z-20 text-lg md:text-2xl px-4 text-center italic font-semibold text-highlight mb-0 md:mb-8 text-text">
+      <p className="relative z-20 text-lg md:text-2xl px-4 text-center italic font-semibold text-highlight mb-0 md:mb-5 text-text">
         PST (Pacific Standard Time)
       </p>
       <MasterSchedule />
