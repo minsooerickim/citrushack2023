@@ -10,7 +10,7 @@ import {
   firstTimeHacker,
   foodPreference,
   shirtSize,
-  MLH,
+  MLH
 } from './options';
 
 interface Props {
@@ -80,6 +80,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="phone_number"
         register={register}
         errors={errors}
+        required
       />
     </div>
     <Radio
@@ -158,33 +159,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       errors={errors}
       required
     />
-    {/* Commented out for now because unsure if only UCR limited and if vaccine cards will be checked
-    <Radio
-      label="Are you participating in-person or online?"
-      subtext={
-        <>
-          <div className="mb-2">
-            <span className="font-medium">
-              Only UCR students can participate in-person.
-            </span>{' '}
-            In-person participants will also get free food, swag, and a chance
-            to network with real engineers.
-          </div>
-          <div>
-            <span className="font-medium">
-              If you plan to participate in-person, please have your vaccine
-              cards.
-            </span>{' '}
-            We will check for them.
-          </div>
-        </>
-      }
-      variable="participation"
-      options={participation}
-      register={register}
-      errors={errors}
-      required
-    />*/}
     <span className="flex flex-col mt-4 gap-2">
       <Checkbox
         label=""

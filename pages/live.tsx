@@ -1,21 +1,18 @@
-// import { useState, useEffect } from 'react'
-// import Link from 'next/link'
-// import { motion } from 'framer-motion'
 import { Element } from 'react-scroll';
-import { Page } from '@/components/Page';
-// import Modal from '@/components/Modal'
+import { ProtectedPage } from '@/components/Page';
 import Landing from '@/pages/sections/live-landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
-import Staff from '@/pages/sections/staff';
+import Team from '@/pages/sections/team';
 import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
 
 export default function Home() {
   return (
-    <Page title="Live Page">
+    // only availble on the day of event for signed-in users!
+    <ProtectedPage title="Live Page" restrictions={['live', 'signin']}>
       <Element
         name="Countdown"
         className="flex justify-center w-full bg-gradient-to-b from-primary to-accent"
@@ -59,7 +56,7 @@ export default function Home() {
       </Element>
       <Element name="Staff" className="flex justify-center w-full bg-primary">
         <span className="flex justify-center px-4 w-full bg-pattern bg-repeat bg-contain">
-          <Staff />
+          <Team />
         </span>
       </Element>
       <Element
@@ -68,6 +65,6 @@ export default function Home() {
       >
         <Faq />
       </Element>
-    </Page>
+    </ProtectedPage>
   );
 }

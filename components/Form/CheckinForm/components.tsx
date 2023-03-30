@@ -2,7 +2,7 @@ import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form';
 import { useSession } from 'next-auth/react';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
 import ExternalLink from '@/components/ExternalLink';
-import { inperson, daily_wellness_completion, MLH, states } from './options';
+import { inperson, MLH, states } from './options';
 
 interface Props {
   register: UseFormRegister<FieldValues>;
@@ -26,25 +26,6 @@ export function Confirmation({ register, errors, watch }: Props) {
           <>
             <Radio
               label="Are you still participating in-person?"
-              subtext={
-                <>
-                  <div className="mb-2">
-                    <span className="font-medium">
-                      Only UCR students can participate in-person. (Though
-                      exemptions may be made.)
-                    </span>{' '}
-                    In-person participants will also get free food, swag, and a
-                    chance to network with real engineers.
-                  </div>
-                  <div>
-                    <span className="font-medium">
-                      If you plan to participate in-person, please have your
-                      vaccine cards.
-                    </span>{' '}
-                    We will check for them.
-                  </div>
-                </>
-              }
               variable="inperson"
               options={inperson}
               register={register}
@@ -55,14 +36,6 @@ export function Confirmation({ register, errors, watch }: Props) {
         )}
         {inperson_confirmation === 'Yes' && (
           <>
-            <Checkbox
-              label="Have you filled out the Daily Wellness Survey?"
-              variable="daily_wellness"
-              options={daily_wellness_completion[0]}
-              register={register}
-              errors={errors}
-              required
-            />
             <Checkbox
               label="Do we have your permission to take pictures that may include you?"
               subtext={
@@ -78,7 +51,7 @@ export function Confirmation({ register, errors, watch }: Props) {
               }
               variable="photo_consent"
               options={[
-                'Yes, I give you permission to take pictures that may include me.',
+                'Yes, I give you permission to take pictures that may include me.'
               ]}
               register={register}
               errors={errors}

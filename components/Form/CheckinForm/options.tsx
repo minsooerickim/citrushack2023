@@ -2,19 +2,6 @@ import ExternalLink from '@/components/ExternalLink';
 
 export const inperson = ['Yes', 'No'];
 
-export const daily_wellness_completion = [
-  [
-    <>
-      I have completed the{' '}
-      <ExternalLink
-        name="Daily Wellness Survey"
-        link="http://visitorwellnesscheck.ucr.edu"
-      />
-      .
-    </>,
-  ],
-];
-
 export const MLH = [
   [
     <>
@@ -24,8 +11,8 @@ export const MLH = [
         link="https://github.com/MLH/mlh-policies/blob/master/code-of-conduct.md"
       />
       .
-    </>,
-  ],
+    </>
+  ]
 ];
 
 export const states = [
@@ -85,5 +72,5 @@ export const states = [
   'WA',
   'WV',
   'WI',
-  'WY',
+  'WY'
 ];

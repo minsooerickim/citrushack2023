@@ -11,7 +11,7 @@ import {
   BiGroup,
   BiLogOutCircle,
   BiHelpCircle,
-  BiCategory,
+  BiCategory
 } from 'react-icons/bi';
 import { FaDiscord } from 'react-icons/fa';
 
@@ -40,7 +40,7 @@ export function UserDropdown() {
       </div>,
       {
         id: 'appStatusInfo',
-        duration: 6000,
+        duration: 6000
       }
     );
   };
@@ -55,7 +55,7 @@ export function UserDropdown() {
       </div>,
       {
         id: 'checkinInfo',
-        duration: 4500,
+        duration: 4500
       }
     );
   };
@@ -77,7 +77,7 @@ export function UserDropdown() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
-          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-darkRed hover:bg-highlight-dark"
+          className="z-[1000] flex justify-center items-center w-11 h-11 rounded-md bg-gold hover:bg-highlight-dark"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -88,7 +88,7 @@ export function UserDropdown() {
         </motion.button>
         <div
           className={
-            'absolute top-14 right-0 w-64 p-4 rounded bg-secondary shadow-md transform-gpu transition-all duration-150 ' +
+            'absolute top-14 right-0 w-64 p-4 rounded bg-gold shadow-md transform-gpu transition-all duration-150 ' +
             (open ? 'z-[1000] visible opacity-100' : 'z-0 invisible opacity-0')
           }
         >
@@ -154,7 +154,7 @@ export function UserDropdown() {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.995 }}
-                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight-dark font-semibold"
+                        className="w-full py-1.5 rounded-md bg-highlight hover:bg-highlight font-semibold"
                         onClick={() => setOpen(!open)}
                       >
                         Check-In Now!

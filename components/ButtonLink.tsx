@@ -14,15 +14,15 @@ const Button = ({
   secondary,
   label,
   skinny,
-  minWidth,
+  minWidth
 }: ButtonProps) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.995 }}
     className={
-      'flex justify-center items-center self-center w-full px-4 font-semibold shadow rounded-md cursor-pointer ' +
+      'flex justify-center items-center self-center w-full px-4 font-semibold shadow rounded-md cursor-pointer text-white ' +
       (primary
-        ? 'bg-highlight hover:bg-highlight-dark '
+        ? 'bg-purple hover:bg-hoverPrimary '
         : secondary
         ? 'bg-sub hover:bg-highlight '
         : 'hover:bg-accent-sub ') +
@@ -38,7 +38,7 @@ Button.defaultProps = {
   primary: Boolean(false),
   secondary: Boolean(false),
   skinny: Boolean(false),
-  minWidth: Boolean(false),
+  minWidth: Boolean(false)
 };
 
 interface ButtonLinkProps {
@@ -65,7 +65,7 @@ export const ButtonLink = ({
   link,
   external,
   skinny,
-  minWidth,
+  minWidth
 }: ButtonLinkProps) => (
   <>
     {external ? (
@@ -103,5 +103,5 @@ ButtonLink.defaultProps = {
   primary: Boolean(false),
   external: Boolean(false),
   skinny: Boolean(false),
-  minWidth: Boolean(false),
+  minWidth: Boolean(false)
 };
