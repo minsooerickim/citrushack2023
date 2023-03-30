@@ -506,7 +506,7 @@ export const Assets = () => {
         <Image src={balloonBlueTilt} alt="balloon" />
       </motion.div>
       {/* orange balloon top right */}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{
           repeat: Infinity,
@@ -515,7 +515,7 @@ export const Assets = () => {
         className="absolute -z-1 w-1/12 right-0 sm:right-10 lg:right-0 top-0"
       >
         <Image src={balloonOrange} alt="balloon" />
-      </motion.div>
+      </motion.div> */}
       {/* blue balloon bottom right */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
@@ -540,7 +540,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top right */}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -555,7 +555,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud middle*/}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -570,7 +570,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -585,7 +585,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud top left */}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
@@ -600,7 +600,7 @@ export const Assets = () => {
       </motion.div>
       {/* cloud bottom left */}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
+        animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
