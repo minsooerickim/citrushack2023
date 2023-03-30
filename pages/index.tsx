@@ -26,7 +26,7 @@ export default function Home() {
         </span>
       </Element>
       <Element name="About" className="flex justify-center w-full">
-        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
+        <span className="flex justify-center w-full 2xl:bg-cover">
           <About />
         </span>
       </Element>

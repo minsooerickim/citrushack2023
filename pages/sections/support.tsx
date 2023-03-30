@@ -1,9 +1,14 @@
 import { CarouselSponsor } from '@/components/Sponsors';
+import SupportWaveLight from '@/public/assets/waves/supportWave.svg';
+import SupportWaveDark from '@/public/assets/waves/supportWaveDark.svg';
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 export default function Support() {
+  const { theme } = useTheme();
   return (
     <section className="flex flex-col w-full md:my-12 lg:mt-0 pb-12 md:pb-0">
-      <div className="flex flex-col justify-center items-center pb-12">
+      <div className="relative z-20 flex flex-col justify-center items-center pb-12">
         <h1 className="text-center font-black text-5xl md:text-7xl text-text">
           Get Involved
         </h1>
@@ -13,8 +18,25 @@ export default function Support() {
           you&apos;d like to help hackers throughout the day!
         </p>
       </div>
-      <div className="flex flex-col justify-center w-full">
+      <div className="relative z-10 flex flex-col justify-center w-full">
         <CarouselSponsor />
+      </div>
+      <div className="absolute w-screen h-screen -z-0 right-0">
+        {theme === 'light' ? (
+          <Image
+            src={SupportWaveLight}
+            alt="Wave Light"
+            layout="responsive"
+            objectFit="contain"
+          />
+        ) : (
+          <Image
+            src={SupportWaveDark}
+            alt="Wave Dark"
+            layout="responsive"
+            objectFit="contain"
+          />
+        )}
       </div>
     </section>
   );

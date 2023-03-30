@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileWrapper from '@/components/ProfileWrapper';
 import Minsoo from '@/public/team/minsoo.png';
 import Ashley from '@/public/team/ashley.png';
-// import Gab from '@/public/team/gabs.png';
+import Gab from '@/public/team/gab.png';
 import Jakin from '@/public/team/jakin.jpg';
 import Mariam from '@/public/team/mariam.png';
 import Henry from '@/public/team/henry.png';
@@ -13,6 +13,10 @@ import Vivian from '@/public/team/vivian.png';
 import Sarah from '@/public/team/sarah.png';
 import Alex from '@/public/team/alex.png';
 import Jon from '@/public/team/jon.png';
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
+import teamWaveDark from '@/public/assets/waves/teamWaveDark.svg';
+import teamWaveLight from '@/public/assets/waves/teamWave.svg';
 
 const directors = [
   {
@@ -79,7 +83,7 @@ const staff = [
   },
   {
     link: 'https://www.linkedin.com/in/gabriela-h-alvarez/',
-    image: '',
+    image: Gab,
     name: 'Gabriela Alvarez',
     position: 'Sponsorship'
   },
@@ -122,10 +126,24 @@ const sponsorship_committee = [
 
 const operations_committee = ['Ronit Bhushan', 'Sneha Panda', 'Ethan Quach'];
 const team = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { theme } = useTheme();
+
   return (
     <section className="flex flex-col w-full h-full my-12 lg:my-0 lg:mb-24 max-w-[75rem] pb-10">
+      {/* <div className="bg-black"> */}
+      {/* <div className="absolute w-screen h-screen z-0 right-0">
+        <Image
+          src={teamWaveLight}
+          alt="Wave Light"
+          layout="responsive"
+          objectFit="contain"
+          className=""
+        />
+      </div> */}
+      {/* </div> */}
       {/* leads */}
-      <div className="flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
+      <div className="relative z-10 flex flex-col flex-wrap justify-center gap-8 md:gap-12 md:gap-y-6 mb-12">
         <p className="text-center text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
           Meet The Team
         </p>
@@ -144,7 +162,7 @@ const team = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12">
+      <div className="relative z-20 flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12">
         {staff.map(({ link, image, name, position }) => (
           <ProfileWrapper
             key={link}
@@ -156,10 +174,27 @@ const team = () => {
         ))}
       </div>
 
+      <div className="absolute w-screen h-screen -z-0 right-0">
+        {theme === 'light' ? (
+          <Image
+            src={teamWaveLight}
+            alt="Wave Light"
+            layout="responsive"
+            objectFit="contain"
+          />
+        ) : (
+          <Image
+            src={teamWaveDark}
+            alt="Wave Dark"
+            layout="responsive"
+            objectFit="contain"
+          />
+        )}
+      </div>
       {/* commitee members */}
-      <div className="pt-10 md:pt-20 flex flex-col">
+      <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
         <div className="flex flex-col pb-4">
-          <p className="text-lg md:text-2xl font-baloo_semi_bold text-center text-text font-semibold pb-4 text-text">
+          <p className="text-lg md:text-2xl font-baloo_semi_bold text-center font-semibold pb-4 text-text">
             Committee Members
           </p>
           <div className="flex flex-row justify-center space-x-12">
