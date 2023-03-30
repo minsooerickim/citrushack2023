@@ -3,7 +3,6 @@ import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import pomeloFlag from '@/public/assets/sponsors/pomelo_flag.svg';
 import orangeFlag from '@/public/assets/sponsors/orange_flag.svg';
 import tangerineFlag from '@/public/assets/sponsors/tangerine_flag.svg';
 import cutieFlag from '@/public/assets/sponsors/cutie_flag.svg';
@@ -82,63 +81,6 @@ export const Sponsor = ({
 );
 
 const tiers = [
-  {
-    type: 'pomelo',
-    flag: pomeloFlag,
-    wide: null,
-    sponsors: [
-      {
-        image: '/assets/sponsors/twilio-light.svg',
-        imageDark: '/assets/sponsors/twilio-dark.svg',
-        width: 60,
-        height: 60,
-        link: 'https://www.twilio.com/',
-        shrink: null,
-        tall: null
-      }
-    ]
-  },
-  {
-    type: 'orange',
-    flag: orangeFlag,
-    wide: null,
-    sponsors: [
-      {
-        image: '/assets/sponsors/spaceforce.svg',
-        imageDark: '/assets/sponsors/spaceforce.svg',
-        width: 2505,
-        height: 3757,
-        link: 'https://www.spaceforce.mil/',
-        shrink: Boolean(true),
-        tall: null
-      }
-    ]
-  },
-  {
-    type: 'tangerine',
-    flag: tangerineFlag,
-    wide: Boolean(true),
-    sponsors: [
-      {
-        image: '/assets/sponsors/gcap-light.svg',
-        imageDark: '/assets/sponsors/gcap-dark.svg',
-        width: 727,
-        height: 728,
-        link: 'https://www.gcapucr.com/aboutgcap',
-        shrink: null,
-        tall: null
-      },
-      {
-        image: '/assets/sponsors/amazon-light.svg',
-        imageDark: '/assets/sponsors/amazon-dark.svg',
-        width: 2380,
-        height: 2452,
-        link: 'https://www.amazon.com/',
-        shrink: Boolean(true),
-        tall: null
-      }
-    ]
-  },
   {
     type: 'cutie',
     flag: cutieFlag,
@@ -237,9 +179,45 @@ const tiers = [
     ]
   },
   {
-    type: 'kumquat',
+    type: 'tangerine',
+    flag: tangerineFlag,
+    wide: Boolean(true),
+    sponsors: [
+      {
+        image: '/assets/sponsors/gcap-light.svg',
+        imageDark: '/assets/sponsors/gcap-dark.svg',
+        width: 727,
+        height: 728,
+        link: 'https://www.gcapucr.com/aboutgcap',
+        shrink: null,
+        tall: null
+      },
+      {
+        image: '/assets/sponsors/amazon-light.svg',
+        imageDark: '/assets/sponsors/amazon-dark.svg',
+        width: 2380,
+        height: 2452,
+        link: 'https://www.amazon.com/',
+        shrink: Boolean(true),
+        tall: null
+      }
+    ]
+  },
+  {
+    type: 'orange',
+    flag: orangeFlag,
     wide: null,
-    sponsors: []
+    sponsors: [
+      {
+        image: '/assets/sponsors/spaceforce.svg',
+        imageDark: '/assets/sponsors/spaceforce.svg',
+        width: 2505,
+        height: 3757,
+        link: 'https://www.spaceforce.mil/',
+        shrink: Boolean(true),
+        tall: null
+      }
+    ]
   }
 ];
 
