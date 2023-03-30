@@ -23,7 +23,8 @@ import cloud2 from '../../public/assets/cloud2.svg';
 import cloudDark from '../../public/assets/cloudDark.svg';
 import cloudDark2 from '../../public/assets/cloudDark2.svg';
 import plane from '../../public/assets/tiltedPlane.svg';
-import balloonBlue from '../../public/assets/balloonBlue.svg';
+import bird1 from '../../public/assets/bird1.svg';
+import star from '../../public/assets/star.svg';
 
 const directors = [
   {
@@ -156,7 +157,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-10 max-[375px]:hidden left-10 xl:left-[10%] top-44 sm:top-36 xl:top-20  w-20 sm:w-28 md:w-32 lg:w-48 xl:w-64"
+        className="absolute z-10 max-[375px]:hidden left-10 xl:left-[10%] top-44 sm:top-28 xl:top-20  w-20 sm:w-28 md:w-32 lg:w-48 xl:w-64"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -164,19 +165,19 @@ export const Assets = () => {
           <Image src={cloudDark2} alt="cloud" />
         )}
       </motion.div>
-      {/* cloud top right */}
+      {/* birf top right */}
       <motion.div
         animate={{ y: [0, -5, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-10 max-md:hidden right-10 top-52 w-24  xl:w-64"
+        className="absolute z-10 max-md:hidden right-10 top-52 w-20  xl:w-24"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={bird1} alt="bird" />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={star} alt="cloud" />
         )}
       </motion.div>
       {/* cloud bottom left */}
@@ -216,9 +217,13 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute z-40 right-6 -bottom-[150%] max-md:hidden xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-20 xl:bottom-64 w-10 xs:w-20 xl:w-32"
+        className="absolute z-40 right-6 -bottom-[150%] max-md:hidden xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-52 xl:bottom-0 w-10 xs:w-20 xl:w-32"
       >
-        <Image src={balloonBlue} alt="cloud" />
+        {theme === 'light' ? (
+          <Image src={bird1} alt="bird" />
+        ) : (
+          <Image src={star} alt="cloud" />
+        )}
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
@@ -227,12 +232,42 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
+        className="absolute z-50 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
+      >
+        {theme === 'light' ? (
+          <Image src={bird1} alt="bird" />
+        ) : (
+          <Image src={star} alt="cloud" />
+        )}
+      </motion.div>
+      {/* cloud bottom right */}
+      {/* <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
         className="absolute z-20 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud} alt="bird" />
         ) : (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloudDark} alt="cloud" />
+        )}
+      </motion.div> */}
+      {/* cloud top left */}
+      <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute z-10 max-[375px]:hidden left-10 top-44 sm:top-28 w-20 sm:w-28 sm:hidden"
+      >
+        {theme === 'light' ? (
+          <Image src={bird1} alt="bird" />
+        ) : (
+          <Image src={star} alt="cloud" />
         )}
       </motion.div>
     </>

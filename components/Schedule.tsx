@@ -536,7 +536,7 @@ export const Assets = () => {
         }}
         className="absolute -z-1 w-[5%] right-0 sm:right-0 md:right-10 xl:-right-16 top-[35%] lg:top-[40%]"
       >
-        <Image src={balloonYellow} alt="balloon" />
+        <Image src={balloonOrange} alt="balloon" />
       </motion.div>
       {/* cloud top right */}
       <motion.div
