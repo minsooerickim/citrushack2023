@@ -187,7 +187,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute max-md:hidden z-10 left-0 md:left-10 bottom-10 md:-bottom-64 w-16 sm:w-24 xl:w-32"
+        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-52 w-16 sm:w-24 xl:w-32 bg-black"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
@@ -233,6 +233,20 @@ export const Assets = () => {
           duration: 5
         }}
         className="absolute z-50 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
+      >
+        {theme === 'light' ? (
+          <Image src={bird1} alt="bird" />
+        ) : (
+          <Image src={star} alt="cloud" />
+        )}
+      </motion.div>
+      <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 5
+        }}
+        className="absolute z-50 max-[375px]:hidden sm:hidden left-0 -bottom-[72%] w-14"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" />

@@ -492,7 +492,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute -z-1 w-1/12 right-14 sm:left-10 md:-left-0 xl:-left-28 bottom-[25.5%] sm:bottom-24"
+        className="absolute -z-1 w-1/12 right-0 xs:right-14 sm:left-10 md:-left-0 xl:-left-28 bottom-[25.5%] sm:bottom-24"
       >
         <Image src={balloonRed} alt="balloon" />
       </motion.div>
@@ -503,7 +503,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute -z-1 w-1/12 left-28 sm:left-10 lg:left-[45%] top-[49%]"
+        className="absolute -z-1 w-1/12 left-0 xs:left-28 sm:left-10 lg:left-[45%] top-[49%]"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" />
@@ -548,14 +548,14 @@ export const Assets = () => {
       >
         <Image src={balloonOrange} alt="balloon" />
       </motion.div>
-      {/* cloud top right */}
+      {/* cloud top right -----*/}
       <motion.div
         animate={{ y: [0, -7, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-20 xs:w-36 right-10 sm:right-0 md:right-10 xl:-right-16 top-[49%] lg:top-[17%]"
+        className="absolute -z-12 w-20 xs:w-36 right-10 sm:right-0 md:right-10 xl:-right-16 top-[49%] lg:top-[17%] max-xs:hidden"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
@@ -570,7 +570,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-12 xs:w-16 md:w-32 right-20 sm:right-0 md:right-10 xl:-right-16 top-[23.5%] md:top-[20%] lg:top-[68.5%]"
+        className="absolute -z-12 w-12 xs:w-16 md:w-32 right-0 md:right-10 xl:-right-16 top-[23.5%] md:top-[20%] lg:top-[68.5%]"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" />
@@ -585,7 +585,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-8 xs:w-20 right-0 sm:right-0 md:right-10 xl:-right-16 bottom-[21%] xs:bottom-[16.5%] lg:bottom-36"
+        className="absolute -z-12 w-8 xs:w-20 right-0 sm:right-0 md:right-10 xl:-right-16 bottom-[21%] xs:bottom-[16.5%] lg:bottom-36 max-xs:hidden"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
@@ -615,7 +615,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-10 xl:-left-36 top-[65%] sm:top-[61%]"
+        className="absolute -z-12 w-12 xs:w-16 left-0 xs:left-5 xl:-left-36 top-[64.5%] sm:top-[61%]"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
