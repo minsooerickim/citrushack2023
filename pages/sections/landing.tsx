@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
-import { CountdownWrapper } from '@/components/Countdown';
+// import { CountdownWrapper } from '@/components/Countdown';
 import { ButtonLink } from '@/components/ButtonLink';
 import Modal from '@/components/Modal';
 import { SigninForm } from '@/components/Form';
-import SignupCounter from '@/components/SignupCounter';
+// import SignupCounter from '@/components/SignupCounter';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -21,7 +21,8 @@ import bird1 from '../../public/assets/bird1.svg';
 import bird2 from '../../public/assets/bird2.svg';
 import bird3 from '../../public/assets/bird3.svg';
 import star from '../../public/assets/star.svg';
-import globeLight from '../../public/assets/globeLight.svg';
+import globeLight from '../../public/assets/globelight.svg';
+import globeDark from '../../public/assets/globedark.svg';
 import { useTheme } from 'next-themes';
 
 export const Assets = () => {
@@ -36,7 +37,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute left-2 max-sm:hidden bottom-[19%] xs:bottom-[25%] lg:bottom-[37%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
+        className="absolute left-44 xl:left-0 max-sm:hidden bottom-[19%] xs:bottom-[40%] lg:bottom-[45%] xl:bottom-[50%] w-20 xs:w-28 sm:w-36"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -51,7 +52,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute right-0 max-sm:hidden bottom-[21%] xs:bottom-[31%] lg:bottom-[37%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
+        className="absolute right-0 max-sm:hidden bottom-[21%] xs:bottom-[40%] lg:bottom-[45%] xl:bottom-[50%] w-16 xs:w-28 sm:w-36"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" />
@@ -97,7 +98,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute left-8 lg:left-3 xl:left-[8%] hidden md:inline-block md:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
+        className="absolute left-8 lg:left-3 xl:left-[8%] hidden sm:inline-block sm:top-[50%] lg:top-[35%] xl:top-[20%] w-14 xs:w-24 lg:w-96 opacity-50"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
@@ -128,7 +129,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute max-xs:hidden left-12 lg:left-10 top-48 lg:top-6 w-20 xs:w-28 opacity-60"
+        className="absolute left-32 xs:left-12 lg:left-10 top-44 xs:top-44 lg:top-6 w-20 xs:w-28 opacity-60"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" />
@@ -158,7 +159,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute right-8 xs:right-20 max-[375px]:hidden top-44 xs:top-64 lg:top-96"
+        className="absolute right-8 xs:right-20 max-[375px]:hidden top-48 xs:top-64 lg:top-96"
       >
         {theme === 'light' ? (
           <Image src={bird3} alt="bird" />
@@ -197,7 +198,7 @@ export const Assets = () => {
         )}
       </motion.div>
       {/* plane*/}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
@@ -206,7 +207,7 @@ export const Assets = () => {
         className="absolute sm:right-[15%] md:right-[5%] lg:right-[10%] top-[70%] max-sm:hidden xs:top-[65%] md:top-[55%] lg:top-[46%] xl:top-[28%] w-36 max-[375px]:w-24 md:w-[250px]"
       >
         <Image src={airplane} alt="airplane" />
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };
@@ -235,12 +236,12 @@ export default function Landing() {
 
   return (
     <>
-      <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[57rem]">
-        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[17%] xs:top-[22%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
-          <div className="text-center text-6xl max-[375px]:text-5xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
-            CITRUS HACK 2023
+      <section className="relative flex flex-col-reverse w-screen h-screen md:min-h-[57rem]">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full top-[27%] xs:top-[30%] md:top-[25%] lg:top-[25%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
+          <div className="text-center text-5xl max-[375px]:text-4xl sm:text-7xl lg:text-8xl mb-2 lg:mb-4 font-black text-text">
+            CITRUS HACK
           </div>
-          <div className="text-center text-2xl max-[375px]:text-2xl md:text-3xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-bold text-text">
+          <div className="text-center text-2xl max-[375px]:text-2xl md:text-3xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-semibold text-text">
             Reach your next destination
             {/* <section className="relative flex flex-col-reverse w-full h-screen md:min-h-[60rem]">
         <div className="absolute left-1/2 -translate-x-1/2 w-full top-[20%] md:top-[25%] lg:top-[16%] flex flex-col justify-center items-center z-10 px-4 text-textcolor">
@@ -253,10 +254,10 @@ export default function Landing() {
           <div className="text-center text-2xl md:text-3xl max-[375px]:text-2xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-normal text-text">
             Reach your next destination */}
           </div>
-          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-semibold z-1 text-text">
+          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 29-30, 2023
           </div>
-          <CountdownWrapper date="2023-04-02T16:00:00" />
+          {/* <CountdownWrapper date="2023-04-02T16:00:00" /> */}
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
           </p> */}
@@ -266,9 +267,20 @@ export default function Landing() {
               Applications will close tonight at 12 AM PST, so be sure to apply while you still can!
             </p>
           } */}
-          <span className="flex justify-center w-full mb-6">
+          {/* <span className="flex justify-center w-full mb-6">
             <SignupCounter />
-          </span>
+          </span> */}
+          {/* plane*/}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 3
+            }}
+            className="absolute sm:right-[15%] md:right-[5%] lg:right-[10%] top-[70%] max-sm:hidden xs:top-[100%] md:top-[100%] xl:top-[45%] w-48 max-[375px]:w-24 md:w-[250px]"
+          >
+            <Image src={airplane} alt="airplane" />
+          </motion.div>
           {status === 'authenticated' &&
             !session.user.uid &&
             router.pathname !== '/apply' && (
@@ -339,14 +351,17 @@ export default function Landing() {
         <span className="hidden sm:block">
           {/* <Image src={Skyline} alt="skyline" className="object-cover" /> */}
           {theme === 'light' ? (
-            <Image src={Skyline} alt="skyline" className="object-cover " />
+            <div className="">
+              <Image src={Skyline} alt="skyline" className="object-cover " />
+            </div>
           ) : (
             <Image src={SkylineDark} alt="skyline" className="object-cover " />
           )}
         </span>
         {/* <span className="flex justify-center items-center"> */}
+
         <motion.span
-          animate={{ y: [0, -10, 0] }}
+          animate={{ y: [0, -8, 0] }}
           transition={{
             repeat: Infinity,
             duration: 5
@@ -354,9 +369,13 @@ export default function Landing() {
           className="block sm:hidden"
         >
           <span className="flex justify-center items-center">
-            <div className="flex max-w-[375px] max-[375px]:w-2/3 xs:w-5/6 mb-3 xs:mb-10">
+            <div className="flex max-w-[375px] max-[375px]:w-3/4 xs:w-5/6 max-[375px]:mb-20 mb-28 xs:mb-24">
               {/* <div className="flex w-11/12 xs:w-[425px] mb-5"> */}
-              <Image src={globeLight} alt="Globe" className="object-cover" />
+              {theme === 'light' ? (
+                <Image src={globeLight} alt="Globe" className="object-cover" />
+              ) : (
+                <Image src={globeDark} alt="Globe" className="object-cover" />
+              )}
             </div>
           </span>
         </motion.span>
