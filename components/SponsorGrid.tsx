@@ -78,7 +78,7 @@ const tiers = [
   {
     type: 'orange',
     flag: orangeFlag,
-    wide: Boolean(true),
+    wide: false,
     sponsors: [
       {
         image: '/assets/sponsors/spaceforce.svg',
@@ -88,16 +88,14 @@ const tiers = [
         link: 'https://www.spaceforce.mil/',
         shrink: Boolean(true),
         tall: null
-      },
-      {
-        image: '/assets/sponsors/spaceforce.svg',
-        imageDark: '/assets/sponsors/spaceforce.svg',
-        width: 2505,
-        height: 3757,
-        link: 'https://www.spaceforce.mil/',
-        shrink: Boolean(true),
-        tall: null
-      },
+      }
+    ]
+  },
+  {
+    type: 'orange',
+    flag: orangeFlag,
+    wide: false,
+    sponsors: [
       {
         image: '/assets/sponsors/spaceforce.svg',
         imageDark: '/assets/sponsors/spaceforce.svg',
@@ -121,15 +119,6 @@ const tiers = [
         height: 728,
         link: 'https://www.gcapucr.com/aboutgcap',
         shrink: null,
-        tall: null
-      },
-      {
-        image: '/assets/sponsors/amazon-light.svg',
-        imageDark: '/assets/sponsors/amazon-dark.svg',
-        width: 2380,
-        height: 2452,
-        link: 'https://www.amazon.com/',
-        shrink: Boolean(true),
         tall: null
       },
       {
@@ -238,24 +227,6 @@ const tiers = [
         shrink: Boolean(true),
         tall: null
       },
-      {
-        image: '/assets/sponsors/ieee-light.svg',
-        imageDark: '/assets/sponsors/ieee-dark.svg',
-        width: 745,
-        height: 959,
-        link: 'https://ieee.ucr.edu/',
-        shrink: Boolean(true),
-        tall: null
-      },
-      {
-        image: '/assets/sponsors/ieee-light.svg',
-        imageDark: '/assets/sponsors/ieee-dark.svg',
-        width: 745,
-        height: 959,
-        link: 'https://ieee.ucr.edu/',
-        shrink: Boolean(true),
-        tall: null
-      }
     ]
   }
 ];
