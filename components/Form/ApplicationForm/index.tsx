@@ -68,14 +68,16 @@ export function ApplicationForm() {
     });
   };
 
-  const uploadFile = async (resume, email: string) => {
+  const uploadFile = async (resume, first_name, last_name, email: string) => {
     if (fileUploaded) {
       const file = resume[0];
+      const file_name = first_name + '_' + last_name + '_resume';
       try {
         const base64String = await readFileAsBase64(file);
         const response = await axios.post('/api/applications/upload-pdf', {
           email: email,
-          resume: base64String
+          resume: base64String,
+          file_name: file_name
         });
 
         if (response.status === 200) {
@@ -121,7 +123,7 @@ export function ApplicationForm() {
     let criteria_met = determineCriteriaMet(grade, participation, school);
     const uid = nanoid();
 
-    await uploadFile(resume, session.user.email);
+    await uploadFile(resume, first_name, last_name, session.user.email);
 
     axios
       .post('/api/applications/create', {

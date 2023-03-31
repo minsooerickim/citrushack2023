@@ -9,12 +9,9 @@ export default async function uploadFile(
   res: NextApiResponse
 ) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { Readable } =  require('stream')
+  const { Readable } = require('stream');
   const db = (await clientPromise).db(process.env.MONGODB_DB);
-  const { email, resume } = req.body;
-
-  console.log(email)
-  console.log(resume)
+  const { email, resume, file_name } = req.body;
 
   const uploadToGoogleDrive = async (base64String, fileName) => {
     const jwtClient = new google.auth.JWT({
@@ -32,7 +29,7 @@ export default async function uploadFile(
 
     // Convert base64 string to buffer
     const buffer = dataUriToBuffer(base64String);
-    const readableStream = Readable.from(buffer)
+    const readableStream = Readable.from(buffer);
     const fileMetadata = {
       name: fileName,
       parents: [folderId]
@@ -61,7 +58,7 @@ export default async function uploadFile(
   };
 
   // converting base64 to pdf and uploading to gdrive
-  const viewableLink = await uploadToGoogleDrive(resume, 'example.pdf');
+  const viewableLink = await uploadToGoogleDrive(resume, file_name);
   console.log('Viewable link:', viewableLink);
 
   const result = await db.collection('users').updateOne(
