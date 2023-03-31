@@ -9,21 +9,24 @@ export default function Footer() {
 
   return (
     <>
-      {theme === 'light' ? (
-        <Image
-          src={bus_footer}
-          alt="footer"
-          objectFit="contain"
-          layout="responsive"
-        />
-      ) : (
-        <Image
-          src={bus_footer_dark}
-          alt="footer"
-          objectFit="contain"
-          layout="responsive"
-        />
-      )}
+      <div className="">
+        {theme === 'light' ? (
+          <Image
+            src={bus_footer}
+            alt="footer"
+            objectFit="contain"
+            layout="responsive"
+            // className="bg-red-200"
+          />
+        ) : (
+          <Image
+            src={bus_footer_dark}
+            alt="footer"
+            objectFit="contain"
+            layout="responsive"
+          />
+        )}
+      </div>
     </>
   );
 }
