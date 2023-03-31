@@ -64,13 +64,27 @@ export default function Modal({
         </div>
       </div>
       <div
+        id="modalBackground"
         className={
-          'fixed top-0 left-0 w-full h-full bg-black transform-gpu transition-opacity transition-z duration-150 z-[1000]' +
+          'fixed top-0 left-0 w-full h-full bg-black transform-gpu transition-opacity transition-z duration-150 z-[1000] ' +
           (show
             ? 'pointer-events-auto opacity-30'
-            : 'pointer-events-none opacity-0')
+            : 'pointer-events-none opacity-0') // pointer-events-none makes clicking events pass through it (and still have the fade out)
         }
-        onClick={() => handler(false)}
+        onClick={() => {
+          handler(false);
+          const modalBg = document.querySelector('#modalBackground');
+          const VISIBLE = 'visible';
+          const INVISIBLE = 'invisible';
+          modalBg.classList.remove(VISIBLE, INVISIBLE);
+          if (show) {
+            // either show it immediately
+            modalBg.classList.add(VISIBLE);
+          } else {
+            // or hide it (delayed) so the fade out occurs, and cypress doesnt get angery
+            setTimeout(() => modalBg.classList.add(INVISIBLE), 150);
+          }
+        }}
       />
     </>
   );
