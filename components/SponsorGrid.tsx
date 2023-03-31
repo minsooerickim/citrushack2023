@@ -6,6 +6,7 @@ import Image from 'next/image';
 import orangeFlag from '@/public/assets/sponsors/orange_flag.svg';
 import tangerineFlag from '@/public/assets/sponsors/tangerine_flag.svg';
 import cutieFlag from '@/public/assets/sponsors/cutie_flag.svg';
+// import tiersFlag from '@/public/assets/tiersFlag.svg';
 
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
@@ -36,9 +37,9 @@ export const Sponsor = ({
 }: SponsorProps) => (
   <div
     className={
-      'flex items-center min-h-[10rem]' +
+      'flex items-center min-h-[10rem] ' +
       (type === 'cutie'
-        ? 'w-20 md:w-24' +
+        ? 'w-20 md:w-24 ' +
           (shrink ? 'w-16 md:w-24' : '') +
           (tall ? 'w-12 md:w-20' : '')
         : type === 'tangerine'
@@ -269,8 +270,12 @@ export function SponsorsGrid() {
   if (!mounted) return null;
 
   return (
-    <div className="relative grid grid-cols-2 gap-6 mt-10  px-3 pl">
+    <div className="relative grid grid-cols-2 gap-6 mt-10  px-3">
       <span className="absolute top-10 left-[1.6rem] flex w-1/2 transform h-full z-100 border-l-4 border-gold z-50 px-0"></span>
+      {/* <span className="absolute top-0 left-[1.6rem] z-[1000]  w-36 md:w-52">
+        <Image src={tiersFlag} alt="flag" />
+      </span> */}
+
       {tiers
         .filter(({ sponsors }) => sponsors.length > 0) // only map tiers with sponsors
         .map(({ type, sponsors, wide }) => (
@@ -281,8 +286,15 @@ export function SponsorsGrid() {
               (wide ? 'col-span-2' : 'col-span-2 sm:col-span-1')
             }
           >
-            <span className="mr-1 rounded-full border-4 border-gold w-8 h-8 absolute left-0 z-[1000] bg-sky px-0"></span>
+            <span className="mr-1 rounded-full border-4 border-gold w-5 h-5 absolute left-1.5 z-[1000] bg-sky px-0"></span>
+            {/* <span className="absolute top-0 -left-0.5 z-[1000] w-36 md:w-52">
+              <Image src={flag} alt="flag" />
+            </span> */}
 
+            {/* CIRCLE */}
+            {/* <span className="mr-1 rounded-full border-4 border-[#E7AA36] w-8 h-8 flex justify-center items-center absolute top-2 -left-3.5 z-50"></span> */}
+
+            {/* <span className="absolute top-10 left-0 flex w-1/2 transform h-full z-100 border-l-4 border-gold z-50"></span> */}
             {sponsors.map(
               ({ image, imageDark, width, height, link, shrink, tall }) => (
                 <Sponsor
