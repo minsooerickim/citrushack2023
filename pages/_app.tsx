@@ -8,10 +8,12 @@ import { UserBar } from '@/components/UserBar';
 import { MLHBanner } from '@/components/MLHBanner';
 import Nav from '@/components/Nav';
 
+import { withPasswordProtect } from 'next-password-protect';
+
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
-export default function App({
+function App({
   Component,
   pageProps
 }: AppProps<{
@@ -29,3 +31,14 @@ export default function App({
     </SessionProvider>
   );
 }
+
+// Before: export default App;
+export default process.env.PASSWORD_PROTECT
+  ? withPasswordProtect(App, {
+      // Options go here (optional)
+      loginApiUrl: '/api/login',
+      loginComponentProps: {
+        logo: '/assets/logo.png'
+      }
+    })
+  : App;
