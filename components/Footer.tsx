@@ -3,7 +3,6 @@ import { useTheme } from 'next-themes';
 
 import bus_footer from '@/public/assets/bus_footer.svg';
 import bus_footer_dark from '@/public/assets/bus_footer_dark.svg';
-import vercel from '@/public/assets/vercel.svg';
 import { motion } from 'framer-motion';
 import {
   FiMail,
@@ -69,18 +68,7 @@ export default function Footer() {
             <p className="text-center">
               Made with {theme === 'dark' ? '🤍' : '🖤'} by the Citrus Hack Team
             </p>
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://vercel.com/"
-            >
-              <motion.div
-                whileHover={{ y: -4 }}
-                className="hover:text-highlight cursor-pointer"
-              >
-                <Image src={vercel} alt="vercel" height={40} />
-              </motion.div>
-            </a>
+
             <div className="flex gap-2.5 text-2xl relative z-30">
               {socials.map(({ icon, link }) => (
                 <a
@@ -91,7 +79,7 @@ export default function Footer() {
                 >
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="hover:text-highlight cursor-pointer"
+                    className="cursor-pointer hover:text-slate-300"
                   >
                     {icon}
                   </motion.div>
