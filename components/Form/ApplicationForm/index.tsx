@@ -60,34 +60,32 @@ export function ApplicationForm() {
   };
 
   const readFileAsBase64 = (file) => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-};
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
-
-  const uploadFile = async (
-    resume,
-    email: string
-  ) => {
+  const uploadFile = async (resume, email: string) => {
     if (fileUploaded) {
       const file = resume[0];
       try {
-    const base64String = await readFileAsBase64(file);
-    console.log('from index : ' + email)
-    const response = await axios.post('/api/applications/upload-pdf', { email: email, resume: base64String });
+        const base64String = await readFileAsBase64(file);
+        const response = await axios.post('/api/applications/upload-pdf', {
+          email: email,
+          resume: base64String
+        });
 
-    if (response.status === 200) {
-      console.log('File uploaded successfully');
-    } else {
-      console.error('Error uploading file');
-    }
-  } catch (err) {
-    console.error('Error uploading file:', err);
-  }
+        if (response.status === 200) {
+          console.log('File uploaded successfully');
+        } else {
+          console.error('Error uploading file');
+        }
+      } catch (err) {
+        console.error('Error uploading file:', err);
+      }
     }
   };
 

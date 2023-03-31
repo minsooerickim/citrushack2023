@@ -160,7 +160,7 @@ export function UserBox({
                       (user.qualified === 'yeah' ? 'Approved' : 'Rejected')}
                   </li>
                   <li className="text-sm md:text-base">
-                    <b>Participation:</b> {user.participation}
+                    <b>Resume:</b> {user.resume}
                   </li>
                   {user.checkedIn && (
                     <li className="text-sm md:text-base">

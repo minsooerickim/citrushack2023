@@ -31,7 +31,7 @@ export default async function createApplication(
       MLH_communication,
       applied_after_limit
     } = req.body;
-    
+
     // send email notification to user applying
     await sendEmail({
       email: session.user.email,
