@@ -11,10 +11,14 @@ import Faq from '@/pages/sections/faq';
 import Schedule from '@/pages/sections/schedule';
 import Team from '@/pages/sections/team';
 import Footer from '@/components/Footer';
-import FooterWave from '@/public/assets/waves/footer_wave.svg';
-import FaqBalloons from '@/public/assets/faq_balloons.svg';
+import FooterWaveLight from '@/public/assets/waves/footer_wave.svg';
+import FooterWaveDark from '@/public/assets/waves/footer_wave_dark.svg';
+// import FaqBalloons from '@/public/assets/faq_balloons.svg';
+import { useTheme } from 'next-themes';
 
 export default function Home() {
+  const { theme } = useTheme();
+
   return (
     <Page>
       <Element
@@ -45,7 +49,7 @@ export default function Home() {
         <Schedule />
       </Element>
       <Element name="Support" className="flex justify-center w-full bg-sky">
-        <span className="flex justify-center px-4 w-full 2xl:bg-cover">
+        <span className="flex justify-center w-full 2xl:bg-cover">
           <Support />
         </span>
       </Element>
@@ -61,12 +65,23 @@ export default function Home() {
         </span>
       </Element>
       <div className="relative w-full">
-        <span className="absolute bottom-0 left-0">
-          <Image src={FooterWave} alt="" objectFit="fill" />
-        </span>
-        <span className="absolute bottom-0 mb-20 pb-20">
-          <Image src={FaqBalloons} alt="" objectFit="fill" />
-        </span>
+        <div className="absolute w-full h-full -z-0 top-0 right-0">
+          {theme === 'light' ? (
+            <Image
+              src={FooterWaveLight}
+              alt="Wave Light"
+              layout="responsive"
+              objectFit="contain"
+            />
+          ) : (
+            <Image
+              src={FooterWaveDark}
+              alt="Wave Dark"
+              layout="responsive"
+              objectFit="contain"
+            />
+          )}
+        </div>
         <Element
           name="FAQ"
           className="flex justify-center px-4 w-full bg-gradient-to-b relative"
