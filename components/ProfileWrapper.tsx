@@ -1,24 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import { useTheme } from 'next-themes';
 
 const ProfileWrapper = ({ name, position, link, image }) => {
-  const { theme } = useTheme();
-
   return (
     <>
       <a target="_blank" rel="noopener noreferrer" href={link}>
         <div className="w-40 h-40 bg-transparent group perspective cursor-pointer">
           <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
             <div
-              className={`absolute backface-hidden rounded-full w-full h-full ${
-                theme === 'dark' ? `bg-[#BFE4FF]` : `bg-[#BFE4FF]`
-              }`}
+              className={`absolute backface-hidden rounded-full w-full h-full bg-[#BFE4FF]`}
             >
               <div
-                className={`absolute backface-hidden w-full h-full rounded-full ${
-                  theme === 'dark' ? `border-[#33719F]` : `border-[#33719F]`
-                }`}
+                className={`absolute backface-hidden w-full h-full rounded-full border-[#33719F]`}
               >
                 <div className="text-center flex flex-col items-center justify-center h-full text-white">
                   <Image
@@ -44,7 +37,6 @@ const ProfileWrapper = ({ name, position, link, image }) => {
                 <div className={`text-black text-center text-sm`}>
                   {position}
                 </div>
-                {/* <div className="text-center text-sm">{position}</div> */}
               </div>
             </div>
           </div>
