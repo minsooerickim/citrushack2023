@@ -37,7 +37,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="first_name"
         register={register}
         errors={errors}
-        required
+        
       />
       <Input
         type="text"
@@ -50,7 +50,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="last_name"
         register={register}
         errors={errors}
-        required
+        
       />
     </div>
     <div className="grid sm:grid-cols-3 gap-3">
@@ -60,7 +60,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         register={register}
         errors={errors}
         options={genders}
-        required
+        
       />
       <span className="sm:col-span-2">
         <Select
@@ -69,7 +69,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
           register={register}
           errors={errors}
           options={ethnicities}
-          required
+          
         />
       </span>
     </div>
@@ -80,7 +80,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="phone_number"
         register={register}
         errors={errors}
-        required
+        
       />
     </div>
     <Radio
@@ -89,7 +89,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
       options={foodPreference}
       register={register}
       errors={errors}
-      required
+      
     />
     <Radio
       label="T-Shirt Size"
@@ -97,7 +97,7 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
       options={shirtSize}
       register={register}
       errors={errors}
-      required
+      
     />
   </Group>
 );
@@ -110,7 +110,7 @@ export const Education = ({ register, errors }: Props) => (
       register={register}
       errors={errors}
       options={schools}
-      required
+      
     />
     <Select
       label="Major"
@@ -118,7 +118,7 @@ export const Education = ({ register, errors }: Props) => (
       register={register}
       errors={errors}
       options={majors}
-      required
+      
     />
     <div className="grid sm:grid-cols-2 gap-3">
       <Select
@@ -127,7 +127,7 @@ export const Education = ({ register, errors }: Props) => (
         register={register}
         errors={errors}
         options={grades}
-        required
+        
       />
       <Input
         type="date"
@@ -135,7 +135,7 @@ export const Education = ({ register, errors }: Props) => (
         variable="grad_date"
         register={register}
         errors={errors}
-        required
+        
       />
     </div>
   </Group>
@@ -157,7 +157,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       options={firstTimeHacker}
       register={register}
       errors={errors}
-      required
+      
     />
     <span className="flex flex-col mt-4 gap-2">
       <Checkbox
@@ -166,7 +166,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[0]}
         register={register}
         errors={errors}
-        required
+        
       />
       <Checkbox
         label=""
@@ -174,7 +174,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[1]}
         register={register}
         errors={errors}
-        required
+        
       />
       <Checkbox
         label=""
@@ -182,7 +182,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[2]}
         register={register}
         errors={errors}
-        required
+        
       />
     </span>
   </Group>
