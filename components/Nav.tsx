@@ -169,7 +169,7 @@ export default function Nav() {
         >
           <div className="flex w-full justify-between">
             <span
-              className="flex items-center p-2.5 text-lg rounded-md hover:bg-buttons cursor-pointer"
+              className="flex items-center p-2.5 text-lg rounded-md hover:bg-buttons cursor-pointer bg-purple"
               onClick={() => setNavOpen(!navOpen)}
             >
               {navOpen ? (

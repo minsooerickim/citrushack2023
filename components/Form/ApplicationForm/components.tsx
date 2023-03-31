@@ -37,7 +37,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="first_name"
         register={register}
         errors={errors}
-        required
       />
       <Input
         type="text"
@@ -50,7 +49,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         variable="last_name"
         register={register}
         errors={errors}
-        required
       />
     </div>
     <div className="grid sm:grid-cols-3 gap-3">
@@ -60,7 +58,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
         register={register}
         errors={errors}
         options={genders}
-        required
       />
       <span className="sm:col-span-2">
         <Select
@@ -69,7 +66,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
           register={register}
           errors={errors}
           options={ethnicities}
-          required
         />
       </span>
     </div>
@@ -88,7 +84,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
       options={foodPreference}
       register={register}
       errors={errors}
-      required
     />
     <Radio
       label="T-Shirt Size"
@@ -96,7 +91,6 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
       options={shirtSize}
       register={register}
       errors={errors}
-      required
     />
   </Group>
 );
@@ -109,7 +103,6 @@ export const Education = ({ register, errors }: Props) => (
       register={register}
       errors={errors}
       options={schools}
-      required
     />
     <Select
       label="Major"
@@ -117,7 +110,6 @@ export const Education = ({ register, errors }: Props) => (
       register={register}
       errors={errors}
       options={majors}
-      required
     />
     <div className="grid sm:grid-cols-2 gap-3">
       <Select
@@ -126,7 +118,6 @@ export const Education = ({ register, errors }: Props) => (
         register={register}
         errors={errors}
         options={grades}
-        required
       />
       <Input
         type="date"
@@ -134,7 +125,6 @@ export const Education = ({ register, errors }: Props) => (
         variable="grad_date"
         register={register}
         errors={errors}
-        required
       />
     </div>
   </Group>
@@ -156,35 +146,7 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
       options={firstTimeHacker}
       register={register}
       errors={errors}
-      required
     />
-    {/* Commented out for now because unsure if only UCR limited and if vaccine cards will be checked
-    <Radio
-      label="Are you participating in-person or online?"
-      subtext={
-        <>
-          <div className="mb-2">
-            <span className="font-medium">
-              Only UCR students can participate in-person.
-            </span>{' '}
-            In-person participants will also get free food, swag, and a chance
-            to network with real engineers.
-          </div>
-          <div>
-            <span className="font-medium">
-              If you plan to participate in-person, please have your vaccine
-              cards.
-            </span>{' '}
-            We will check for them.
-          </div>
-        </>
-      }
-      variable="participation"
-      options={participation}
-      register={register}
-      errors={errors}
-      required
-    />*/}
     <span className="flex flex-col mt-4 gap-2">
       <Checkbox
         label=""
@@ -192,7 +154,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[0]}
         register={register}
         errors={errors}
-        required
       />
       <Checkbox
         label=""
@@ -200,7 +161,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[1]}
         register={register}
         errors={errors}
-        required
       />
       <Checkbox
         label=""
@@ -208,7 +168,6 @@ export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
         options={MLH[2]}
         register={register}
         errors={errors}
-        required
       />
     </span>
   </Group>

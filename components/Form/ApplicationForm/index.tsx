@@ -6,8 +6,6 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { nanoid } from 'nanoid';
 import { toast } from 'react-hot-toast';
-import storage from '@/lib/firebase';
-import { ref, uploadBytes } from 'firebase/storage';
 import { PersonalInfo, Education, HackerApp } from './components';
 import useSWR from 'swr';
 
@@ -61,26 +59,35 @@ export function ApplicationForm() {
     return criteria_met;
   };
 
-  const uploadFile = async (
-    resume,
-    first_name: string,
-    last_name: string,
-    uid: string
-  ) => {
+  const readFileAsBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  const uploadFile = async (resume, first_name, last_name, email: string) => {
     if (fileUploaded) {
       const file = resume[0];
-      const filename =
-        first_name.replace(/\s/g, '') +
-        '___' +
-        last_name.replace(/\s/g, '') +
-        '___' +
-        uid +
-        '.pdf';
-      const fileRef = ref(storage, 'resumes/' + filename);
-      const metadata = {
-        contentType: 'application/pdf'
-      };
-      await uploadBytes(fileRef, file, metadata); // upload file
+      const file_name = first_name + '_' + last_name + '_' + email;
+      try {
+        const base64String = await readFileAsBase64(file);
+        const response = await axios.post('/api/applications/upload-pdf', {
+          email: email,
+          resume: base64String,
+          file_name: file_name
+        });
+
+        if (response.status === 200) {
+          console.log('File uploaded successfully');
+        } else {
+          console.error('Error uploading file');
+        }
+      } catch (err) {
+        console.error('Error uploading file:', err);
+      }
     }
   };
 
@@ -116,7 +123,7 @@ export function ApplicationForm() {
     let criteria_met = determineCriteriaMet(grade, participation, school);
     const uid = nanoid();
 
-    await uploadFile(resume, first_name, last_name, uid);
+    await uploadFile(resume, first_name, last_name, session.user.email);
 
     axios
       .post('/api/applications/create', {
@@ -165,9 +172,9 @@ export function ApplicationForm() {
 
   return (
     <main className="flex flex-col items-center my-24 px-4 w-full">
-      <h2 className="mb-6">Application Form</h2>
+      <h2 className="mb-6 text-3xl font-bold">Application Form</h2>
       <p className="pb-4 w-full sm:max-w-2xl">
-        Fill out this form to apply for Cutie Hack 2022!
+        Fill out this form to apply for Citrus Hack 2023!
       </p>
       <p className="pb-4 w-full sm:max-w-2xl">
         Within 24 hours of submitting, you will be notified via email about your
