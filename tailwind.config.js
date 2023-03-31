@@ -67,5 +67,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('daisyui'), MyClass]
+  plugins: [MyClass]
 };
