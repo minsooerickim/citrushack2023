@@ -49,7 +49,7 @@ const staff = [
     position: 'Software Engineer'
   },
   {
-    link: 'https://www.linkedin.com/in/nathan-melwani/',
+    link: 'https://www.linkedin.com/in/paulianle/',
     image: Paulian,
     name: 'Paulian Le',
     position: 'Software Engineer'
@@ -357,7 +357,7 @@ const team = () => {
       <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
         <div className="flex flex-col">
           <p className="text-xl md:text-2xl text-center font-semibold pb-4 text-text mt-10 sm:mt-0">
-            The Committee Members
+            Committee Members
           </p>
           {/* <div className="flex flex-row"> */}
           <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">
@@ -387,43 +387,7 @@ const team = () => {
                 </p>
               ))}
             </div>
-            {/* </div> */}
           </div>
-
-          {/* <div className="flex flex-row justify-center space-x-12">
-            <div>
-              <div className="flex justify-center pb-2 text-text">
-                ⚙️ SWE ⚙️
-              </div>
-              <div>
-                {swe_committee.map((member, index) => (
-                  <p key={index} className="text-lightPurple">
-                    {member}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-center pb-2 text-text">
-                💰 Sponsorship 💰
-              </div>
-              {sponsorship_committee.map((member, index) => (
-                <p key={index} className="text-lightPurple">
-                  {member}
-                </p>
-              ))}
-            </div>
-            <div>
-              <div className="flex justify-center pb-2 text-text">
-                ✏️ Operations ✏️
-              </div>
-              {operations_committee.map((member, index) => (
-                <p key={index} className="text-lightPurple">
-                  {member}
-                </p>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
