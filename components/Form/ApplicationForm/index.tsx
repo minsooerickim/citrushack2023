@@ -71,7 +71,7 @@ export function ApplicationForm() {
   const uploadFile = async (resume, first_name, last_name, email: string) => {
     if (fileUploaded) {
       const file = resume[0];
-      const file_name = first_name + '_' + last_name + '_resume';
+      const file_name = first_name + '_' + last_name + '_' + email;
       try {
         const base64String = await readFileAsBase64(file);
         const response = await axios.post('/api/applications/upload-pdf', {
