@@ -9,20 +9,19 @@ export default function Footer() {
 
   return (
     <>
-      <div className="">
+      <div className="w-screen">
         {theme === 'light' ? (
           <Image
             src={bus_footer}
             alt="footer"
-            objectFit="contain"
+            objectFit="cover"
             layout="responsive"
-            // className="bg-red-200"
           />
         ) : (
           <Image
             src={bus_footer_dark}
             alt="footer"
-            objectFit="contain"
+            objectFit="cover"
             layout="responsive"
           />
         )}
