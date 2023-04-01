@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const plugin = require('tailwindcss/plugin');
 const MyClass = plugin(function ({ addUtilities }) {
@@ -32,6 +33,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    colors: {
+      'green': '#2BAD21',
+      'blue': '#00f',
+    },
+    linearBorderGradients: theme => ({
+      colors: theme('colors'),
+    }),
+
     borderWidth: {
       11: '11px'
     },
@@ -75,5 +84,5 @@ module.exports = {
       }
     }
   },
-  plugins: [MyClass]
+  plugins: [MyClass, require('tailwindcss-border-gradients')(),]
 };

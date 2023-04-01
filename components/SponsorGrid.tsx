@@ -7,6 +7,10 @@ import orangeFlag from '@/public/assets/sponsors/orange_flag.svg';
 import tangerineFlag from '@/public/assets/sponsors/tangerine_flag.svg';
 import cutieFlag from '@/public/assets/sponsors/cutie_flag.svg';
 
+import orange from '@/public/assets/sponsors/orange_sponsor_orange.svg';
+import tangerine from '@/public/assets/sponsors/tangerine_sponsor_orange.svg';
+import cutie from '@/public/assets/sponsors/cutie_sponsor_orange.svg';
+
 interface SponsorProps {
   /** Sponsor tier (e.g. 'cutie'). */
   type: string;
@@ -85,6 +89,7 @@ const tiers = [
     type: 'orange',
     flag: orangeFlag,
     wide: true,
+    orange: orange,
     sponsors: [
       {
         image: '/assets/sponsors/aspb.png',
@@ -114,6 +119,7 @@ const tiers = [
     type: 'tangerine',
     flag: tangerineFlag,
     wide: Boolean(true),
+    orange: tangerine,
     sponsors: [
       {
         image: '/assets/sponsors/blackstone.png',
@@ -141,6 +147,7 @@ const tiers = [
     type: 'cutie',
     flag: cutieFlag,
     wide: Boolean(true),
+    orange: cutie,
     sponsors: [
       {
         image: '/assets/sponsors/redbull.png',
@@ -241,14 +248,12 @@ export function SponsorsGrid() {
 
   return (
     <div className="relative grid grid-cols-2 gap-6 mt-10  px-3">
-      <span className="absolute top-10 left-[1.6rem] flex w-1/2 transform h-full z-100 border-l-4 border-[#2BAD21] z-50 px-0 pointer-events-none"></span>
       {/* <span className="absolute top-0 left-[1.6rem] z-[1000]  w-36 md:w-52">
         <Image src={tiersFlag} alt="flag" />
       </span> */}
-
       {tiers
         .filter(({ sponsors }) => sponsors.length > 0) // only map tiers with sponsors
-        .map(({ type, sponsors, wide }) => (
+        .map(({ type, sponsors, wide, orange }) => (
           <div
             key={type}
             className={
@@ -256,7 +261,29 @@ export function SponsorsGrid() {
               (wide ? 'col-span-2' : 'col-span-2 sm:col-span-1')
             }
           >
-            <span className="mr-1 rounded-full border-4 border-goldL w-5 h-5 absolute left-1.5 z-[1000] bg-sky px-0"></span>
+            <span className="flex lg:hidden absolute left-[1.1rem] top-[5rem] w-1/2 transform h-full z-100 border-l-4 border-gradient-t-green z-50 px-0 pointer-events-none"></span>
+            <span className="block lg:hidden mr-1 w-10 left-0 absolute z-[9999] bg-transparent px-0">
+              <Image
+                src={orange}
+                alt="orange"
+                draggable={false}
+                width={200}
+                height={200}
+                layout="responsive"
+              />
+            </span>
+
+            <span className="hidden lg:flex absolute left-[2.4rem] top-[7.5rem] w-1/2 transform h-full z-100 border-l-4 border-gradient-t-green z-50 px-0 pointer-events-none"></span>
+            <span className="hidden lg:block mr-1 w-20 left-0 absolute z-[9999] bg-transparent px-0">
+              <Image
+                src={orange}
+                alt="orange"
+                draggable={false}
+                width={200}
+                height={200}
+                layout="responsive"
+              />
+            </span>
             {sponsors.map(
               ({
                 image,
