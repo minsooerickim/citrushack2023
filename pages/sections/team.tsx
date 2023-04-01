@@ -375,7 +375,7 @@ const team = () => {
             <div>
               <p
                 className={`text-xl font-semibold ${
-                  theme === 'light' ? `text-brown` : `text-gold`
+                  theme === 'dark' ? `text-gold` : `text-brown`
                 }`}
               >
                 Operations
@@ -389,7 +389,7 @@ const team = () => {
             <div>
               <p
                 className={`text-xl font-semibold ${
-                  theme === 'light' ? `text-brown` : `text-gold`
+                  theme === 'dark' ? `text-gold` : `text-brown`
                 }`}
               >
                 Sponsorship
@@ -403,7 +403,7 @@ const team = () => {
             <div>
               <p
                 className={`text-xl font-semibold ${
-                  theme === 'light' ? `text-brown` : `text-gold`
+                  theme === 'dark' ? `text-gold` : `text-brown`
                 }`}
               >
                 Software Engineers

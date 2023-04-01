@@ -62,7 +62,7 @@ export default function Home() {
         <div className="absolute w-full h-full -z-0 top-0 right-0">
           {theme === 'light' ? (
             <>
-              <div className="max-xl:hidden">
+              <div className="max-xl:hidden opacity-80">
                 <Image
                   src={sponsorBGLightDesktop}
                   alt="Wave Dark"
@@ -71,7 +71,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="max-sm:hidden sm:block xl:hidden">
+              <div className="max-sm:hidden sm:block xl:hidden opacity-80">
                 <Image
                   src={sponsorBGLightTablet}
                   alt="Wave Dark"
@@ -80,7 +80,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden">
+              <div className="block sm:hidden opacity-80">
                 <Image
                   src={sponsorBGLightMobile}
                   alt="Wave Dark"
@@ -92,7 +92,7 @@ export default function Home() {
             </>
           ) : (
             <>
-              <div className="max-xl:hidden">
+              <div className="max-xl:hidden opacity-80">
                 <Image
                   src={sponsorBGDarkDesktop}
                   alt="Wave Dark"
@@ -101,7 +101,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="max-sm:hidden sm:block xl:hidden">
+              <div className="max-sm:hidden sm:block xl:hidden opacity-80">
                 <Image
                   src={sponsorBGDarkTablet}
                   alt="Wave Dark"
@@ -110,7 +110,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden">
+              <div className="block sm:hidden opacity-80">
                 <Image
                   src={sponsorBGDarkMobile}
                   alt="Wave Dark"
