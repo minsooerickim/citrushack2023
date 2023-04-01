@@ -46,8 +46,8 @@ export const Sponsor = ({
       whileTap={{ scale: 0.995 }}
       className={
         'transform-gpu rounded-full bg-white border-6 grid content-center ' +
-        ((border || '') + ' ') +
         (shrink ? 'p-[2rem] ' : 'p-[0.6rem] ') +
+        ((border || '') + ' ') +
         (type === 'cutie'
           ? 'w-24 h-24 md:w-28 md:h-28 ' +
             (false && shrink ? 'w-16 md:w-24' : '') +
@@ -142,85 +142,88 @@ const tiers = [
     wide: Boolean(true),
     sponsors: [
       {
-        image: '/assets/sponsors/wolfram-light.svg',
-        imageDark: '/assets/sponsors/wolfram-dark.svg',
-        width: 198,
-        height: 154.34,
+        image: '/assets/sponsors/redbull.png',
+        width: 580,
+        height: 335,
+        link: 'https://www.redbull.com/us-en/',
+        border: 'border-[#FF0000] bg-[#FCF1BF]'
+      },
+      {
+        image: '/assets/sponsors/wolfram.png',
+        width: 529,
+        height: 413,
         link: 'https://www.wolframalpha.com/',
-        shrink: null,
-        tall: null
+        border: 'border-[#DD1100] p-[1rem]'
       },
       {
-        image: '/assets/sponsors/sketch-light.svg',
-        imageDark: '/assets/sponsors/sketch-dark.svg',
-        width: 1407,
-        height: 1288,
-        link: 'https://sketch.com/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/desmos.png',
+        width: 435,
+        height: 435,
+        link: 'https://desmos.com/',
+        border: 'border-[#138141] p-[1.4rem]'
       },
       {
-        image: '/assets/sponsors/triad-light.svg',
-        imageDark: '/assets/sponsors/triad-dark.svg',
-        width: 1089,
-        height: 1001,
-        link: 'https://www.triadmagnetics.com/',
-        shrink: Boolean(true),
-        tall: Boolean(true)
+        image: '/assets/sponsors/stickermule.png',
+        width: 442,
+        height: 259,
+        link: 'https://www.stickermule.com/',
+        border: 'border-[#4C2418] bg-[#E0BDAE]'
       },
       {
-        image: '/assets/sponsors/vercel-light.svg',
-        imageDark: '/assets/sponsors/vercel-dark.svg',
-        width: 1155,
-        height: 1000,
-        link: 'https://vercel.com/?utm_source=citrushack&utm_campaign=oss',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/echo3d.png',
+        width: 536,
+        height: 362,
+        link: 'https://www.echo3d.com/',
+        border: 'border-[#28C1FD] bg-[#002D64]'
       },
       {
-        image: '/assets/sponsors/snapchat.svg',
-        imageDark: '/assets/sponsors/snapchat.svg',
-        width: 391.39,
-        height: 385.49,
-        link: 'https://www.snapchat.com/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/tensorflow.png',
+        width: 636,
+        height: 409,
+        link: 'https://www.tensorflow.org/',
+        border: 'border-[#F59121] bg-[#FFDCBC]'
       },
       {
-        image: '/assets/sponsors/interview-cake-light.svg',
-        imageDark: '/assets/sponsors/interview-cake-dark.svg',
-        width: 1754,
-        height: 1850,
-        link: 'https://www.interviewcake.com/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/ucrBotanic.png',
+        width: 469,
+        height: 490,
+        link: 'https://gardens.ucr.edu/',
+        border: 'border-[#708652] p-[1rem]'
       },
       {
-        image: '/assets/sponsors/google-cloud.svg',
-        imageDark: '/assets/sponsors/google-cloud.svg',
-        width: 2278,
-        height: 1833,
+        image: '/assets/sponsors/balsamiq.png',
+        width: 1024,
+        height: 327,
+        link: 'https://balsamiq.com/',
+        border: 'border-[#CC0100] bg-[#FFD6D6]'
+      },
+      {
+        image: '/assets/sponsors/googleCloud.svg',
+        width: 1200,
+        height: 600,
         link: 'https://cloud.google.com/',
-        shrink: Boolean(true),
-        tall: null
+        border: 'border-rainbow bg-[#424242]'
       },
       {
-        image: '/assets/sponsors/digital-ocean-light.svg',
-        imageDark: '/assets/sponsors/digital-ocean-dark.svg',
-        width: 176.4,
-        height: 176.5,
-        link: 'https://www.digitalocean.com/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/glico.png',
+        width: 300,
+        height: 117,
+        link: 'https://www.glico.com/global/',
+        border: 'border-[#E70012] p-[1rem]'
       },
       {
-        image: '/assets/sponsors/ieee-light.svg',
-        imageDark: '/assets/sponsors/ieee-dark.svg',
+        image: '/assets/sponsors/sketch.png',
+        width: 512,
+        height: 460,
+        link: 'https://sketch.com/',
+        border: 'border-[#FDAD00] p-[1rem]'
+      },
+      {
+        image: '/assets/sponsors/ieee-dark.svg',
         width: 745,
         height: 959,
         link: 'https://ieee.ucr.edu/',
-        shrink: Boolean(true),
-        tall: null
+        border: 'border-[#0085FF] bg-[#271D50] p-[1.5rem]'
       }
     ]
   }
