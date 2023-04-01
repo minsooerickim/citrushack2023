@@ -80,7 +80,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden opacity-80">
+              <div className="block sm:hidden opacity-60">
                 <Image
                   src={sponsorBGLightMobile}
                   alt="Wave Dark"
@@ -92,7 +92,7 @@ export default function Home() {
             </>
           ) : (
             <>
-              <div className="max-xl:hidden opacity-80">
+              <div className="max-xl:hidden opacity-90">
                 <Image
                   src={sponsorBGDarkDesktop}
                   alt="Wave Dark"
@@ -101,7 +101,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="max-sm:hidden sm:block xl:hidden opacity-80">
+              <div className="max-sm:hidden sm:block xl:hidden opacity-90">
                 <Image
                   src={sponsorBGDarkTablet}
                   alt="Wave Dark"
@@ -110,7 +110,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden opacity-80">
+              <div className="block sm:hidden">
                 <Image
                   src={sponsorBGDarkMobile}
                   alt="Wave Dark"
