@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -13,6 +13,8 @@ interface SponsorProps {
   type: string;
   /** Path to sponsor logo (e.g. /assets/sponsors/google-cloud.svg). */
   image: string;
+  /** Path to sponsor logo in dark mode */
+  imageDark?: string;
   /** Width of sponsor logo. */
   width: number;
   /** Height of sponsor logo. */
@@ -225,7 +227,7 @@ const tiers = [
 /** Grid of sponsors of all specified tiers. */
 export function SponsorsGrid() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
@@ -260,7 +262,7 @@ export function SponsorsGrid() {
             {sponsors.map(
               ({
                 image,
-                imageDark,
+                // imageDark, // idk why but vscode explodes if you comment this out, it gets eslint to shut tho
                 width,
                 height,
                 link,
