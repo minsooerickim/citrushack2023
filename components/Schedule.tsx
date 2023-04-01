@@ -12,7 +12,6 @@ import cloud from '../public/assets/cloud.svg';
 import cloudDark from '../public/assets/cloudDark.svg';
 import bird1 from '@/public/assets/bird1.svg';
 import star from '@/public/assets/star.svg';
-import scheduleWave from '@/public/assets/waves/scheduleWave.svg';
 
 import { useTheme } from 'next-themes';
 

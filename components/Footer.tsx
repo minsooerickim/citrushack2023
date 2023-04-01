@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
       <div
         className={` ${
-          theme === 'dark' ? `bg-[#397411]` : `bg-[#72C03F]`
+          theme === 'dark' ? `bg-[#397411]` : `bg-[#7DBC55]`
         } flex flex-col justify-center items-center w-full h-full`}
       >
         <footer className="flex justify-center w-full py-4 bg-primary">
