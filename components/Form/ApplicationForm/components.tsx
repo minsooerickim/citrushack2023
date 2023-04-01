@@ -124,7 +124,7 @@ export function Education({ register, errors, watch }: Props) {
       {school === 'University of California, Riverside' && (
         <Input
           type="text"
-          label="UCR SID"
+          label="UCR SID (starts with 86...)"
           variable="ucr_sid"
           register={register}
           errors={errors}
