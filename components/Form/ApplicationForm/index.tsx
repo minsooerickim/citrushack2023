@@ -40,6 +40,7 @@ export function ApplicationForm() {
     // eslint-disable-next-line no-var
     var criteria_met = true;
 
+    // used by auto accept "bot" (/api/auto-review)
     // determine if criteria to participate is met
     // auto accept if
     // if undergrad && UCR
