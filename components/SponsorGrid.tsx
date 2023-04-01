@@ -124,13 +124,15 @@ const tiers = [
         image: '/assets/sponsors/acm.webp',
         width: 1080,
         height: 1080,
-        link: 'https://acmucr.org/'
+        link: 'https://acmucr.org/',
+        border: 'border-[#4185FC]'
       },
       {
         image: '/assets/sponsors/triad.png',
         width: 371,
         height: 85,
-        link: 'https://www.triadmagnetics.com/'
+        link: 'https://www.triadmagnetics.com/',
+        border: 'border-[#FFB624]'
       }
     ]
   },
@@ -262,7 +264,7 @@ export function SponsorsGrid() {
             {sponsors.map(
               ({
                 image,
-                // imageDark, // idk why but vscode explodes if you comment this out, it gets eslint to shut tho
+                imageDark,
                 width,
                 height,
                 link,
@@ -273,7 +275,9 @@ export function SponsorsGrid() {
                 <Sponsor
                   key={link}
                   type={type}
-                  image={image /*theme === 'light' ? image : imageDark*/}
+                  image={
+                    image || imageDark /*theme === 'light' ? image : imageDark*/
+                  } // imageDark sitting there so typescript doesnt explode (idk why but imageDark HAS to be there and you HAVE to use it or eslint explodes instead)
                   width={width}
                   height={height}
                   link={link}
