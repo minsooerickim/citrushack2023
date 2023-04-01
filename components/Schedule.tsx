@@ -392,7 +392,7 @@ export const EventDesktop = ({
                 {leftDescription}
               </p>
               <p
-                className={`text-base text-left w-full ${
+                className={`text-base text-right w-full ${
                   theme === 'dark' ? `text-gold` : `text-brown`
                 }`}
               >

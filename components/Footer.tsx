@@ -51,10 +51,6 @@ export default function Footer() {
       >
         <footer className="flex justify-center w-full py-4 bg-primary">
           <div className="flex flex-col gap-2 items-center w-full mx-4 text-md font-semibold">
-            <p className="text-center">
-              Made with {theme === 'dark' ? '🤍' : '🖤'} by the Citrus Hack Team
-            </p>
-
             <div className="flex gap-2.5 text-2xl relative z-30">
               {socials.map(({ icon, link }) => (
                 <a
@@ -72,7 +68,17 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="text-sm mr-4">Copyright © 2023</p>
+            <a
+              className="text-text relative z-30 hover:text-slate-300"
+              target="_blank"
+              rel="noferrer noopener noreferrer"
+              href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+            >
+              MLH Code Of Conduct
+            </a>
+            <p className="text-center">
+              Made with {theme === 'dark' ? '🤍' : '🖤'} by the Citrus Hack Team
+            </p>
           </div>
         </footer>
       </div>
