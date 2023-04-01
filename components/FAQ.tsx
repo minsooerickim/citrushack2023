@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BiX } from 'react-icons/bi';
 import ExternalLink from '@/components/ExternalLink';
+import { useTheme } from 'next-themes';
 
 interface Props {
   /** Heading for accordion. */
@@ -12,6 +13,7 @@ interface Props {
 /** Accordion for a single FAQ. */
 export function FaqAccordion({ question, answer }: Props) {
   const [open, setOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col w-full border-b-2 border-sub">
@@ -19,7 +21,7 @@ export function FaqAccordion({ question, answer }: Props) {
         className="flex py-3 items-center hover:text-highlight cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <h4 className="grow font-bold text-lg text-text">{question}</h4>
+        <h4 className="grow font-semibold text-lg text-text">{question}</h4>
         <div>
           <BiX
             className={
@@ -36,9 +38,21 @@ export function FaqAccordion({ question, answer }: Props) {
         }
       >
         {typeof answer === 'string' ? (
-          <p className="m-0 mb-8 text-base text-text">{answer}</p>
+          <p
+            className={`m-0 mb-8 text-base ${
+              theme === 'dark' ? `text-gold` : `text-brown`
+            }`}
+          >
+            {answer}
+          </p>
         ) : (
-          <div className="m-0 mb-8 text-base text-text">{answer}</div>
+          <div
+            className={`m-0 mb-8 text-base text-text ${
+              theme === 'dark' ? `text-gold` : `text-brown`
+            }`}
+          >
+            {answer}
+          </div>
         )}
       </div>
     </div>
