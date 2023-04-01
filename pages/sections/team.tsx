@@ -148,7 +148,7 @@ export const Assets = () => {
         }}
         className="absolute z-20 max-lg:hidden left-10 xl:left-[10%] top-[20%] xl:top-[15%] w-28 md:w-40 lg:w-48 xl:w-64"
       >
-        <Image src={plane} alt="cloud" />
+        <Image src={plane} alt="cloud" draggable={false} />
       </motion.div>
       {/* cloud top left */}
       <motion.div
@@ -160,9 +160,9 @@ export const Assets = () => {
         className="absolute z-10 max-[375px]:hidden left-10 xl:left-[10%] top-44 sm:top-28 xl:top-20  w-20 sm:w-28 md:w-32 lg:w-48 xl:w-64"
       >
         {theme === 'light' ? (
-          <Image src={cloud2} alt="cloud" />
+          <Image src={cloud2} alt="cloud" draggable={false} />
         ) : (
-          <Image src={cloudDark2} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" draggable={false} />
         )}
       </motion.div>
       {/* birf top right */}
@@ -175,9 +175,9 @@ export const Assets = () => {
         className="absolute z-10 max-md:hidden right-10 top-52 w-20  xl:w-24"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird1} alt="bird" draggable={false} />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" draggable={false} />
         )}
       </motion.div>
       {/* cloud bottom left */}
@@ -190,9 +190,9 @@ export const Assets = () => {
         className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-52 w-16 sm:w-24 xl:w-32"
       >
         {theme === 'light' ? (
-          <Image src={cloud} alt="cloud" />
+          <Image src={cloud} alt="cloud" draggable={false} />
         ) : (
-          <Image src={cloudDark} alt="cloud" />
+          <Image src={cloudDark} alt="cloud" draggable={false} />
         )}
       </motion.div>
       {/* cloud bottom left */}
@@ -204,7 +204,7 @@ export const Assets = () => {
         }}
         className="absolute z-30 max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-96 lg:-bottom-96 xl:-bottom-96 w-12 xl:w-24"
       >
-        <Image src={balloonOrange} alt="cloud" />
+        <Image src={balloonOrange} alt="cloud" draggable={false} />
       </motion.div>
       {/* cloud bottom right */}
       <motion.div
@@ -216,9 +216,9 @@ export const Assets = () => {
         className="absolute z-20 right-10 max-md:hidden -bottom-[150%] xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-12 xl:bottom-56 w-16 sm:w-24 xl:w-32"
       >
         {theme === 'light' ? (
-          <Image src={cloud2} alt="cloud" />
+          <Image src={cloud2} alt="cloud" draggable={false} />
         ) : (
-          <Image src={cloudDark2} alt="cloud" />
+          <Image src={cloudDark2} alt="cloud" draggable={false} />
         )}
       </motion.div>
       {/* balloon */}
@@ -231,9 +231,9 @@ export const Assets = () => {
         className="absolute z-40 right-6 -bottom-[150%] max-md:hidden xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-52 xl:bottom-0 w-10 xs:w-20 xl:w-32"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird1} alt="bird" draggable={false} />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="cloud" draggable={false} />
         )}
       </motion.div>
       {/* cloud bottom right */}
@@ -246,9 +246,9 @@ export const Assets = () => {
         className="absolute z-50 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird1} alt="bird" draggable={false} />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" draggable={false} />
         )}
       </motion.div>
       <motion.div
@@ -260,26 +260,11 @@ export const Assets = () => {
         className="absolute z-50 max-[375px]:hidden sm:hidden left-0 -bottom-[72%] w-14"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird1} alt="bird" draggable={false} />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" draggable={false} />
         )}
       </motion.div>
-      {/* cloud bottom right */}
-      {/* <motion.div
-        animate={{ y: [0, -5, 0] }}
-        transition={{
-          repeat: Infinity,
-          duration: 5
-        }}
-        className="absolute z-20 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
-      >
-        {theme === 'light' ? (
-          <Image src={cloud} alt="bird" />
-        ) : (
-          <Image src={cloudDark} alt="cloud" />
-        )}
-      </motion.div> */}
       {/* cloud top left */}
       <motion.div
         animate={{ y: [0, -5, 0] }}
@@ -290,9 +275,9 @@ export const Assets = () => {
         className="absolute z-10 max-[375px]:hidden left-10 top-44 sm:top-28 w-20 sm:w-28 sm:hidden"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" />
+          <Image src={bird1} alt="bird" draggable={false} />
         ) : (
-          <Image src={star} alt="cloud" />
+          <Image src={star} alt="star" draggable={false} />
         )}
       </motion.div>
     </>
@@ -343,6 +328,7 @@ const team = () => {
             alt="Wave Light"
             layout="responsive"
             objectFit="contain"
+            draggable={false}
           />
         ) : (
           <Image
@@ -350,10 +336,10 @@ const team = () => {
             alt="Wave Dark"
             layout="responsive"
             objectFit="contain"
+            draggable={false}
           />
         )}
       </div>
-      {/* commitee members */}
       <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
         <div className="flex flex-col">
           <p className="text-xl md:text-2xl text-center font-bold pb-4 text-text mt-10 sm:mt-0">

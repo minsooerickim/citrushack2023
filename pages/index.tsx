@@ -13,7 +13,6 @@ import Team from '@/pages/sections/team';
 import Footer from '@/components/Footer';
 import FooterWaveLight from '@/public/assets/waves/footer_wave.svg';
 import FooterWaveDark from '@/public/assets/waves/footer_wave_dark.svg';
-// import FaqBalloons from '@/public/assets/faq_balloons.svg';
 import { useTheme } from 'next-themes';
 import sponsorBGDarkDesktop from '@/public/assets/waves/sponsorBGDarkDesktop.svg';
 import sponsorBGLightDesktop from '@/public/assets/waves/sponsorBGLightDesktop.svg';
@@ -69,6 +68,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
               <div className="max-sm:hidden sm:block xl:hidden">
@@ -77,6 +77,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
               <div className="block sm:hidden">
@@ -85,6 +86,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
             </>
@@ -96,6 +98,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
               <div className="max-sm:hidden sm:block xl:hidden">
@@ -104,6 +107,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
               <div className="block sm:hidden">
@@ -112,6 +116,7 @@ export default function Home() {
                   alt="Wave Dark"
                   layout="responsive"
                   objectFit="contain"
+                  draggable={false}
                 />
               </div>
             </>
@@ -137,6 +142,7 @@ export default function Home() {
               alt="Wave Light"
               layout="responsive"
               objectFit="contain"
+              draggable={false}
             />
           ) : (
             <Image
@@ -144,6 +150,7 @@ export default function Home() {
               alt="Wave Dark"
               layout="responsive"
               objectFit="contain"
+              draggable={false}
             />
           )}
         </div>

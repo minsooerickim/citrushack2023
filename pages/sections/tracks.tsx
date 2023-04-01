@@ -106,12 +106,10 @@ export const Assets = () => {
 export default function Tracks() {
   return (
     <section className="relative flex flex-col w-full h-full my-5 lg:my-3 max-w-[72rem] justify-center items-center px-4 pb-12 lg:pb-5">
-      {/* <div className="relative flex w-full my-10 px-10 flex-col items-center"> */}
       <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks
       </h1>
       <div className="flex flex-col gap-y-7 md:grid md:grid-cols-3 gap-36 lg:gap-56 items-start mb-0 lg:mb-20">
-        {/* <div className="flex justify-start items-start bg-blue-500"> */}
         <div className="flex flex-col items-center justify-end gap-y-2 lg:gap-y-4">
           <Image
             className="scale-90"

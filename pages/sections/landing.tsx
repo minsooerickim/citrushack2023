@@ -319,7 +319,6 @@ export default function Landing() {
         <Assets />
         <span className="hidden sm:block">
           {theme === 'light' ? (
-            // <div className="">
             <Image
               src={Skyline}
               alt="skyline"
@@ -333,7 +332,6 @@ export default function Landing() {
               layout="responsive"
               objectFit="contain"
             />
-            // </div>
           )}
         </span>
         <motion.span
