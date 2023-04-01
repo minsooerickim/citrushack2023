@@ -26,6 +26,7 @@ export default function Support() {
             alt="Wave Light"
             layout="responsive"
             objectFit="contain"
+            draggable="false"
           />
         ) : (
           <Image
@@ -33,6 +34,7 @@ export default function Support() {
             alt="Wave Dark"
             layout="responsive"
             objectFit="contain"
+            draggable="false"
           />
         )}
       </div>

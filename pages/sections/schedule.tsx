@@ -22,6 +22,7 @@ export default function Schedule() {
           <Image
             src={scheduleWave}
             alt="Wave Light"
+            draggable="false"
             layout="responsive"
             objectFit="contain"
           />
@@ -29,6 +30,7 @@ export default function Schedule() {
           <Image
             src={scheduleWaveDark}
             alt="Wave Dark"
+            draggable="false"
             layout="responsive"
             objectFit="contain"
           />

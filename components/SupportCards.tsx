@@ -57,6 +57,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               quality={1}
               className="rounded-md"
               alt=""
+              draggable="false"
             />
             <motion.span
               whileHover={{ scale: 1.05 }}
@@ -66,7 +67,13 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               animate={bounce ? 'animate' : 'initial'}
             >
               <a href={link}>
-                <Image src={button} width={140} height={120} alt="" />
+                <Image
+                  src={button}
+                  width={140}
+                  height={120}
+                  alt=""
+                  draggable="false"
+                />
               </a>
             </motion.span>
           </div>
@@ -82,6 +89,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               quality={1}
               className="rounded-md"
               alt=""
+              draggable="false"
             />
             <motion.span
               whileHover={{ scale: 1.05 }}
@@ -91,7 +99,13 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               animate={bounce ? 'animate' : 'initial'}
             >
               <a href={link}>
-                <Image src={button} width={140} height={120} alt="" />
+                <Image
+                  src={button}
+                  width={140}
+                  height={120}
+                  alt=""
+                  draggable="false"
+                />
               </a>
             </motion.span>
           </div>
