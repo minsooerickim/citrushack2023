@@ -123,7 +123,7 @@ const faq = [
           name="citrushack@gmail.com"
           link="mailto:citrushack@gmail.com"
         />{' '}
-        if you have any more questions.
+        or ask Mika Shanela in-person if you have any more questions.
       </p>
     )
   }
