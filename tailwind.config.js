@@ -67,7 +67,9 @@ module.exports = {
         purple: 'var(--purple)',
         lightPurple: 'var(--lightPurple)',
         text: 'var(--text)',
-        hoverPrimary: 'var(--hoverPrimary)'
+        hoverPrimary: 'var(--hoverPrimary)',
+        goldHover: 'var(--goldHover)',
+        link: 'var(--link)'
       },
       backgroundImage: {
         clouds: 'var(--clouds)',
