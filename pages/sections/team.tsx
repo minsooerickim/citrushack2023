@@ -309,7 +309,7 @@ const team = () => {
         <p className="text-center text-5xl md:text-7xl font-black not-italic items-center text-text">
           Meet The Team
         </p>
-        <p className="text-opposite text-xl md:text-2xl font-baloo_semi_bold text-center px-4 text-text font-semibold">
+        <p className="text-opposite text-xl md:text-2xl font-baloo_semi_bold text-center px-4 text-text font-bold">
           The Leads
         </p>
         <div className="relative z-10 flex flex-wrap justify-center gap-6 md:gap-10 md:gap-y-12 ">
@@ -356,32 +356,32 @@ const team = () => {
       {/* commitee members */}
       <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
         <div className="flex flex-col">
-          <p className="text-xl md:text-2xl text-center font-semibold pb-4 text-text mt-10 sm:mt-0">
+          <p className="text-xl md:text-2xl text-center font-bold pb-4 text-text mt-10 sm:mt-0">
             Committee Members
           </p>
           <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">
             <div>
-              <p className="text-xl font-medium text-text">Operations</p>
+              <p className="text-xl font-semibold text-text">Operations</p>
               {operations_committee.map((member, index) => (
-                <p key={index} className="text-lightPurple">
+                <p key={index} className="text-text">
                   {member}
                 </p>
               ))}
             </div>
             <div>
-              <p className="text-xl font-medium text-text">Sponsorship</p>
+              <p className="text-xl font-semibold text-text">Sponsorship</p>
               {sponsorship_committee.map((member, index) => (
-                <p key={index} className="text-lightPurple">
+                <p key={index} className="text-text">
                   {member}
                 </p>
               ))}
             </div>
             <div>
-              <p className="text-xl font-medium text-text">
+              <p className="text-xl font-semibold text-text">
                 Software Engineers
               </p>
               {swe_committee.map((member, index) => (
-                <p key={index} className="text-lightPurple">
+                <p key={index} className="text-text">
                   {member}
                 </p>
               ))}
