@@ -323,21 +323,47 @@ const team = () => {
       <div className="absolute w-screen h-screen -z-0 right-0">
         <Assets />
         {theme === 'light' ? (
-          <Image
-            src={teamWaveLight}
-            alt="Wave Light"
-            layout="responsive"
-            objectFit="contain"
-            draggable={false}
-          />
+          <>
+            <div className="max-lg:hidden block">
+              <Image
+                src={teamWaveLight}
+                alt="Wave Light"
+                layout="responsive"
+                objectFit="contain"
+                draggable={false}
+              />
+            </div>
+            <div className="block lg:hidden relative top-[50%]">
+              <Image
+                src={teamWaveLight}
+                alt="Wave Light"
+                layout="responsive"
+                objectFit="contain"
+                draggable={false}
+              />
+            </div>
+          </>
         ) : (
-          <Image
-            src={teamWaveDark}
-            alt="Wave Dark"
-            layout="responsive"
-            objectFit="contain"
-            draggable={false}
-          />
+          <>
+            <div className="max-lg:hidden block">
+              <Image
+                src={teamWaveDark}
+                alt="Wave Light"
+                layout="responsive"
+                objectFit="contain"
+                draggable={false}
+              />
+            </div>
+            <div className="block lg:hidden relative top-[50%]">
+              <Image
+                src={teamWaveDark}
+                alt="Wave Light"
+                layout="responsive"
+                objectFit="contain"
+                draggable={false}
+              />
+            </div>
+          </>
         )}
       </div>
       <div className="relative z-8  pt-10 md:pt-20 flex flex-col">
