@@ -157,7 +157,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-10 max-[375px]:hidden left-10 xl:left-[10%] top-44 sm:top-28 xl:top-20  w-20 sm:w-28 md:w-32 lg:w-48 xl:w-64"
+        className="absolute z-10 max-[375px]:hidden left-10 xl:left-[10%] -top-20 sm:top-28 xl:top-20  w-20 sm:w-28 md:w-32 lg:w-48 xl:w-64"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" draggable={false} />
@@ -221,7 +221,7 @@ export const Assets = () => {
           <Image src={cloudDark2} alt="cloud" draggable={false} />
         )}
       </motion.div>
-      {/* balloon */}
+      {/* bird */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{
@@ -272,7 +272,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-10 max-[375px]:hidden left-10 top-44 sm:top-28 w-20 sm:w-28 sm:hidden"
+        className="absolute z-10 max-[375px]:hidden left-10 -top-16 sm:top-16 w-20 sm:w-28"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" draggable={false} />
@@ -373,7 +373,13 @@ const team = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">
             <div>
-              <p className="text-xl font-semibold text-text">Operations</p>
+              <p
+                className={`text-xl font-semibold ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
+                Operations
+              </p>
               {operations_committee.map((member, index) => (
                 <p key={index} className="text-text">
                   {member}
@@ -381,7 +387,13 @@ const team = () => {
               ))}
             </div>
             <div>
-              <p className="text-xl font-semibold text-text">Sponsorship</p>
+              <p
+                className={`text-xl font-semibold ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
+                Sponsorship
+              </p>
               {sponsorship_committee.map((member, index) => (
                 <p key={index} className="text-text">
                   {member}
@@ -389,7 +401,11 @@ const team = () => {
               ))}
             </div>
             <div>
-              <p className="text-xl font-semibold text-text">
+              <p
+                className={`text-xl font-semibold ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
                 Software Engineers
               </p>
               {swe_committee.map((member, index) => (

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 const ProfileWrapper = ({ name, position, link, image }) => {
   const [isHover, setIsHover] = useState(false);
+  const { theme } = useTheme();
   return (
     <div className="relative flex flex-col w-full max-w-[8rem] md:max-w-[9rem] items-center">
       <motion.div
@@ -13,7 +15,13 @@ const ProfileWrapper = ({ name, position, link, image }) => {
         }
       >
         <p className="mb-0 w-max text-text font-bold">{name}</p>
-        <p className="mt-0 leading-4 text-center text-gold">{position}</p>
+        <p
+          className={`mt-0 leading-4 text-center  ${
+            theme === 'light' ? `text-brown` : `text-gold`
+          }`}
+        >
+          {position}
+        </p>
       </motion.div>
       <motion.div
         className="cursor-pointer z-10"
@@ -35,11 +43,15 @@ const ProfileWrapper = ({ name, position, link, image }) => {
           />
         </a>
       </motion.div>
-      <div className="flex flex-col items-center md:hidden justify-center">
+      <div className="flex flex-col items-center lg:hidden justify-center">
         <p className="mb-0 w-max font-baloo_semi_bold text-text text-center">
           {name}
         </p>
-        <p className="mt-0 leading-4 text-center font-baloo_regular text-gold w-max">
+        <p
+          className={`mt-0 leading-4 text-center font-baloo_regular ${
+            theme === 'light' ? `text-brown` : `text-gold`
+          } w-max`}
+        >
           {position}
         </p>
       </div>

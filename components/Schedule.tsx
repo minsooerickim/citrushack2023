@@ -273,6 +273,8 @@ const eventsMobileDay1 = [
 ];
 
 export const EventMobile = ({ time, description, color, place }) => {
+  const { theme } = useTheme();
+
   return (
     <>
       <span
@@ -286,10 +288,18 @@ export const EventMobile = ({ time, description, color, place }) => {
               {description}
             </p>
             <div className="flex flex-col w-full">
-              <p className="text-base text-center font-semibold w-full text-text">
+              <p
+                className={`text-base text-center font-semibold w-full ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
                 {time}
               </p>
-              <p className="text-base text-center font-medium w-full text-text">
+              <p
+                className={`text-base text-center font-medium w-full ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
                 {place}
               </p>
             </div>
@@ -297,7 +307,11 @@ export const EventMobile = ({ time, description, color, place }) => {
         </div>
         <div className="xs:hidden relative bottom-[55%] pl-10 py-6 h-[90px] flex flex-col items-start">
           <p className="text-xl text-left font-semibold">{description}</p>
-          <p className="text-md text-left text-text">
+          <p
+            className={`text-md text-left ${
+              theme === 'light' ? `text-brown` : `text-gold`
+            }`}
+          >
             {time} @ {place}
           </p>
         </div>
@@ -358,6 +372,7 @@ export const EventDesktop = ({
   rightPlace,
   borderColor
 }) => {
+  const { theme } = useTheme();
   return (
     <>
       <span
@@ -376,7 +391,11 @@ export const EventDesktop = ({
               <p className="text-xl text-right font-semibold w-full text-text">
                 {leftDescription}
               </p>
-              <p className="text-base text-right text-text w-full">
+              <p
+                className={`text-base text-right w-full ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
                 {leftTime} @ {leftPlace}
               </p>
             </div>
@@ -392,7 +411,11 @@ export const EventDesktop = ({
               <p className="text-xl text-left font-semibold w-full text-text">
                 {rightDescription}
               </p>
-              <p className="text-base text-left text-text w-full">
+              <p
+                className={`text-base text-left w-full ${
+                  theme === 'light' ? `text-brown` : `text-gold`
+                }`}
+              >
                 {rightTime} @ {rightPlace}
               </p>
             </div>
