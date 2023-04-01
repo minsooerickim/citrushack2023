@@ -173,12 +173,14 @@ export function ApplicationForm() {
   };
 
   return (
-    <main className="flex flex-col items-center my-24 px-4 w-full">
-      <h2 className="mb-6 text-3xl font-bold">Application Form</h2>
-      <p className="pb-4 w-full sm:max-w-2xl">
+    <main className="flex flex-col items-center my-24 px-4 w-full bg-clouds bg-contain bg-no-repeat">
+      <h2 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-center text-text">
+        Application Form
+      </h2>
+      <p className="pb-4 w-full sm:max-w-2xl text-center text-text">
         Fill out this form to apply for Citrus Hack 2023!
       </p>
-      <p className="pb-4 w-full sm:max-w-2xl">
+      <p className="pb-4 w-full sm:max-w-2xl text-center text-text">
         Within 24 hours of submitting, you will be notified via email about your
         application status.
       </p>
