@@ -53,8 +53,6 @@ const ProfileWrapper = ({ name, position, link, image }) => {
           </div>
         </div>
       </div>
-      {/* </a> */}
-      {/* <div className="absolute inset-0 max-sm:pointer-events-none"></div> */}
     </>
   );
 };
