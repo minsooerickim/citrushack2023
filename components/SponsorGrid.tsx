@@ -73,6 +73,7 @@ export const Sponsor = ({
           priority={Boolean(true)}
           layout="responsive"
           objectFit="contain"
+          draggable={false}
         />
       </a>
     </motion.div>
