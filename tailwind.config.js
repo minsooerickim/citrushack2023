@@ -13,6 +13,14 @@ const MyClass = plugin(function ({ addUtilities }) {
     },
     '.backface-hidden': {
       backfaceVisibility: 'hidden'
+    },
+    '.border-rainbow': {
+      // https://stackoverflow.com/a/53037637 PAIN
+      border: 'double transparent',
+      borderRadius: '9999px',
+      backgroundImage: 'linear-gradient(white, white), linear-gradient(to bottom right, #FBBC05 0%, #EA4335 33%, #34A853 80%, #4285F4 100%)',
+      backgroundOrigin: 'border-box',
+      backgroundClip: 'padding-box, border-box',
     }
   });
 });
