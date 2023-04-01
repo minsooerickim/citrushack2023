@@ -4,13 +4,7 @@ import { useTheme } from 'next-themes';
 import bus_footer from '@/public/assets/bus_footer.svg';
 import bus_footer_dark from '@/public/assets/bus_footer_dark.svg';
 import { motion } from 'framer-motion';
-import {
-  FiMail,
-  FiFacebook,
-  FiInstagram,
-  FiTwitter,
-  FiLinkedin
-} from 'react-icons/fi';
+import { FiMail, FiInstagram, FiLinkedin } from 'react-icons/fi';
 export default function Footer() {
   const { theme } = useTheme();
 
@@ -20,16 +14,8 @@ export default function Footer() {
       link: 'mailto:citrushack@gmail.com'
     },
     {
-      icon: <FiFacebook title="Facebook" />,
-      link: 'https://www.facebook.com/CitrusHack'
-    },
-    {
       icon: <FiInstagram title="Instagram" />,
       link: 'https://www.instagram.com/citrushack_ucr'
-    },
-    {
-      icon: <FiTwitter title="Twitter" />,
-      link: 'https://twitter.com/citrushack'
     },
     {
       icon: <FiLinkedin title="LinkedIn" />,
