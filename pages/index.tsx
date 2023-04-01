@@ -15,6 +15,12 @@ import FooterWaveLight from '@/public/assets/waves/footer_wave.svg';
 import FooterWaveDark from '@/public/assets/waves/footer_wave_dark.svg';
 // import FaqBalloons from '@/public/assets/faq_balloons.svg';
 import { useTheme } from 'next-themes';
+import sponsorBGDarkDesktop from '@/public/assets/waves/sponsorBGDarkDesktop.svg';
+import sponsorBGLightDesktop from '@/public/assets/waves/sponsorBGLightDesktop.svg';
+import sponsorBGDarkTablet from '@/public/assets/waves/sponsorBGDarkTablet.svg';
+import sponsorBGLightTablet from '@/public/assets/waves/sponsorBGLightTablet.svg';
+import sponsorBGDarkMobile from '@/public/assets/waves/sponsorBGDarkMobile.svg';
+import sponsorBGLightMobile from '@/public/assets/waves/sponsorBGLightMobile.svg';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -53,12 +59,71 @@ export default function Home() {
           <Support />
         </span>
       </Element>
-      <Element
-        name="Sponsors"
-        className="flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent pb-20"
-      >
-        <Sponsors />
-      </Element>
+      <div className="relative w-full">
+        <div className="absolute w-full h-full -z-0 top-0 right-0">
+          {theme === 'light' ? (
+            <>
+              <div className="max-xl:hidden">
+                <Image
+                  src={sponsorBGLightDesktop}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="max-sm:hidden sm:block xl:hidden">
+                <Image
+                  src={sponsorBGLightTablet}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="block sm:hidden">
+                <Image
+                  src={sponsorBGLightMobile}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="max-xl:hidden">
+                <Image
+                  src={sponsorBGDarkDesktop}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="max-sm:hidden sm:block xl:hidden">
+                <Image
+                  src={sponsorBGDarkTablet}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="block sm:hidden">
+                <Image
+                  src={sponsorBGDarkMobile}
+                  alt="Wave Dark"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </div>
+            </>
+          )}
+        </div>
+        <Element
+          name="Sponsors"
+          className="flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent pb-20"
+        >
+          <Sponsors />
+        </Element>
+      </div>
       <Element name="Staff" className="flex justify-center w-full bg-sky pt-20">
         <span className="flex justify-center px-4 w-full">
           <Team />

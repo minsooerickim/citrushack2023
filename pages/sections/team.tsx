@@ -359,7 +359,6 @@ const team = () => {
           <p className="text-xl md:text-2xl text-center font-semibold pb-4 text-text mt-10 sm:mt-0">
             Committee Members
           </p>
-          {/* <div className="flex flex-row"> */}
           <div className="flex flex-col sm:flex-row justify-center text-center gap-8 xs:gap-10">
             <div>
               <p className="text-xl font-medium text-text">Operations</p>

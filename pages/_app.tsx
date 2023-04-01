@@ -8,7 +8,7 @@ import { UserBar } from '@/components/UserBar';
 import { MLHBanner } from '@/components/MLHBanner';
 import Nav from '@/components/Nav';
 
-import { withPasswordProtect } from 'next-password-protect';
+// import { withPasswordProtect } from 'next-password-protect';
 
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
