@@ -33,6 +33,7 @@ export default function Footer() {
             alt="footer"
             objectFit="contain"
             layout="responsive"
+            draggable={false}
           />
         ) : (
           <Image
@@ -41,6 +42,7 @@ export default function Footer() {
             objectFit="contain"
             layout="responsive"
             className=""
+            draggable={false}
           />
         )}
       </div>
@@ -77,7 +79,7 @@ export default function Footer() {
               MLH Code Of Conduct
             </a>
             <p className="text-center">
-              Made with {theme === 'dark' ? '🤍' : '🖤'} by the Citrus Hack Team
+              Made with {theme === 'dark' ? '🤍' : '🖤'} by Team Citrus
             </p>
           </div>
         </footer>

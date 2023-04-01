@@ -47,7 +47,7 @@ export function FaqAccordion({ question, answer }: Props) {
           </p>
         ) : (
           <div
-            className={`m-0 mb-8 text-base text-text ${
+            className={`m-0 mb-8 text-base ${
               theme === 'dark' ? `text-gold` : `text-brown`
             }`}
           >
@@ -131,14 +131,14 @@ const faq = [
   {
     question: "My question isn't listed?",
     answer: (
-      <p className="text-text">
+      <>
         Feel free to email us at{' '}
         <ExternalLink
           name="citrushack@gmail.com"
           link="mailto:citrushack@gmail.com"
-        />{' '}
-        or ask Mika Shanela in-person if you have any more questions.
-      </p>
+        />
+        <p> or ask Mika Shanela in-person if you have any more questions.</p>
+      </>
     )
   }
 ];
