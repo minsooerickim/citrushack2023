@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BiX } from 'react-icons/bi';
 import ExternalLink from '@/components/ExternalLink';
-import { useTheme } from 'next-themes';
 
 interface Props {
   /** Heading for accordion. */
@@ -13,7 +12,6 @@ interface Props {
 /** Accordion for a single FAQ. */
 export function FaqAccordion({ question, answer }: Props) {
   const [open, setOpen] = useState(false);
-  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col w-full border-b-2 border-sub">
@@ -38,21 +36,9 @@ export function FaqAccordion({ question, answer }: Props) {
         }
       >
         {typeof answer === 'string' ? (
-          <p
-            className={`m-0 mb-8 text-base ${
-              theme === 'dark' ? `text-gold` : `text-brown`
-            }`}
-          >
-            {answer}
-          </p>
+          <p className="m-0 mb-8 text-base text-text">{answer}</p>
         ) : (
-          <div
-            className={`m-0 mb-8 text-base ${
-              theme === 'dark' ? `text-gold` : `text-brown`
-            }`}
-          >
-            {answer}
-          </div>
+          <div className="m-0 mb-8 text-base text-text">{answer}</div>
         )}
       </div>
     </div>
@@ -136,8 +122,8 @@ const faq = [
         <ExternalLink
           name="citrushack@gmail.com"
           link="mailto:citrushack@gmail.com"
-        />
-        <p> or ask Mika Shanela in-person if you have any more questions.</p>
+        />{' '}
+        or ask Mika Shanela in-person if you have any more questions.
       </>
     )
   }
