@@ -111,6 +111,7 @@ const staff = [
 ];
 
 const swe_committee = [
+  'Ukim Shanelo 🥊',
   'Thomas Li',
   'Bobby Lerias',
   'Andre Amante',

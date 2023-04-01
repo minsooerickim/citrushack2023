@@ -25,6 +25,8 @@ body {
     --purple: #373a5e;
     --lightPurple: #5c6084;
     --hoverPrimary: #5c6084;
+    --goldHover: #FFC753;
+    --link: #71461f;
     --text: #373a5e;
     --clouds: url('/assets/clouds.svg');
     --clouds2: url('/assets/clouds_birds.svg');
@@ -45,7 +47,9 @@ body {
     --darkbubble: #373a5e;
     --purple: #373a5e;
     --hoverPrimary: #5c6084;
+    --goldHover: #FFC753;
     --lightPurple: #5c6084;
+    --link: #71461f;
     --text: #373a5e;
     --clouds: url('/assets/clouds.svg');
     --clouds2: url('/assets/clouds_birds.svg');
@@ -67,7 +71,9 @@ body {
     --darkbubble: #373a5e;
     --purple: #597daa;
     --lightPurple: #5c6084;
-    --hoverPrimary: #5c6084;
+    --hoverPrimary: #7495BE;
+    --goldHover: #FFC753;
+    --link: #ffac01;
     --text: #ffff;
     --clouds: url('/assets/clouds.svg');
     --clouds2: url('/assets/clouds_birds.svg');

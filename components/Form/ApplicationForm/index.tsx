@@ -43,14 +43,17 @@ export function ApplicationForm() {
     // used by auto accept "bot" (/api/auto-review)
     // determine if criteria to participate is met
     // auto accept if
-    // if undergrad && UCR
+    // if undergrad or highschool => auto accept
+    const containsHighSchool = school
+      .toLowerCase()
+      .includes('high school'.toLowerCase());
     if (
-      school == 'University of California, Riverside' &&
-      (grade === '1st Year Undergraduate' ||
-        grade === '2nd Year Undergraduate' ||
-        grade === '3rd Year Undergraduate' ||
-        grade === '4th Year Undergraduate' ||
-        grade === '5th+ Year Undergraduate')
+      containsHighSchool ||
+      grade === '1st Year Undergraduate' ||
+      grade === '2nd Year Undergraduate' ||
+      grade === '3rd Year Undergraduate' ||
+      grade === '4th Year Undergraduate' ||
+      grade === '5th+ Year Undergraduate'
     ) {
       criteria_met = true;
     } else {
