@@ -111,12 +111,26 @@ const staff = [
 ];
 
 const swe_committee = [
-  'Ukim Shanelo 🥊',
-  'Thomas Li',
-  'Bobby Lerias',
-  'Andre Amante',
-  'Raidah Fairooz',
-  'Kirtana Venkat'
+  {
+    link: 'https://www.linkedin.com/in/thomasli9/',
+    name: 'Thomas Li'
+  },
+  {
+    link: 'https://www.linkedin.com/in/robertlerias/',
+    name: 'Bobby Lerias'
+  },
+  {
+    link: 'https://www.linkedin.com/in/andreamantee/',
+    name: 'Andre Amante'
+  },
+  {
+    link: 'https://www.linkedin.com/in/raidah-fairooz-78b1a8146/',
+    name: 'Raidah Fairooz'
+  },
+  {
+    link: '',
+    name: 'Kirtana Venkat'
+  }
 ];
 
 const sponsorship_committee = [
@@ -409,10 +423,29 @@ const team = () => {
               >
                 Software Engineers
               </p>
-              {swe_committee.map((member, index) => (
+              {/* {swe_committee.map((link, name, index) => (
                 <p key={index} className="text-text">
-                  {member}
+                  {name}
                 </p>
+              ))} */}
+              {swe_committee.map(({ link, name }) => (
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={link}
+                  key={name}
+                >
+                  <p
+                    key={name}
+                    className={`text-text  ${
+                      theme === 'dark'
+                        ? `hover:text-goldHover`
+                        : `hover:text-[#987a5e]`
+                    }`}
+                  >
+                    {name}
+                  </p>
+                </a>
               ))}
             </div>
           </div>

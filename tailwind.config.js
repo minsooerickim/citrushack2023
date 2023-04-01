@@ -19,9 +19,10 @@ const MyClass = plugin(function ({ addUtilities }) {
       // https://stackoverflow.com/a/53037637 PAIN
       border: 'double transparent',
       borderRadius: '9999px',
-      backgroundImage: 'linear-gradient(white, white), linear-gradient(to bottom right, #FBBC05 0%, #EA4335 33%, #34A853 80%, #4285F4 100%)',
+      backgroundImage:
+        'linear-gradient(white, white), linear-gradient(to bottom right, #FBBC05 0%, #EA4335 33%, #34A853 80%, #4285F4 100%)',
       backgroundOrigin: 'border-box',
-      backgroundClip: 'padding-box, border-box',
+      backgroundClip: 'padding-box, border-box'
     }
   });
 });
@@ -34,11 +35,11 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'green': '#2BAD21',
-      'blue': '#00f',
+      green: '#2BAD21',
+      blue: '#00f'
     },
-    linearBorderGradients: theme => ({
-      colors: theme('colors'),
+    linearBorderGradients: (theme) => ({
+      colors: theme('colors')
     }),
 
     borderWidth: {
@@ -86,5 +87,5 @@ module.exports = {
       }
     }
   },
-  plugins: [MyClass, require('tailwindcss-border-gradients')(),]
+  plugins: [MyClass, require('tailwindcss-border-gradients')()]
 };
