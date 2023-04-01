@@ -40,12 +40,13 @@ export const Sponsor = ({
   tall,
   border
 }: SponsorProps) => (
-  <div className={'flex items-center '}>
+  // bg white is up here for a default bg color (also needs to be rounded haha)
+  <div className={'flex items-center bg-white rounded-full '}>
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.995 }}
       className={
-        'transform-gpu rounded-full bg-white border-6 grid content-center ' +
+        'transform-gpu rounded-full border-6 grid content-center ' +
         (shrink ? 'p-[2rem] ' : 'p-[0.6rem] ') +
         ((border || '') + ' ') +
         (type === 'cutie'
