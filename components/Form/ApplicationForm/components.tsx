@@ -1,5 +1,5 @@
 import { Session } from 'next-auth';
-import { UseFormRegister, FieldValues } from 'react-hook-form';
+import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
 import { schools } from './schools';
 import {
@@ -21,6 +21,7 @@ interface Props {
     [x: string]: any;
   };
   setFileUploaded?: (arg0: boolean) => void;
+  watch?: UseFormWatch<FieldValues>;
 }
 
 export const PersonalInfo = ({ session, register, errors }: Props) => (
@@ -108,44 +109,58 @@ export const PersonalInfo = ({ session, register, errors }: Props) => (
   </Group>
 );
 
-export const Education = ({ register, errors }: Props) => (
-  <Group title="Education">
-    <Select
-      label="School"
-      variable="school"
-      register={register}
-      errors={errors}
-      options={schools}
-      required
-    />
-    <Select
-      label="Major"
-      variable="major"
-      register={register}
-      errors={errors}
-      options={majors}
-      required
-    />
-    <div className="grid sm:grid-cols-2 gap-3">
+export function Education({ register, errors, watch }: Props) {
+  const school = watch('school');
+  return (
+    <Group title="Education">
       <Select
-        label="Grade"
-        variable="grade"
+        label="School"
+        variable="school"
         register={register}
         errors={errors}
-        options={grades}
+        options={schools}
         required
       />
-      <Input
-        type="date"
-        label="Graduation Date"
-        variable="grad_date"
+      {school === 'University of California, Riverside' && (
+        <Input
+          type="text"
+          label="UCR SID"
+          variable="ucr_sid"
+          register={register}
+          errors={errors}
+          required
+        />
+      )}
+      <Select
+        label="Major"
+        variable="major"
         register={register}
         errors={errors}
+        options={majors}
         required
       />
-    </div>
-  </Group>
-);
+      {school === ''}
+      <div className="grid sm:grid-cols-2 gap-3">
+        <Select
+          label="Grade"
+          variable="grade"
+          register={register}
+          errors={errors}
+          options={grades}
+          required
+        />
+        <Input
+          type="date"
+          label="Graduation Date"
+          variable="grad_date"
+          register={register}
+          errors={errors}
+          required
+        />
+      </div>
+    </Group>
+  );
+}
 
 export const HackerApp = ({ register, errors, setFileUploaded }: Props) => (
   <Group title="Hacker App">

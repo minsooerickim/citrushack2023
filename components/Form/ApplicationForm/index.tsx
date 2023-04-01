@@ -26,7 +26,7 @@ export function ApplicationForm() {
   });
 
   const { data: session } = useSession();
-  const { register, handleSubmit, control } = useForm();
+  const { register, handleSubmit, control, watch } = useForm();
   const { errors } = useFormState({ control });
   const router = useRouter();
   const [clickedSubmitOnce, setClickedSubmitOnce] = useState(false);
@@ -93,6 +93,7 @@ export function ApplicationForm() {
   };
 
   const onSubmit = async ({
+    // TODO: add ucr sid in db
     first_name,
     last_name,
     gender,
@@ -102,6 +103,7 @@ export function ApplicationForm() {
     food_preference,
     shirt_size,
     school,
+    ucr_sid,
     major,
     grade,
     grad_date,
@@ -139,6 +141,7 @@ export function ApplicationForm() {
         food_preference,
         shirt_size,
         school,
+        ucr_sid,
         major,
         grade,
         grad_date,
@@ -190,7 +193,7 @@ export function ApplicationForm() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <PersonalInfo session={session} register={register} errors={errors} />
-        <Education register={register} errors={errors} />
+        <Education register={register} errors={errors} watch={watch} />
         <HackerApp
           register={register}
           errors={errors}
