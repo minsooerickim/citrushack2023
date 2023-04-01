@@ -23,6 +23,8 @@ interface SponsorProps {
   shrink?: boolean;
   /** Decides whether to shrink the sponsor logo even more if it still appears larger than others in the same tier. */
   tall?: boolean;
+  /** what tailwindcss class to add for border */
+  border?: string;
 }
 
 /** Individual sponsor logo linked to sponsor website. */
@@ -33,30 +35,31 @@ export const Sponsor = ({
   height,
   link,
   shrink,
-  tall
+  tall,
+  border
 }: SponsorProps) => (
-  <div
-    className={
-      'flex items-center min-h-[10rem] ' +
-      (type === 'cutie'
-        ? 'w-20 md:w-24 ' +
-          (shrink ? 'w-16 md:w-24' : '') +
-          (tall ? 'w-12 md:w-20' : '')
-        : type === 'tangerine'
-        ? 'w-28 md:w-32 ' +
-          (shrink ? 'w-24 md:w-28' : '') +
-          (tall ? 'w-18 md:w-24' : '')
-        : type === 'orange'
-        ? 'w-32 md:w-36 ' +
-          (shrink ? 'w-24 md:w-28' : '') +
-          (tall ? 'w-18 md:w-24' : '')
-        : '')
-    }
-  >
+  <div className={'flex items-center '}>
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.995 }}
-      className="w-full transform-gpu"
+      className={
+        'transform-gpu rounded-full bg-white border-6 grid content-center ' +
+        ((border || '') + ' ') +
+        (shrink ? 'p-[2rem] ' : 'p-[0.6rem] ') +
+        (type === 'cutie'
+          ? 'w-24 h-24 md:w-28 md:h-28 ' +
+            (false && shrink ? 'w-16 md:w-24' : '') +
+            (false && tall ? 'w-12 md:w-20' : '')
+          : type === 'tangerine'
+          ? 'w-28 h-28 md:w-36 md:h-36 ' +
+            (false && shrink ? 'w-24 md:w-28' : '') +
+            (false && tall ? 'w-18 md:w-24' : '')
+          : type === 'orange'
+          ? 'w-32 h-32 md:w-44 md:h-44 ' +
+            (false && shrink ? 'w-24 md:w-28' : '') +
+            (false && tall ? 'w-18 md:w-24' : '')
+          : '')
+      }
     >
       <a target="_blank" rel="noreferrer noopener" href={link}>
         <Image
@@ -78,32 +81,29 @@ const tiers = [
   {
     type: 'orange',
     flag: orangeFlag,
-    wide: false,
+    wide: true,
     sponsors: [
       {
-        image: '/assets/sponsors/spaceforce.svg',
-        imageDark: '/assets/sponsors/spaceforce.svg',
-        width: 2505,
-        height: 3757,
-        link: 'https://www.spaceforce.mil/',
-        shrink: Boolean(true),
-        tall: null
-      }
-    ]
-  },
-  {
-    type: 'orange',
-    flag: orangeFlag,
-    wide: false,
-    sponsors: [
+        image: '/assets/sponsors/aspb.png',
+        width: 1080,
+        height: 1080,
+        link: 'https://aspb.ucr.edu/',
+        border: 'border-[#003DA5]'
+      },
       {
-        image: '/assets/sponsors/spaceforce.svg',
-        imageDark: '/assets/sponsors/spaceforce.svg',
-        width: 2505,
-        height: 3757,
-        link: 'https://www.spaceforce.mil/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/gcap.png',
+        width: 2500,
+        height: 1330,
+        link: 'https://www.gcapucr.com/aboutgcap',
+        border: 'border-[#74B053]'
+      },
+      {
+        image: '/assets/sponsors/coolerMaster.png',
+        width: 300,
+        height: 237,
+        link: 'https://www.coolermaster.com/',
+        shrink: true,
+        border: 'border-[#1D252C]'
       }
     ]
   },
@@ -113,22 +113,22 @@ const tiers = [
     wide: Boolean(true),
     sponsors: [
       {
-        image: '/assets/sponsors/gcap-light.svg',
-        imageDark: '/assets/sponsors/gcap-dark.svg',
-        width: 727,
-        height: 728,
-        link: 'https://www.gcapucr.com/aboutgcap',
-        shrink: null,
-        tall: null
+        image: '/assets/sponsors/blackstone.png',
+        width: 690,
+        height: 150,
+        link: 'https://www.blackstonelaunchpad.org/'
       },
       {
-        image: '/assets/sponsors/amazon-light.svg',
-        imageDark: '/assets/sponsors/amazon-dark.svg',
-        width: 2380,
-        height: 2452,
-        link: 'https://www.amazon.com/',
-        shrink: Boolean(true),
-        tall: null
+        image: '/assets/sponsors/acm.webp',
+        width: 1080,
+        height: 1080,
+        link: 'https://acmucr.org/'
+      },
+      {
+        image: '/assets/sponsors/triad.png',
+        width: 371,
+        height: 85,
+        link: 'https://www.triadmagnetics.com/'
       }
     ]
   },
@@ -210,15 +210,6 @@ const tiers = [
         tall: null
       },
       {
-        image: '/assets/sponsors/acm-light.svg',
-        imageDark: '/assets/sponsors/acm-dark.svg',
-        width: 910,
-        height: 910,
-        link: 'https://acmucr.org/',
-        shrink: Boolean(true),
-        tall: null
-      },
-      {
         image: '/assets/sponsors/ieee-light.svg',
         imageDark: '/assets/sponsors/ieee-dark.svg',
         width: 745,
@@ -226,7 +217,7 @@ const tiers = [
         link: 'https://ieee.ucr.edu/',
         shrink: Boolean(true),
         tall: null
-      },
+      }
     ]
   }
 ];
@@ -267,16 +258,26 @@ export function SponsorsGrid() {
 
             {/* <span className="absolute top-10 left-0 flex w-1/2 transform h-full z-100 border-l-4 border-gold z-50"></span> */}
             {sponsors.map(
-              ({ image, imageDark, width, height, link, shrink, tall }) => (
+              ({
+                image,
+                imageDark,
+                width,
+                height,
+                link,
+                shrink,
+                tall,
+                border
+              }) => (
                 <Sponsor
                   key={link}
                   type={type}
-                  image={theme === 'light' ? image : imageDark}
+                  image={image /*theme === 'light' ? image : imageDark*/}
                   width={width}
                   height={height}
                   link={link}
                   shrink={shrink}
                   tall={tall}
+                  border={border}
                 />
               )
             )}
