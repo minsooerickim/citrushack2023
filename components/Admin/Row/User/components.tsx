@@ -161,14 +161,18 @@ export function UserBox({
                   </li>
                   <li className="text-sm md:text-base">
                     <b>Resume:</b>{' '}
-                    <a
-                      href={user.resume}
-                      className="text-blue-500"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      view in broswer
-                    </a>
+                    {user.resume ? (
+                      <a
+                        href={user.resume}
+                        className="text-blue-500 z-[10000] hover:text-green-400"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        view in browser
+                      </a>
+                    ) : (
+                      <span>no resume submitted</span>
+                    )}
                   </li>
                   {user.checkedIn && (
                     <li className="text-sm md:text-base">

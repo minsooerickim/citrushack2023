@@ -86,13 +86,17 @@ export function ApplicationForm() {
 
         if (response.status === 200) {
           console.log('File uploaded successfully');
+          return true;
         } else {
           console.error('Error uploading file');
+          return false;
         }
       } catch (err) {
         console.error('Error uploading file:', err);
+        return false;
       }
     }
+    return true;
   };
 
   const onSubmit = async ({
@@ -130,45 +134,60 @@ export function ApplicationForm() {
     let criteria_met = determineCriteriaMet(grade, participation, school);
     const uid = nanoid();
 
-    await uploadFile(resume, first_name, last_name, session.user.email);
+    const upload_success = await uploadFile(
+      resume,
+      first_name,
+      last_name,
+      session.user.email
+    );
 
-    axios
-      .post('/api/applications/create', {
-        uid,
-        first_name,
-        last_name,
-        gender,
-        ethnicity,
-        phone_number,
-        age,
-        food_preference,
-        shirt_size,
-        school,
-        ucr_sid,
-        major,
-        grade,
-        grad_date,
-        first_time,
-        participation,
-        criteria_met,
-        MLH_code_of_conduct,
-        MLH_privacy_policy,
-        MLH_communication,
-        applied_after_limit
-      })
-      .then(() => {
-        toast.success('Successfully submitted your application!', {
-          id: 'submitApplicationSuccess'
+    if (!upload_success) {
+      toast.error(
+        'Uh oh. Something went wrong. If this issue persists, let us know.',
+        { id: 'submitApplicationError' }
+      );
+      setClickedSubmitOnce(Boolean(false));
+    }
+
+    if (upload_success) {
+      axios
+        .post('/api/applications/create', {
+          uid,
+          first_name,
+          last_name,
+          gender,
+          ethnicity,
+          phone_number,
+          age,
+          food_preference,
+          shirt_size,
+          school,
+          ucr_sid,
+          major,
+          grade,
+          grad_date,
+          first_time,
+          participation,
+          criteria_met,
+          MLH_code_of_conduct,
+          MLH_privacy_policy,
+          MLH_communication,
+          applied_after_limit
+        })
+        .then(() => {
+          toast.success('Successfully submitted your application!', {
+            id: 'submitApplicationSuccess'
+          });
+          router.reload();
+        })
+        .catch(() => {
+          toast.error(
+            'Uh oh. Something went wrong. If this issue persists, let us know.',
+            { id: 'submitApplicationError' }
+          );
+          setClickedSubmitOnce(Boolean(false));
         });
-        router.reload();
-      })
-      .catch(() => {
-        toast.error(
-          'Uh oh. Something went wrong. If this issue persists, let us know.',
-          { id: 'submitApplicationError' }
-        );
-        setClickedSubmitOnce(Boolean(false));
-      });
+    }
   };
 
   const triggerErrorNotification = () => {
