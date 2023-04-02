@@ -128,65 +128,65 @@ const swe_committee = [
     name: 'Raidah Fairooz'
   },
   {
-    link: '',
+    link: null,
     name: 'Kirtana Venkat'
   }
 ];
 
 const operations_committee = [
   {
-    link: '',
+    link: null,
     name: 'Ronit Bhushan'
   },
   {
-    link: '',
+    link: null,
     name: 'Sneha Panda'
   },
   {
-    link: '',
+    link: null,
     name: 'Ethan Quach'
   }
 ];
 
 const sponsorhip_committee = [
   {
-    link: '',
+    link: 'https://www.linkedin.com/in/jasmita-yechuri-0b7a871bb/',
     name: 'Jasmita Yechuri'
   },
   {
-    link: '',
+    link: 'https://www.linkedin.com/in/javier-herrera-jr-832717264/',
     name: 'Javier Herrera Jr.'
   },
   {
-    link: '',
+    link: null,
     name: 'Freddy Song'
   },
   {
-    link: '',
+    link: null,
     name: 'Joseph Hoang'
   },
   {
-    link: '',
+    link: null,
     name: 'Javier Vargas'
   },
   {
-    link: '',
+    link: null,
     name: 'Brian Uong'
   },
   {
-    link: '',
+    link: null,
     name: 'Adreyan Distor'
   },
   {
-    link: '',
+    link: null,
     name: 'Minnoli Nori'
   },
   {
-    link: '',
+    link: null,
     name: 'Isabelle Celo'
   },
   {
-    link: '',
+    link: null,
     name: 'Felix Maass'
   },
   {
@@ -233,7 +233,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-10 max-md:hidden right-10 top-52 w-20  xl:w-24"
+        className="absolute z-10 max-md:hidden right-10 top-52 w-20  xl:w-24 "
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" draggable={false} />
@@ -263,24 +263,9 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-30 max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-96 lg:-bottom-96 xl:-bottom-96 w-12 xl:w-24"
+        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
       >
-        <Image src={balloonOrange} alt="cloud" draggable={false} />
-      </motion.div>
-      {/* cloud bottom right */}
-      <motion.div
-        animate={{ y: [0, -5, 0] }}
-        transition={{
-          repeat: Infinity,
-          duration: 5
-        }}
-        className="absolute z-20 right-10 max-md:hidden -bottom-[150%] xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-12 xl:bottom-56 w-16 sm:w-24 xl:w-32"
-      >
-        {theme === 'light' ? (
-          <Image src={cloud2} alt="cloud" draggable={false} />
-        ) : (
-          <Image src={cloudDark2} alt="cloud" draggable={false} />
-        )}
+        <Image src={balloonOrange} alt="balloon" draggable={false} />
       </motion.div>
       {/* bird */}
       <motion.div
@@ -326,7 +311,7 @@ export const Assets = () => {
           <Image src={star} alt="star" draggable={false} />
         )}
       </motion.div>
-      {/* cloud top left */}
+      {/* bird top left */}
       <motion.div
         animate={{ y: [0, -5, 0] }}
         transition={{
@@ -445,13 +430,13 @@ const team = () => {
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
-                  href={link}
+                  href={link === null ? '' : link}
                   key={name}
                 >
                   <p
                     key={name}
                     className={`text-text  ${
-                      theme === 'dark'
+                      link !== null && theme === 'dark'
                         ? `hover:text-goldHover`
                         : `hover:text-[#987a5e]`
                     }`}
@@ -473,7 +458,7 @@ const team = () => {
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
-                  href={link}
+                  href={link === null ? '' : link}
                   key={name}
                 >
                   <p
@@ -501,7 +486,7 @@ const team = () => {
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
-                  href={link}
+                  href={link === null ? '' : link}
                   key={name}
                 >
                   <p
