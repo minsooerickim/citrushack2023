@@ -5,7 +5,6 @@ export function MLHBanner() {
     <a
       id="mlh-trust-badge"
       className={'block w-full max-w-[60px] md:max-w-[100px] z-[500]'}
-      // className={'block w-full max-w-[60px] md:max-w-[100px] z-[500]'}
       href="https://mlh.io/seasons/2023/events"
       target="_blank"
     >
