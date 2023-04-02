@@ -138,7 +138,6 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               variants={bounceVariants as Variants}
               animate={bounce ? 'animate' : 'initial'}
             >
-              {/* <a href={link}> */}
               <Image
                 src={button}
                 width={140}
@@ -146,7 +145,6 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
                 alt=""
                 draggable="false"
               />
-              {/* </a> */}
             </motion.span>
           </a>
         </div>
@@ -175,7 +173,6 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               variants={bounceVariants as Variants}
               animate={bounce ? 'animate' : 'initial'}
             >
-              {/* <a href={link}> */}
               <Image
                 src={button}
                 width={140}
@@ -183,7 +180,6 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
                 alt=""
                 draggable="false"
               />
-              {/* </a> */}
             </motion.span>
           </a>
         </div>
