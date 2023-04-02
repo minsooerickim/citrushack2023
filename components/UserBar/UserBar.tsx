@@ -20,7 +20,7 @@ export function UserBar() {
 
   return (
     <>
-      <div className="z-[1000] m-2 flex gap-3 text-white">
+      <div className="z-[1000] mt-3 my-3 flex gap-3 text-white">
         {status === 'authenticated' &&
           !session.user.uid &&
           router.pathname !== '/apply' && (
