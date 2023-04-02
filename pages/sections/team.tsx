@@ -426,25 +426,31 @@ const team = () => {
               >
                 Operations
               </p>
-              {operations_committee.map(({ link, name }) => (
-                <a
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href={link === null ? '' : link}
-                  key={name}
-                >
-                  <p
+              {operations_committee.map(({ link, name }) =>
+                link ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={link === null ? '' : link}
                     key={name}
-                    className={`text-text  ${
-                      link !== null && theme === 'dark'
-                        ? `hover:text-goldHover`
-                        : `hover:text-[#987a5e]`
-                    }`}
                   >
+                    <p
+                      key={name}
+                      className={`text-text  ${
+                        link !== null && theme === 'dark'
+                          ? `hover:text-goldHover`
+                          : `hover:text-[#987a5e]`
+                      }`}
+                    >
+                      {name}
+                    </p>
+                  </a>
+                ) : (
+                  <p key={name} className="text-text">
                     {name}
                   </p>
-                </a>
-              ))}
+                )
+              )}
             </div>
             <div>
               <p
@@ -454,25 +460,31 @@ const team = () => {
               >
                 Sponsorship
               </p>
-              {sponsorhip_committee.map(({ link, name }) => (
-                <a
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href={link === null ? '' : link}
-                  key={name}
-                >
-                  <p
+              {sponsorhip_committee.map(({ link, name }) =>
+                link ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={link === null ? '' : link}
                     key={name}
-                    className={`text-text  ${
-                      theme === 'dark'
-                        ? `hover:text-goldHover`
-                        : `hover:text-[#987a5e]`
-                    }`}
                   >
+                    <p
+                      key={name}
+                      className={`text-text  ${
+                        theme === 'dark'
+                          ? `hover:text-goldHover`
+                          : `hover:text-[#987a5e]`
+                      }`}
+                    >
+                      {name}
+                    </p>
+                  </a>
+                ) : (
+                  <p key={name} className="text-text">
                     {name}
                   </p>
-                </a>
-              ))}
+                )
+              )}
             </div>
             <div>
               <p
@@ -482,25 +494,31 @@ const team = () => {
               >
                 Software Engineers
               </p>
-              {swe_committee.map(({ link, name }) => (
-                <a
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  href={link === null ? '' : link}
-                  key={name}
-                >
-                  <p
+              {swe_committee.map(({ link, name }) =>
+                link ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={link === null ? '' : link}
                     key={name}
-                    className={`text-text  ${
-                      theme === 'dark'
-                        ? `hover:text-goldHover`
-                        : `hover:text-[#987a5e]`
-                    }`}
                   >
+                    <p
+                      key={name}
+                      className={`text-text  ${
+                        theme === 'dark'
+                          ? `hover:text-goldHover`
+                          : `hover:text-[#987a5e]`
+                      }`}
+                    >
+                      {name}
+                    </p>
+                  </a>
+                ) : (
+                  <p key={name} className="text-text">
                     {name}
                   </p>
-                </a>
-              ))}
+                )
+              )}
             </div>
           </div>
         </div>
