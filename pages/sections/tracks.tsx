@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import NewFrontiers from '../../public/assets/newFrontiers.svg';
 import globalCommunity from '../../public/assets/globalCommunity.svg';
 import sustainability from '../../public/assets/sustainability.svg';
