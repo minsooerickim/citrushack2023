@@ -248,7 +248,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-52 w-16 sm:w-24 xl:w-32"
+        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-24 w-16 sm:w-24 xl:w-32"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" draggable={false} />
@@ -263,7 +263,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
+        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 md:-bottom-40 lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
       >
         <Image src={balloonOrange} alt="balloon" draggable={false} />
       </motion.div>
@@ -274,7 +274,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 3
         }}
-        className="absolute z-40 right-6 -bottom-[150%] max-md:hidden xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-52 xl:bottom-0 w-10 xs:w-20 xl:w-32"
+        className="absolute z-40 right-6 -bottom-[150%] max-md:hidden xs:-bottom-[45%] sm:-bottom-[35%] md:-bottom-52 bg xl:bottom-0 w-10 xs:w-20 xl:w-32"
       >
         {theme === 'light' ? (
           <Image src={bird1} alt="bird" draggable={false} />
