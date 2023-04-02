@@ -133,21 +133,67 @@ const swe_committee = [
   }
 ];
 
-const sponsorship_committee = [
-  'Jasmita Yechuri',
-  'Javier Herrera Jr.',
-  'Freddy Song',
-  'Joseph Hoang',
-  'Javier Vargas',
-  'Brian Uong',
-  'Adreyan Distor',
-  'Minnoli Nori',
-  'Isabelle Celo',
-  'Felix Maass',
-  'Suhani Chaudhary'
+const operations_committee = [
+  {
+    link: '',
+    name: 'Ronit Bhushan'
+  },
+  {
+    link: '',
+    name: 'Sneha Panda'
+  },
+  {
+    link: '',
+    name: 'Ethan Quach'
+  }
 ];
 
-const operations_committee = ['Ronit Bhushan', 'Sneha Panda', 'Ethan Quach'];
+const sponsorhip_committee = [
+  {
+    link: '',
+    name: 'Jasmita Yechuri'
+  },
+  {
+    link: '',
+    name: 'Javier Herrera Jr.'
+  },
+  {
+    link: '',
+    name: 'Freddy Song'
+  },
+  {
+    link: '',
+    name: 'Joseph Hoang'
+  },
+  {
+    link: '',
+    name: 'Javier Vargas'
+  },
+  {
+    link: '',
+    name: 'Brian Uong'
+  },
+  {
+    link: '',
+    name: 'Adreyan Distor'
+  },
+  {
+    link: '',
+    name: 'Minnoli Nori'
+  },
+  {
+    link: '',
+    name: 'Isabelle Celo'
+  },
+  {
+    link: '',
+    name: 'Felix Maass'
+  },
+  {
+    link: 'https://www.linkedin.com/in/suhani-chaudhary-25a476244',
+    name: 'Suhani Chaudhary'
+  }
+];
 
 export const Assets = () => {
   const { theme } = useTheme();
@@ -395,10 +441,24 @@ const team = () => {
               >
                 Operations
               </p>
-              {operations_committee.map((member, index) => (
-                <p key={index} className="text-text">
-                  {member}
-                </p>
+              {operations_committee.map(({ link, name }) => (
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={link}
+                  key={name}
+                >
+                  <p
+                    key={name}
+                    className={`text-text  ${
+                      theme === 'dark'
+                        ? `hover:text-goldHover`
+                        : `hover:text-[#987a5e]`
+                    }`}
+                  >
+                    {name}
+                  </p>
+                </a>
               ))}
             </div>
             <div>
@@ -409,10 +469,24 @@ const team = () => {
               >
                 Sponsorship
               </p>
-              {sponsorship_committee.map((member, index) => (
-                <p key={index} className="text-text">
-                  {member}
-                </p>
+              {sponsorhip_committee.map(({ link, name }) => (
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={link}
+                  key={name}
+                >
+                  <p
+                    key={name}
+                    className={`text-text  ${
+                      theme === 'dark'
+                        ? `hover:text-goldHover`
+                        : `hover:text-[#987a5e]`
+                    }`}
+                  >
+                    {name}
+                  </p>
+                </a>
               ))}
             </div>
             <div>
@@ -423,11 +497,6 @@ const team = () => {
               >
                 Software Engineers
               </p>
-              {/* {swe_committee.map((link, name, index) => (
-                <p key={index} className="text-text">
-                  {name}
-                </p>
-              ))} */}
               {swe_committee.map(({ link, name }) => (
                 <a
                   target="_blank"
