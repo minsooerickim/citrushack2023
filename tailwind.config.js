@@ -19,9 +19,10 @@ const MyClass = plugin(function ({ addUtilities }) {
       // https://stackoverflow.com/a/53037637 PAIN
       border: 'double transparent',
       borderRadius: '9999px',
-      backgroundImage: 'linear-gradient(white, white), linear-gradient(to bottom right, #FBBC05 0%, #EA4335 33%, #34A853 80%, #4285F4 100%)',
+      backgroundImage:
+        'linear-gradient(white, white), linear-gradient(to bottom right, #FBBC05 0%, #EA4335 33%, #34A853 80%, #4285F4 100%)',
       backgroundOrigin: 'border-box',
-      backgroundClip: 'padding-box, border-box',
+      backgroundClip: 'padding-box, border-box'
     }
   });
 });
@@ -69,6 +70,7 @@ module.exports = {
         text: 'var(--text)',
         hoverPrimary: 'var(--hoverPrimary)',
         goldHover: 'var(--goldHover)',
+        brownHover: 'var(--brownHover)',
         link: 'var(--link)'
       },
       backgroundImage: {

@@ -331,6 +331,7 @@ export default function Landing() {
               alt="skyline"
               layout="responsive"
               objectFit="contain"
+              draggable={false}
             />
           ) : (
             <Image
@@ -338,6 +339,7 @@ export default function Landing() {
               alt="Skyline Dark"
               layout="responsive"
               objectFit="contain"
+              draggable={false}
             />
           )}
         </span>
@@ -352,9 +354,19 @@ export default function Landing() {
           <span className="flex justify-center items-center">
             <div className="flex max-w-[375px] max-[375px]:w-3/4 xs:w-5/6 max-[375px]:mb-8 mb-16 xs:mb-24">
               {theme === 'light' ? (
-                <Image src={globeLight} alt="Globe" className="object-cover" />
+                <Image
+                  src={globeLight}
+                  alt="Globe"
+                  draggable={false}
+                  className="object-cover"
+                />
               ) : (
-                <Image src={globeDark} alt="Globe" className="object-cover" />
+                <Image
+                  src={globeDark}
+                  alt="Globe"
+                  className="object-cover"
+                  draggable={false}
+                />
               )}
             </div>
           </span>
