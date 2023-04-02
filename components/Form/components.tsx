@@ -144,7 +144,7 @@ export const Radio = ({
 }: RadioProps) => (
   <div>
     <legend className="font-semibold text-white">{label}</legend>
-    {subtext && <p className="m-0 mb-1 text-sm italic">{subtext}</p>}
+    {subtext && <p className="m-0 mb-1 text-sm italic text-gray">{subtext}</p>}
     <div
       className={
         direction === 'row'
@@ -208,7 +208,7 @@ export const Checkbox = ({
 }: CheckboxProps) => (
   <div>
     <legend className="font-semibold text-white">{label}</legend>
-    {subtext && <p className="m-0 mb-1 text-sm italic">{subtext}</p>}
+    {subtext && <p className="m-0 mb-1 text-sm italic text-gray">{subtext}</p>}
     <div className="flex flex-col gap-2 pl-2">
       {options.map((option: string) => (
         <div key={option} id={label} className="flex gap-2">

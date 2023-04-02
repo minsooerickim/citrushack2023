@@ -288,22 +288,22 @@ export default function Landing() {
             </span>
           )} */}
           <div className="flex flex-col w-full gap-3">
-            {/* uncomment the day before */}
-            {status === 'authenticated' &&
+            {/* TODO: uncomment the day before */}
+            {/* {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
                 </span>
-              )}
+              )} */}
             {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' && (
                 <>
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
-                      secondary
+                      primary
                       label="Join Our Discord"
                       link={process.env.discord}
                       external
@@ -311,13 +311,13 @@ export default function Landing() {
                   </span>
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
-                      secondary
+                      primary
                       label="Group Dashboard"
                       link="/group/dashboard"
                     />
                   </span>
                   <span className="flex justify-center w-full z-[200]">
-                    <ButtonLink secondary label="QR Code" link={userDataLink} />
+                    <ButtonLink primary label="QR Code" link={userDataLink} />
                   </span>
                 </>
               )}
