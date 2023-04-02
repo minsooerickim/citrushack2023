@@ -73,10 +73,10 @@ export const Assets = () => {
 export default function Faq() {
   return (
     <section className="relative z-0 flex flex-col w-full h-full my-12 lg:mt-0 max-w-[60rem] items-center">
-      <h1 className="text-center text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
+      <h1 className="text-center text-5xl md:text-7xl font-black w-391 h-109 not-italic items-center mt-6 text-text">
         FAQ
       </h1>
-      <p className="text-center text-text font-semibold mb-4 md:mb-8 text-5xl md:text-7xl  xs:w-3/4">
+      <p className="text-center text-text font-semibold mb-4 md:mb-8 xs:w-3/4">
         If you still can&apos;t find an answer to your question, feel free to
         email us at{' '}
         <ExternalLink

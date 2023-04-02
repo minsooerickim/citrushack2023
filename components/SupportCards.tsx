@@ -113,12 +113,12 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
   return (
     <div className="flex h-60 w-full md:w-96 group perspective cursor-pointer">
       <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full duration-700">
-        <div className="absolute backface-hidden w-full">
+        <div className="hidden lg:flex absolute backface-hidden w-full">
           <a
             href={link}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex text-center items-center justify-center text-white"
+            className="hidden lg:flex text-center items-center justify-center text-white"
           >
             <Image
               src={'/assets/sponsors/' + front}
@@ -127,7 +127,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               objectFit="contain"
               priority={true}
               quality={1}
-              className="rounded-md"
+              className="rounded-md hidden lg:flex"
               alt=""
               draggable="false"
             />
