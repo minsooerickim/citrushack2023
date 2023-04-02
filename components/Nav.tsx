@@ -109,7 +109,7 @@ export default function Nav() {
                 duration={500}
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-hoverPrimary hover:text-white cursor-pointer text-white"
               >
-                <span className="text-2xl">{icon}</span>
+                <span className="text-2xl text-white">{icon}</span>
                 <span>{title}</span>
               </NavLink>
             </motion.span>
@@ -129,7 +129,7 @@ export default function Nav() {
                 duration={500}
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-hoverPrimary hover:text-white cursor-pointer text-white"
               >
-                <span className="text-2xl">{icon}</span>
+                <span className="text-2xl text-white">{icon}</span>
                 <span>{title}</span>
               </NavLink>
             </motion.span>
@@ -144,10 +144,10 @@ export default function Nav() {
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-white cursor-pointer text-white"
                 onClick={() => setNavOpen(false)}
               >
-                <span className="text-2xl">
+                <span className="text-2xl text-white">
                   <BiHomeAlt />
                 </span>
-                <span>Home</span>
+                <span className='text-white'>Home</span>
               </span>
             </Link>
           </motion.span>
@@ -192,7 +192,7 @@ export default function Nav() {
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg rounded-md hover:bg-buttons hover:text-white cursor-pointer text-white"
                 onClick={() => setNavOpen(false)}
               >
-                <span className="text-2xl">{icon}</span>
+                <span className="text-2xl text-white">{icon}</span>
                 <span>{title}</span>
               </NavLink>
             ))}
@@ -209,7 +209,7 @@ export default function Nav() {
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg rounded-md hover:bg-buttons hover:text-white cursor-pointer"
                 onClick={() => setNavOpen(false)}
               >
-                <span className="text-2xl">{icon}</span>
+                <span className="text-2xl text-white">{icon}</span>
                 <span>{title}</span>
               </NavLink>
             ))}
