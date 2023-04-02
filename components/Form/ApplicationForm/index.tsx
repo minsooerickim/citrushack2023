@@ -96,7 +96,6 @@ export function ApplicationForm() {
   };
 
   const onSubmit = async ({
-    // TODO: add ucr sid in db
     first_name,
     last_name,
     gender,
