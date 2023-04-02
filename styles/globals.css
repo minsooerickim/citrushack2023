@@ -26,6 +26,7 @@ body {
     --lightPurple: #5c6084;
     --hoverPrimary: #5c6084;
     --goldHover: #ffc753;
+    --brownHover: #987a5e;
     --link: #71461f;
     --text: #373a5e;
     --clouds: url('/assets/clouds.svg');
@@ -48,6 +49,7 @@ body {
     --purple: #373a5e;
     --hoverPrimary: #5c6084;
     --goldHover: #ffc753;
+    --brownHover: #987a5e;
     --lightPurple: #5c6084;
     --link: #71461f;
     --text: #373a5e;
@@ -73,6 +75,7 @@ body {
     --lightPurple: #5c6084;
     --hoverPrimary: #7495be;
     --goldHover: #ffc753;
+    --brownHover: #987a5e;
     --link: #ffac01;
     --text: #ffff;
     --clouds: url('/assets/clouds.svg');

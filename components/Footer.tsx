@@ -91,9 +91,11 @@ export default function Footer() {
             <span className="text-center flex space-x-1">
               Made with
               {theme === 'light' ? (
-                <BsBalloonHeartFill />
+                <span className="text-black">
+                  <BsBalloonHeartFill />
+                </span>
               ) : (
-                <span className="text-gold">
+                <span className="text-goldHover">
                   <BsBalloonHeartFill />
                 </span>
               )}

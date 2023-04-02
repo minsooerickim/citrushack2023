@@ -290,14 +290,14 @@ export const EventMobile = ({ time, description, color, place }) => {
             <div className="flex flex-col w-full">
               <p
                 className={`text-base text-center font-semibold w-full ${
-                  theme === 'dark' ? `text-gold` : `text-brown`
+                  theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
                 {time}
               </p>
               <p
                 className={`text-base text-center font-medium w-full ${
-                  theme === 'dark' ? `text-gold` : `text-brown`
+                  theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
                 {place}
@@ -309,7 +309,7 @@ export const EventMobile = ({ time, description, color, place }) => {
           <p className="text-xl text-left font-semibold">{description}</p>
           <p
             className={`text-md text-left ${
-              theme === 'dark' ? `text-gold` : `text-brown`
+              theme === 'dark' ? `text-goldHover` : `text-brown`
             }`}
           >
             {time} @ {place}
@@ -393,7 +393,7 @@ export const EventDesktop = ({
               </p>
               <p
                 className={`text-base text-right w-full ${
-                  theme === 'dark' ? `text-gold` : `text-brown`
+                  theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
                 {leftTime} @ {leftPlace}
@@ -413,7 +413,7 @@ export const EventDesktop = ({
               </p>
               <p
                 className={`text-base text-left w-full ${
-                  theme === 'dark' ? `text-gold` : `text-brown`
+                  theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
                 {rightTime} @ {rightPlace}

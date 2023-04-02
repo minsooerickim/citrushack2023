@@ -138,7 +138,7 @@ const tiers = [
         image: '/assets/sponsors/acm.webp',
         width: 1080,
         height: 1080,
-        link: 'https://acmucr.org/',
+        link: 'https://acm.cs.ucr.edu/',
         border: 'border-[#4185FC]'
       },
       {

@@ -70,6 +70,7 @@ module.exports = {
         text: 'var(--text)',
         hoverPrimary: 'var(--hoverPrimary)',
         goldHover: 'var(--goldHover)',
+        brownHover: 'var(--brownHover)',
         link: 'var(--link)'
       },
       backgroundImage: {
