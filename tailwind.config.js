@@ -33,12 +33,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    colors: {
-      'green': '#2BAD21',
-    },
-    linearBorderGradients: theme => ({
-      colors: theme('colors'),
-    }),
+    // colors: {
+    //   'green': '#2BAD21',
+    // },
+    // linearBorderGradients: {
+    //   'green': '#69c063',
+    //   'blue': '#00f',
+    // },
 
     borderWidth: {
       11: '11px'
@@ -85,5 +86,6 @@ module.exports = {
       }
     }
   },
-  plugins: [MyClass, require('tailwindcss-border-gradients')(),]
+  // plugins: [MyClass, require('tailwindcss-border-gradients')(),]
+  plugins: [MyClass]
 };
