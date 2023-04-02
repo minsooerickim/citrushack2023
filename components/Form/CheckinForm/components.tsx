@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { UseFormRegister, FieldValues, UseFormWatch } from 'react-hook-form';
 import { useSession } from 'next-auth/react';
 import { Group, Input, Select, Radio, Checkbox } from '../components';
