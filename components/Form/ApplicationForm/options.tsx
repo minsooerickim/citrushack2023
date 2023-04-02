@@ -84,3 +84,7 @@ export const MLH = [
     'I authorize MLH to send me an email where I can further opt into the MLH Hacker, Events, or Organizer Newsletters and other communications from MLH.'
   ]
 ];
+
+export const awk = [
+  ['I awknowledge that I will compete and participate In-Person.']
+];
