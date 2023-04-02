@@ -305,7 +305,7 @@ export default function Landing() {
                     <ButtonLink
                       primary
                       label="Join Our Discord"
-                      link={process.env.discord}
+                      link="https://discord.com/invite/j7vCRHQPSF"
                       external
                     />
                   </span>
