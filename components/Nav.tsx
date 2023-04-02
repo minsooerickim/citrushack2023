@@ -147,7 +147,7 @@ export default function Nav() {
                 <span className="text-2xl text-white">
                   <BiHomeAlt />
                 </span>
-                <span className='text-white'>Home</span>
+                <span className="text-white">Home</span>
               </span>
             </Link>
           </motion.span>
