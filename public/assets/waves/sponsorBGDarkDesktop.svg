@@ -11,13 +11,12 @@
 <path d="M1480.5 1308.04H1483.78L1480.5 1329.37V1345.36L1487.06 1340.03L1500.2 1332.03H1506.77C1506.77 1332.03 1504.47 1333.97 1500.2 1337.36C1495.92 1340.76 1493.63 1345.36 1493.63 1345.36C1493.63 1345.36 1496.91 1345.36 1503.48 1348.03L1510.05 1350.69H1487.06C1487.06 1350.69 1483.78 1350.69 1480.5 1356.02C1477.21 1361.35 1477.21 1361.35 1477.21 1366.68C1477.21 1372.01 1480.5 1467.97 1480.5 1467.97H1460.79C1460.79 1467.97 1467.36 1380.01 1464.08 1369.35C1460.79 1358.69 1447.66 1353.36 1447.66 1353.36L1427.96 1340.03L1431.24 1337.36L1447.66 1345.36L1437.81 1324.04H1441.09L1457.51 1350.69L1467.36 1356.02C1467.36 1356.02 1457.51 1337.36 1454.23 1332.03C1450.94 1326.7 1437.81 1318.71 1437.81 1318.71L1441.09 1313.38L1457.51 1324.04L1460.79 1313.38H1464.08L1460.79 1329.37L1470.64 1340.03L1480.5 1308.04Z" fill="#846044"/>
 <rect width="1776" height="3214" transform="translate(-33 -358)" fill="#2D314D" fill-opacity="0.26"/>
 </g>
-<rect width="1440" height="1388" fill="url(#paint6_linear_0_1)"/>
 <g opacity="0.75">
 <circle cx="1411" cy="260" r="91" fill="#BBB9A9" fill-opacity="0.33"/>
 <circle cx="1411.5" cy="253.5" r="71.5" fill="#D3D3C4" fill-opacity="0.6"/>
 <circle cx="1411" cy="256" r="46" fill="#E5E6CF"/>
-<path d="M1595.48 297.764C1591.19 383.924 1262.67 553.983 810.372 531.462C416.459 517.948 -46.7345 302.37 -42.4445 216.21C-38.1546 130.051 338.199 -8.02042 790.5 14.5C1242.8 37.0204 1599.77 211.605 1595.48 297.764Z" fill="url(#paint7_linear_0_1)" fill-opacity="0.29"/>
 </g>
+<rect width="1440" height="1388" fill="url(#paint6_linear_0_1)"/>
 <defs>
 <filter id="filter0_f_0_1" x="-744" y="-362" width="2816.18" height="3222.19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -62,10 +61,6 @@
 <linearGradient id="paint6_linear_0_1" x1="720" y1="552" x2="720" y2="1052" gradientUnits="userSpaceOnUse">
 <stop stop-color="#2C314F" stop-opacity="0"/>
 <stop offset="1" stop-color="#2C314F"/>
-</linearGradient>
-<linearGradient id="paint7_linear_0_1" x1="1170.44" y1="280.195" x2="1007.75" y2="713.317" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D6D6D6"/>
-<stop offset="1" stop-color="#FFE974" stop-opacity="0"/>
 </linearGradient>
 </defs>
 </svg>
