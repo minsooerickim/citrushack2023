@@ -269,7 +269,7 @@ export function SponsorsGrid() {
               (wide ? 'col-span-2' : 'col-span-2 sm:col-span-1')
             }
           >
-            <span className="flex lg:hidden absolute left-[1.1rem] top-[5rem] w-1/2 transform h-full z-100 border-l-4 border-gradient-t-green z-50 px-0 pointer-events-none"></span>
+            <span className="flex lg:hidden absolute left-[1.1rem] top-[5rem] w-1/2 transform h-full z-100 border-l-4 border-lightgreen border-gradient-t-green z-50 px-0 pointer-events-none"></span>
             <span className="block lg:hidden mr-1 w-10 left-0 absolute z-[9999] bg-transparent px-0">
               <Image
                 src={theme === 'dark' ? orangeDark : orange}
@@ -281,7 +281,7 @@ export function SponsorsGrid() {
               />
             </span>
 
-            <span className="hidden lg:flex absolute left-[2.4rem] top-[7.5rem] w-1/2 transform h-full z-100 border-l-4 border-gradient-t-green z-50 px-0 pointer-events-none"></span>
+            <span className="hidden lg:flex absolute left-[2.4rem] top-[7.5rem] w-1/2 transform h-full z-100 border-l-4 border-lightgreen border-gradient-t-green z-50 px-0 pointer-events-none"></span>
             <span className="hidden lg:block mr-1 w-20 left-0 absolute z-[9999] bg-transparent px-0">
               <Image
                 src={theme === 'dark' ? orangeDark : orange}

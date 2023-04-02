@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -137,8 +138,8 @@ export function UserDropdown() {
                     </div>
                   </>
                 ))}
-              {/* uncomment the day before */}
-              {status === 'authenticated' &&
+              {/* TODO:uncomment the day before */}
+              {/* {status === 'authenticated' &&
                 session.user.uid &&
                 session.user.qualified === 'yeah' &&
                 (!session.user.checkedIn ? (
@@ -165,7 +166,7 @@ export function UserDropdown() {
                   <div className="w-full py-1.5 text-center rounded-md bg-sub font-semibold">
                     Checked-In
                   </div>
-                ))}
+                ))} */}
               {status === 'authenticated' &&
                 session.user.uid &&
                 session.user.qualified === 'yeah' && (
