@@ -24,6 +24,7 @@ import cloudDark from '../../public/assets/cloudDark.svg';
 import cloudDark2 from '../../public/assets/cloudDark2.svg';
 import plane from '../../public/assets/tiltedPlane.svg';
 import bird1 from '../../public/assets/bird1.svg';
+import bird3 from '../../public/assets/bird3.svg';
 import star from '../../public/assets/star.svg';
 import balloonOrange from '../../public/assets/balloonOrange.svg';
 
@@ -248,7 +249,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-24 w-16 sm:w-24 xl:w-32"
+        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-[35%] w-16 sm:w-24 xl:w-32"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" draggable={false} />
@@ -263,7 +264,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 md:-bottom-40 lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
+        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 md:-bottom-[25%] lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
       >
         <Image src={balloonOrange} alt="balloon" draggable={false} />
       </motion.div>
@@ -292,7 +293,7 @@ export const Assets = () => {
         className="absolute z-50 max-[375px]:hidden sm:hidden right-0 -bottom-[77%] w-14"
       >
         {theme === 'light' ? (
-          <Image src={bird1} alt="bird" draggable={false} />
+          <Image src={bird3} alt="bird" draggable={false} />
         ) : (
           <Image src={star} alt="star" draggable={false} />
         )}
