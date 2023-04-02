@@ -234,6 +234,13 @@ export default function Landing() {
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 29-30, 2023
           </div>
+          {status == 'authenticated' && session.user.applied_after_limit && (
+            <p className="text-center text-text text-center pb-6 max-w-sm">
+              Based on the time of your application, we can no longer guarantee
+              a shirt due to our limited inventory.
+            </p>
+          )}
+
           {/* <p className='max-w-lg italic text-center font-medium'>
             In-person sign-ups will close today at 5:30 PM PST, as we are reaching maximum capacity
           </p> */}

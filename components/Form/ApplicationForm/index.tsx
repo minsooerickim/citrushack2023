@@ -122,8 +122,9 @@ export function ApplicationForm() {
     }
     setClickedSubmitOnce(Boolean(true));
 
+    // tshirts only available for 200 people
     // eslint-disable-next-line prefer-const
-    let applied_after_limit = data.numUsersInperson >= 350 ? true : false;
+    let applied_after_limit = data.numUsersInperson >= 200 ? true : false;
 
     // generate other user attributes
     // eslint-disable-next-line prefer-const
