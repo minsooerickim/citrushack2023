@@ -8,7 +8,6 @@ import Tracks from '@/pages/sections/tracks';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
-import Schedule from '@/pages/sections/schedule';
 import Team from '@/pages/sections/team';
 import Footer from '@/components/Footer';
 import FooterWaveLight from '@/public/assets/waves/footer_wave.svg';
@@ -46,12 +45,6 @@ export default function Home() {
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
         </span>
-      </Element>
-      <Element
-        name="Schedule"
-        className="relative flex justify-center w-full bg-citrus-sky bg-contain"
-      >
-        <Schedule />
       </Element>
       <Element name="Support" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center w-full 2xl:bg-cover">
