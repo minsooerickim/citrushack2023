@@ -22,30 +22,13 @@ function App({
   return (
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
-        <div className="fixed z-[1000] w-full flex justify-center items-center">
-          <div className="flex items-start justify-end w-[97%]">
-            <UserBar />
-            <MLHBanner />
-          </div>
-        </div>
+        <MLHBanner />
         <Nav />
         <Component {...pageProps} />
+        <UserBar />
         <Toaster />
       </ThemeProvider>
     </SessionProvider>
-    // <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
-    //   <ThemeProvider enableSystem={false}>
-    //     <div className="w-full flex justify-center items-center sticky top-0 z-[1000]">
-    //       <div className="flex items-start justify-end w-[97%] gap-2.5">
-    //         <UserBar />
-    //         <MLHBanner />
-    //       </div>
-    //     </div>
-    //     <Nav />
-    //     <Component {...pageProps} />
-    //     <Toaster />
-    //   </ThemeProvider>
-    // </SessionProvider>
   );
 }
 
