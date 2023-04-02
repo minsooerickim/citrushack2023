@@ -64,7 +64,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="max-sm:hidden sm:block xl:hidden opacity-80">
+              <div className="max-sm:hidden sm:block xl:hidden">
                 <Image
                   src={sponsorBGLightTablet}
                   alt="Wave Dark"

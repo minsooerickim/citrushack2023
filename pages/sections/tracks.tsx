@@ -76,7 +76,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute left-0 lg:-left-48 bottom-10 md:-bottom-32 lg:bottom-10 w-16 xs:w-20 lg:w-28"
+        className="absolute z-20 left-0 lg:-left-48 bottom-10 md:-bottom-32 lg:bottom-10 w-16 xs:w-20 lg:w-28"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" draggable="false" />
@@ -91,7 +91,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute right-0 xl:-right-16 bottom-20 xs:-bottom-14  w-16 xs:w-20 lg:w-28"
+        className="absolute z-20 right-0 xl:-right-16 bottom-20 xs:-bottom-14  w-16 xs:w-20 lg:w-28"
       >
         {theme === 'light' ? (
           <Image src={cloud2} alt="cloud" draggable="false" />
@@ -109,7 +109,7 @@ export default function Tracks() {
       <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-text">
         Tracks
       </h1>
-      <div className="flex flex-col gap-y-7 md:grid md:grid-cols-3 gap-36 lg:gap-56 items-start mb-0 lg:mb-20">
+      <div className="relative z-[100] flex flex-col gap-y-7 md:grid md:grid-cols-3 gap-36 lg:gap-56 items-start mb-0 lg:mb-20">
         <div className="flex flex-col items-center justify-end gap-y-2 lg:gap-y-4">
           <Image
             className="scale-90"
