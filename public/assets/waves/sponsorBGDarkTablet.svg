@@ -12,6 +12,12 @@
 <rect width="1776" height="3930.77" transform="translate(-33 -358)" fill="#2D314D" fill-opacity="0.26"/>
 </g>
 <rect width="1440" height="3297" fill="url(#paint6_linear_0_1)"/>
+<g opacity="0.75">
+<path d="M1906.34 537.269C1947.02 851.142 1546.33 1591.88 854.273 1681.59C254.887 1781.81 -559.15 1175.99 -599.835 862.118C-640.519 548.245 -236.061 112.705 456 23C1148.06 -66.7047 1865.66 223.396 1906.34 537.269Z" fill="url(#paint7_linear_0_1)" fill-opacity="0.29"/>
+<circle cx="1412" cy="341" r="153" fill="#BBB9A9" fill-opacity="0.33"/>
+<circle cx="1413" cy="331" r="121" fill="#D3D3C4" fill-opacity="0.6"/>
+<ellipse cx="1412" cy="334.5" rx="78" ry="77.5" fill="#E5E6CF"/>
+</g>
 <defs>
 <filter id="filter0_f_0_1" x="-744" y="-362" width="2816.18" height="3939" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -56,6 +62,10 @@
 <linearGradient id="paint6_linear_0_1" x1="720" y1="840.989" x2="720" y2="2935.67" gradientUnits="userSpaceOnUse">
 <stop stop-color="#2C314F" stop-opacity="0"/>
 <stop offset="1" stop-color="#2C314F"/>
+</linearGradient>
+<linearGradient id="paint7_linear_0_1" x1="1257.95" y1="634.599" x2="551.075" y2="1863.71" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D6D6D6"/>
+<stop offset="1" stop-color="#FFE974" stop-opacity="0"/>
 </linearGradient>
 </defs>
 </svg>

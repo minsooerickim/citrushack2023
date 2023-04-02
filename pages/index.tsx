@@ -62,7 +62,7 @@ export default function Home() {
         <div className="absolute w-full h-full -z-0 top-0 right-0">
           {theme === 'light' ? (
             <>
-              <div className="max-xl:hidden opacity-80">
+              <div className="max-xl:hidden ">
                 <Image
                   src={sponsorBGLightDesktop}
                   alt="Wave Dark"
@@ -80,7 +80,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden opacity-60">
+              <div className="block sm:hidden opacity-60 relative bottom-10 ">
                 <Image
                   src={sponsorBGLightMobile}
                   alt="Wave Dark"
@@ -110,7 +110,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden">
+              <div className="block sm:hidden relative bottom-10">
                 <Image
                   src={sponsorBGDarkMobile}
                   alt="Wave Dark"
