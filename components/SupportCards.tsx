@@ -134,7 +134,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
             <motion.span
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.995 }}
-              className="absolute right-2 -bottom-8"
+              className="absolute right-2 -bottom-8 hidden lg:flex"
               variants={bounceVariants as Variants}
               animate={bounce ? 'animate' : 'initial'}
             >
