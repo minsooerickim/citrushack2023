@@ -263,7 +263,7 @@ export default function GroupDashboard() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.995 }}
-            className="w-full max-w-lg py-1.5 rounded bg-red-500 hover:bg-red-600 font-semibold text-[#F2F3F4]"
+            className="w-full max-w-lg py-1.5 bg-lightPurple rounded-md hover:purple font-semibold text-[#F2F3F4]"
             onClick={() => leaveGroup()}
           >
             Confirm
@@ -271,7 +271,7 @@ export default function GroupDashboard() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.995 }}
-            className="w-full max-w-lg py-1.5 rounded bg-highlight hover:bg-highlight-dark font-semibold "
+            className="w-full max-w-lg py-1.5 rounded-md bg-lightPurple hover:bg-highlight-dark font-semibold text-[#F2F3F4] "
             onClick={() => setModalOpen(false)}
           >
             Cancel

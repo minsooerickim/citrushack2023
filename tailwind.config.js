@@ -35,7 +35,6 @@ module.exports = {
   theme: {
     colors: {
       'green': '#2BAD21',
-      'blue': '#00f',
     },
     linearBorderGradients: theme => ({
       colors: theme('colors'),
