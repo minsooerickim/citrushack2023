@@ -235,9 +235,9 @@ export default function Landing() {
             April 29-30, 2023
           </div>
           {status == 'authenticated' && session.user.applied_after_limit && (
-            <p className="text-center text-text text-center pb-6 max-w-sm">
+            <p className="text-center text-text pb-6 max-w-sm">
               Based on the time of your application, we can no longer guarantee
-              a shirt due to our limited inventory.
+              swag due to our limited inventory.
             </p>
           )}
 
