@@ -86,5 +86,5 @@ export const MLH = [
 ];
 
 export const awk = [
-  ['I awknowledge that I will compete and participate In-Person.']
+  ['I acknowledge that I will compete and participate In-Person.']
 ];
