@@ -229,7 +229,7 @@ export const Assets = () => {
       </motion.div>
       {/* birf top right */}
       <motion.div
-        animate={{ y: [0, -5, 0] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
           duration: 5
