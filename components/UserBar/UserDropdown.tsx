@@ -35,7 +35,7 @@ export function UserDropdown() {
           This determines your eligibility to participate in Citrus Hack.
         </span>
         <span>
-          Application status will be updated within 24 hours, and you will
+          Application status will be updated within 24 hours and you will
           receive an email notification. Check back again later!
         </span>
       </div>,
@@ -95,7 +95,7 @@ export function UserDropdown() {
         >
           <div className="flex flex-col gap-3 items-center w-full text-lg">
             <div className="flex flex-col gap-2 items-center w-full pb-3 border-b-[1px] border-sub">
-              <span className="flex text-center text-sm">
+              <span className="flex text-center text-white text-base">
                 Signed in as <br />
                 {session.user.email}
               </span>
@@ -115,10 +115,10 @@ export function UserDropdown() {
                   </>
                 ) : (
                   <>
-                    <span className="flex text-center font-semibold text-sm">
+                    <span className="flex text-white font-semibold text-lg">
                       Your Application Status
                       <BiHelpCircle
-                        className="text-sub-highlight hover:text-highlight cursor-pointer"
+                        className="text-white hover:text-brown cursor-pointer text-base"
                         onClick={() => triggerInfo()}
                       />
                     </span>
@@ -128,7 +128,7 @@ export function UserDropdown() {
                         (session.user.qualified === ''
                           ? 'bg-goldHover text-white'
                           : session.user.qualified === 'yeah'
-                          ? 'bg-[#9DC300] text-lime-800'
+                          ? 'bg-[#9DC300] text-lime-900'
                           : 'bg-red-400 text-red-900')
                       }
                     >
@@ -178,10 +178,10 @@ export function UserDropdown() {
                         className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
                         onClick={() => setOpen(!open)}
                       >
-                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-brown rounded-md bg-sub text-sub-bright text-2xl">
                           <BiGroup />
                         </div>
-                        <div className="p-1.5 group-hover:text-highlight">
+                        <div className="p-1.5 group-hover:text-brown">
                           My Group
                         </div>
                       </motion.button>
@@ -198,10 +198,10 @@ export function UserDropdown() {
                         className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
                         onClick={() => setOpen(!open)}
                       >
-                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                        <div className="p-1.5 group-hover:bg-highlight group-hover:text-brown rounded-md bg-sub text-sub-bright text-2xl">
                           <FaDiscord />
                         </div>
-                        <div className="p-1.5 group-hover:text-highlight">
+                        <div className="p-1.5 group-hover:text-brown">
                           Discord Server
                         </div>
                       </motion.button>
@@ -253,10 +253,10 @@ export function UserDropdown() {
               className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-goldHover"
               onClick={() => signOut()}
             >
-              <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+              <div className="p-1.5 group-hover:bg-highlight group-hover:text-brown rounded-md bg-sub text-sub-bright text-2xl">
                 <BiLogOutCircle />
               </div>
-              <div className="p-1.5 group-hover:text-highlight">Sign Out</div>
+              <div className="p-1.5 group-hover:text-brown">Sign Out</div>
             </motion.button>
           </div>
         </div>
