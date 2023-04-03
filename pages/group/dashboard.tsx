@@ -137,7 +137,7 @@ export default function GroupDashboard() {
                 </motion.button>
               </div>
               <p className="text-white mt-4">Or</p>
-              <div className="w-full flex flex-col max-w-md text-white">
+              <div className="w-full flex flex-col max-w-md text-white mb-3">
                 <h2 className="font-bold text-white">Join a Group</h2>
                 <p className="text-sm pb-2">
                   Have a group to join? Just enter the invite code below.
