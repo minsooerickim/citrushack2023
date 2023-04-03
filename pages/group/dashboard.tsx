@@ -177,7 +177,7 @@ export default function GroupDashboard() {
                 <span className="text-gold">
                   <ExternalLink
                     name="Discord server"
-                    link={process.env.discord}
+                    link="https://discord.com/invite/j7vCRHQPSF"
                   />{' '}
                 </span>
                 to look for more teammates and get important updates on event
