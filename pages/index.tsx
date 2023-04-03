@@ -73,7 +73,7 @@ export default function Home() {
                   draggable={false}
                 />
               </div>
-              <div className="block sm:hidden opacity-60 relative bottom-10 ">
+              <div className="block sm:hidden opacity-60 relative bottom-10">
                 <Image
                   src={sponsorBGLightMobile}
                   alt="Wave Dark"
