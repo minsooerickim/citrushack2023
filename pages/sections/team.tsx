@@ -249,7 +249,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 md:-bottom-[35%] w-16 sm:w-24 xl:w-32"
+        className="absolute z-30 max-md:hidden left-0 md:left-10 bottom-10 lg:-bottom-[5%] md:-bottom-[15%] w-16 sm:w-24 xl:w-32"
       >
         {theme === 'light' ? (
           <Image src={cloud} alt="cloud" draggable={false} />
@@ -264,7 +264,7 @@ export const Assets = () => {
           repeat: Infinity,
           duration: 5
         }}
-        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 md:-bottom-[25%] lg:-bottom-56 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
+        className="absolute max-md:hidden left-0 lg:left-0 xl:left-32 -bottom-48 md:-bottom-[25%] lg:-bottom-28 xl:-bottom-64 w-12 xl:w-24 z-[1000]"
       >
         <Image src={balloonOrange} alt="balloon" draggable={false} />
       </motion.div>
