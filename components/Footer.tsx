@@ -36,6 +36,7 @@ export default function Footer() {
             objectFit="contain"
             layout="responsive"
             draggable={false}
+            quality={100}
           />
         ) : (
           <Image
@@ -45,6 +46,7 @@ export default function Footer() {
             layout="responsive"
             className=""
             draggable={false}
+            quality={100}
           />
         )}
       </div>
