@@ -77,7 +77,7 @@ export function CheckinForm() {
         Check-In Form
       </h2>
       <p className="pb-4 w-full sm:max-w-2xl tex-text text-center">
-        Fill out this form to confirm your participation for Citrus Hack 2023!
+        Fill out this form to confirm your participation for Citrus Hack!
       </p>
       <form
         className="flex flex-col gap-4 w-full sm:max-w-2xl self-center"
