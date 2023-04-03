@@ -113,6 +113,10 @@ const staff = [
 
 const swe_committee = [
   {
+    link: 'https://www.linkedin.com/in/mika-shanela/',
+    name: 'Mika Shanela'
+  },
+  {
     link: 'https://www.linkedin.com/in/thomasli9/',
     name: 'Thomas Li'
   },

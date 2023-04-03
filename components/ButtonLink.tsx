@@ -17,7 +17,7 @@ const Button = ({
   minWidth
 }: ButtonProps) => (
   <motion.button
-    whileHover={{ scale: 1.05 }}
+    whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.995 }}
     className={
       'flex justify-center items-center self-center w-full px-4 font-semibold shadow rounded-md cursor-pointer text-white ' +
