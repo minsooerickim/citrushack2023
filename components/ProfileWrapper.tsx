@@ -17,7 +17,7 @@ const ProfileWrapper = ({ name, position, link, image }) => {
         <p className="mb-0 w-max text-text font-bold">{name}</p>
         <p
           className={`mt-0 leading-4 text-center  ${
-            theme === 'light' ? `text-brown` : `text-gold`
+            theme === 'dark' ? `text-gold` : `text-brown`
           }`}
         >
           {position}
@@ -50,7 +50,7 @@ const ProfileWrapper = ({ name, position, link, image }) => {
         </p>
         <p
           className={`mt-0 leading-4 text-center font-baloo_regular ${
-            theme === 'light' ? `text-brown` : `text-gold`
+            theme === 'dark' ? `text-gold` : `text-brown`
           } w-max`}
         >
           {position}

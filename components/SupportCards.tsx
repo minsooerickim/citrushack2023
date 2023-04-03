@@ -131,7 +131,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
               alt=""
               draggable="false"
             />
-            <motion.span
+            {/* <motion.span
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.995 }}
               className="absolute right-2 -bottom-8 hidden lg:flex"
@@ -145,7 +145,7 @@ function SupportCard({ front, back, button, link }: SupportCardProps) {
                 alt=""
                 draggable="false"
               />
-            </motion.span>
+            </motion.span> */}
           </a>
         </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full">

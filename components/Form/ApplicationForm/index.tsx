@@ -199,14 +199,14 @@ export function ApplicationForm() {
   };
 
   return (
-    <main className="flex flex-col items-center my-24 px-4 w-full bg-clouds bg-contain bg-no-repeat">
+    <main className="flex flex-col items-center my-24 px-4 w-full lg:bg-clouds bg-contain bg-no-repeat">
       <h2 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-center text-text">
         Application Form
       </h2>
-      <p className="pb-4 w-full sm:max-w-2xl text-center text-text">
-        Fill out this form to apply for Citrus Hack 2023!
+      <p className="pb-4 w-full sm:max-w-2xl text-center text-text text-base md:text-2xl font-semibold">
+        Fill out this form to apply for Citrus Hack!
       </p>
-      <p className="pb-4 w-full sm:max-w-2xl text-center text-text">
+      <p className="pb-4 w-full text-base sm:max-w-2xl text-center text-text">
         Within 24 hours of submitting, you will be notified via email about your
         application status.
       </p>
@@ -222,7 +222,7 @@ export function ApplicationForm() {
           setFileUploaded={setFileUploaded}
         />
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
           className="w-full py-1.5 rounded-xl bg-buttons font-semibold text-white bg-purple hover:bg-hoverPrimary"

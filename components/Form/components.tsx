@@ -45,10 +45,10 @@ export const Input = ({
   <div>
     <label className="font-semibold text-white">
       {label}
-      {!required && <span className="text-lightPurple"> (optional)</span>}
+      {!required && <span className="text-slate-300"> (optional)</span>}
     </label>
     {type === 'file' && (
-      <p className="m-0 mb-1 text-sm italic text-lightPurple">
+      <p className="m-0 mb-1 text-sm italic text-lightPurple text-slate-300">
         Will be used for recruiting purposes.
       </p>
     )}
