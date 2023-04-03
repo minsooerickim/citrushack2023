@@ -117,12 +117,28 @@ export default function GroupDashboard() {
 
   return (
     <ProtectedPage title="My Group" restrictions={['signin', 'qualified']}>
-      <div className="flex flex-col gap-10 items-center bg-purple rounded-xl p-4">
+      <div className="flex flex-col gap-10 gap-y-5 items-center bg-purple rounded-xl p-4">
         {status === 'authenticated' &&
           (session.user.gid === '' ? (
             <>
               <div className="flex flex-col max-w-md text-white">
-                <h2 className="font-bold text-gold">Join a Group</h2>
+                <h2 className="font-bold text-white">Create a Group</h2>
+                <p className="text-sm pb-2">
+                  Want to make your own group? Click the button below to create
+                  a group.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="w-full py-1.5 rounded bg-gold hover:bg-goldHover font-semibold text-white"
+                  onClick={() => createGroup()}
+                >
+                  {clickedCreateOnce ? 'Creating Group...' : 'Create Group'}
+                </motion.button>
+              </div>
+              <p className="text-white mt-4">Or</p>
+              <div className="w-full flex flex-col max-w-md text-white">
+                <h2 className="font-bold text-white">Join a Group</h2>
                 <p className="text-sm pb-2">
                   Have a group to join? Just enter the invite code below.
                 </p>
@@ -139,7 +155,7 @@ export default function GroupDashboard() {
                     required
                   />
                   <motion.button
-                    whileHover={{ scale: 1.03 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.995 }}
                     type="submit"
                     className="w-full py-1.5 rounded bg-gold hover:bg-goldHover font-semibold"
@@ -149,47 +165,35 @@ export default function GroupDashboard() {
                   </motion.button>
                 </form>
               </div>
-              <div className="flex flex-col max-w-md text-white">
-                <h2 className="font-bold text-gold">Create a Group</h2>
-                <p className="text-sm pb-2">
-                  Want to make your own group? Click the button below to create
-                  a group.
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.995 }}
-                  className="w-full py-1.5 rounded bg-gold hover:bg-goldHover font-semibold text-white"
-                  onClick={() => createGroup()}
-                >
-                  {clickedCreateOnce ? 'Creating Group...' : 'Create Group'}
-                </motion.button>
-              </div>
             </>
           ) : (
             <div className="flex flex-col max-w-md">
-              <h2 className="font-bold text-gold">My Group</h2>
-              <p className="text-white text-sm">
-                Join the{' '}
-                <ExternalLink
-                  name="Discord server"
-                  link={process.env.discord}
-                />{' '}
-                to look for more teammates for important updates on the day of.
+              <h2 className="font-bold text-white">My Group</h2>
+              <p className="text-slate-300 text-sm mb-5 italic">
+                Groups can only contain a max total of 4 hackers.
               </p>
               <p className="text-white text-sm">
-                Note that groups can only contain a max total of 4 hackers.
+                Join the{' '}
+                <span className="text-gold">
+                  <ExternalLink
+                    name="Discord server"
+                    link={process.env.discord}
+                  />{' '}
+                </span>
+                to look for more teammates and get important updates on event
+                day.
               </p>
               <p className="text-white text-sm">
                 Want others to join? Share the invite code below.
               </p>
-              <h3 className="font-bold text-gold pt-2">Invite Code</h3>
+              <h3 className="font-bold pt-5 text-white">Invite Code</h3>
               <CopyToClipboard
                 text={session.user.gid}
                 className="flex justify-between items-center text-lg p-2 rounded-md bg-sub font-medium mb-4 text-white"
               >
                 <motion.button
                   aria-label="Copy to Clipboard Button"
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.995 }}
                   onClick={() => toast.success('Copied to clipboard!')}
                   className=""
@@ -201,7 +205,7 @@ export default function GroupDashboard() {
                   <BiCopy className="text-2xl" />
                 </motion.button>
               </CopyToClipboard>
-              <h3 className="font-bold text-gold">Members</h3>
+              <h3 className="font-bold text-white">Members</h3>
               {(error || !data) &&
                 (cachedData ? (
                   <ul className="ml-5 list-disc text-lg text-white">
@@ -234,7 +238,7 @@ export default function GroupDashboard() {
         <div className="flex flex-col w-full gap-4 max-w-md">
           {status === 'authenticated' && session.user.gid !== '' && (
             <motion.button
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.995 }}
               className="w-full max-w-lg py-1.5 rounded bg-gold hover:bg-goldHover font-semibold text-white"
               onClick={() => setModalOpen(true)}
@@ -244,9 +248,9 @@ export default function GroupDashboard() {
           )}
           <Link passHref href="/">
             <motion.button
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.995 }}
-              className="w-full max-w-lg py-1.5 rounded bg-lightPurple hover:bg-hoverPrimary font-semibold text-white"
+              className="w-full max-w-lg py-1.5 rounded bg-lightPurple hover:bg-hoverPrimary font-semibold text-white mt-5"
             >
               Go Back to Homepage
             </motion.button>

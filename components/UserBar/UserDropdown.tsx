@@ -218,10 +218,10 @@ export function UserDropdown() {
                       className="group flex items-center gap-1.5 w-full rounded-md text-sub-highlight font-semibold bg-transparent"
                       onClick={() => setOpen(!open)}
                     >
-                      <div className="p-1.5 group-hover:bg-highlight group-hover:text-text rounded-md bg-sub text-sub-bright text-2xl">
+                      <div className="p-1.5 group-hover:bg-highlight group-hover:text-brown rounded-md bg-sub text-sub-bright text-2xl">
                         <BiCategory />
                       </div>
-                      <div className="p-1.5 group-hover:text-highlight">
+                      <div className="p-1.5 group-hover:text-brown">
                         Admin Dashboard
                       </div>
                     </motion.button>

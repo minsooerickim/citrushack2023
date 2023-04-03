@@ -76,7 +76,7 @@ export function CheckinForm() {
       <h2 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 text-center text-text">
         Check-In Form
       </h2>
-      <p className="pb-4 w-full sm:max-w-2xl tex-text text-center">
+      <p className="pb-4 w-full sm:max-w-2xl tex-text text-center text-base md:text-2xl">
         Fill out this form to confirm your participation for Citrus Hack!
       </p>
       <form
@@ -85,7 +85,7 @@ export function CheckinForm() {
       >
         <Confirmation register={register} errors={errors} watch={watch} />
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
           className="w-full py-1.5 bg-purple rounded-xl hover:bg-hoverPrimary font-semibold text-white"
