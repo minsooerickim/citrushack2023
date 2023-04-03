@@ -432,15 +432,15 @@ const team = () => {
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
-                    href={link === null ? '' : link}
+                    href={link}
                     key={name}
                   >
                     <p
                       key={name}
                       className={`text-text  ${
-                        link !== null && theme === 'dark'
+                        theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-[#987a5e]`
+                          : `hover:text-hoverBrown`
                       }`}
                     >
                       {name}
@@ -466,7 +466,7 @@ const team = () => {
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
-                    href={link === null ? '' : link}
+                    href={link}
                     key={name}
                   >
                     <p
@@ -474,7 +474,7 @@ const team = () => {
                       className={`text-text  ${
                         theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-[#987a5e]`
+                          : `hover:text-hoverBrown`
                       }`}
                     >
                       {name}
@@ -500,7 +500,7 @@ const team = () => {
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
-                    href={link === null ? '' : link}
+                    href={link}
                     key={name}
                   >
                     <p
@@ -508,7 +508,7 @@ const team = () => {
                       className={`text-text  ${
                         theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-[#987a5e]`
+                          : `hover:text-hoverBrown`
                       }`}
                     >
                       {name}
