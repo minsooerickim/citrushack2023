@@ -22,10 +22,14 @@ function App({
   return (
     <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
       <ThemeProvider enableSystem={false}>
-        <MLHBanner />
+        <div className="fixed z-[1000] w-full flex justify-center items-center">
+          <div className="flex items-start justify-end w-[97%]">
+            <UserBar />
+            <MLHBanner />
+          </div>
+        </div>
         <Nav />
         <Component {...pageProps} />
-        <UserBar />
         <Toaster />
       </ThemeProvider>
     </SessionProvider>
