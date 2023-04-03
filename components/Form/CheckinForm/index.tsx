@@ -88,7 +88,7 @@ export function CheckinForm() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.995 }}
           type="submit"
-          className="w-full py-1.5 rounded bg-purple rounded-xl hover:bg-hoverPrimary font-semibold text-white"
+          className="w-full py-1.5 bg-purple rounded-xl hover:bg-hoverPrimary font-semibold text-white"
           onClick={() => triggerErrorNotification()}
         >
           {clickedSubmitOnce ? 'Submitting...' : 'Submit'}

@@ -26,7 +26,7 @@ export function Confirmation({ register, errors, watch }: Props) {
         <Checkbox
           label="Do we have your permission to take pictures that may include you?"
           subtext={
-            <>
+            <p className="text-slate-300 mb-4">
               These photos will be posted on our Instagram and other social
               media. If you have a problem with this, please contact us at{' '}
               <ExternalLink
@@ -34,7 +34,7 @@ export function Confirmation({ register, errors, watch }: Props) {
                 link="mailto:citrushack@gmail.com"
               />
               .
-            </>
+            </p>
           }
           variable="photo_consent"
           options={[
@@ -54,7 +54,12 @@ export function Confirmation({ register, errors, watch }: Props) {
         />
         <Radio
           label="Do you live in the U.S.?"
-          subtext="This is used only for shipping purposes. We will only be able to ship merchandise and/or prizes those who live within the U.S."
+          subtext={
+            <p className="text-slate-300 mb-4">
+              This is used only for shipping purposes. We will only be able to
+              ship merchandise and/or prizes those who live within the U.S.
+            </p>
+          }
           variable="lives_in_US"
           options={['Yes', 'No']}
           register={register}
