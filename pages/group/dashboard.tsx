@@ -117,7 +117,7 @@ export default function GroupDashboard() {
 
   return (
     <ProtectedPage title="My Group" restrictions={['signin', 'qualified']}>
-      <div className="flex flex-col gap-10 gap-y-5 items-center bg-purple rounded-xl p-4">
+      <div className="flex flex-col gap-10 gap-y-0 items-center bg-purple rounded-xl p-4">
         {status === 'authenticated' &&
           (session.user.gid === '' ? (
             <>
