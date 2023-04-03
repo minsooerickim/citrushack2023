@@ -136,15 +136,15 @@ const swe_committee = [
 
 const operations_committee = [
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/rrbhushan/',
     name: 'Ronit Bhushan'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/sneha-pandaa',
     name: 'Sneha Panda'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/ethan-quach-010a05230',
     name: 'Ethan Quach'
   }
 ];
@@ -171,7 +171,7 @@ const sponsorhip_committee = [
     name: 'Javier Vargas'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/brian-uong-2a156b257/',
     name: 'Brian Uong'
   },
   {
@@ -440,7 +440,7 @@ const team = () => {
                       className={`text-text  ${
                         theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-hoverBrown`
+                          : `hover:text-brownHover`
                       }`}
                     >
                       {name}
@@ -474,7 +474,7 @@ const team = () => {
                       className={`text-text  ${
                         theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-hoverBrown`
+                          : `hover:text-brownHover`
                       }`}
                     >
                       {name}
@@ -508,7 +508,7 @@ const team = () => {
                       className={`text-text  ${
                         theme === 'dark'
                           ? `hover:text-goldHover`
-                          : `hover:text-hoverBrown`
+                          : `hover:text-brownHover`
                       }`}
                     >
                       {name}
