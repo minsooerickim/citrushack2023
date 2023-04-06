@@ -1248,6 +1248,7 @@ export const schools = [
   'Olney High School',
   'Onondaga Community College',
   'Opolska University of Technology',
+  'Orange Coast College',
   'Oratary Prep School At Summit',
   'Oregon State University',
   'Oriental Group of Institutes',
