@@ -143,7 +143,7 @@ export function ApplicationForm() {
 
     if (!upload_success) {
       toast.error(
-        'Uh oh. Something went wrong. If this issue persists, let us know.',
+        'Resume upload error. Please retry. If it persists, submit the application without resume and manually email it to us.',
         { id: 'submitApplicationError' }
       );
       setClickedSubmitOnce(Boolean(false));
