@@ -12,7 +12,7 @@ import useSWR from 'swr';
 export function ApplicationForm() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { data, error } = useSWR('/api/users/count-in-person', fetcher, {
+  const { data, error } = useSWR('/api/users/count', fetcher, {
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
       // Never retry on 404.
       if (error.status === 404) return;
@@ -127,7 +127,7 @@ export function ApplicationForm() {
 
     // tshirts only available for 200 people
     // eslint-disable-next-line prefer-const
-    let applied_after_limit = data.numUsersInperson >= 200 ? true : false;
+    let applied_after_limit = data.numUsers >= 200 ? true : false;
 
     // generate other user attributes
     // eslint-disable-next-line prefer-const
