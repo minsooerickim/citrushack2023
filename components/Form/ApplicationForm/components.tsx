@@ -132,6 +132,16 @@ export function Education({ register, errors, watch }: Props) {
           required
         />
       )}
+      {school === 'Other' && (
+        <Input
+          type="text"
+          label="School Name"
+          variable="school_other"
+          register={register}
+          errors={errors}
+          required
+        />
+      )}
       <Select
         label="Major"
         variable="major"
