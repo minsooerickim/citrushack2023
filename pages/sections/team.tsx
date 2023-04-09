@@ -133,7 +133,7 @@ const swe_committee = [
     name: 'Raidah Fairooz'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/kirtanavenkat/',
     name: 'Kirtana Venkat'
   }
 ];
