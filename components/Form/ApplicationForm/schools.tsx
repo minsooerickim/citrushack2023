@@ -2174,5 +2174,6 @@ export const schools = [
   'Zespół Szkół Łączności, Monte Cassino 31',
   'Zespół Szkół nr 1 im. Jana Pawła II w Przysusze',
   'Zespół szkół nr 1 im. Stanisława Staszica w Bochni',
-  'Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie'
+  'Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie',
+  'Other'
 ];
