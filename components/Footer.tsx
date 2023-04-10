@@ -101,7 +101,7 @@ export default function Footer() {
                   <BsBalloonHeartFill />
                 </span>
               )}
-              by Citrus Hack Team
+              by The Citrus Hack Team
             </span>
           </div>
         </footer>
