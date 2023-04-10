@@ -93,7 +93,7 @@ export default function Footer() {
             <span className="text-center flex space-x-1">
               Made with
               {theme === 'light' ? (
-                <span className="text-brown">
+                <span className="text-black">
                   <BsBalloonHeartFill />
                 </span>
               ) : (
@@ -101,7 +101,7 @@ export default function Footer() {
                   <BsBalloonHeartFill />
                 </span>
               )}
-              by the Citrus Hack Team
+              by The Citrus Hack Team
             </span>
           </div>
         </footer>
