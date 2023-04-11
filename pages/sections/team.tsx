@@ -152,6 +152,20 @@ const operations_committee = [
     name: 'Ethan Quach'
   }
 ];
+const marketing_committee = [
+  {
+    link: 'https://www.linkedin.com/in/anjaline-singh-450735258/',
+    name: 'Anjaline Singh'
+  },
+  {
+    link: 'https://www.linkedin.com/in/josalyn-chow/',
+    name: 'Josalyn Chow'
+  },
+  {
+    link: 'https://www.linkedin.com/in/elaine-lin02/',
+    name: 'Elaine Lin'
+  }
+];
 
 const sponsorhip_committee = [
   {
@@ -163,20 +177,32 @@ const sponsorhip_committee = [
     name: 'Javier Herrera Jr.'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/freddy-song-428677212/',
     name: 'Freddy Song'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/joseph-hoang04/',
     name: 'Joseph Hoang'
   },
   {
-    link: null,
+    link: 'https://www.linkedin.com/in/javier-vargas-b50104245',
     name: 'Javier Vargas'
   },
   {
     link: 'https://www.linkedin.com/in/brian-uong-2a156b257/',
     name: 'Brian Uong'
+  },
+  {
+    link: 'https://www.linkedin.com/in/felix-maass-3754871b8',
+    name: 'Felix Maass'
+  },
+  {
+    link: 'https://www.linkedin.com/in/suhani-chaudhary-25a476244',
+    name: 'Suhani Chaudhary'
+  },
+  {
+    link: 'https://www.linkedin.com/in/huong-le-87345a254//',
+    name: 'Huong Le'
   },
   {
     link: null,
@@ -192,11 +218,7 @@ const sponsorhip_committee = [
   },
   {
     link: null,
-    name: 'Felix Maass'
-  },
-  {
-    link: 'https://www.linkedin.com/in/suhani-chaudhary-25a476244',
-    name: 'Suhani Chaudhary'
+    name: 'Dhriti Veeramachaneni'
   }
 ];
 
@@ -463,9 +485,9 @@ const team = () => {
                   theme === 'dark' ? `text-gold` : `text-brown`
                 }`}
               >
-                Sponsorship
+                Marketing
               </p>
-              {sponsorhip_committee.map(({ link, name }) =>
+              {marketing_committee.map(({ link, name }) =>
                 link ? (
                   <a
                     target="_blank"
@@ -500,6 +522,40 @@ const team = () => {
                 Software Engineers
               </p>
               {swe_committee.map(({ link, name }) =>
+                link ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={link}
+                    key={name}
+                  >
+                    <p
+                      key={name}
+                      className={`text-text  ${
+                        theme === 'dark'
+                          ? `hover:text-goldHover`
+                          : `hover:text-brownHover`
+                      }`}
+                    >
+                      {name}
+                    </p>
+                  </a>
+                ) : (
+                  <p key={name} className="text-text">
+                    {name}
+                  </p>
+                )
+              )}
+            </div>
+            <div>
+              <p
+                className={`text-xl font-semibold ${
+                  theme === 'dark' ? `text-gold` : `text-brown`
+                }`}
+              >
+                Sponsorship
+              </p>
+              {sponsorhip_committee.map(({ link, name }) =>
                 link ? (
                   <a
                     target="_blank"
