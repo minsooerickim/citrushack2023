@@ -38,29 +38,29 @@ export const Sponsor = ({
 }: SponsorProps) => (
   // bg white is up here for a default bg color (also needs to be rounded haha)
   <div className={'flex items-center bg-white rounded-full '}>
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.995 }}
-      className={
-        'transform-gpu rounded-full border-6 grid content-center ' +
-        (shrink ? 'p-[2rem] ' : 'p-[0.6rem] ') +
-        ((border || '') + ' ') +
-        (type === 'cutie'
-          ? 'w-24 h-24 md:w-28 md:h-28 ' +
-            (false && shrink ? 'w-16 md:w-24' : '') +
-            (false && tall ? 'w-12 md:w-20' : '')
-          : type === 'tangerine'
-          ? 'w-28 h-28 md:w-36 md:h-36 ' +
-            (false && shrink ? 'w-24 md:w-28' : '') +
-            (false && tall ? 'w-18 md:w-24' : '')
-          : type === 'orange'
-          ? 'w-32 h-32 md:w-44 md:h-44 ' +
-            (false && shrink ? 'w-24 md:w-28' : '') +
-            (false && tall ? 'w-18 md:w-24' : '')
-          : '')
-      }
-    >
-      <a target="_blank" rel="noreferrer noopener" href={link}>
+    <a target="_blank" rel="noreferrer noopener" href={link}>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.995 }}
+        className={
+          'transform-gpu rounded-full border-6 grid content-center ' +
+          (shrink ? 'p-[2rem] ' : 'p-[0.6rem] ') +
+          ((border || '') + ' ') +
+          (type === 'cutie'
+            ? 'w-24 h-24 md:w-28 md:h-28 ' +
+              (false && shrink ? 'w-16 md:w-24' : '') +
+              (false && tall ? 'w-12 md:w-20' : '')
+            : type === 'tangerine'
+            ? 'w-28 h-28 md:w-36 md:h-36 ' +
+              (false && shrink ? 'w-24 md:w-28' : '') +
+              (false && tall ? 'w-18 md:w-24' : '')
+            : type === 'orange'
+            ? 'w-32 h-32 md:w-44 md:h-44 ' +
+              (false && shrink ? 'w-24 md:w-28' : '') +
+              (false && tall ? 'w-18 md:w-24' : '')
+            : '')
+        }
+      >
         <Image
           src={image}
           alt="sponsor"
@@ -72,8 +72,8 @@ export const Sponsor = ({
           objectFit="contain"
           draggable={false}
         />
-      </a>
-    </motion.div>
+      </motion.div>
+    </a>
   </div>
 );
 
