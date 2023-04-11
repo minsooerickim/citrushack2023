@@ -219,6 +219,13 @@ const tiers = [
         height: 959,
         link: 'https://ieee.ucr.edu/',
         border: 'border-[#0085FF] bg-[#271D50] p-[1.5rem]'
+      },
+      {
+        image: '/assets/sponsors/stickers.svg',
+        width: 900,
+        height: 700,
+        link: 'https://www.standoutstickers.com/',
+        border: 'border-[#49C5B1] bg-white p-[1.5rem]'
       }
     ]
   }
