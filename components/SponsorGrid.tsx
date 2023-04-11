@@ -161,7 +161,7 @@ const tiers = [
         image: '/assets/sponsors/stickermule.png',
         width: 442,
         height: 259,
-        link: 'https://www.stickermule.com/',
+        link: 'https://mule.to/p3go',
         border: 'border-[#4C2418] bg-[#E0BDAE]'
       },
       {
