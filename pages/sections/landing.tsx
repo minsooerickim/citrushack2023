@@ -22,6 +22,7 @@ import star from '@/public/assets/star.svg';
 import globeLight from '@/public/assets/globeLight.svg';
 import globeDark from '@/public/assets/globeDark.svg';
 import { useTheme } from 'next-themes';
+import SignupCounter from '@/components/SignupCounter';
 
 export const Assets = () => {
   const { theme } = useTheme();
@@ -234,6 +235,7 @@ export default function Landing() {
           <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
             April 29-30, 2023
           </div>
+          <SignupCounter />
           {status == 'authenticated' && session.user.applied_after_limit && (
             <p className="text-center text-text pb-6 max-w-sm">
               Based on the time of your application, we can no longer guarantee
