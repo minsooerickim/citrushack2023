@@ -146,7 +146,7 @@ export default function Tracks() {
             draggable="false"
           />
           <p className="text-lg lg:text-2xl font-black text-center w-fit text-text">
-            Sustainabiility
+            Sustainability
           </p>
         </div>
       </div>
