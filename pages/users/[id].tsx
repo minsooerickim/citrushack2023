@@ -17,6 +17,7 @@ export default function Info({ userData }) {
     shirtSize,
     qualified,
     name,
+    applied_after_limit,
     MLHAcknowledgement,
     pickedUpShirt,
     InPersonCheckIn
@@ -65,7 +66,7 @@ export default function Info({ userData }) {
       .post('/api/users/mark-tshirt-picked-up', { uid })
       .then(() => {
         console.log('hello inside');
-        toast.success('In-person check in successful!', {
+        toast.success('T-shirt pickup successful!', {
           id: 'markTshirtSuccess'
         });
         router.reload();
@@ -112,7 +113,14 @@ export default function Info({ userData }) {
       restrictions={['signin', 'self']}
       uid={uid}
     >
-      {/* user can only see the QR code */}
+      {/* user can only see the QR code and this text */}
+      {status === 'authenticated' && !session.user.admin && (
+        <>
+          <p className="pb-8 text-center text-lg text-text font-bold">
+            Show this QR code at Check-in and during food distribution!
+          </p>
+        </>
+      )}
       <QR />
 
       {/* goodies picked up */}
@@ -120,7 +128,7 @@ export default function Info({ userData }) {
       {status === 'authenticated' && session.user.admin && (
         <div className="flex flex-col justify-center items-center py-4">
           {InPersonCheckIn ? (
-            <p className="text-green-400">Checked In!</p>
+            <p className="text-green-500">Checked In!</p>
           ) : (
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -135,16 +143,33 @@ export default function Info({ userData }) {
           )}
 
           <p>
-            {name.first}, {name.last}
+            {name.first} {name.last}
           </p>
           <p>{email}</p>
           {/* TODO: only allow people who applied before `applied_after_limit` pick up tshirt; (display ingeligible to pickup tshirt or sum) */}
-          <div className="flex flex-col py-4 items-center">
-            {pickedUpShirt ? (
-              <p className="text-green-400">picked up</p>
+          <div className="pb-4">
+            {applied_after_limit ? (
+              <p>
+                First 200 Hacker: <span className="text-red-500">False</span>
+              </p>
+            ) : (
+              <p>
+                First 200 Hacker: <span className="text-green-500">True</span>
+              </p>
+            )}
+          </div>
+          <div className="flex flex-col pb-4 items-center text-center">
+            {applied_after_limit ? (
+              ``
+            ) : pickedUpShirt ? (
+              <>
+                <p>Shirt Size: {shirtSize}</p>
+                <p className="text-green-500">Picked Up</p>
+              </>
             ) : (
               <div>
-                <p className="text-red-400">not picked up</p>
+                <p>Shirt Size: {shirtSize}</p>
+                <p className="text-red-500">Not Picked Up</p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
@@ -157,28 +182,24 @@ export default function Info({ userData }) {
                 </motion.button>
               </div>
             )}
-            <p>shirt size: {shirtSize}</p>
           </div>
 
-          <div className="pb-4">
-            {MLHAcknowledgement ? (
-              <p>
-                MLHAcknowledgement: <span className="text-green-400">True</span>
-              </p>
-            ) : (
-              <p>
-                MLHAcknowledgement: <span className="text-red-400">False</span>
-              </p>
-            )}
-          </div>
-          <p className="pb-4">
-            qualified:{' '}
+          <p>
+            Qualified:{' '}
             {qualified == '' ? (
-              <span className="text-red-400">pending</span>
+              <span className="text-red-500">Pending</span>
             ) : (
-              <span className="text-green-400">qualified</span>
+              <span className="text-green-500">Qualified</span>
             )}
           </p>
+          <div className="pb-4">
+            MLHAcknowledgement:{' '}
+            {MLHAcknowledgement ? (
+              <span className="text-green-500">True</span>
+            ) : (
+              <span className="text-red-500">False</span>
+            )}
+          </div>
           {/* add button to check people in  */}
 
           {/* approve or reject user */}
