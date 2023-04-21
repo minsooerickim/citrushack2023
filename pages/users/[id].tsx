@@ -160,7 +160,9 @@ export default function Info({ userData }) {
           </div>
           <div className="flex flex-col pb-4 items-center text-center">
             {applied_after_limit ? (
-              ``
+              <span className="text-lg font-semibold text-red-500">
+                Ineligible for Shirt Pick-up
+              </span>
             ) : pickedUpShirt ? (
               <>
                 <p>Shirt Size: {shirtSize}</p>
