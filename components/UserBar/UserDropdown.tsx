@@ -144,7 +144,7 @@ export function UserDropdown() {
                 session.user.qualified === 'yeah' &&
                 (!session.user.checkedIn ? (
                   <>
-                    <span className="flex text-center font-semibold text-sub-bright text-sm">
+                    <span className="flex text-center font-semibold text-sub-bright text-sm bg-red-400">
                       You Haven&apos;t Checked-In
                       <BiHelpCircle
                         className="text-sub-highlight hover:text-highlight cursor-pointer"
@@ -163,7 +163,7 @@ export function UserDropdown() {
                     </Link>
                   </>
                 ) : (
-                  <div className="w-full py-1.5 text-center rounded-md bg-sub font-semibold">
+                  <div className="w-full py-1.5 text-center rounded-md bg-[#9DC300] font-semibold">
                     Checked-In
                   </div>
                 ))}
