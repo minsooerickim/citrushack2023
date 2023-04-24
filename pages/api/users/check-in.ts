@@ -12,15 +12,15 @@ export default async function checkin(
     const {
       uid,
       inperson,
-      daily_wellness,
+      // daily_wellness,
       photo_consent,
       MLH_code_of_conduct,
       address
     } = req.body;
 
     const participation = inperson === 'Yes' ? 'In-Person' : 'Online';
-    const dailyWellnessCheck =
-      inperson === 'Yes' && daily_wellness ? 'Completed' : 'N/A';
+    // const dailyWellnessCheck =
+    //   inperson === 'Yes' && daily_wellness ? 'Completed' : 'N/A';
     const photoConsent =
       inperson === 'Yes' && photo_consent ? 'Consented' : 'N/A';
     const actualAddress = address === '' ? 'Lives Outside the U.S.' : address;
@@ -30,7 +30,7 @@ export default async function checkin(
       {
         $set: {
           participation,
-          dailyWellnessCheck,
+          // dailyWellnessCheck,
           photoConsent,
           readMLHCodeOfConduct: Boolean(MLH_code_of_conduct),
           address: actualAddress,
