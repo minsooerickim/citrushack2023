@@ -24,6 +24,16 @@ export function Confirmation({ register, errors, watch }: Props) {
     <>
       <Group title="Confirm Details">
         <Checkbox
+          label="Are you aware that this is a completely in-person event?"
+          variable="inperson_conf"
+          options={[
+            'Yes, I am aware that this is a completely in-person event.'
+          ]}
+          register={register}
+          errors={errors}
+          required
+        />
+        <Checkbox
           label="Do we have your permission to take pictures that may include you?"
           subtext={
             <p className="text-slate-300 mb-4">
