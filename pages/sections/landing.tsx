@@ -290,15 +290,14 @@ export default function Landing() {
             </span>
           )} */}
           <div className="flex flex-col w-full gap-3">
-            {/* TODO: uncomment the day before */}
-            {/* {status === 'authenticated' &&
+            {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' &&
               !session.user.checkedIn && (
                 <span className="flex justify-center w-full z-[200]">
                   <ButtonLink primary label="Check-In Now!" link="/checkin" />
                 </span>
-              )} */}
+              )}
             {status === 'authenticated' &&
               session.user.uid &&
               session.user.qualified === 'yeah' && (
