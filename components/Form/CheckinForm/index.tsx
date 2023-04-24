@@ -24,7 +24,8 @@ export function CheckinForm() {
     address_line_2,
     city,
     state,
-    zipcode
+    zipcode,
+    foreign_country
   }) => {
     if (clickedSubmitOnce) {
       return;
@@ -39,6 +40,8 @@ export function CheckinForm() {
         address += ', ' + address_line_2;
       }
       address += ', ' + city + ', ' + state + ' ' + zipcode;
+    } else {
+      address = foreign_country;
     }
 
     axios
