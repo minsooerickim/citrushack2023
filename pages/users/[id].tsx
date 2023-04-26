@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import router from 'next/router';
 import toast from 'react-hot-toast';
+import { FaCheckCircle } from 'react-icons/fa';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 export default function Info({ userData }) {
   const { data: session, status } = useSession();
@@ -84,7 +86,7 @@ export default function Info({ userData }) {
       .post('/api/users/mark-canes-picked-up', { uid })
       .then(() => {
         console.log('hello inside');
-        toast.success('T-shirt pickup successful!', {
+        toast.success('Canes pickup successful!', {
           id: 'markCanesSuccess'
         });
         router.reload();
@@ -163,15 +165,20 @@ export default function Info({ userData }) {
             {name.first} {name.last}
           </p>
           <p>{email}</p>
-          {/* TODO: only allow people who applied before `applied_after_limit` pick up tshirt; (display ingeligible to pickup tshirt or sum) */}
-          <div className="pb-4">
+          <div>
             {applied_after_limit ? (
-              <p>
-                First 200 Hacker: <span className="text-red-500">False</span>
+              <p className="flex">
+                First 200 Hacker:{' '}
+                <span className="text-red-500 pt-1 pl-1">
+                  <AiFillCloseCircle />
+                </span>
               </p>
             ) : (
-              <p>
-                First 200 Hacker: <span className="text-green-500">True</span>
+              <p className="flex">
+                First 200 Hacker:{' '}
+                <span className="text-green-500 pt-1 pl-1">
+                  <FaCheckCircle />
+                </span>
               </p>
             )}
           </div>
@@ -181,16 +188,22 @@ export default function Info({ userData }) {
                 Ineligible for Shirt Pick-up
               </span>
             ) : pickedUpShirt ? (
-              <>
-                <p>
+              <div className="mt-4 mb-2">
+                <p className="flex">
                   Shirt Size: {shirtSize}{' '}
-                  <span className="text-green-500">Picked Up</span>
+                  <span className="text-green-500 pt-1 pl-1">
+                    <FaCheckCircle />
+                  </span>
                 </p>
-              </>
+              </div>
             ) : (
-              <div>
-                <p>Shirt Size: {shirtSize}</p>
-                <p className="text-red-500">Not Picked Up</p>
+              <div className="mt-4 mb-2 flex flex-col justify-center items-center">
+                <p className="flex">
+                  T-Shirt Pickup:
+                  <span className="text-red-500 pt-1 pl-1">
+                    <AiFillCloseCircle />
+                  </span>
+                </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
@@ -199,21 +212,27 @@ export default function Info({ userData }) {
                     markTshirt();
                   }}
                 >
-                  Mark T-Shirt Pick Up
+                  Mark T-Shirt Picked Up
                 </motion.button>
               </div>
             )}
             {pickedUpCanes ? (
               <div className="mt-4 mb-2">
-                <p>
+                <p className="flex">
                   Canes Pickup:{' '}
-                  <span className="text-green-500">Picked Up</span>
+                  <span className="text-green-500 pt-1 pl-1">
+                    <FaCheckCircle />
+                  </span>
                 </p>
               </div>
             ) : (
-              <div className="mt-4 mb-2">
-                <p>Canes Pickup:</p>
-                <p className="text-red-500">Not Picked Up</p>
+              <div className="mt-4 mb-2 flex flex-col justify-center items-center">
+                <p className="flex">
+                  Canes Pickup:
+                  <span className="text-red-500 pt-1 pl-1">
+                    <AiFillCloseCircle />
+                  </span>
+                </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.995 }}
@@ -222,31 +241,36 @@ export default function Info({ userData }) {
                     markCanes();
                   }}
                 >
-                  Mark Canes Pick Up
+                  Mark Canes Picked Up
                 </motion.button>
               </div>
             )}
           </div>
 
-          <p>
+          <p className="flex">
             Qualified:{' '}
             {qualified == '' ? (
-              <span className="text-red-500">Pending</span>
+              <span className="text-red-500 pt-1 pl-1">
+                <AiFillCloseCircle />
+              </span>
             ) : (
-              <span className="text-green-500">Qualified</span>
+              <span className="text-green-500 pt-1 pl-1">
+                <FaCheckCircle />
+              </span>
             )}
           </p>
-          <div className="pb-4">
+          <div className="pb-4 flex">
             MLHAcknowledgement:{' '}
             {MLHAcknowledgement ? (
-              <span className="text-green-500">True</span>
+              <span className="text-green-500 pt-1 pl-1">
+                <FaCheckCircle />
+              </span>
             ) : (
-              <span className="text-red-500">False</span>
+              <span className="text-red-500 pt-1 pl-1">
+                <AiFillCloseCircle />
+              </span>
             )}
           </div>
-          {/* add button to check people in  */}
-
-          {/* approve or reject user */}
           <div className="flex flex-row space-x-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
