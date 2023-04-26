@@ -20,6 +20,7 @@ export default function Info({ userData }) {
     applied_after_limit,
     MLHAcknowledgement,
     pickedUpShirt,
+    pickedUpCanes,
     InPersonCheckIn
     // ...other
   } = json_obj[0];
@@ -78,6 +79,23 @@ export default function Info({ userData }) {
       });
   };
 
+  const markCanes = () => {
+    axios
+      .post('/api/users/mark-canes-picked-up', { uid })
+      .then(() => {
+        console.log('hello inside');
+        toast.success('T-shirt pickup successful!', {
+          id: 'markCanesSuccess'
+        });
+        router.reload();
+      })
+      .catch(() => {
+        toast.error('Uh oh. Something went wrong...', {
+          id: 'markCanesError'
+        });
+      });
+  };
+
   // {
   //   _id: new ObjectId("63e4b1f210e022bb585f31b3"),
   //   name: { first: 'Minsoo', last: 'Kim' },
@@ -114,15 +132,14 @@ export default function Info({ userData }) {
       uid={uid}
     >
       {/* user can only see the QR code and this text */}
+      <QR />
       {status === 'authenticated' && !session.user.admin && (
         <>
-          <p className="pb-8 text-center text-lg text-text font-bold">
-            Show this QR code at Check-in and during food distribution!
+          <p className="pt-8 text-center text-lg text-text font-bold">
+            Show this QR Code at check-in and during food distribution!
           </p>
         </>
       )}
-      <QR />
-
       {/* goodies picked up */}
       {/* only admins can see actions and additional info */}
       {status === 'authenticated' && session.user.admin && (
@@ -165,8 +182,10 @@ export default function Info({ userData }) {
               </span>
             ) : pickedUpShirt ? (
               <>
-                <p>Shirt Size: {shirtSize}</p>
-                <p className="text-green-500">Picked Up</p>
+                <p>
+                  Shirt Size: {shirtSize}{' '}
+                  <span className="text-green-500">Picked Up</span>
+                </p>
               </>
             ) : (
               <div>
@@ -180,7 +199,30 @@ export default function Info({ userData }) {
                     markTshirt();
                   }}
                 >
-                  Mark as Picked Up
+                  Mark T-Shirt Pick Up
+                </motion.button>
+              </div>
+            )}
+            {pickedUpCanes ? (
+              <div className="mt-4 mb-2">
+                <p>
+                  Canes Pickup:{' '}
+                  <span className="text-green-500">Picked Up</span>
+                </p>
+              </div>
+            ) : (
+              <div className="mt-4 mb-2">
+                <p>Canes Pickup:</p>
+                <p className="text-red-500">Not Picked Up</p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.995 }}
+                  className="flex items-center self-center h-11 px-4 font-semibold text-lg rounded-md bg-purple text-white cursor-pointer"
+                  onClick={() => {
+                    markCanes();
+                  }}
+                >
+                  Mark Canes Pick Up
                 </motion.button>
               </div>
             )}
