@@ -24,6 +24,16 @@ export function Confirmation({ register, errors, watch }: Props) {
     <>
       <Group title="Confirm Details">
         <Checkbox
+          label="Are you aware that this is a completely in-person event?"
+          variable="inperson_conf"
+          options={[
+            'Yes, I am aware that this is a completely in-person event.'
+          ]}
+          register={register}
+          errors={errors}
+          required
+        />
+        <Checkbox
           label="Do we have your permission to take pictures that may include you?"
           subtext={
             <p className="text-slate-300 mb-4">
@@ -68,10 +78,11 @@ export function Confirmation({ register, errors, watch }: Props) {
         />
       </Group>
       {lives_in_US === 'Yes' && (
-        <Group
-          title="Address"
-          subtitle="Please input the best address to ship merchandise and/or prizes to you."
-        >
+        <Group title="Address">
+          <p className="text-slate-300 mb-4">
+            Please input the best address to ship merchandise and/or prizes to
+            you.
+          </p>
           <Input
             type="text"
             label="Street Address"
@@ -119,6 +130,18 @@ export function Confirmation({ register, errors, watch }: Props) {
               />
             </span>
           </div>
+        </Group>
+      )}
+      {lives_in_US === 'No' && (
+        <Group title="Address">
+          <Input
+            type="text"
+            label="Name of Country"
+            variable="foreign_country"
+            register={register}
+            errors={errors}
+            required
+          />
         </Group>
       )}
     </>
