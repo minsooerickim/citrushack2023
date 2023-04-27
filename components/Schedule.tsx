@@ -25,13 +25,13 @@ const eventDesktopDay1 = [
     leftEventType: '',
     rightTime: '7:00 AM',
     rightDescription: 'Check-In',
-    rightPlace: 'MSE 116',
+    rightPlace: '@ MSE 116',
     rightEventType: ''
   },
   {
     leftTime: '8:00 AM',
     leftDescription: 'Opening Ceremony',
-    leftPlace: 'MSE 116',
+    leftPlace: '@ MSE 116',
     leftEventType: '',
     rightTime: '',
     rightDescription: '',
@@ -41,17 +41,17 @@ const eventDesktopDay1 = [
   {
     leftTime: '9:00 AM',
     leftDescription: 'Hacking Begins',
-    leftPlace: 'MSE 116',
+    leftPlace: '',
     leftEventType: '',
     rightTime: '9:00 AM',
     rightDescription: 'Team Building',
-    rightPlace: 'MSE 116',
+    rightPlace: '@ MSE 116',
     rightEventType: 'Workshop'
   },
   {
     leftTime: '10:00 AM',
-    leftDescription: 'Giddy up w/ Git',
-    leftPlace: 'WCH 205/206',
+    leftDescription: 'Giddy Up w/ Git',
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '',
     rightDescription: '',
@@ -64,38 +64,38 @@ const eventDesktopDay1 = [
     leftPlace: '',
     leftEventType: '',
     rightTime: '11:00 AM',
-    rightDescription: 'Rock Your Web Portfolio w/ React',
-    rightPlace: 'WCH 205/206',
+    rightDescription: 'Rock your Web Portfolio w/ React',
+    rightPlace: '@ WCH 205/206',
     rightEventType: 'Workshop'
   },
   {
     leftTime: '12:00 PM',
-    leftDescription: 'Unity University',
-    leftPlace: 'WCH 205/206',
+    leftDescription: 'Understanding Unity',
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '12:00 PM',
     rightDescription: 'Strongest Bridge',
-    rightPlace: 'Bourns A265',
+    rightPlace: '@ Bourns A265',
     rightEventType: 'Activity'
   },
   {
     leftTime: '',
     leftDescription: '',
     leftPlace: '',
-    leftEventType: 'Activity',
+    leftEventType: '',
     rightTime: '1:00 PM',
     rightDescription: 'Lunch',
-    rightPlace: 'Outside Bytes',
-    rightEventType: 'Activity'
+    rightPlace: '@ Outside Bytes',
+    rightEventType: ''
   },
   {
     leftTime: '2:00 PM',
-    leftDescription: 'Live, Laugh, LinkedIn',
-    leftPlace: 'WCH 205/206',
+    leftDescription: 'Level Up your LinkedIn',
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '2:00 PM',
     rightDescription: 'Tallest Tower Stacking',
-    rightPlace: 'Bourns A265',
+    rightPlace: '@ Bourns A265',
     rightEventType: 'Activity'
   },
   {
@@ -104,34 +104,34 @@ const eventDesktopDay1 = [
     leftPlace: '',
     leftEventType: '',
     rightTime: '3:00 PM',
-    rightDescription: 'App Dev',
-    rightPlace: 'WCH 205/206',
+    rightDescription: `Prof. Allan's App Dev Masterclass`,
+    rightPlace: '@ WCH 205/206',
     rightEventType: 'Workshop'
   },
   {
     leftTime: '4:00 PM',
-    leftDescription: `Can't Spell UI/UX Without U and I <3`,
-    leftPlace: 'WCH 205/206',
+    leftDescription: `Can't Spell UI/UX without U & I <3`,
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '4:00 PM',
     rightDescription: 'Skribblio',
-    rightPlace: 'Bourns A265',
+    rightPlace: '@ Bourns A265',
     rightEventType: 'Activity'
   },
   {
     leftTime: '5:00 PM',
     leftDescription: 'TypeRacer',
-    leftPlace: 'Bourns A265',
-    leftEventType: '',
+    leftPlace: '@ Bourns A265',
+    leftEventType: 'Activity',
     rightTime: '5:00 PM',
-    rightDescription: 'API Security & Testing',
-    rightPlace: 'WCH 205/206',
+    rightDescription: 'Arm Up your API: Security & Testing',
+    rightPlace: '@ WCH 205/206',
     rightEventType: ''
   },
   {
     leftTime: '6:00 PM',
-    leftDescription: 'Revamp Your Resume',
-    leftPlace: 'WCH 205/206',
+    leftDescription: 'Revamp your Resume',
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '',
     rightDescription: '',
@@ -141,11 +141,11 @@ const eventDesktopDay1 = [
   {
     leftTime: '7:00 PM',
     leftDescription: 'Digital Twin Performance',
-    leftPlace: 'WCH Courtyard',
+    leftPlace: '@ WCH Courtyard',
     leftEventType: '',
     rightTime: '7:00 PM',
     rightDescription: 'Dinner',
-    rightPlace: 'Outside Bytes',
+    rightPlace: '@ Outside Bytes',
     rightEventType: ''
   },
   {
@@ -155,13 +155,13 @@ const eventDesktopDay1 = [
     leftEventType: 'Workshop',
     rightTime: '7:30 PM',
     rightDescription: 'Group Photo',
-    rightPlace: 'WCH Courtyard',
+    rightPlace: '@ WCH Courtyard',
     rightEventType: ''
   },
   {
     leftTime: '8:00 PM',
-    leftDescription: 'Capture The Flag',
-    leftPlace: 'WCH 205/206',
+    leftDescription: 'MLH: Capture the Flag',
+    leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '',
     rightDescription: '',
@@ -178,13 +178,13 @@ const eventDesktopDay2 = [
     leftEventType: '',
     rightTime: '1:00 AM',
     rightDescription: 'JackBox',
-    rightPlace: 'Bourns A265',
+    rightPlace: '@ Bourns A265',
     rightEventType: 'Activity'
   },
   {
     leftTime: '3:00 AM',
     leftDescription: 'Movie Marathon',
-    leftPlace: 'Bourns A265',
+    leftPlace: '@ Bourns A265',
     leftEventType: 'Activity',
     rightTime: '',
     rightDescription: '',
@@ -198,13 +198,13 @@ const eventDesktopDay2 = [
     leftEventType: '',
     rightTime: '9:00 AM',
     rightDescription: 'Hacking Ends',
-    rightPlace: 'MSE 116',
+    rightPlace: '',
     rightEventType: ''
   },
   {
     leftTime: '9:15 AM',
     leftDescription: 'Breakfast',
-    leftPlace: 'Outside Bytes',
+    leftPlace: '@ Outside Bytes',
     leftEventType: '',
     rightTime: '',
     rightDescription: '',
@@ -218,13 +218,13 @@ const eventDesktopDay2 = [
     leftEventType: '',
     rightTime: '10:00 AM',
     rightDescription: 'Judging Starts',
-    rightPlace: '',
+    rightPlace: '@ WCH Courtyard',
     rightEventType: ''
   },
   {
     leftTime: '1:30 PM',
     leftDescription: 'Closing Ceremony',
-    leftPlace: 'MSE 116',
+    leftPlace: '@ MSE 116',
     leftEventType: '',
     rightTime: '',
     rightDescription: '',
@@ -348,19 +348,19 @@ const eventsMobileDay1 = [
   },
   {
     time: '10:00 AM',
-    description: 'Giddy Up with Git',
+    description: 'Giddy Up w/ Git',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
   {
     time: '11:00 AM',
-    description: 'Rock Your Web Portfolio with React',
+    description: 'Rock Your Web Portfolio w/ React',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
   {
     time: '12:00 PM',
-    description: 'Unity University',
+    description: 'Understanding Unity',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
@@ -378,7 +378,7 @@ const eventsMobileDay1 = [
   },
   {
     time: '2:00 PM',
-    description: 'Live, Laugh, LinkedIn',
+    description: 'Level Up Your LinkedIn',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
@@ -390,13 +390,13 @@ const eventsMobileDay1 = [
   },
   {
     time: '3:00 PM',
-    description: `Prof. Allan Knight App Dev`,
+    description: `Prof. Allan's App Dev Masterclass`,
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
   {
     time: '4:00 PM',
-    description: `Can't Spell UI/UX Without U and I <3`,
+    description: `Can't Spell UI/UX without U & I <3`,
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
@@ -408,7 +408,7 @@ const eventsMobileDay1 = [
   },
   {
     time: '5:00 PM',
-    description: 'API Security & Testing',
+    description: 'Arm Up your API: Security & Testing',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
@@ -444,7 +444,7 @@ const eventsMobileDay1 = [
   },
   {
     time: '8:00 PM',
-    description: 'Capture The Flag',
+    description: 'MLH: Capture the Flag',
     place: '@ WCH 205/206',
     type: 'Workshop'
   }
@@ -477,7 +477,7 @@ const eventsMobileDay2 = [
   {
     time: '10:00 AM',
     description: 'Judging Starts',
-    place: '',
+    place: '@ WCH Courtyard',
     type: ''
   },
   {
@@ -630,7 +630,7 @@ export const EventDesktop = ({
                   theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
-                {leftTime} @ {leftPlace}
+                {leftTime} {leftPlace}
               </p>
               <p
                 className={`text-base text-right w-full ${
@@ -657,7 +657,7 @@ export const EventDesktop = ({
                   theme === 'dark' ? `text-goldHover` : `text-brown`
                 }`}
               >
-                {rightTime} @ {rightPlace}
+                {rightTime} {rightPlace}
               </p>
               <p
                 className={`text-base text-left w-full ${
