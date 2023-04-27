@@ -37,6 +37,10 @@ export default function Nav() {
       title: 'Tracks'
     },
     {
+      icon: <BiDirections />,
+      title: 'Resources'
+    },
+    {
       icon: <BiCalendarEvent />,
       title: 'Schedule'
     },
@@ -161,7 +165,7 @@ export default function Nav() {
             (navOpen ? 'p-2 ' : 'w-11 h-11 ') +
             (navOpen &&
               (router.pathname === '/'
-                ? 'w-48 h-[29.5rem] md:h-[25.75rem]'
+                ? 'w-48 h-[35.5rem] md:h-[32.75rem]'
                 : router.pathname === '/live'
                 ? 'w-48 h-[29rem] md:h-[25.75rem]'
                 : 'w-48 h-[10.25rem] md:h-[7rem]'))
