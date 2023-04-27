@@ -20,7 +20,7 @@ export default function Info({ userData }) {
     qualified,
     name,
     applied_after_limit,
-    MLHAcknowledgement,
+    // MLHAcknowledgement,
     pickedUpShirt,
     pickedUpCanes,
     InPersonCheckIn
