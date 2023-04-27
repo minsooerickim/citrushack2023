@@ -110,7 +110,7 @@ const eventDesktopDay1 = [
   },
   {
     leftTime: '4:00 PM',
-    leftDescription: 'UI/UX',
+    leftDescription: `Can't Spell UI/UX Without U and I <3`,
     leftPlace: 'WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '4:00 PM',
@@ -390,13 +390,13 @@ const eventsMobileDay1 = [
   },
   {
     time: '3:00 PM',
-    description: 'App Dev',
+    description: `Prof. Allan Knight App Dev`,
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
   {
     time: '4:00 PM',
-    description: 'UI/UX',
+    description: `Can't Spell UI/UX Without U and I <3`,
     place: '@ WCH 205/206',
     type: 'Workshop'
   },

@@ -68,7 +68,6 @@ export default function Info({ userData }) {
     axios
       .post('/api/users/mark-tshirt-picked-up', { uid })
       .then(() => {
-        console.log('hello inside');
         toast.success('T-shirt pickup successful!', {
           id: 'markTshirtSuccess'
         });
@@ -85,7 +84,6 @@ export default function Info({ userData }) {
     axios
       .post('/api/users/mark-canes-picked-up', { uid })
       .then(() => {
-        console.log('hello inside');
         toast.success('Canes pickup successful!', {
           id: 'markCanesSuccess'
         });
@@ -247,7 +245,7 @@ export default function Info({ userData }) {
             )}
           </div>
 
-          <p className="flex">
+          <p className="flex pb-4">
             Qualified:{' '}
             {qualified == '' ? (
               <span className="text-red-500 pt-1 pl-1">
@@ -259,7 +257,7 @@ export default function Info({ userData }) {
               </span>
             )}
           </p>
-          <div className="pb-4 flex">
+          {/* <div className="pb-4 flex">
             MLHAcknowledgement:{' '}
             {MLHAcknowledgement ? (
               <span className="text-green-500 pt-1 pl-1">
@@ -270,7 +268,7 @@ export default function Info({ userData }) {
                 <AiFillCloseCircle />
               </span>
             )}
-          </div>
+          </div> */}
           <div className="flex flex-row space-x-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
