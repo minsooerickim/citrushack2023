@@ -5,6 +5,8 @@ import { Page } from '@/components/Page';
 import Landing from '@/pages/sections/landing';
 import About from '@/pages/sections/about';
 import Tracks from '@/pages/sections/tracks';
+import Resources from './sections/resources';
+import Schedule from '@/pages/sections/schedule';
 import Support from '@/pages/sections/support';
 import Sponsors from '@/pages/sections/sponsors';
 import Faq from '@/pages/sections/faq';
@@ -45,6 +47,18 @@ export default function Home() {
         <span className="flex justify-center px-4 w-full 2xl:bg-cover">
           <Tracks />
         </span>
+      </Element>
+      <Element
+        name="Resources"
+        className="flex justify-center px-4 w-full bg-accent"
+      >
+        <Resources />
+      </Element>
+      <Element
+        name="Schedule"
+        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+      >
+        <Schedule />
       </Element>
       <Element name="Support" className="flex justify-center w-full bg-sky">
         <span className="flex justify-center w-full 2xl:bg-cover">

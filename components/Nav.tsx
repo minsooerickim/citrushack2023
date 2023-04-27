@@ -37,6 +37,10 @@ export default function Nav() {
       title: 'Tracks'
     },
     {
+      icon: <BiCalendarEvent />,
+      title: 'Schedule'
+    },
+    {
       icon: <BiDonateHeart />,
       title: 'Support'
     },
