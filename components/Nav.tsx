@@ -15,8 +15,10 @@ import {
   BiMenu,
   BiX,
   BiAlarm,
-  BiReceipt
+  BiReceipt,
+  BiStore
 } from 'react-icons/bi';
+import { GrResources } from 'react-icons/gr';
 import { ThemeButton } from '@/components/UserBar/ThemeButton';
 
 /** Side navbar. */
@@ -37,7 +39,7 @@ export default function Nav() {
       title: 'Tracks'
     },
     {
-      icon: <BiDirections />,
+      icon: <BiStore />,
       title: 'Resources'
     },
     {
@@ -158,7 +160,7 @@ export default function Nav() {
         )}
       </motion.div>
       {/* mobile navbar */}
-      <div className="z-[1000] fixed top-3 -left-1 xl:hidden px-4">
+      <div className="z-[1000] fixed top-3 -left-1 xl:hidden px-4 e">
         <div
           className={
             'flex flex-col gap-1.5 rounded-md bg-purple shadow overflow-hidden transform-gpu transition-size duration-200 ' +
