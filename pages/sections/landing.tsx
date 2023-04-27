@@ -302,14 +302,14 @@ export default function Landing() {
               session.user.uid &&
               session.user.qualified === 'yeah' && (
                 <>
-                  <span className="flex justify-center w-full z-[200]">
+                  {/* <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
                       primary
                       label="Join Our Discord"
                       link="https://discord.com/invite/j7vCRHQPSF"
                       external
                     />
-                  </span>
+                  </span> */}
                   <span className="flex justify-center w-full z-[200]">
                     <ButtonLink
                       primary
