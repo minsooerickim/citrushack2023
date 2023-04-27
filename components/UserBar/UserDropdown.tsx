@@ -138,7 +138,6 @@ export function UserDropdown() {
                     </div>
                   </>
                 ))}
-              {/* TODO:uncomment the day before */}
               {status === 'authenticated' &&
                 session.user.uid &&
                 session.user.qualified === 'yeah' &&
