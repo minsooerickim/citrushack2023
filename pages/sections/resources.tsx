@@ -12,7 +12,7 @@ export default function Resources() {
       <div className="flex flex-col gap-4 w-2/3 md:w-full ">
         <ButtonLink
           primary
-          link="https://citrus-hack-2022.devpost.com/"
+          link="https://citrus-hack-2023.devpost.com/"
           label="Devpost"
           external
         />
