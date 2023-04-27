@@ -48,10 +48,7 @@ export default function Home() {
           <Tracks />
         </span>
       </Element>
-      <Element
-        name="Resources"
-        className="flex justify-center px-4 w-full bg-accent"
-      >
+      <Element name="Resources" className="flex justify-center px-4 w-full">
         <Resources />
       </Element>
       <Element

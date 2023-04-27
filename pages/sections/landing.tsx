@@ -23,6 +23,7 @@ import globeLight from '@/public/assets/globeLight.svg';
 import globeDark from '@/public/assets/globeDark.svg';
 import { useTheme } from 'next-themes';
 import SignupCounter from '@/components/SignupCounter';
+import { HackerCountdownWrapper } from '@/components/Countdown';
 
 export const Assets = () => {
   const { theme } = useTheme();
@@ -232,9 +233,17 @@ export default function Landing() {
           <div className="text-center text-2xl max-[375px]:text-2xl md:text-3xl sm:text-4xl lg:text-5xl mb-2 lg:mb-4 font-semibold text-text">
             Reach your next destination
           </div>
-          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 lg:mb-6 font-black z-1 text-text">
+          <div className="text-center text-2xl max-[375px]:text-xl sm:text-3xl lg:text-4xl mb-3 font-black z-1 text-text">
             April 29-30, 2023
           </div>
+          <HackerCountdownWrapper date="2023-04-30T16:00:00Z" />
+          {status != 'authenticated' && <SignupCounter />}
+          {status == 'authenticated' && session.user.applied_after_limit && (
+            <p className="text-center text-text pb-6 max-w-sm">
+              Based on the time of your application, we can no longer guarantee
+              food or swag due to our limited inventory.
+            </p>
+          )}
           {status != 'authenticated' && <SignupCounter />}
           {status == 'authenticated' && session.user.applied_after_limit && (
             <p className="text-center text-text pb-6 max-w-sm">

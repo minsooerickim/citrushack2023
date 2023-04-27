@@ -18,7 +18,6 @@ import {
   BiReceipt,
   BiStore
 } from 'react-icons/bi';
-import { GrResources } from 'react-icons/gr';
 import { ThemeButton } from '@/components/UserBar/ThemeButton';
 
 /** Side navbar. */
