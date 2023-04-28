@@ -145,7 +145,7 @@ const eventDesktopDay1 = [
     leftEventType: '',
     rightTime: '7:00 PM',
     rightDescription: 'Dinner',
-    rightPlace: '@ Outside Bytes',
+    rightPlace: '@ WCH Courtyard',
     rightEventType: ''
   },
   {
@@ -467,7 +467,7 @@ const eventsMobileDay1 = [
   {
     time: '7:00 PM',
     description: 'Dinner',
-    place: '@ Outside Bytes',
+    place: '@ WCH Courtyard',
     type: ''
   },
   {
