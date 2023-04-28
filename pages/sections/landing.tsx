@@ -225,7 +225,7 @@ export default function Landing() {
 
   return (
     <>
-      <section className="relative flex flex-col-reverse w-screen h-screen md:min-h-[57rem]">
+      <section className="relative flex flex-col-reverse w-screen h-screen md:min-h-[57rem] mb-0 md:mb-14 lg:mb-24">
         {/* UNCOMMENT DAY OF */}
         {/* <div className="absolute left-1/2 -translate-x-1/2 w-full top-[20%] md:top-[25%] lg:top-[15%] flex flex-col justify-center items-center z-10 px-4 text-textcolor"> */}
 

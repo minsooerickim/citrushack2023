@@ -30,16 +30,16 @@ export default function Nav() {
       title: 'Home'
     },
     {
-      icon: <BiInfoCircle />,
-      title: 'About'
-    },
-    {
       icon: <BiCalendarEvent />,
       title: 'Schedule'
     },
     {
       icon: <BiStore />,
       title: 'Resources'
+    },
+    {
+      icon: <BiInfoCircle />,
+      title: 'About'
     },
     {
       icon: <BiDirections />,
