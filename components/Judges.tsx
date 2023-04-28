@@ -170,6 +170,16 @@ const judges = [
     image: '/assets/judges/alex-chen.jpg',
     name: 'Jino Sirivatanarat',
     role: 'Former Vice President of ACM@UCR'
+  },
+  {
+    image: '/assets/judges/alex-chen.jpg',
+    name: 'Isean Bhanot',
+    role: 'ACM Membership Chair'
+  },
+  {
+    image: '/assets/judges/alex-chen.jpg',
+    name: 'Vincent Raimondi',
+    role: 'Ratheon Software Engineer'
   }
 ];
 

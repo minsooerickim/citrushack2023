@@ -167,6 +167,26 @@ const eventDesktopDay1 = [
     rightDescription: '',
     rightPlace: '',
     rightEventType: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    leftEventType: '',
+    rightTime: '9:00 PM',
+    rightDescription: 'Sturdiest Boat',
+    rightPlace: '@ Bourns A265',
+    rightEventType: 'Activity'
+  },
+  {
+    leftTime: '11:00 PM',
+    leftDescription: 'Smash Tourney',
+    leftPlace: '@ Bourns A265',
+    leftEventType: 'Activity',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: '',
+    rightEventType: ''
   }
 ];
 
@@ -447,6 +467,18 @@ const eventsMobileDay1 = [
     description: 'MLH: Capture the Flag',
     place: '@ WCH 205/206',
     type: 'Workshop'
+  },
+  {
+    time: '9:00 PM',
+    description: 'Sturdiest Boat',
+    place: '@ WCH Courtyard',
+    type: 'Activity'
+  },
+  {
+    time: '11:00 PM',
+    description: 'Smash Tourney',
+    place: '@ Bourns A265',
+    type: 'Activity'
   }
 ];
 const eventsMobileDay2 = [
