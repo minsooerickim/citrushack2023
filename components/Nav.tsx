@@ -34,16 +34,16 @@ export default function Nav() {
       title: 'About'
     },
     {
-      icon: <BiDirections />,
-      title: 'Tracks'
+      icon: <BiCalendarEvent />,
+      title: 'Schedule'
     },
     {
       icon: <BiStore />,
       title: 'Resources'
     },
     {
-      icon: <BiCalendarEvent />,
-      title: 'Schedule'
+      icon: <BiDirections />,
+      title: 'Tracks'
     },
     {
       icon: <BiReceipt />,

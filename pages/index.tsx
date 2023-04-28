@@ -36,6 +36,15 @@ export default function Home() {
           <Landing />
         </span>
       </Element>
+      <Element
+        name="Schedule"
+        className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
+      >
+        <Schedule />
+      </Element>
+      <Element name="Resources" className="flex justify-center px-4 w-full">
+        <Resources />
+      </Element>
       <Element name="About" className="flex justify-center w-full">
         <span className="flex justify-center w-full 2xl:bg-cover">
           <About />
@@ -49,7 +58,7 @@ export default function Home() {
           <Tracks />
         </span>
       </Element>
-      <Element name="Resources" className="flex justify-center px-4 w-full">
+      {/* <Element name="Resources" className="flex justify-center px-4 w-full">
         <Resources />
       </Element>
       <Element
@@ -57,7 +66,7 @@ export default function Home() {
         className="relative flex justify-center px-4 w-full bg-gradient-to-b from-accent-secondary to-accent"
       >
         <Schedule />
-      </Element>
+      </Element> */}
       <Element
         name="Judges"
         className="relative flex justify-center w-full bg-gradient-to-b from-primary to-secondary"
