@@ -22,6 +22,7 @@ export default function Info({ userData }) {
     // MLHAcknowledgement,
     pickedUpShirt,
     pickedUpCanes,
+    checkedIn,
     InPersonCheckIn
     // ...other
   } = json_obj[0];
@@ -143,8 +144,13 @@ export default function Info({ userData }) {
       {/* only admins can see actions and additional info */}
       {status === 'authenticated' && session.user.admin && (
         <div className="flex flex-col justify-center items-center py-4">
+          <span className="flex flex-col pb-4 text-center">
+            {name.first} {name.last}
+            <br />
+            {email}
+          </span>
           {InPersonCheckIn ? (
-            <p className="text-green-500">Checked In!</p>
+            <p className="text-green-500">Checked In In-Person!</p>
           ) : (
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -157,12 +163,19 @@ export default function Info({ userData }) {
               Check-In {name.first}
             </motion.button>
           )}
-
-          <p>
-            {name.first} {name.last}
-          </p>
-          <p>{email}</p>
-          <div>
+          <span className="flex flex-row">
+            Online Check-In:{' '}
+            {checkedIn ? (
+              <span className="text-green-500 pt-1 pl-1">
+                <FaCheckCircle />
+              </span>
+            ) : (
+              <span className="text-red-500 pt-1 pl-1">
+                <AiFillCloseCircle />
+              </span>
+            )}
+          </span>
+          <div className="pt-4">
             {applied_after_limit ? (
               <p className="flex">
                 First 200 Hacker:{' '}
@@ -243,7 +256,6 @@ export default function Info({ userData }) {
               </div>
             )}
           </div>
-
           <p className="flex pb-4">
             Qualified:{' '}
             {qualified == '' ? (
