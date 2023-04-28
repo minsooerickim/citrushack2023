@@ -45,10 +45,10 @@ export default function Nav() {
       icon: <BiDirections />,
       title: 'Tracks'
     },
-    {
-      icon: <BiReceipt />,
-      title: 'Judges'
-    },
+    // {
+    //   icon: <BiReceipt />,
+    //   title: 'Judges'
+    // },
     {
       icon: <BiDonateHeart />,
       title: 'Support'
@@ -228,10 +228,10 @@ export default function Nav() {
                 className="flex gap-2.5 items-center p-2 font-semibold text-lg truncate rounded-md hover:bg-buttons hover:text-white cursor-pointer"
                 onClick={() => setNavOpen(false)}
               >
-                <span className="text-2xl">
+                <span className="text-2xl text-white">
                   <BiHomeAlt />
                 </span>
-                <span>Home</span>
+                <span className="text-white">Home</span>
               </span>
             </Link>
           )}

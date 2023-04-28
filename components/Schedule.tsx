@@ -340,6 +340,26 @@ const eventDesktopDay2 = [
     rightDescription: '',
     rightPlace: '',
     rightEventType: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    leftEventType: '',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: '',
+    rightEventType: ''
+  },
+  {
+    leftTime: '',
+    leftDescription: '',
+    leftPlace: '',
+    leftEventType: '',
+    rightTime: '',
+    rightDescription: '',
+    rightPlace: '',
+    rightEventType: ''
   }
 ];
 
