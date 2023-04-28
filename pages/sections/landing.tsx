@@ -23,7 +23,7 @@ import globeLight from '@/public/assets/globeLight.svg';
 import globeDark from '@/public/assets/globeDark.svg';
 import { useTheme } from 'next-themes';
 import SignupCounter from '@/components/SignupCounter';
-import { HackerCountdownWrapper } from '@/components/Countdown';
+// import { HackerCountdownWrapper } from '@/components/Countdown';
 
 export const Assets = () => {
   const { theme } = useTheme();

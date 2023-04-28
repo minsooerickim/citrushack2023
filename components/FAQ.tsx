@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BiX } from 'react-icons/bi';
-import ExternalLink from '@/components/ExternalLink';
+// import ExternalLink from '@/components/ExternalLink';
 import { useTheme } from 'next-themes';
 
 interface Props {
@@ -12,8 +12,6 @@ interface Props {
 
 /** Accordion for a single FAQ. */
 export function FaqAccordion({ question, answer }: Props) {
-  const { theme } = useTheme();
-
   const [open, setOpen] = useState(false);
 
   return (
