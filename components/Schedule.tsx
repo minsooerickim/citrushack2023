@@ -90,7 +90,7 @@ const eventDesktopDay1 = [
   },
   {
     leftTime: '2:00 PM',
-    leftDescription: 'Level Up your LinkedIn',
+    leftDescription: 'Revamp your Resume',
     leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '2:00 PM',
@@ -130,7 +130,7 @@ const eventDesktopDay1 = [
   },
   {
     leftTime: '6:00 PM',
-    leftDescription: 'Revamp your Resume',
+    leftDescription: 'Level Up your LinkedIn',
     leftPlace: '@ WCH 205/206',
     leftEventType: 'Workshop',
     rightTime: '',
@@ -378,7 +378,7 @@ const eventsMobileDay1 = [
   },
   {
     time: '2:00 PM',
-    description: 'Level Up Your LinkedIn',
+    description: 'Revamp your Resume',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
@@ -420,7 +420,7 @@ const eventsMobileDay1 = [
   },
   {
     time: '6:00 PM',
-    description: 'Revamp Your Resume',
+    description: 'Level Up Your LinkedIn',
     place: '@ WCH 205/206',
     type: 'Workshop'
   },
