@@ -73,7 +73,7 @@ const judges = [
   },
   {
     image: '/assets/judges/allan-knight.jpg',
-    name: 'Daniel Beg',
+    name: 'Danial Beg',
     role: 'Software Engineer @ BAE Systems'
   },
   {
@@ -98,7 +98,7 @@ const judges = [
   },
   {
     image: '/assets/judges/chloe-georgiou.jpg',
-    name: 'Krystala Pothilat',
+    name: 'Krystal Pothilat',
     role: 'President of WinC@UCR'
   },
   {
